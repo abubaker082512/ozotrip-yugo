@@ -15,7 +15,7 @@
 .day2 span,
 .go-reward span,
 .filter-box h5 {
-    color: #00224f;
+    color: #1c3659;
 }
 
 .flight-box1 span,
@@ -52,7 +52,7 @@
 .day2 span,
 .go-reward span,
 .filter-box h5 {
-    color: #00224f;
+    color: #1c3659;
 }
 
 .departure-place-time-con .day,
@@ -85,7 +85,7 @@
 .day2 span,
 .go-reward span,
 .filter-box h5 {
-    color: #00224f;
+    color: #1c3659;
 }
 
 .float-left.col-xl-12.flight-operation {
@@ -103,12 +103,12 @@
     content: '';
     position: absolute;
     border-radius: 100%;
-    background-color: #00224f;
+    background-color: #1c3659;
 }
 
 button.blue-btn.d-inline-block.align-top {
-    border: #0066ff;
-    background: #007cff;
+    border: #1c3659;
+    background: #1c3659;
     width: 168px;
     height: 46px;
     border-radius: 35px;
@@ -164,7 +164,7 @@ button.blue-btn.d-inline-block.align-top {
 .payment-steps ul.step-list>li>a {
     display: block;
     padding: 14px;
-    color: #00224f;
+    color: #1c3659;
     font-size: 15px;
     line-height: 15px;
     border-radius: 30px;
@@ -200,7 +200,7 @@ button.blue-btn.d-inline-block.align-top {
 .fill-details a,
 .steps-info-inner h4 span a,
 #countdown label {
-    color: #287cbc;
+    color: #1c3659;
 }
 
 
@@ -216,7 +216,7 @@ button.blue-btn.d-inline-block.align-top {
 .select-payment-outer .heading {
     width: 100%;
     font-size: 18px;
-    color: #00224f;
+    color: #1c3659;
     padding: 12px 15px;
     border-radius: 8px 8px 0 0;
     background-color: #f7f7f7;
@@ -269,7 +269,7 @@ button.blue-btn.d-inline-block.align-top {
     padding: 12px;
     font-size: 15px;
     line-height: 15px;
-    color: #51596c;
+    color: #1c3659;
     border-radius: 30px;
     border: 1px solid #e8e7e7;
     margin: 0;
@@ -279,7 +279,7 @@ button.blue-btn.d-inline-block.align-top {
 .steps-info-bt select,
 .card-info input,
 .card-info label {
-    color: #51596c;
+    color: #1c3659;
 }
 
 .steps-info-bt select {
@@ -342,14 +342,14 @@ button.blue-btn.d-inline-block.align-top {
     text-decoration: none;
     border-radius: 40px;
     border: none;
-    background-color: #007cff;
-    box-shadow: 0 0 0 2px #007cff inset;
+    background-color: #1c3659;
+    box-shadow: 0 0 0 2px #1c3659 inset;
 }
 
 .blue-btn a:hover,
 .promo button:hover,
 .card-info button:hover {
-    color: #007cff;
+    color: #1c3659;
     background: none;
 }
 
@@ -371,8 +371,8 @@ button.blue-btn.d-inline-block.align-top {
 .promo button {
     color: #fff;
     border: none;
-    background-color: #2a7dbb;
-    box-shadow: 0 0 0 2px #2a7dbb inset;
+    background-color: #1c3659;
+    box-shadow: 0 0 0 2px #1c3659 inset;
     padding: 8px 0 7px;
     font-size: 14px;
 }
@@ -460,7 +460,7 @@ button.blue-btn.d-inline-block.align-top {
     font-size: 18px;
     position: relative;
     cursor: pointer !important;
-    border: 4px solid #113865;
+    border: 4px solid #1c3659;
     background-color: #fff;
 }
 
@@ -516,11 +516,11 @@ button.blue-btn.d-inline-block.align-top {
     font-size: 18px;
     line-height: 22px;
     background: none;
-    border: 1px solid #2a7dbb;
+    border: 1px solid #1c3659;
 }
 
 .payment-method .navbar-toggler.active .radio-custom+.radio-custom-label:before {
-    background: #2a7dbb;
+    background: #1c3659;
 }
 
 .payment-method .radio-custom:focus+.radio-custom-label {
@@ -553,7 +553,7 @@ button.blue-btn.d-inline-block.align-top {
 
 .payment-table table tr:last-child td {
     background-color: #fbebeb;
-    border-top: 3px solid #fd5656;
+    border-top: 3px solid #ddb651;
 }
 
 .payment-table table tr:nth-child(2) td {
@@ -563,11 +563,11 @@ button.blue-btn.d-inline-block.align-top {
 .meezan-ac,
 .jazz-cash,
 .phone-n select {
-    color: #00224f;
+    color: #1c3659;
 }
 
 .meezan-ac .copy {
-    color: #007cff;
+    color: #1c3659;
     cursor: pointer;
 }
 
@@ -626,7 +626,7 @@ button.blue-btn.d-inline-block.align-top {
 /* When the radio button is checked, add a blue background */
 
 .pay .container input:checked~.checkmark {
-    background-color: #297cbb;
+    background-color: #1c3659;
 }
 
 
@@ -678,7 +678,7 @@ button.blue-btn.d-inline-block.align-top {
     content: '';
     position: absolute;
     border-radius: 100%;
-    background-color: #297cbb;
+    background-color: #1c3659;
 }
 
 .phone-n div.float-left {
@@ -725,7 +725,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .thankyou h4 {
-    color: #007cff;
+    color: #1c3659;
 }
 
 .thankyou p,
@@ -735,11 +735,11 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .thankyou p a {
-    color: #fd6410;
+    color: #ddb651;
 }
 
 .thankyou p {
-    color: #51596c;
+    color: #1c3659;
 }
 
 .booking-confirm ul {
@@ -759,7 +759,7 @@ button.blue-btn.d-inline-block.align-top {
 
 .booking-confirm ul li span,
 .booking-confirm h5 {
-    color: #51596c;
+    color: #1c3659;
 }
 
 .booking-confirm h5 {
@@ -779,7 +779,7 @@ button.blue-btn.d-inline-block.align-top {
     position: relative;
     padding: 0 0 0 25px;
     cursor: pointer;
-    color: #51596c;
+    color: #1c3659;
 }
 
 .declaration input {
@@ -806,7 +806,7 @@ button.blue-btn.d-inline-block.align-top {
     content: "";
     position: absolute;
     display: none;
-    border: solid #007cff;
+    border: solid #1c3659;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -824,7 +824,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .payment-steps .card-info ul li p a {
-    color: #2a7dbb;
+    color: #1c3659;
 }
 
 .payment-steps .card-info ul li p a:hover {
@@ -841,7 +841,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .login-register {
-    color: #17244e;
+    color: #1c3659;
     padding: 20px 65px;
     border: 1px solid #dcdcdc;
     background: url(../../assets/img/payment/login-bg.png) no-repeat right top #fff;
@@ -852,8 +852,8 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .login-register a {
-    color: #17244e;
-    color: #007dfe;
+    color: #1c3659;
+    color: #1c3659;
 }
 
 .login-register a:hover {
@@ -901,7 +901,7 @@ button.blue-btn.d-inline-block.align-top {
 .flight-summary .destination-time-box span,
 .trip-experditure,
 .flight-summary ul li.style1 {
-    color: #002253;
+    color: #1c3659;
 }
 
 .flight-summary .destination-time-box span {
@@ -919,7 +919,7 @@ button.blue-btn.d-inline-block.align-top {
     color: #fff;
     padding: 4px 0;
     border-radius: 20px;
-    background-color: #00224f;
+    background-color: #1c3659;
 }
 
 .flight-summary ul li {
@@ -937,7 +937,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .pay-price {
-    color: #fd6410;
+    color: #ddb651;
     padding: 8px 0 0;
     margin: 12px 0 0;
     font-size: 14px;
@@ -951,7 +951,7 @@ button.blue-btn.d-inline-block.align-top {
 .select-payment-method .navbar-toggler {
     width: 49%;
     border: none;
-    color: #00224f;
+    color: #1c3659;
     font-size: 13px;
     padding: 20px 18px;
     text-align: left;
@@ -963,7 +963,7 @@ button.blue-btn.d-inline-block.align-top {
 .select-payment-method .navbar-toggler.active {
     color: #fff;
     box-shadow: none;
-    background-color: #13305c;
+    background-color: #1c3659;
 }
 
 .select-payment-method .navbar-toggler .visa-master {
@@ -992,7 +992,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .select-payment .steps-info-bt p {
-    color: #51596c;
+    color: #1c3659;
 }
 
 .steps-info-bt ul li.cvv>div {
@@ -1010,7 +1010,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .steps-info-bt ul li.cvv span {
-    color: #51596c;
+    color: #1c3659;
     font-size: 10px
 }
 
@@ -1063,12 +1063,12 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .steps-info-bt .rewards-promo ul li .redeem a {
-    background-color: #007cff;
+    background-color: #1c3659;
     margin: 0 0 10px;
 }
 
 .steps-info-bt .rewards-promo ul li.pay-your-price {
-    color: #fd6410;
+    color: #ddb651;
 }
 
 div#navbarSupportedContent2 {
@@ -1086,7 +1086,7 @@ div#navbarSupportedContent2 {
 }
 
 .steps-info-bt .rewards-promo ul li.trip-tos p a {
-    color: #007cff;
+    color: #1c3659;
 }
 
 .steps-info-bt .rewards-promo ul li.trip-tos p a:hover {
@@ -1094,7 +1094,7 @@ div#navbarSupportedContent2 {
 }
 
 .steps-info-bt .rewards-promo ul li .pay-now a {
-    background-color: #fd6410;
+    background-color: #ddb651;
 }
 
 .visa-price-summary {
@@ -1135,7 +1135,7 @@ div#navbarSupportedContent2 {
 .payment-steps ul>li>a {
     display: block;
     padding: 14px;
-    color: #00224f;
+    color: #1c3659;
     font-size: 15px;
     line-height: 15px;
     border-radius: 30px;
@@ -1232,7 +1232,7 @@ div#navbarSupportedContent2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 70px;
     font-weight: 300;
-    color: #7FC1FF;
+    color: #1c3659;
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 0.8;
@@ -1260,7 +1260,7 @@ div#navbarSupportedContent2 {
 }
 
 .criteria-text h3 {
-    color: #FC610F;
+    color: #ddb651;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -1271,7 +1271,7 @@ div#navbarSupportedContent2 {
 }
 
 .criteria-text p {
-    color: #51586B;
+    color: #1c3659;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 22px;
@@ -1279,12 +1279,12 @@ div#navbarSupportedContent2 {
 
 .criteria-text p a:first-child {
     text-decoration: none;
-    color: #007DFE;
+    color: #1c3659;
 }
 
 .criteria-text p a:last-child {
     text-decoration: none;
-    color: #FC610F;
+    color: #ddb651;
 }
 
 .criteria-text {
@@ -1306,7 +1306,7 @@ div#navbarSupportedContent2 {
 }
 
 .criteria-right-text p {
-    color: #3C506B;
+    color: #1c3659;
     font-size: 25px;
     font-family: 'Open Sans', sans-serif;
     line-height: 0.7;
@@ -1314,7 +1314,7 @@ div#navbarSupportedContent2 {
 }
 
 .criteria-right-text h3 {
-    color: #017BFF;
+    color: #1c3659;
     font-size: 34px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
@@ -1343,14 +1343,14 @@ div#navbarSupportedContent2 {
 
 .social-link p {
     font-size: 22px;
-    color: #54576A;
+    color: #1c3659;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     margin-bottom: 0;
 }
 
 .click-here-btn {
-    background: #1687FF;
+    background: #1c3659;
     color: #fff;
     border: none;
     padding: 0 5px;
@@ -1367,7 +1367,7 @@ div#navbarSupportedContent2 {
 /* ****************** Criteria Left ****************** */
 
 .criteria-left {
-    background: #FF5736;
+    background: #ddb651;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1418,7 +1418,7 @@ div#navbarSupportedContent2 {
 }
 
 .criteria-left-social-text .click-here-btn {
-    color: #1687FF;
+    color: #1c3659;
     background: #fff;
     font-weight: 500;
 }
@@ -1431,7 +1431,7 @@ div#navbarSupportedContent2 {
 }
 
 .condition-text h3 {
-    color: #FC610F;
+    color: #ddb651;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -1453,7 +1453,7 @@ div#navbarSupportedContent2 {
 }
 
 .condition-text ul li a {
-    color: #51586B;
+    color: #1c3659;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -1474,7 +1474,7 @@ div#navbarSupportedContent2 {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #FC610F;
+    background: #ddb651;
     left: 0;
     top: 13px;
 }
@@ -1488,15 +1488,15 @@ div#navbarSupportedContent2 {
 }
 
 .condition-text ul li span:nth-child(2) {
-    color: #2256C2;
+    color: #1c3659;
 }
 
 .condition-text ul li span:nth-child(3) {
-    color: #F42E37;
+    color: #ddb651;
 }
 
 .condition-text ul li span:nth-child(4) {
-    color: #217CE1;
+    color: #1c3659;
 }
 
 
@@ -1527,7 +1527,7 @@ div#navbarSupportedContent2 {
 
 .flights-text p {
     margin-bottom: 0;
-    color: #2685FB;
+    color: #1c3659;
     font-size: 19px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -1563,7 +1563,7 @@ div#navbarSupportedContent2 {
 /* ****************** Footer Section ****************** */
 
 .promotion-footer {
-    background: #52596C;
+    background: #1c3659;
     padding: 20px;
     text-align: center;
     color: #fff;
@@ -1665,7 +1665,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     }
     .payment-steps ul>li.active:first-child>a::after,
     .payment-steps ul>li.active:nth-child(2)>a::after {
-        border-left: 50px solid #113865;
+        border-left: 50px solid #1c3659;
     }
     .card-info ul li,
     .card-info ul li:last-child,
@@ -1759,7 +1759,7 @@ input.float-left.contact-user-detail.contact-detail-number {
         font-size: 16px;
     }
     .payment-steps ul>li.active:first-child>a::after {
-        border-left-color: #113865;
+        border-left-color: #1c3659;
     }
     .steps-info-inner h4 {
         font-size: 18px;
@@ -1790,11 +1790,11 @@ input.float-left.contact-user-detail.contact-detail-number {
         line-height: 20px;
     }
     .payment-steps ul>li.active:first-child>a::after {
-        border-left: 40px solid #113865;
-        border-left-color: rgb(17, 56, 101);
+        border-left: 40px solid #1c3659;
+        border-left-color: rgb(28, 54, 89);
     }
     .payment-steps ul>li.active:nth-child(2)>a::after {
-        border-left: 40px solid #113865;
+        border-left: 40px solid #1c3659;
     }
     .payment-steps p {
         font-size: 15px;
@@ -1809,7 +1809,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     .payment-method .navbar-toggler {
         padding: 5px 0;
         font-size: 14px;
-        border: 2px solid #113865;
+        border: 2px solid #1c3659;
     }
     .card-info .jazz-cash ul li {
         margin: 0 0 8px;
@@ -1946,15 +1946,15 @@ input.float-left.contact-user-detail.contact-detail-number {
         width: 100%;
     }
     .payment-steps ul>li.active :first-child>a::after {
-        border-left-color: #113865;
+        border-left-color: #1c3659;
     }
     .payment-steps ul>li.active:first-child>a::after {
-        border-left: 10px solid #113865;
-        border-left-color: rgb(17, 56, 101);
-        border-left-color: rgb(17, 56, 101);
+        border-left: 10px solid #1c3659;
+        border-left-color: rgb(28, 54, 89);
+        border-left-color: rgb(28, 54, 89);
     }
     .payment-steps ul>li.active:nth-child(2)>a::after {
-        border-left: 10px solid #113865;
+        border-left: 10px solid #1c3659;
     }
     .card-info ul li,
     .card-info ul li:last-child {
@@ -2071,7 +2071,7 @@ input.float-left.contact-user-detail.contact-detail-number {
         line-height: 16px;
     }
     .steps-info .heading {
-        color: #00224f;
+        color: #1c3659;
         padding: 8px 15px;
     }
     .thankyou {
@@ -2278,7 +2278,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     .day2 span,
     .go-reward span,
     .filter-box h5 {
-        color: #00224f;
+        color: #1c3659;
     }
     .flight-box1 span,
     .destination-time-box {
@@ -2310,7 +2310,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     .day2 span,
     .go-reward span,
     .filter-box h5 {
-        color: #00224f;
+        color: #1c3659;
     }
     .departure-place-time-con .day,
     .arival-place-time-con .day2 {
@@ -2339,7 +2339,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     .day2 span,
     .go-reward span,
     .filter-box h5 {
-        color: #00224f;
+        color: #1c3659;
     }
     .float-left.col-xl-12.flight-operation {
         text-align: center;
@@ -2355,11 +2355,11 @@ input.float-left.contact-user-detail.contact-detail-number {
         content: '';
         position: absolute;
         border-radius: 100%;
-        background-color: #00224f;
+        background-color: #1c3659;
     }
     button.blue-btn.d-inline-block.align-top {
-        border: #0066ff;
-        background: #007cff;
+        border: #1c3659;
+        background: #1c3659;
         width: 168px;
         height: 46px;
         border-radius: 35px;
@@ -2423,7 +2423,7 @@ input.float-left.contact-user-detail.contact-detail-number {
         content: '';
         position: absolute;
         border-radius: 100%;
-        background-color: #00224f;
+        background-color: #1c3659;
     }
     .flight-box2 ul li,
     .flight-box1 span,
@@ -2435,7 +2435,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     .day2 span,
     .go-reward span,
     .filter-box h5 {
-        color: #00224f;
+        color: #1c3659;
         display: flex;
         font-size: 14px !important;
     }
@@ -2450,7 +2450,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     }
     li.p-lr-box {
         margin: 7px 7px 0px 15px !important;
-        color: #0066ff !important;
+        color: #1c3659 !important;
         font-size: 15px !important;
         font-weight: 400 !important;
     }

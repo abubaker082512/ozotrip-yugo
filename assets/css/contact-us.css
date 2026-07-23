@@ -1,6 +1,6 @@
 .contact-info,
 .contact-info p {
-    color: #51596c;
+    color: #1c3659;
     font-size: 18px;
     line-height: 26px;
 }
@@ -11,7 +11,7 @@
 
 .contact-info h3 {
     font-size: 24px;
-    color: #00224f;
+    color: #1c3659;
     margin: 0 0 30px;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .call-us a {
-    background-color: #007cff;
-    box-shadow: 0 0 0 2px #007cff inset;
+    background-color: #1c3659;
+    box-shadow: 0 0 0 2px #1c3659 inset;
 }
 
 .whatsapp a {
@@ -47,13 +47,13 @@
 }
 
 .find-us a {
-    background-color: #51596c;
-    box-shadow: 0 0 0 2px #51596c inset;
+    background-color: #1c3659;
+    box-shadow: 0 0 0 2px #1c3659 inset;
 }
 
 .write-us a {
-    background-color: #fd6410;
-    box-shadow: 0 0 0 2px #fd6410 inset;
+    background-color: #ddb651;
+    box-shadow: 0 0 0 2px #ddb651 inset;
 }
 
 .call-us a:hover,
@@ -64,7 +64,7 @@
 }
 
 .call-us a:hover {
-    color: #007cff;
+    color: #1c3659;
 }
 
 .whatsapp a:hover {
@@ -72,11 +72,11 @@
 }
 
 .find-us a:hover {
-    color: #51596c;
+    color: #1c3659;
 }
 
 .write-us a:hover {
-    color: #fd6410;
+    color: #ddb651;
 }
 
 @media screen and (max-width: 991px) {

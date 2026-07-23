@@ -5,7 +5,7 @@
 }
 .select-11 {
     background-color: transparent !important;
-    color: #00224f;
+    color: #1c3659;
     padding: 0px;
     border: none;
     cursor: pointer;
@@ -38,7 +38,7 @@
     font-size: 14px;
 }
 .choose-11-user:hover {
-    color: #0066ff;
+    color: #1c3659;
 }
 .main-box-open a:last-child {
     border-bottom: none;
@@ -52,20 +52,20 @@ img.more-icon-11 {
     position: fixed;
 }
 .select-11.active {
-    color: #0066ff !important; /* Matches the active link color */
+    color: #1c3659 !important; /* Matches the active link color */
 }
 .yugo-header .navbar-expand-xl .navbar-nav .nav-item {
     padding: 0 8px;
     overflow: initial;
 }
 li.active a {
-    color: #0066ff !important;
+    color: #1c3659 !important;
 }
 a.active.choose-11-user{
-    color: #0066ff !important;
+    color: #1c3659 !important;
 }
 .select-11.active {
-    color: #0066ff !important; /* Matches the active link color */
+    color: #1c3659 !important; /* Matches the active link color */
 }
 
 .yugo-header .navbar-expand-xl .navbar-nav .nav-link {
@@ -174,10 +174,10 @@ a.active.choose-11-user{
 .yugo-header.js-header-fix-moment .u-header__section,
 .yugo-header.header-wo-banner {
     background: #051425;
-    background: -moz-linear-gradient(top, #051425 0%, #144277 100%);
-    background: -webkit-linear-gradient(top, #051425 0%, #144277 100%);
-    background: linear-gradient(to bottom, #051425 0%, #144277 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#051425', endColorstr='#144277', GradientType=0);
+    background: -moz-linear-gradient(top, #051425 0%, #1c3659 100%);
+    background: -webkit-linear-gradient(top, #051425 0%, #1c3659 100%);
+    background: linear-gradient(to bottom, #051425 0%, #1c3659 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#051425', endColorstr='#1c3659', GradientType=0);
 }
 
 .header-links {
@@ -205,7 +205,7 @@ a.active.choose-11-user{
 
 .header-links li a:hover {
     border-radius: 8px;
-    background-color: #be434d;
+    background-color: #ddb651;
 }
 
 .mobile_nav_sticky {
@@ -249,7 +249,7 @@ a.active.choose-11-user{
     color: #fff;
     padding: 10px 16px;
     border-radius: 35px;
-    background-color: #00224f;
+    background-color: #1c3659;
 }
 
 .new-header .navbar-expand-xl .navbar-nav .nav-item.my-accounts {
@@ -281,13 +281,13 @@ a.active.choose-11-user{
     padding: 0;
     font-size: 14px;
     font-weight: 400;
-    color: #16244d;
+    color: #1c3659;
     line-height: 15px;
 }
 
 .new-header .navbar-expand-xl .navbar-nav .nav-item.my-accounts .dropdown-item:hover,
 .new-header .navbar-expand-xl .navbar-nav .nav-item.my-accounts .dropdown-item span {
-    color: #047aff !important;
+    color: #1c3659 !important;
 }
 
 .new-header .navbar-expand-xl .navbar-nav .nav-item.my-accounts .dropdown-item.trips {
@@ -341,7 +341,7 @@ p.week-cls {
 }
 .\32 0-prcent-tag {
     height: 36px;
-    background: #c2ebff;
+    background: #1c3659;
     padding: 4px;
     text-align: center;
     display: block;
@@ -350,10 +350,10 @@ p.tag-line-save{
     margin: 0px;
     font-size: 16px;
     font-weight: 400;
-    color: #00224f;
+    color: #1c3659;
 }
 span.sve-bld {
-    color: #fd6410;
+    color: #ddb651;
     font-weight: 500;
 }
 img.promo-icon-head {
@@ -414,7 +414,7 @@ img.promo-icon-head {
         z-index: 1111111111111111;
     }
     h1.save-20-prcnt {
-        color: #00224f;
+        color: #1c3659;
         font-size: 13px;
         font-weight: 400;
         padding-top: 7px;
@@ -424,7 +424,7 @@ img.promo-icon-head {
     }
     .col-xl-12.p-0.off-save-20-bg {
         display: block;
-        background: #c2ebff;
+        background: #1c3659;
         margin: 0;
         height: 33px;
         text-align: center;
@@ -437,7 +437,7 @@ img.promo-icon-head {
     }
 
     span.bl-bld {
-        color: #007cff;
+        color: #1c3659;
         font-weight: 500;
     }
     .\32 0-prcent-tag{
@@ -463,7 +463,7 @@ img.promo-icon-head {
         font-size: 12px;
         padding: 9px;
         font-weight: 600;
-        color: #007CFF !important;
+        color: #1c3659 !important;
     }
     .whats-outer{
         width: 43%;
@@ -498,7 +498,7 @@ img.promo-icon-head {
     }
     a.inner-text-tripple-find{
         font-size: 12px;
-        color: #FD6410 !important;
+        color: #ddb651 !important;
         padding: 9px;
         font-weight: 600;
         text-decoration: none;
@@ -563,16 +563,16 @@ img.promo-icon-head {
 
     .yugo-header {
         background: #051425;
-        background: -moz-linear-gradient(top, #051425 0%, #144277 100%);
-        background: -webkit-linear-gradient(top, #051425 0%, #144277 100%);
-        background: linear-gradient(to bottom, #051425 0%, #144277 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#051425', endColorstr='#144277', GradientType=0);
+        background: -moz-linear-gradient(top, #051425 0%, #1c3659 100%);
+        background: -webkit-linear-gradient(top, #051425 0%, #1c3659 100%);
+        background: linear-gradient(to bottom, #051425 0%, #1c3659 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#051425', endColorstr='#1c3659', GradientType=0);
     }
 
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item:hover .nav-link,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.log-sign .nav-link,
     .yugo-header .navbar-expand-xl .navbar-nav .dropdown-menu .dropdown-item {
-        color: #047aff;
+        color: #1c3659;
     }
 
     .yugo-header .navbar-expand-xl .navbar-nav .dropdown-menu {
@@ -701,7 +701,7 @@ img.promo-icon-head {
     }
 
     span.lft-ham:hover {
-        color: #007cff !important;
+        color: #1c3659 !important;
     }
 
     .f-icon, .f-icon:hover {
@@ -933,7 +933,7 @@ img.promo-icon-head {
         margin-left: 111px !important;
     }
     span.rental-ham:hover{
-        color: #007CFF !important;
+        color: #1c3659 !important;
     }
     .airport-transfer-icon {
         background: url(../../assets/img/header/airport_transfer_dark.png) no-repeat center;
@@ -995,10 +995,10 @@ img.promo-icon-head {
 
     .flight-result-header.show {
         background: #051425;
-        background: -moz-linear-gradient(top, #051425 0%, #144277 100%);
-        background: -webkit-linear-gradient(top, #051425 0%, #144277 100%);
-        background: linear-gradient(to bottom, #051425 0%, #144277 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#051425', endColorstr='#144277', GradientType=0);
+        background: -moz-linear-gradient(top, #051425 0%, #1c3659 100%);
+        background: -webkit-linear-gradient(top, #051425 0%, #1c3659 100%);
+        background: linear-gradient(to bottom, #051425 0%, #1c3659 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#051425', endColorstr='#1c3659', GradientType=0);
     }
 
     .new-header,
@@ -1161,3 +1161,9 @@ img.promo-icon-head {
 
 
 
+
+/* OzoTrips Logo resize overrides (72px max-height) */
+.navbar-brand img, .new-header .navbar-brand img, .logo-img, img[alt*="Logo"], img[alt*="logo"] {
+    max-height: 72px !important;
+    width: auto !important;
+}

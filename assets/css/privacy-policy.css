@@ -4,14 +4,14 @@
     }
     .privacy-text h3{   
         font-size: 24px;
-        color: #00224f; 
+        color: #1c3659; 
         margin: 0 0 30px;    
     }
     .privacy-text p.style1{
-        color: #fd6410;
+        color: #ddb651;
     }
     .privacy-text, .privacy-text p {
-        color: #51596c;
+        color: #1c3659;
         font-size: 18px;
         line-height: 26px;
     }
@@ -19,7 +19,7 @@
         text-align: justify;
     }
     .privacy-text p a{
-        color: #007cff;
+        color: #1c3659;
     }
     .privacy-text ul li{
         padding: 0 0 0 15px;
@@ -43,7 +43,7 @@
 
         position: absolute;
 
-        background-color: #fd6410 ;    
+        background-color: #ddb651 ;    
 
     }
 

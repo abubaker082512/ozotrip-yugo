@@ -2,7 +2,7 @@
     padding: 80px 0 0;
 }
 .sitemap-banner h1{
-    color: #16254e;
+    color: #1c3659;
     font-size: 24px;
 }
 .sitemap-links {
@@ -10,17 +10,17 @@
 }
 .sitemap-links h3 {
     float: left;
-    color: #008cff;
+    color: #1c3659;
     font-size: 17px;
     line-height: 18px;
     border-bottom: 1px solid #cecfcf;
 }
 .sitemap-links ul li a {
-    color: #16254e;
+    color: #1c3659;
     font-size: 15px;
 }
 .sitemap-links ul li a:hover{
-    color: #008cff;
+    color: #1c3659;
 }
 .sitemap-links ul {
     width: 100%;
