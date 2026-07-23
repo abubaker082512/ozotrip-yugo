@@ -6452,17 +6452,16 @@ $(document).ready(function(){
 <script>
 
         function filterVisas(filter) {
-            // Normalize space and newlines
             var cleanFilter = filter.trim().replace(/\s+/g, ' ');
             
             var fileMap = {
-                "All Visas": "assets/data/visas_all.html",
-                "Visas Without Bank Statement": "assets/data/visas_no_statement.html",
-                "Other Popular Visas": "assets/data/visas_e_visas.html",
-                "Easy Sticker Visas": "assets/data/visas_sticker.html"
+                "All Visas": "/assets/data/visas_all.html",
+                "Visas Without Bank Statement": "/assets/data/visas_no_statement.html",
+                "Other Popular Visas": "/assets/data/visas_e_visas.html",
+                "Easy Sticker Visas": "/assets/data/visas_sticker.html"
             };
             
-            var localPath = fileMap[cleanFilter] || "assets/data/visas_all.html";
+            var localPath = fileMap[cleanFilter] || "/assets/data/visas_all.html";
             
             $.ajax({
                 type: 'GET',
@@ -6471,45 +6470,43 @@ $(document).ready(function(){
                     $('#visasList').html(response);
                 },
                 error: function() {
-                    // Fallback to all visas if file fails to load
-                    $.get("assets/data/visas_all.html", function(res) {
+                    $.get("/assets/data/visas_all.html", function(res) {
                         $('#visasList').html(res);
                     });
                 }
             });
         }
 
-        
-
         $(document).ready(function() {
             filterVisas('All Visas');
+        });
 
-            $('.main-filter').on('click', function() {
-                var clickedText = $(this).text().trim().replace(/\s+/g, ' ');
+        // Use event delegation to handle clicks on dynamically generated/cloned filter elements
+        $(document).on('click', '.main-filter', function() {
+            var clickedText = $(this).text().trim().replace(/\s+/g, ' ');
+            
+            $('.main-filter').each(function() {
+                var currentText = $(this).text().trim().replace(/\s+/g, ' ');
+                var isMatch = (currentText === clickedText);
+                var filterDiv = $(this).find('div');
                 
-                $('.main-filter').each(function() {
-                    var currentText = $(this).text().trim().replace(/\s+/g, ' ');
-                    var isMatch = (currentText === clickedText);
-                    var filterDiv = $(this).find('div');
-                    
-                    filterDiv.toggleClass('vsaFlter-active', isMatch);
-                    filterDiv.toggleClass('vsaFlter-gray', !isMatch);
-                    
-                    if (isMatch) {
-                        if (filterDiv.find('img.gd-blue').length === 0) {
-                            var img = $('<img>', {
-                                src: "assets/img/home/gd-blue-tick.png",
-                                class: 'gd-blue custom-gd-blue'
-                            });
-                            filterDiv.append(img);
-                        }
-                    } else {
-                        filterDiv.find('img.gd-blue').remove();
+                filterDiv.toggleClass('vsaFlter-active', isMatch);
+                filterDiv.toggleClass('vsaFlter-gray', !isMatch);
+                
+                if (isMatch) {
+                    if (filterDiv.find('img.gd-blue').length === 0) {
+                        var img = $('<img>', {
+                            src: "assets/img/home/gd-blue-tick.png",
+                            class: 'gd-blue custom-gd-blue'
+                        });
+                        filterDiv.append(img);
                     }
-                });
-                
-                filterVisas(clickedText);
+                } else {
+                    filterDiv.find('img.gd-blue').remove();
+                }
             });
+            
+            filterVisas(clickedText);
         });
 
     </script>
