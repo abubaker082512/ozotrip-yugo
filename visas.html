@@ -6481,84 +6481,35 @@ $(document).ready(function(){
 
         
 
-        $(document).ready(function() 
+        $(document).ready(function() {
+            filterVisas('All Visas');
 
-        {
-
-            filterVisas('all');
-
-
-
-            const filters = $('.main-filter');
-
-
-
-            const updateClasses = function(activeFilter) 
-
-            {
-
-                filters.each(function() 
-
-                {
-
-                    const filterDiv = $(this).find('div');
-
-                    const isActive = $(this).is(activeFilter);
-
-                    filterDiv.toggleClass('vsaFlter-active', isActive);
-
-                    filterDiv.toggleClass('vsaFlter-gray', !isActive);
-
-
-
-                    if (isActive) {
-
+            $('.main-filter').on('click', function() {
+                var clickedText = $(this).text().trim().replace(/\s+/g, ' ');
                 
-
-                        filterVisas($(this).text());
-
+                $('.main-filter').each(function() {
+                    var currentText = $(this).text().trim().replace(/\s+/g, ' ');
+                    var isMatch = (currentText === clickedText);
+                    var filterDiv = $(this).find('div');
+                    
+                    filterDiv.toggleClass('vsaFlter-active', isMatch);
+                    filterDiv.toggleClass('vsaFlter-gray', !isMatch);
+                    
+                    if (isMatch) {
                         if (filterDiv.find('img.gd-blue').length === 0) {
-
-                            const img = $('<img>', {
-
-                                src: "https://www.ozotrips.com/assets/img/home/gd-blue-tick.png",
-
-                                class: 'gd-blue'
-
+                            var img = $('<img>', {
+                                src: "assets/img/home/gd-blue-tick.png",
+                                class: 'gd-blue custom-gd-blue'
                             });
-
                             filterDiv.append(img);
-
                         }
-
                     } else {
-
-                        const img = filterDiv.find('img.gd-blue');
-
-                        if (img.length > 0) {
-
-                            img.remove();
-
-                        }
-
+                        filterDiv.find('img.gd-blue').remove();
                     }
-
                 });
-
-            };
-
-
-
-            filters.each(function() {
-
-                $(this).on('click', function() {
-
-                    updateClasses($(this));
-
-                });
-
+                
+                filterVisas(clickedText);
             });
-
         });
 
     </script>
