@@ -6452,29 +6452,31 @@ $(document).ready(function(){
 <script>
 
         function filterVisas(filter) {
-
+            // Normalize space and newlines
+            var cleanFilter = filter.trim().replace(/\s+/g, ' ');
+            
+            var fileMap = {
+                "All Visas": "assets/data/visas_all.html",
+                "Visas Without Bank Statement": "assets/data/visas_no_statement.html",
+                "E-Visas": "assets/data/visas_e_visas.html",
+                "Easy Sticker Visas": "assets/data/visas_sticker.html"
+            };
+            
+            var localPath = fileMap[cleanFilter] || "assets/data/visas_all.html";
+            
             $.ajax({
-
                 type: 'GET',
-
-                url: '/filter_visas',
-
-                data: {
-
-                    visas: filter,
-
-                    _token: 'RxVLdin0DJj725raQVs5KoH2AfWT9FLrXqWEhqoN'
-
-                },
-
+                url: localPath,
                 success: function(response) {
-
                     $('#visasList').html(response);
-
+                },
+                error: function() {
+                    // Fallback to all visas if file fails to load
+                    $.get("assets/data/visas_all.html", function(res) {
+                        $('#visasList').html(res);
+                    });
                 }
-
             });
-
         }
 
         
