@@ -1,0 +1,2458 @@
+/*  */
+
+.destination-time-box,
+.departure-place-time-con {
+    position: relative;
+}
+
+.flight-box2 ul li,
+.flight-box1 span,
+.airblue span,
+.airsial span,
+.destination-time-box,
+.destination-time-box,
+.day span,
+.day2 span,
+.go-reward span,
+.filter-box h5 {
+    color: #00224f;
+}
+
+.flight-box1 span,
+.destination-time-box {
+    font-size: 12px;
+}
+
+.destination-time-box,
+.departure-place-time-con {
+    position: relative;
+}
+
+.departure-place-time-con>div,
+.departure-place-time-con .day,
+.arival-place-time-con>div,
+.arival-place-time-con .day2 {
+    width: 100%;
+}
+
+.departure-place-time-con,
+.arival-place-time-con {
+    width: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.flight-box2 ul li,
+.flight-box1 span,
+.airblue span,
+.airsial span,
+.destination-time-box,
+.destination-time-box,
+.day span,
+.day2 span,
+.go-reward span,
+.filter-box h5 {
+    color: #00224f;
+}
+
+.departure-place-time-con .day,
+.arival-place-time-con .day2 {
+    margin: 30px 0 0;
+}
+
+.departure-place-time-con>div,
+.departure-place-time-con .day,
+.arival-place-time-con>div,
+.arival-place-time-con .day2 {
+    width: 100%;
+}
+
+.day,
+.day2 {
+    width: 100px;
+    color: #7d7e83;
+    margin: 0 0 0 -17px;
+    font-weight: 400 !important;
+}
+
+.flight-box2 ul li,
+.flight-box1 span,
+.airblue span,
+.airsial span,
+.destination-time-box,
+.destination-time-box,
+.day span,
+.day2 span,
+.go-reward span,
+.filter-box h5 {
+    color: #00224f;
+}
+
+.float-left.col-xl-12.flight-operation {
+    text-align: center;
+}
+
+.departure-place-time-con::after,
+.arival-place-time-con::after {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 47px;
+    width: 10px;
+    height: 10px;
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    background-color: #00224f;
+}
+
+button.blue-btn.d-inline-block.align-top {
+    border: #0066ff;
+    background: #007cff;
+    width: 168px;
+    height: 46px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffff;
+    text-align: center;
+    margin: 30px 0px 0px;
+}
+
+.arival-place-time-con {
+    float: right;
+}
+
+.departure-place-time-con,
+.arival-place-time-con {
+    width: 100px;
+    text-align: center;
+    position: relative;
+}
+
+.departure-place-time-con .day,
+.arival-place-time-con .day2 {
+    margin: 30px 0 0;
+}
+
+
+/*  */
+
+.steps-info {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+}
+
+.payment-outerbox {
+    padding: 30px 0 25px;
+}
+
+.payment-steps ul.step-list {
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #fff !important;
+    display: table;
+}
+.payment-steps ul{
+    border: 1px solid #fff !important;
+}
+
+.payment-steps ul.step-list>li {
+    display: table-cell;
+}
+
+.payment-steps ul.step-list>li>a {
+    display: block;
+    padding: 14px;
+    color: #00224f;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 30px;
+}
+
+.payment-steps ul.step-list>li.active>a,
+.payment-steps ul.step-list>li.active>a:hover,
+.payment-steps ul.step-list>li.active>a:focus {
+    background-color: #fff;
+    box-shadow: 7px 6px 15px rgba(0, 0, 0, 0.20);
+}
+
+.payment-steps ul.step-list>li.active>a .step,
+.payment-steps ul.step-list>li.active>a .step:hover,
+.payment-steps ul.step-list>li.active>a .step:focus {
+    color: #fff;
+}
+
+.steps-info-inner,
+.steps-info-bt {
+    padding: 0 15px 20px;
+}
+
+.steps-info-inner h4 span {
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.steps-info-inner h4 span span {
+    color: red;
+}
+
+.fill-details a,
+.steps-info-inner h4 span a,
+#countdown label {
+    color: #287cbc;
+}
+
+
+/* .steps-info{
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 8px;
+
+} */
+
+.steps-info .heading,
+.select-payment-outer .heading {
+    width: 100%;
+    font-size: 18px;
+    color: #00224f;
+    padding: 12px 15px;
+    border-radius: 8px 8px 0 0;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.roller-box {
+    margin: 95px 0px 14px;
+}
+
+.steps-info-bt ul {
+    border: none;
+    background: none;
+    border-radius: 0;
+}
+
+.steps-info-bt ul li {
+    margin: 20px 0 0;
+    font-size: 13px;
+}
+
+.steps-info-bt ul li.dop select:nth-child(2),
+.steps-info-bt ul li.expiry select:nth-child(2) {
+    border-radius: 30px 0 0 30px;
+}
+
+.steps-info-bt ul li.dop select:nth-child(3),
+.steps-info-bt ul li.expiry select:nth-child(3) {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.steps-info-bt ul li.dop select:nth-child(4),
+.steps-info-bt ul li.expiry select:nth-child(4) {
+    border-radius: 0 30px 30px 0;
+}
+
+.steps-info-bt ul li,
+.steps-info-bt ul li:last-child,
+.steps-info-bt ul li:nth-child(2n),
+.card-info ul li,
+.card-info ul li:last-child {
+    width: 49%;
+}
+
+.steps-info-bt select,
+.steps-info-bt input,
+.card-info input {
+    padding: 12px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #51596c;
+    border-radius: 30px;
+    border: 1px solid #e8e7e7;
+    margin: 0;
+}
+
+.steps-info-bt,
+.steps-info-bt select,
+.card-info input,
+.card-info label {
+    color: #51596c;
+}
+
+.steps-info-bt select {
+    color: #aaa;
+}
+
+.steps-info-bt input,
+.card-info input {
+    width: 100%;
+}
+
+.card-info ul li {
+    margin: 15px 0;
+}
+
+.steps-info-bt ul li label span,
+.card-info ul li label span {
+    color: #f42130;
+}
+
+.steps-info-bt ul li div select {
+    width: 20%;
+    height: 44px;
+    padding: 0 0 0 8px;
+    border-right: none;
+    border-radius: 30px 0 0 30px;
+}
+
+
+/* .steps-info-bt ul li div input{
+
+    width: 80%;
+
+    border-radius: 0 10px 10px 0;
+
+} */
+
+.steps-info-bt ul li span.style1 {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.field-height {
+    min-height: 96px;
+}
+
+.blue-btn,
+.card-info button {
+    min-width: 150px;
+}
+
+.blue-btn a,
+.card-info button {
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 13px 15px;
+    text-decoration: none;
+    border-radius: 40px;
+    border: none;
+    background-color: #007cff;
+    box-shadow: 0 0 0 2px #007cff inset;
+}
+
+.blue-btn a:hover,
+.promo button:hover,
+.card-info button:hover {
+    color: #007cff;
+    background: none;
+}
+
+.promo p {
+    font-size: 14px;
+}
+
+.promo input,
+.promo button {
+    border-radius: 5px;
+}
+
+.promo input {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 2px solid #bbb7b7;
+}
+
+.promo button {
+    color: #fff;
+    border: none;
+    background-color: #2a7dbb;
+    box-shadow: 0 0 0 2px #2a7dbb inset;
+    padding: 8px 0 7px;
+    font-size: 14px;
+}
+
+.promo2 input {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.promo2 button {
+    width: 24%;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.promo2 span {
+    font-size: 18px;
+}
+
+.promo2 .payment-steps p {
+    font-size: 16px;
+}
+
+.fligt-accordion {
+    border: 2px solid #bbb7b7;
+    border-top: none;
+}
+
+.fligt-accordion .card {
+    border: none;
+    border-radius: 0;
+}
+
+.fligt-accordion .card-header {
+    padding: 0;
+    border-radius: 0;
+    border-top: 2px solid #bbb7b7;
+}
+
+.fligt-accordion .card-header button.btn-link {
+    width: 100%;
+    color: #272727;
+    font-size: 14px;
+    text-align: left;
+    background: url(../../assets/img/payment/arrow-top.png) no-repeat 95% center;
+}
+
+.fligt-accordion .card-header button.btn-link.collapsed {
+    background: url(../../assets/img/payment/arrow-bottom.png) no-repeat 95% center;
+}
+
+.fligt-accordion .card-body {
+    border-top: 2px solid #bbb7b7;
+}
+
+.date-time,
+.date-time .tm {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.date-time .dt {
+    color: #717171;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.date-time .pl {
+    font-size: 15px;
+}
+
+.flight-details {
+    padding: 1rem;
+    border: 2px solid #bbb7b7;
+    border-top: 0;
+}
+
+.payment-method .navbar-toggler {
+    width: 49%;
+    border-radius: 5px;
+    padding: 22px 0;
+    color: #717171;
+    margin: 0 0 20px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer !important;
+    border: 4px solid #113865;
+    background-color: #fff;
+}
+
+.payment-method .navbar-toggler img {
+    margin: 0 0 10px;
+}
+
+.payment-method .radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.payment-method .radio-custom,
+.payment-method .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.payment-method .radio-custom-label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.payment-method .radio-custom+.radio-custom-label:before,
+.payment-method .navbar-toggler.close2 .radio-custom+.radio-custom-label:before {
+    content: '';
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-right: 3px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.payment-method .radio-custom+.radio-custom-label:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    background: none;
+    border: 1px solid #2a7dbb;
+}
+
+.payment-method .navbar-toggler.active .radio-custom+.radio-custom-label:before {
+    background: #2a7dbb;
+}
+
+.payment-method .radio-custom:focus+.radio-custom-label {
+    outline: 1px solid #ddd;
+    /* focus style */
+}
+
+.card-info ul li ul li {
+    margin-top: 0;
+}
+
+.card-info ul li ul li label span {
+    color: #44484e;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.card-info button {
+    padding: 15px 35px;
+}
+
+.payment-table table td {
+    padding: 15px;
+    width: 50%;
+    color: #717171;
+    text-align: left;
+    padding-left: 150px;
+    font-size: 18px;
+}
+
+.payment-table table tr:last-child td {
+    background-color: #fbebeb;
+    border-top: 3px solid #fd5656;
+}
+
+.payment-table table tr:nth-child(2) td {
+    padding-bottom: 30px;
+}
+
+.meezan-ac,
+.jazz-cash,
+.phone-n select {
+    color: #00224f;
+}
+
+.meezan-ac .copy {
+    color: #007cff;
+    cursor: pointer;
+}
+
+.pay {
+    width: 330px;
+}
+
+.pay .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 2px solid #dbdbdb;
+    padding: 7px 10px 10px 40px;
+    border-radius: 5px;
+    color: #191918;
+    font-weight: 500;
+}
+
+
+/* Hide the browser's default radio button */
+
+.pay .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom radio button */
+
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.pay .container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the radio button is checked, add a blue background */
+
+.pay .container input:checked~.checkmark {
+    background-color: #297cbb;
+}
+
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+
+.pay .container input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the indicator (dot/circle) */
+
+.pay .container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.card-info .jazz-cash ul {
+    padding-left: revert;
+}
+
+.card-info .jazz-cash ul li {
+    margin: 0 0 12px;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    padding: 0 0 0 20px;
+    line-height: 18px;
+}
+
+.card-info .jazz-cash ul li::before {
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    background-color: #297cbb;
+}
+
+.phone-n div.float-left {
+    border: 2px solid #dbdbdb;
+}
+
+.phone-n select {
+    width: 25%;
+    border: none;
+    height: 46px;
+    box-shadow: none;
+    border-right: 2px solid #dbdbdb;
+}
+
+.phone-n input {
+    width: 75%;
+    border: none;
+    box-shadow: none;
+}
+
+.card-info .jazz-cash ul li.phone-n {
+    padding-left: 0;
+}
+
+.card-info .jazz-cash ul li.phone-n::before {
+    display: none;
+}
+
+.payment-method .navbar-toggler.active~.select-payment1.show,
+.payment-method .navbar-toggler.active~.select-payment2.show,
+.payment-method .navbar-toggler.active~.select-payment3.show,
+.payment-method .navbar-toggler.active~.select-payment4.show {
+    display: block;
+}
+
+.booking-confirm {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.thankyou {
+    padding: 20px;
+    border-bottom: 2px solid #efeeee;
+}
+
+.thankyou h4 {
+    color: #007cff;
+}
+
+.thankyou p,
+.thankyou h4,
+.booking-confirm h5 {
+    font-size: 15px;
+}
+
+.thankyou p a {
+    color: #fd6410;
+}
+
+.thankyou p {
+    color: #51596c;
+}
+
+.booking-confirm ul {
+    padding: 8px 20px 20px;
+    background: none;
+    border: none;
+}
+
+.booking-confirm ul li,
+.booking-confirm ul li:last-child {
+    color: #4b4747;
+    width: 100%;
+    line-height: 15px;
+    font-size: 13px;
+    margin: 8px 0 0;
+}
+
+.booking-confirm ul li span,
+.booking-confirm h5 {
+    color: #51596c;
+}
+
+.booking-confirm h5 {
+    padding: 20px 20px 0;
+}
+
+.steps-info2 {
+    display: none;
+}
+
+.steps-info2.show {
+    display: block;
+}
+
+.declaration {
+    margin: 0;
+    position: relative;
+    padding: 0 0 0 25px;
+    cursor: pointer;
+    color: #51596c;
+}
+
+.declaration input {
+    opacity: 0;
+}
+
+.declaration .checkmark {
+    top: 4px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    border-radius: 0;
+    background: none;
+    display: block;
+    border: 1px solid #a9a2a2;
+}
+
+.declaration .checkmark::after {
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 10px;
+    content: "";
+    position: absolute;
+    display: none;
+    border: solid #007cff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.declaration input:checked~.checkmark:after {
+    display: block;
+}
+
+.payment-steps .card-info ul li p {
+    color: red;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.payment-steps .card-info ul li p a {
+    color: #2a7dbb;
+}
+
+.payment-steps .card-info ul li p a:hover {
+    text-decoration: underline;
+}
+
+#countdown label {
+    line-height: 26px;
+}
+
+#countdown li {
+    width: auto;
+    font-size: 18px;
+}
+
+.login-register {
+    color: #17244e;
+    padding: 20px 65px;
+    border: 1px solid #dcdcdc;
+    background: url(../../assets/img/payment/login-bg.png) no-repeat right top #fff;
+}
+
+.login-register figure {
+    margin: 0 25px 0 0;
+}
+
+.login-register a {
+    color: #17244e;
+    color: #007dfe;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+.login-register>div {
+    float: left;
+    font-size: 24px;
+    margin: 12px 0 0;
+}
+
+.flying-plane {
+    margin: 0 0 30px;
+}
+
+.flight-summary {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 60px 0 0;
+    border: 1px solid #dcdcdc;
+}
+
+.flight-summary {
+    margin: 63px 0 0;
+}
+
+.flight-summary,
+.flight-summary ul li.style1,
+.steps-info-bt .trip-experditure,
+.steps-info-bt .rewards-promo ul li.pay-your-price {
+    font-size: 15px;
+}
+
+.flight-summary ul li.style1 {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.flight-summary .destination-time-box {
+    color: #7d7e83;
+}
+
+.flight-summary,
+.flight-summary .destination-time-box span,
+.trip-experditure,
+.flight-summary ul li.style1 {
+    color: #002253;
+}
+
+.flight-summary .destination-time-box span {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.flight-summary .separator-line {
+    width: 73%;
+    margin: 15px 0 15px 14%;
+}
+
+.flight-summary .details a {
+    display: block;
+    color: #fff;
+    padding: 4px 0;
+    border-radius: 20px;
+    background-color: #00224f;
+}
+
+.flight-summary ul li {
+    margin: 6px 0 0;
+}
+
+.flight-summary ul li {
+    font-size: 14px;
+    color: #181819;
+    font-weight: 300;
+}
+
+.flight-summary ul li.style1 {
+    margin: 10px 0 8px;
+}
+
+.pay-price {
+    color: #fd6410;
+    padding: 8px 0 0;
+    margin: 12px 0 0;
+    font-size: 14px;
+    border-top: 1px solid #e8e7e7;
+}
+
+.select-payment-method {
+    padding: 22px 15px;
+}
+
+.select-payment-method .navbar-toggler {
+    width: 49%;
+    border: none;
+    color: #00224f;
+    font-size: 13px;
+    padding: 20px 18px;
+    text-align: left;
+    line-height: 18px;
+    border-radius: 10px;
+    box-shadow: 1px 0 7px rgba(0, 0, 0, 0.14);
+}
+
+.select-payment-method .navbar-toggler.active {
+    color: #fff;
+    box-shadow: none;
+    background-color: #13305c;
+}
+
+.select-payment-method .navbar-toggler .visa-master {
+    width: 94px;
+    height: 42px;
+    background: url(../../assets/img/payment/visa-master.png) no-repeat center;
+}
+
+.select-payment-method .navbar-toggler.active .visa-master {
+    background: url(../../assets/img/payment/visa-master-hover.png) no-repeat center;
+}
+
+.select-payment-method .navbar-toggler .bank-transfer {
+    width: 42px;
+    height: 42px;
+    background: url(../../assets/img/payment/bank-transfer.png) no-repeat center;
+}
+
+.select-payment-method .navbar-toggler.active .bank-transfer {
+    background: url(../../assets/img/payment/bank-transfer-hover.png) no-repeat center;
+}
+
+.select-payment .steps-info-bt {
+    padding: 20px 15px;
+    font-size: 13px;
+}
+
+.select-payment .steps-info-bt p {
+    color: #51596c;
+}
+
+.steps-info-bt ul li.cvv>div {
+    width: 48%;
+}
+
+.steps-info-bt ul li.cvv input {
+    border-radius: 30px;
+}
+
+.steps-info-bt ul li.cvv label,
+.steps-info-bt ul li.cvv input,
+.steps-info-bt .rewards-promo ul li {
+    width: 100%;
+}
+
+.steps-info-bt ul li.cvv span {
+    color: #51596c;
+    font-size: 10px
+}
+
+.steps-info-bt .trip-experditure ul li {
+    width: 100%;
+    float: left;
+    color: #181819;
+    margin: 10px 0 0;
+    border-bottom: 1px solid #e8e7e7;
+}
+
+.steps-info-bt .trip-experditure ul li span {
+    margin: 10px 0 -8px;
+    background: #fff;
+    padding: 0 10px 0 0;
+}
+
+.steps-info-bt .trip-experditure ul li span {
+    margin: 10px 0 -8px;
+    background: #fff;
+    padding: 0 10px 0 0;
+}
+
+.steps-info-bt .trip-experditure ul li span.float-right {
+    padding: 0 0 0 10px;
+}
+
+.steps-info-bt .rewards-promo ul li {
+    margin: 20px 0 0;
+}
+
+.steps-info-bt .rewards-promo ul li label {
+    width: 28%;
+    line-height: 44px;
+}
+
+.steps-info-bt .rewards-promo ul li input {
+    width: 50%;
+    margin: 0 0 10px;
+}
+
+.steps-info-bt .rewards-promo ul li .redeem a,
+.steps-info-bt .rewards-promo ul li .pay-now a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 40px;
+}
+
+.steps-info-bt .rewards-promo ul li .redeem a {
+    background-color: #007cff;
+    margin: 0 0 10px;
+}
+
+.steps-info-bt .rewards-promo ul li.pay-your-price {
+    color: #fd6410;
+}
+
+div#navbarSupportedContent2 {
+    border: none;
+}
+
+.steps-info-bt .rewards-promo ul li.pay-your-price span.float-left,
+.steps-info-bt .rewards-promo ul li.trip-tos p {
+    width: 78%;
+}
+
+.booking-confirm ul {
+    border: none !important;
+    background: none !important;
+}
+
+.steps-info-bt .rewards-promo ul li.trip-tos p a {
+    color: #007cff;
+}
+
+.steps-info-bt .rewards-promo ul li.trip-tos p a:hover {
+    text-decoration: underline;
+}
+
+.steps-info-bt .rewards-promo ul li .pay-now a {
+    background-color: #fd6410;
+}
+
+.visa-price-summary {
+    margin: 184px 0 0;
+}
+
+.visa-price-summary2 {
+    margin: 117px 0 0;
+}
+
+.payment-steps ul {
+    display: flex;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #e8e7e7;
+}
+
+.payment-steps ul.yugo-email-list {
+    display: block;
+}
+
+.booking-confirm ul.yugo-email-list li,
+.booking-confirm ul.yugo-email-list li:last-child {
+    width: 33.333%;
+}
+
+.payment-steps ul li {
+    width: 33.333%;
+}
+
+.payment-steps ul>li.active>a,
+.payment-steps ul>li.active>a:hover,
+.payment-steps ul>li.active>a:focus {
+    background-color: #fff;
+    box-shadow: 7px 6px 15px rgb(0 0 0 / 20%);
+}
+
+.payment-steps ul>li>a {
+    display: block;
+    padding: 14px;
+    color: #00224f;
+    font-size: 15px;
+    line-height: 15px;
+    border-radius: 30px;
+}
+
+.steps-info-bt ul {
+    border: none;
+    background: none;
+    border-radius: 0;
+    flex-wrap: wrap;
+}
+
+.steps-info-bt ul.list-unstyled {
+    justify-content: space-between;
+}
+
+.steps-info-bt ul.list-unstyled li {
+    width: 49%;
+}
+
+.rewards-promo ul {
+    flex-direction: column !important;
+}
+
+.steps-info-bt ul li.cvv label,
+.steps-info-bt ul li.cvv input,
+.steps-info-bt .rewards-promo ul li {
+    width: 100% !important;
+    text-align: left;
+}
+
+
+/* ******************** Hero Section ******************** */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('../../assets/img/payment/Dubai-promotion-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overly {
+    position: absolute;
+    background: #00000009;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.promotion-container {
+    width: 100%;
+    padding: 0 80px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    max-width: 400px;
+}
+
+.hero-text h2 {
+    display: flex;
+    align-items: center;
+}
+
+.brand-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.olx-logo img {
+    width: 170px;
+    height: auto;
+}
+
+.yugo-logo img {
+    width: 210px;
+    height: auto;
+}
+
+.hero-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70px;
+    font-weight: 300;
+    color: #7FC1FF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 0.8;
+}
+
+.hero-text h3 {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0px;
+    line-height: 0.8;
+}
+
+.hero-text h3 strong {
+    font-size: 100px;
+    font-weight: 800;
+}
+
+
+/* ******************** Criteria Section ******************** */
+
+.criteria {
+    padding: 50px 20px;
+}
+
+.criteria-text h3 {
+    color: #FC610F;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.criteria-text p:nth-child(2) {
+    padding-top: 30px;
+}
+
+.criteria-text p {
+    color: #51586B;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.criteria-text p a:first-child {
+    text-decoration: none;
+    color: #007DFE;
+}
+
+.criteria-text p a:last-child {
+    text-decoration: none;
+    color: #FC610F;
+}
+
+.criteria-text {
+    padding-bottom: 25px;
+}
+
+
+/* ****************** Criteria Right ****************** */
+
+.criteria-right {
+    background: #F5F8F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 265px;
+    border-radius: 8px;
+    padding: 60px;
+}
+
+.criteria-right-text p {
+    color: #3C506B;
+    font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 0.7;
+    margin-bottom: 0;
+}
+
+.criteria-right-text h3 {
+    color: #017BFF;
+    font-size: 34px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.criteria-right-img {
+    padding: 0 10px;
+    width: 100%;
+    height: auto;
+}
+
+.criteria-right-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.insta-logo img {
+    width: 45px;
+    height: 40px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+}
+
+.social-link p {
+    font-size: 22px;
+    color: #54576A;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.click-here-btn {
+    background: #1687FF;
+    color: #fff;
+    border: none;
+    padding: 0 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.criteria-right-social-text {
+    text-align: center;
+}
+
+
+/* ****************** Criteria Left ****************** */
+
+.criteria-left {
+    background: #FF5736;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 39px 20px;
+    height: 265px;
+}
+
+.criteria-left-img img {
+    width: 200px;
+}
+
+.criteria-left-text {
+    text-align: center;
+    color: #fff;
+}
+
+.criteria-left-text p {
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0.8;
+    max-width: 180px;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.criteria-left-text h2 {
+    opacity: 0.8;
+    font-size: 30px;
+    font-weight: 800;
+    padding-top: 10px;
+}
+
+.criteria-left-text img {
+    width: 120px;
+    padding-top: 15px;
+}
+
+.criteria-left-social-text {
+    text-align: center;
+    color: #fff;
+    padding-right: 50px;
+}
+
+.criteria-left-social-text .social-link p {
+    color: #fff;
+}
+
+.criteria-left-social-text .click-here-btn {
+    color: #1687FF;
+    background: #fff;
+    font-weight: 500;
+}
+
+
+/* ****************** Condition Section ****************** */
+
+.condition {
+    padding: 0 20px 60px 20px;
+}
+
+.condition-text h3 {
+    color: #FC610F;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.pro-join-whstsapp {
+    max-width: 800px;
+    margin: 70px auto 0;
+}
+
+.pro-join-whstsapp img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.condition-text ul {
+    padding: 30px 0 0;
+}
+
+.condition-text ul li a {
+    color: #51586B;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.condition-text ul li {
+    list-style: none;
+    padding-left: 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.condition-text ul li::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FC610F;
+    left: 0;
+    top: 13px;
+}
+
+.condition-text ul li a:hover {
+    text-decoration: none;
+}
+
+.condition-text ul li span:first-child {
+    color: #AC1FBF;
+}
+
+.condition-text ul li span:nth-child(2) {
+    color: #2256C2;
+}
+
+.condition-text ul li span:nth-child(3) {
+    color: #F42E37;
+}
+
+.condition-text ul li span:nth-child(4) {
+    color: #217CE1;
+}
+
+
+/* ****************** Flights Section ****************** */
+
+.custom-container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.flights {
+    padding: 50px;
+    margin: 0 20px 70px;
+    background: #F5F8F1;
+    border-radius: 8px;
+}
+
+.flights-text p {
+    margin-bottom: 0;
+}
+
+.flights-text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.flights-text p {
+    margin-bottom: 0;
+    color: #2685FB;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.flights .click-here-btn {
+    font-size: 25px;
+    padding: 0 20px;
+}
+
+.flights-col-left {
+    text-align: right;
+    padding-right: 30px;
+}
+
+
+/* ****************** Rocking Deals Section ****************** */
+
+.rocking-deals {
+    margin: 50px 20px;
+}
+
+.rocking-deals-bg {
+    width: 100%;
+    height: 170px;
+    background-image: url('../images/rocking-deals.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+}
+
+
+/* ****************** Footer Section ****************** */
+
+.promotion-footer {
+    background: #52596C;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.promotion-footer p {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.promotion-footer a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.promotion-footer a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul.iti__country-list {
+    width: 223px;
+    white-space: pre-wrap;
+    display: block !important;
+    z-index: 999;
+    background: #fff;
+}
+
+ul.iti__country-list li {
+    width: 100% !important;
+}
+
+ul.iti__country-list.iti__hide {
+    display: none !important;
+}
+
+input.float-left.contact-user-detail.contact-detail-number {
+    border-radius: 30px;
+    width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag,
+.iti--allow-dropdown .iti__flag-container:hover .iti__selected-flag {
+    border-top-left-radius: 22px;
+    border-bottom-left-radius: 22px;
+}
+
+.iti {
+    width: 100%;
+}
+
+
+/***********************responsive******************/
+
+@media only screen and (max-width: 1350px) {
+    .criteria-right {
+        padding: 20px;
+    }
+    .criteria-right-text h3 {
+        font-size: 25px;
+    }
+    .criteria-right-text p {
+        font-size: 18px;
+    }
+    .social-link p {
+        font-size: 18px;
+    }
+    .insta-logo img {
+        width: 30px;
+        height: 25px;
+    }
+    .criteria-left-img img {
+        max-width: 150px;
+    }
+    .criteria-left-text p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .payment-outerbox {
+        padding: 50px 15px 25px;
+    }
+    .flight-summary figure img {
+        width: 120px;
+        margin: 10px 0 0;
+    }
+    .booking-confirm ul {
+        padding: 0 20px 15px;
+    }
+    .steps-info-bt ul li {
+        margin: 10px 0;
+    }
+    .field-height {
+        min-height: auto;
+    }
+    .payment-steps ul>li.active:first-child>a::after,
+    .payment-steps ul>li.active:nth-child(2)>a::after {
+        border-left: 50px solid #113865;
+    }
+    .card-info ul li,
+    .card-info ul li:last-child,
+    .flying-plane img {
+        width: 100%;
+    }
+    .card-info ul li ul li,
+    .card-info ul li ul li:last-child {
+        width: 49%;
+    }
+    .payment-table table td {
+        padding: 8px;
+        padding-left: 60px;
+        font-size: 16px;
+    }
+    .payment-table table tr:nth-child(2) td {
+        padding-bottom: 20px;
+    }
+    .summary-sidebar {
+        padding: 0 !important;
+    }
+    .flight-summary,
+    .passenger-details .flight-summary {
+        margin: 0;
+    }
+    .flight-summary .separator-line {
+        width: 92%;
+        margin: 15px 0 15px 4.5%;
+    }
+    .flying-plane {
+        margin: 0 0 20px;
+    }
+    .select-payment-method .navbar-toggler {
+        height: auto;
+        background: none;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .payment-method .navbar-toggler {
+        padding: 15px 0;
+        margin: 0 0 10px;
+        font-size: 15px;
+    }
+    .payment-method .radio-custom-label {
+        left: 3px;
+        top: 3px;
+        margin: 0;
+    }
+    .criteria-left {
+        margin-top: 50px;
+    }
+    .flights-col-left {
+        text-align: left;
+        padding-top: 15px;
+        padding-right: 0;
+    }
+    .criteria-right-img {
+        padding: 0;
+    }
+    .hero-text {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .thankyou h4 {
+        line-height: 16px;
+        font-size: 14px;
+        margin: 0 0 5px !important;
+    }
+    .payment-steps ul>li>a {
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .booking-confirm ul {
+        flex-wrap: wrap;
+    }
+    .thankyou p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .booking-confirm ul li,
+    .booking-confirm ul li:last-child,
+    .steps-info-bt ul li {
+        width: 100%;
+    }
+    .payment-steps p {
+        font-size: 16px;
+    }
+    .payment-steps ul>li.active:first-child>a::after {
+        border-left-color: #113865;
+    }
+    .steps-info-inner h4 {
+        font-size: 18px;
+    }
+    .fill-details {
+        margin: 2px 0 0 !important;
+    }
+    .steps-info-bt select,
+    .steps-info-bt input,
+    .card-info input {
+        padding: 8px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .steps-info-bt ul li div select {
+        height: 36px;
+    }
+    .steps-info-inner,
+    .steps-info-bt {
+        padding: 14px 10px;
+    }
+    .blue-btn a,
+    .card-info button {
+        padding: 10px 25px
+    }
+    .payment-steps p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .payment-steps ul>li.active:first-child>a::after {
+        border-left: 40px solid #113865;
+        border-left-color: rgb(17, 56, 101);
+    }
+    .payment-steps ul>li.active:nth-child(2)>a::after {
+        border-left: 40px solid #113865;
+    }
+    .payment-steps p {
+        font-size: 15px;
+    }
+    .card-info ul li,
+    .card-info ul li:last-child {
+        width: 100%;
+    }
+    .card-info ul li {
+        margin: 5px 0;
+    }
+    .payment-method .navbar-toggler {
+        padding: 5px 0;
+        font-size: 14px;
+        border: 2px solid #113865;
+    }
+    .card-info .jazz-cash ul li {
+        margin: 0 0 8px;
+        font-size: 13px;
+        padding: 0 0 0 15px;
+        line-height: 16px;
+    }
+    .phone-n input {
+        padding: 14px;
+    }
+    .payment-method .navbar-toggler img {
+        height: 50px;
+    }
+    .payment-method .radio-custom+.radio-custom-label::before {
+        width: 20px;
+        height: 20px;
+        font-size: 11px;
+        line-height: 12px;
+    }
+    .steps-info-inner h4 span {
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .login-register {
+        padding: 10px 15px;
+    }
+    .login-register figure {
+        margin: 0 15px 0 0;
+    }
+    .login-register>div {
+        font-size: 18px;
+        margin: 30px 0 0;
+        line-height: 20px;
+    }
+    .declaration {
+        font-size: 14px;
+    }
+    .flight-summary .separator-line {
+        width: 86%;
+        margin: 15px 0 15px 8%;
+    }
+    .steps-info-bt .rewards-promo ul li label {
+        line-height: 16px;
+    }
+    .steps-info-bt .rewards-promo ul li label,
+    .steps-info-bt .rewards-promo ul li input {
+        margin: 0 0 5px !important;
+    }
+    .steps-info-bt .rewards-promo ul li.trip-tos p,
+    .steps-info-bt .rewards-promo ul li label,
+    .steps-info-bt .rewards-promo ul li input {
+        width: 100%;
+    }
+    .steps-info-bt .rewards-promo ul li .redeem a,
+    .steps-info-bt .rewards-promo ul li .pay-now a {
+        padding: 9px 30px;
+    }
+    .steps-info-bt .rewards-promo ul li.pay-your-price span.float-left {
+        text-align: left;
+    }
+    .payment-steps p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .steps-info-bt .rewards-promo ul li input {
+        font-size: 12px;
+    }
+    .steps-info .heading {
+        font-size: 16px;
+        padding: 7px 15px;
+    }
+    .steps-info-bt .rewards-promo ul li.trip-tos p {
+        margin: 0 0 10px !important;
+    }
+    .steps-info-bt .rewards-promo ul li.pay-your-price span.float-left {
+        width: 65%;
+    }
+    .hero {
+        height: 400px;
+    }
+    .olx-logo img {
+        width: 150px;
+    }
+    .criteria-text h3 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .criteria-text p:nth-child(2) {
+        padding-top: 20px;
+    }
+    .criteria-text p {
+        font-size: 16px;
+    }
+    .condition-text ul li a {
+        font-size: 17px;
+    }
+    .flights .click-here-btn {
+        font-size: 21px;
+    }
+    .rocking-deals-bg {
+        height: 120px;
+    }
+    .promotion-footer {
+        font-size: 18px;
+    }
+    .criteria-right-img {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    /* .payment-steps ul.step-list > li{
+        display:block ;
+    } */
+    .steps-info-bt2 ul.list-unstyled {
+        flex-wrap: wrap;
+    }
+    .steps-info-bt ul.list-unstyled {
+        flex-wrap: wrap;
+    }
+    .payment-steps ul>li>a {
+        padding: 9px 0;
+        padding-left: 0px;
+        font-size: 12px;
+        line-height: 13px;
+    }
+    .booking-confirm ul li,
+    .booking-confirm ul li:last-child,
+    .steps-info-bt ul li,
+    .steps-info-bt ul li:last-child {
+        width: 100%;
+    }
+    .steps-info-bt ul.list-unstyled li {
+        width: 100%;
+    }
+    .payment-steps ul>li.active :first-child>a::after {
+        border-left-color: #113865;
+    }
+    .payment-steps ul>li.active:first-child>a::after {
+        border-left: 10px solid #113865;
+        border-left-color: rgb(17, 56, 101);
+        border-left-color: rgb(17, 56, 101);
+    }
+    .payment-steps ul>li.active:nth-child(2)>a::after {
+        border-left: 10px solid #113865;
+    }
+    .card-info ul li,
+    .card-info ul li:last-child {
+        width: 100%;
+    }
+    .select-payment {
+        font-size: 14px;
+    }
+    .payment-table table td {
+        padding-left: 30px;
+        font-size: 14px;
+    }
+    .card-info ul li ul li label span {
+        display: none;
+    }
+    .card-info .jazz-cash ul {
+        padding-left: 20px;
+    }
+    .payment-method .radio-custom+.radio-custom-label::before {
+        width: 14px;
+        font-size: 7px;
+        line-height: 7px;
+        height: 14px;
+    }
+    .promo3,
+    .fligt-accordion3,
+    .flight-details3 {
+        display: none;
+    }
+    .payment-method .navbar-toggler img {
+        margin: 0 0 6px;
+        width: auto;
+        height: 30px;
+    }
+    .payment-method .navbar-toggler {
+        font-size: 12px;
+    }
+    .promo2 input {
+        padding: 9px;
+        font-size: 14px;
+        width: 70% !important;
+    }
+    .promo2 span {
+        font-size: 16px;
+    }
+    .promo2 button {
+        width: 28%;
+        padding: 13px 0 14px;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    .promo2 .payment-steps p {
+        font-size: 14px;
+    }
+    .declaration {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .steps-info-inner h4 span {
+        font-size: 10px;
+    }
+    .steps-info-bt ul li span.style1 {
+        font-size: 12px;
+    }
+    .blue-btn a,
+    .card-info button {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 9px 15px;
+    }
+    .login-register figure img {
+        width: 40px;
+    }
+    .login-register>div {
+        font-size: 14px;
+        margin: 12px 0 0;
+        line-height: 18px;
+    }
+    #countdown label {
+        line-height: 24px;
+        font-size: 14px;
+    }
+    #countdown li {
+        font-size: 16px;
+    }
+    .payment-steps ul>li>a span {
+        display: none;
+    }
+    .flight-summary,
+    .flight-summary ul li.style1,
+    .steps-info-bt .trip-experditure,
+    .steps-info-bt .rewards-promo ul li.pay-your-price {
+        font-size: 14px;
+    }
+    .flight-summary ul li {
+        margin: 0;
+    }
+    .select-payment-method .navbar-toggler {
+        padding: 10px;
+        text-align: center;
+    }
+    .select-payment-method .navbar-toggler .bank-transfer,
+    .steps-info-bt ul li.cvv>div,
+    .select-payment-method .navbar-toggler .visa-master {
+        margin: 4px 0 0;
+    }
+    .select-payment-method .navbar-toggler .bank-transfer,
+    .steps-info-bt ul li.cvv>div,
+    .select-payment-method .navbar-toggler .visa-master,
+    .select-payment-method .navbar-toggler span {
+        width: 100%;
+    }
+    .select-payment-method .navbar-toggler span {
+        line-height: 16px;
+    }
+    .steps-info .heading {
+        color: #00224f;
+        padding: 8px 15px;
+    }
+    .thankyou {
+        padding: 15px;
+    }
+    .booking-confirm h5 {
+        padding: 10px 15px 0;
+    }
+    .booking-confirm ul {
+        padding: 0 15px 15px;
+    }
+    .blue-btn,
+    .card-info button {
+        min-width: 120px;
+    }
+    /* .payment-steps ul {
+    display: flex !important;
+    align-items: center;
+} */
+    .criteria-left {
+        height: auto;
+    }
+    .criteria-left-img img {
+        max-width: 100px;
+    }
+    .criteria-left-text p {
+        font-size: 16px;
+    }
+    .criteria-left-text img {
+        width: 90px;
+    }
+    .criteria-left-social-text {
+        padding-right: 0;
+        margin-top: 13px;
+    }
+    .criteria-right {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .criteria-right-text p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+    .criteria-right-text h3 {
+        font-size: 16px;
+    }
+    .social-link p {
+        font-size: 15px;
+    }
+    .insta-logo img {
+        width: 25px;
+        height: 18px;
+        margin-right: 7px;
+    }
+    .click-here-btn {
+        font-size: 15px;
+    }
+    .social-link {
+        padding-right: 0;
+        margin-top: 20px;
+    }
+    .pro-join-whstsapp {
+        margin-top: 20px;
+    }
+    .condition {
+        padding: 0 20px 30px 20px;
+    }
+    .pro-join-whstsapp {
+        height: 130px;
+    }
+    .hero-text h3 strong {
+        font-size: 80px;
+    }
+    .hero-text h3 {
+        font-size: 55px;
+    }
+    .hero-text p {
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .hero {
+        height: 320px;
+    }
+    .olx-logo img {
+        width: 120px;
+    }
+    .yugo-logo img {
+        width: 120px;
+    }
+    .hero-text h3 {
+        font-size: 45px;
+    }
+    .hero-text h3 strong {
+        font-size: 70px;
+    }
+    .hero-text p {
+        font-size: 45px;
+        margin-bottom: 2px;
+    }
+    .hero-text h3 span {
+        background: transparent;
+        text-shadow: 2px 3px #000;
+        padding: 0;
+    }
+    .condition-text h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .flights {
+        padding: 50px 20px;
+    }
+    .flights-text {
+        text-align: center;
+    }
+    .flights-text h3 {
+        font-size: 18px;
+    }
+    .flights-col-left {
+        text-align: center;
+    }
+    .promotion-footer {
+        font-size: 16px;
+    }
+    .condition-text ul li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .select-payment-method button.navbar-toggler {
+        font-size: 11px;
+    }
+    .payment-steps ul.step-list>li>a {
+        font-size: 12px;
+    }
+    .criteria-right-text p {
+        font-size: 9px;
+    }
+    .criteria-right-text h3 {
+        font-size: 11px;
+    }
+    .social-link p {
+        font-size: 12px;
+    }
+    .insta-logo img {
+        width: 18px;
+        height: 15px;
+    }
+    .click-here-btn {
+        font-size: 12px;
+    }
+    .criteria-left-img img {
+        max-width: 74px;
+    }
+    .criteria-left-text p {
+        font-size: 11px;
+    }
+    .criteria-left-text img {
+        width: 60px;
+    }
+    .pro-join-whstsapp {
+        height: 90px;
+    }
+    .hero-text h3 strong {
+        span.actual-chld-fgr {
+            margin: 0px 0px 0px 2px;
+            font-size: 15px !important;
+            color: rgb(0 124 255);
+        }
+        font-size: 36px;
+    }
+    .hero-text h3 {
+        font-size: 25px;
+    }
+    .hero-text p {
+        font-size: 26px;
+    }
+}
+
+@media (min-width:320px) and (max-width:525px) {
+    span.actual-chld-fgr {
+        margin: 0px 0px 0px 2px;
+        font-size: 15px !important;
+        color: rgb(0 124 255);
+    }
+    .covid_section,
+    .col-xl-12.float-left.subscribe.text-center {
+        display: none;
+    }
+    /*  */
+    .destination-time-box,
+    .departure-place-time-con {
+        position: relative;
+    }
+    .flight-box2 ul li,
+    .flight-box1 span,
+    .airblue span,
+    .airsial span,
+    .destination-time-box,
+    .destination-time-box,
+    .day span,
+    .day2 span,
+    .go-reward span,
+    .filter-box h5 {
+        color: #00224f;
+    }
+    .flight-box1 span,
+    .destination-time-box {
+        font-size: 12px;
+    }
+    .destination-time-box,
+    .departure-place-time-con {
+        position: relative;
+    }
+    .departure-place-time-con>div,
+    .departure-place-time-con .day,
+    .arival-place-time-con>div,
+    .arival-place-time-con .day2 {
+        width: 100%;
+    }
+    .departure-place-time-con,
+    .arival-place-time-con {
+        width: 100px;
+        text-align: center;
+        position: relative;
+    }
+    .flight-box2 ul li,
+    .flight-box1 span,
+    .airblue span,
+    .airsial span,
+    .destination-time-box,
+    .destination-time-box,
+    .day span,
+    .day2 span,
+    .go-reward span,
+    .filter-box h5 {
+        color: #00224f;
+    }
+    .departure-place-time-con .day,
+    .arival-place-time-con .day2 {
+        margin: 30px 0 0;
+    }
+    .departure-place-time-con>div,
+    .departure-place-time-con .day,
+    .arival-place-time-con>div,
+    .arival-place-time-con .day2 {
+        width: 100%;
+    }
+    .day,
+    .day2 {
+        width: 100px;
+        color: #7d7e83;
+        margin: 0 0 0 -17px;
+        font-weight: 400 !important;
+    }
+    .flight-box2 ul li,
+    .flight-box1 span,
+    .airblue span,
+    .airsial span,
+    .destination-time-box,
+    .destination-time-box,
+    .day span,
+    .day2 span,
+    .go-reward span,
+    .filter-box h5 {
+        color: #00224f;
+    }
+    .float-left.col-xl-12.flight-operation {
+        text-align: center;
+    }
+    .departure-place-time-con::after,
+    .arival-place-time-con::after {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 47px;
+        width: 10px;
+        height: 10px;
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        background-color: #00224f;
+    }
+    button.blue-btn.d-inline-block.align-top {
+        border: #0066ff;
+        background: #007cff;
+        width: 168px;
+        height: 46px;
+        border-radius: 35px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffff;
+        text-align: center;
+        margin: 30px 0px 0px;
+    }
+    .arival-place-time-con {
+        float: right;
+    }
+    .departure-place-time-con,
+    .arival-place-time-con {
+        width: 100px;
+        text-align: center;
+        position: relative;
+    }
+    .departure-place-time-con .day,
+    .arival-place-time-con .day2 {
+        margin: 30px 0 0;
+    }
+    .departure-place-time-con {
+        float: left;
+    }
+    .bg-plain {
+        background: #F8FAFC;
+        padding: 5px;
+        height: 100px;
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
+        width: 100%;
+        text-align: center;
+    }
+    .departure-place-time-con,
+    .arival-place-time-con {
+        width: 100px;
+        text-align: center;
+        position: relative;
+    }
+    .departure-place-time-con>div,
+    .departure-place-time-con .day,
+    .arival-place-time-con>div,
+    .arival-place-time-con .day2 {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .departure-place-time-con .day,
+    .arival-place-time-con .day2 {
+        margin: 30px 0 0;
+    }
+    .departure-place-time-con::after,
+    .arival-place-time-con::after {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 47px;
+        width: 10px;
+        height: 10px;
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        background-color: #00224f;
+    }
+    .flight-box2 ul li,
+    .flight-box1 span,
+    .airblue span,
+    .airsial span,
+    .destination-time-box,
+    .destination-time-box,
+    .day span,
+    .day2 span,
+    .go-reward span,
+    .filter-box h5 {
+        color: #00224f;
+        display: flex;
+        font-size: 14px !important;
+    }
+    .arival-place-time-con {
+        float: right;
+        text-align: right;
+    }
+    .departure-place-time-con>div {
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
+    li.p-lr-box {
+        margin: 7px 7px 0px 15px !important;
+        color: #0066ff !important;
+        font-size: 15px !important;
+        font-weight: 400 !important;
+    }
+    /*  */
+}

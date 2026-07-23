@@ -1,0 +1,80 @@
+.sitemap-banner{
+    padding: 80px 0 0;
+}
+.sitemap-banner h1{
+    color: #16254e;
+    font-size: 24px;
+}
+.sitemap-links {
+    padding: 30px 0;
+}
+.sitemap-links h3 {
+    float: left;
+    color: #008cff;
+    font-size: 17px;
+    line-height: 18px;
+    border-bottom: 1px solid #cecfcf;
+}
+.sitemap-links ul li a {
+    color: #16254e;
+    font-size: 15px;
+}
+.sitemap-links ul li a:hover{
+    color: #008cff;
+}
+.sitemap-links ul {
+    width: 100%;
+    float: left;
+}
+
+
+
+@media screen and (max-width: 1199px){
+.sitemap-links {
+    padding: 40px 15px;
+}
+}
+@media screen and (max-width: 991px){
+.sitemap-links ul li a {
+    font-size: 14px;
+}
+.sitemap-links {
+    padding: 30px 15px;
+}
+}
+@media screen and (max-width: 767px){
+
+.sitemap-links ul li{
+
+    line-height: 18px;
+
+}
+
+.sitemap-links ul li a {
+
+    font-size: 14px;
+
+}
+
+.sitemap-links .col-xl-4.col-lg-4.col-md-4 > div{
+
+    width: 100%;
+
+    float: left;
+
+}
+
+.sitemap-links .col-xl-4.col-lg-4.col-md-4 > div:nth-child(2n){
+
+    float: right;
+
+}
+
+}
+@media screen and (max-width: 575px){
+
+
+}
+
+
+

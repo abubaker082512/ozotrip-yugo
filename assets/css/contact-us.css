@@ -1,0 +1,168 @@
+.contact-info,
+.contact-info p {
+    color: #51596c;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.contact-info {
+    padding: 50px 0;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    color: #00224f;
+    margin: 0 0 30px;
+}
+
+.contact-info ul li {
+    float: left;
+    width: 25%;
+}
+
+.contact-info ul li figure {
+    margin: 30px 0;
+}
+
+.contact-btn a {
+    color: #fff;
+    font-size: 22px;
+    line-height: 22px;
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    min-width: 210px;
+}
+
+.call-us a {
+    background-color: #007cff;
+    box-shadow: 0 0 0 2px #007cff inset;
+}
+
+.whatsapp a {
+    background-color: #00d15a;
+    box-shadow: 0 0 0 2px #00d15a inset;
+}
+
+.find-us a {
+    background-color: #51596c;
+    box-shadow: 0 0 0 2px #51596c inset;
+}
+
+.write-us a {
+    background-color: #fd6410;
+    box-shadow: 0 0 0 2px #fd6410 inset;
+}
+
+.call-us a:hover,
+.whatsapp a:hover,
+.find-us a:hover,
+.write-us a:hover {
+    background: none;
+}
+
+.call-us a:hover {
+    color: #007cff;
+}
+
+.whatsapp a:hover {
+    color: #00d15a;
+}
+
+.find-us a:hover {
+    color: #51596c;
+}
+
+.write-us a:hover {
+    color: #fd6410;
+}
+
+@media screen and (max-width: 991px) {
+    .contact-banner img {
+        width: 450px;
+    }
+
+    .contact-info {
+        padding: 20px 0;
+    }
+
+    .contact-info h3 {
+        font-size: 22px;
+        line-height: 24px;
+        margin: 0 0 15px;
+    }
+
+    .contact-info p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .contact-info ul li figure {
+        margin: 10px 0 20px;
+    }
+
+    .contact-btn a {
+        font-size: 18px;
+        line-height: 20px;
+        padding: 10px 20px;
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contact-btn a {
+        font-size: 15px;
+        line-height: 17px;
+        padding: 8px 10px;
+        min-width: 110px;
+    }
+
+    .contact-banner img {
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .contact-info p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .contact-btn a {
+        font-size: 11px;
+        line-height: 14px;
+        padding: 6px 0;
+        min-width: 76px;
+    }
+
+    .contact-info ul li figure {
+        margin: 0 0 20px;
+    }
+
+    .contact-info ul li:nth-child(1) figure {
+        margin: 0 0 24px;
+    }
+
+    .contact-info ul li:nth-child(2) figure {
+        margin: 0 0 22px;
+    }
+
+    .contact-info ul li:nth-child(1) img {
+        width: 26px;
+    }
+
+    .contact-info ul li:nth-child(2) img {
+        width: 29px;
+    }
+
+    .contact-info ul li:nth-child(3) img {
+        width: 21px;
+    }
+
+    .contact-info ul li:nth-child(4) img {
+        width: 44px;
+        margin: 0 0 3px;
+    }
+}

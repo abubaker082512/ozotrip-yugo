@@ -1,0 +1,104 @@
+
+    .privacy-text{
+        padding: 50px 0;
+    }
+    .privacy-text h3{   
+        font-size: 24px;
+        color: #00224f; 
+        margin: 0 0 30px;    
+    }
+    .privacy-text p.style1{
+        color: #fd6410;
+    }
+    .privacy-text, .privacy-text p {
+        color: #51596c;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .privacy-text p {
+        text-align: justify;
+    }
+    .privacy-text p a{
+        color: #007cff;
+    }
+    .privacy-text ul li{
+        padding: 0 0 0 15px;
+        position: relative;
+        margin:0 0 13px;
+        list-style: none;
+    }
+    .privacy-text ul li::before{
+
+        left: 0;
+
+        top: 8px;
+
+        width: 5px;
+
+        height: 5px;
+
+        content: '';
+
+        border-radius: 100%;
+
+        position: absolute;
+
+        background-color: #fd6410 ;    
+
+    }
+
+@media screen and (max-width: 991px){
+
+.privacy-text, .privacy-text p {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.privacy-text ul li {
+    padding: 0 0 0 20px;
+    margin: 0 0 8px;
+}
+.privacy-text {
+    padding: 20px 0;
+}
+.privacy-text h3 {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 0 15px;
+}
+}
+@media screen and (max-width: 767px){
+    .tos-banner img {
+    width: 190px;
+}
+
+.story-banner img {
+    width: 280px;
+}
+.careers-banner img {
+    width: 300px;
+}
+.privacy-text h3 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 12px;
+}
+}
+@media screen and (max-width: 575px){
+
+.privacy-text, .privacy-text p {
+
+    font-size: 14px;
+
+    line-height: 21px;
+
+}
+
+}
+
+
+
+
+
+
+

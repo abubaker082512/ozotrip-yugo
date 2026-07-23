@@ -1,0 +1,155 @@
+.wallet-banner {
+    height: 350px;
+    padding: 43px 0 0;
+    background: url(../../assets/img/wallet/wallet-banner.jpg) no-repeat center bottom;
+    background-size: cover;
+    margin: 88px 0 0;
+}
+.wallet-banner h1{
+    margin: 66px 0 0;
+}
+.wallet-banner img {
+    top: -120px;
+    width: 278px;
+    position: relative;
+}
+.wallet-box{
+    padding:30px 0
+}
+.wallet-box ul {
+    width: 46%;
+}
+.wallet-box ul li{
+    padding: 16px 0 15px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.wallet-box ul li:last-child{
+    border-bottom:none;
+}
+.wallet-box ul li h5 {
+    color: #000;
+    font-size: 18px;
+    line-height: 23px;
+    margin: 0 0 8px;    
+}
+.wallet-box ul li p{
+    margin: 0;     
+    color: #292727;
+    font-size: 15px;
+    line-height: 23px;
+}
+.wallet-box ul li p a{
+    color:#047aff;
+    text-decoration: underline;
+}
+.wallet-box ul li p a.style1{
+    text-decoration:none;
+}
+
+@media screen and (max-width: 1199px){
+
+.wallet-banner {
+    padding: 70px 0 0;
+    margin: 70px 0 0;
+}
+
+.wallet-banner img {
+
+    top: -110px;
+
+    width: 228px;
+
+}
+
+.wallet-box {
+
+    padding: 30px 2%;
+
+}
+
+.wallet-box ul {
+
+    width: 48%;
+
+}
+
+.wallet-box ul li h5 {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.wallet-box ul li p {
+
+    font-size: 14px;
+
+    line-height: 16px;
+
+}
+.wallet-box ul li {
+    padding: 12px 0;
+}
+}
+@media screen and (max-width: 767px){
+
+    .wallet-box ul {
+
+        width: 100%;
+
+    }
+
+    .wallet-box ul li:last-child{
+
+        border-bottom: 1px solid #e1e1e1;
+
+    }
+
+    .wallet-banner {
+
+        padding: 20px 0 0;
+
+        height: auto;
+
+    }
+
+    .wallet-banner h1 {
+
+        margin: 25px 0;
+
+    }
+
+    .wallet-banner img {
+
+        top: 0;
+
+        width: 178px;
+
+        float: none !important;
+
+        left: 14px;
+
+    }
+
+    .wallet-banner h1 {
+        font-size: 20px;
+        line-height: 22px;
+
+    }
+    .wallet-box {
+        padding: 20px 2% 30px;
+    }
+
+}
+@media screen and (max-width: 575px){
+.wallet-banner {
+    margin: 53px 0 0;
+}
+}
+
+
+
+
+
+
+
+
+

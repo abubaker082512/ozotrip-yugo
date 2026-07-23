@@ -1,0 +1,268 @@
+img.svg-chat-need {
+    display: block !important;
+}
+.whts-chat-icon {
+    position: fixed !important;
+    width: 14% !important;
+    height: 76px !important;
+    bottom: 68px !important;
+    /* right: 0 !important; */
+    text-align: right !important;
+    cursor: pointer !important;
+    z-index: 100 !important;
+    left: -109px !important;
+}
+.need-responsive-box {
+    display: none;
+}
+/* .need-svg-box {
+    position: fixed !important;
+    width: 13% !important;
+    height: 463px !important;
+    bottom: -238px !important;
+    right: -22px !important;
+    text-align: right !important;
+    cursor: pointer !important;
+    z-index: 100 !important;
+    right: -11% !important;
+} */
+.need-svg-box {
+    position: fixed !important;
+    width: 15% !important;
+    height: 446px !important;
+    bottom: -239px !important;
+    right: -22px !important;
+    text-align: right !important;
+    cursor: pointer !important;
+    z-index: 100 !important;
+    right: -12.8% !important;
+}
+img.svg-chat-new {
+    width: 29%;
+}
+/* img.svg-chat-need{
+    width: 16% !important;
+    display: block;
+} */
+
+img.svg-chat-need {
+    width: 16% !important;
+    display: block;
+}
+/*  */
+div#expiredModal{
+    background: rgb(0 0 0 / 45%);
+}
+.modal-dialog.d-table.session-timeout-100 {
+    margin:14.75rem auto !important;
+}
+.modal-content.d-table-cell.align-middle {
+    border: 1px solid rgb(146 148 152);
+    border-radius: 17px;
+    padding: 0px !important;
+    width: 460px;
+}
+img.popPkgimg {
+    width: 100%;
+    border-radius: 0px;
+}
+button.close-btn-pkg{
+    position: absolute;
+    top: -55px;
+    font-size: 52PX;
+    font-weight: 300;
+    color: white;
+    right: -27px;
+    border: none;
+    background: transparent;
+}
+/*  */
+
+.footer-fixed-links li {
+    float: left;
+    width: 25%;
+}
+
+.footer-fixed-links li a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    padding: 12px 0 20px;
+}
+
+.footer-fixed-links li a img {
+    display: block;
+    margin: 0 auto 5px;
+}
+
+.footer-fixed-links li .wallet-price {
+    font-size: 17px;
+    line-height: 22px;
+    color: #fdbb08;
+    margin: 10px 0 0;
+}
+
+.footer-fixed-links li .wallet-price span {
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.footer-fixed-links li a:hover {
+    color: #fdbb08;
+}
+
+.footer .list-group-item-action:hover {
+    color: #113865;
+}
+
+@media screen and (max-width: 991px) {
+    .sitemap, .travel-help, .sitemap-info h4, .sitemap-info address {
+        display: none;
+    }
+
+    .footer .space-bottom-2.space-top-1 {
+        padding: 0 0 10px !important;
+    }
+
+    .footer-fixed-links li .wallet-price {
+        font-size: 12px;
+        line-height: 15px;
+        margin: 15px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .footer-fixed-links li .wallet-price {
+        margin: 7px 0 0;
+    }
+
+    .img\.svg-chat-new-resp {
+        display: block;
+        width: 100% !important;
+    }
+
+    .whatsAppWidgetIconResp {
+        position: fixed !important;
+        width: 18% !important;
+        height: 76px !important;
+        bottom: 69px !important;
+        right: 138px !important;
+        text-align: right;
+        cursor: pointer;
+        z-index: 100;
+        display: block !important;
+    }
+
+    div#whatsAppWidgetIcon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .footer-fixed-links li .wallet-price {
+        margin: 0;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .footer-fixed-links li a {
+        padding: 7px 0 5px;
+    }
+
+    img.svg-chat-need {
+        display: none !important;
+    }
+
+    img.svg-chat-need-mobile-con {
+        width: 40% !important;
+        display: block;
+    }
+
+    .need-help-svg-mobile {
+        display: block;
+        width: 67%;
+    }
+
+    .need-help-svg {
+        display: none;
+    }
+}
+
+@media (min-width: 1700px) {
+    .whts-chat-icon {
+        position: fixed !important;
+        width: 13% !important;
+        height: 76px !important;
+        bottom: 68px !important;
+        right: 0 !important;
+        text-align: right !important;
+        cursor: pointer !important;
+        z-index: 100 !important;
+        left: -169px !important;
+    }
+    .img\.svg-chat-new {
+        width: 27% !important;
+    }
+    /*  */
+   
+}
+
+@media (min-width: 320px) and (max-width: 525px) {
+    img.svg-chat-need {
+        display: none !important;
+    }
+
+    .need-svg-box {
+        display: none !important;
+    }
+
+    img.svg-chat-need-mobile-con {
+        width: 43%;
+        display: block !important;
+    }
+    .need-responsive-box {
+        position: fixed !important;
+        width: 15% !important;
+        height: 463px !important;
+        right: -22px !important;
+        text-align: right !important;
+        cursor: pointer !important;
+        z-index: 100 !important;
+        right: -9% !important;
+        display: block;
+        top: 299px;
+    }
+    img.popPkgimg {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .modal-dialog.d-table.session-timeout-100 {
+        margin: 9.99rem auto !important;
+    }
+    .modal-content.d-table-cell.align-middle {
+        width: 330px;
+    }
+    button.close-btn-pkg{
+        position: absolute;
+        top: -57px;
+        font-size: 50PX;
+        font-weight: 300;
+        color: white;
+        right: -18px;
+        border: none;
+        background: transparent;
+    }
+}
+/* For laptop */
+@media only screen and (min-width: 1200px) and (max-width: 1300px){
+    .modal-dialog.d-table.session-timeout-100 {
+        margin: 4.75rem auto !important;
+    }
+    .modal-content.d-table-cell.align-middle {
+        border: 1px solid rgb(146 148 152);
+        border-radius: 17px;
+        padding: 0px !important;
+        width: 400px;
+    }
+}
