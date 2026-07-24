@@ -1117,13 +1117,13 @@ a.double-25 {
 <div class="search-navbar">
 <ul class="nav nav-pills ml-0">
 <li class="nav-item">
-<a href="#" id="oneway-tab" onclick="document.getElementById('round_oneWay').style.display = 'block'">One-Way</a>
+<a href="#" id="oneway-tab">One-Way</a>
 </li>
 <li class="nav-item">
-<a class="active" href="#" id="round-tab" onclick="document.getElementById('round_oneWay').style.display = 'block'">Roundtrip</a>
+<a class="active" href="#" id="round-tab">Roundtrip</a>
 </li>
 <li class="nav-item">
-<a href="#" id="multicity-tab" onclick="document.getElementById('round_oneWay').style.display = 'none'">Multi-City</a>
+<a href="#" id="multicity-tab">Multi-City</a>
 </li>
 </ul>
 </div>
@@ -5549,21 +5549,37 @@ jQuery(document).ready(function () {
             });
 
             jQuery('.yugo-search-bar .nav-item a').on('click', function(e) {
+                e.preventDefault();
+                jQuery('.yugo-search-bar .nav-item a').removeClass('active');
+                jQuery(this).addClass('active');
 
-                if (jQuery(this).attr('id') !== 'multicity-tab') {
-
+                var tabId = jQuery(this).attr('id');
+                if (tabId === 'multicity-tab') {
+                    jQuery('#round_oneWay').hide();
+                    jQuery('#multiCity').show();
+                    jQuery('input[name="searchtype"]').val('multicity');
+                } else {
+                    jQuery('#round_oneWay').show();
+                    jQuery('#multiCity').hide();
+                    
                     // Reset multi-city to initial state
-
                     currentSegments = 1;
-
                     jQuery('.multi-city-segment').hide();
-
                     jQuery('.multi-city-segment[data-segment="1"]').show();
-
                     jQuery('#addMoreFlights').show();
-
+                    
+                    if (tabId === 'oneway-tab') {
+                        // One-Way: Set searchtype to oneway and hide checkout return date
+                        jQuery('input[name="searchtype"]').val('oneway');
+                        jQuery('#dates-wrap .t-datepicker').addClass('only-checkin');
+                        jQuery('#dates-wrap .checkout-block').hide();
+                    } else {
+                        // Roundtrip: Set searchtype to return and show checkout return date
+                        jQuery('input[name="searchtype"]').val('return');
+                        jQuery('#dates-wrap .t-datepicker').removeClass('only-checkin');
+                        jQuery('#dates-wrap .checkout-block').show();
+                    }
                 }
-
             });
 
 

@@ -6842,9 +6842,12 @@ input.select2-search__field,
 }
 .depart-icon {
   color: #1c3659;
-  position: absolute;
-  left: calc(50% - 60px);
-  top: 7px;
+  position: absolute !important;
+  left: 15px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin: 0 !important;
+  z-index: 10;
 }
 .last-right-icons {
   display: flex;
@@ -7184,6 +7187,8 @@ div#pills-tabContent {
   float: left;
   width: 50%;
   text-align: center;
+  position: relative !important;
+  height: 48px !important;
 }
 .only-checkin .checkin-block {
   width: 100%;
