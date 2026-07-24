@@ -11785,9 +11785,9 @@ img.show-mobile {
   }
 }
 
-/* OzoTrips Logo resize overrides (72px max-height) */
+/* OzoTrips Logo resize overrides (95px max-height) */
 .navbar-brand img, .new-header .navbar-brand img, .logo-img, img[alt*="Logo"], img[alt*="logo"] {
-    max-height: 72px !important;
+    max-height: 95px !important;
     width: auto !important;
 }
 
