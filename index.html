@@ -3,13 +3,201 @@
 <html lang="en">
 <head>
 <style>
-
             input#contact_person_last_name {
-
                 display: none;
-
             }
 
+            /* Multi-Tabular Search Bar Styling */
+            .multi-search-container {
+              max-width: 900px;
+              margin: 25px auto 0;
+              font-family: 'Outfit', 'Rubik', sans-serif;
+              background: rgba(255, 255, 255, 0.95);
+              backdrop-filter: blur(15px);
+              border-radius: 16px;
+              box-shadow: 0 15px 35px rgba(28, 54, 89, 0.25);
+              border: 1px solid rgba(28, 54, 89, 0.1);
+              overflow: hidden;
+              text-align: left;
+            }
+
+            /* Tabs Header */
+            .search-tabs {
+              display: flex;
+              background: #f8fafc;
+              border-bottom: 1px solid rgba(28, 54, 89, 0.1);
+              overflow-x: auto;
+              scrollbar-width: none;
+            }
+            .search-tabs::-webkit-scrollbar {
+              display: none;
+            }
+
+            .search-tab-btn {
+              flex: 1;
+              min-width: 120px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 6px;
+              padding: 14px 10px;
+              border: none;
+              background: transparent;
+              color: #64748b;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              position: relative;
+              outline: none !important;
+            }
+
+            .search-tab-btn:hover {
+              color: #1c3659;
+              background: rgba(28, 54, 89, 0.03);
+            }
+
+            .search-tab-btn.active {
+              color: #1c3659;
+              background: #ffffff;
+              font-weight: 600;
+            }
+
+            .search-tab-btn.active::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 3px;
+              background: #ddb651;
+              border-radius: 3px 3px 0 0;
+            }
+
+            .tab-icon {
+              font-size: 1.4rem;
+            }
+
+            .tab-label {
+              font-size: 0.85rem;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+
+            /* Content Panels */
+            .search-panels {
+              padding: 24px;
+            }
+
+            .search-panel {
+              display: none;
+              animation: searchFadeIn 0.3s ease-in-out forwards;
+            }
+
+            .search-panel.active {
+              display: block;
+            }
+
+            @keyframes searchFadeIn {
+              from {
+                opacity: 0;
+                transform: translateY(8px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            /* Fields Grid */
+            .search-fields-grid {
+              display: grid;
+              grid-template-columns: 1fr auto;
+              gap: 16px;
+              align-items: flex-end;
+            }
+
+            .search-fields-grid.grid-2 {
+              grid-template-columns: 1fr 1fr auto;
+            }
+
+            .search-fields-grid.grid-3 {
+              grid-template-columns: 1fr 1fr 1fr auto;
+            }
+
+            @media (max-width: 768px) {
+              .search-fields-grid, 
+              .search-fields-grid.grid-2, 
+              .search-fields-grid.grid-3 {
+                grid-template-columns: 1fr;
+                gap: 12px;
+              }
+              .search-action-btn {
+                width: 100%;
+              }
+            }
+
+            .search-field {
+              display: flex;
+              flex-direction: column;
+              gap: 6px;
+              text-align: left;
+            }
+
+            .search-field label {
+              font-size: 0.75rem;
+              font-weight: 700;
+              color: #1c3659;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              margin-left: 2px;
+              margin-bottom: 0px;
+            }
+
+            .search-field input,
+            .search-field select {
+              width: 100%;
+              padding: 10px 14px;
+              border: 1px solid #cbd5e1;
+              border-radius: 6px;
+              background: #ffffff;
+              color: #1c3659;
+              font-size: 0.9rem;
+              outline: none;
+              transition: border-color 0.3s ease, box-shadow 0.3s ease;
+              font-family: inherit;
+              height: 42px;
+            }
+
+            .search-field input:focus,
+            .search-field select:focus {
+              border-color: #1c3659;
+              box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.1);
+            }
+
+            .search-action-btn {
+              padding: 10px 24px;
+              background: #ddb651;
+              color: #1c3659;
+              border: none;
+              border-radius: 6px;
+              font-size: 0.9rem;
+              font-weight: 700;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              height: 42px;
+              white-space: nowrap;
+              outline: none !important;
+            }
+
+            .search-action-btn:hover {
+              background: #1c3659;
+              color: #ffffff;
+              box-shadow: 0 4px 12px rgba(28, 54, 89, 0.2);
+              transform: translateY(-1px);
+            }
+
+            .search-action-btn:active {
+              transform: translateY(0);
+            }
         </style>
 <!-- TikTok Pixel Code Start -->
 <script>
@@ -2288,20 +2476,180 @@ a.double-25 {
 <img alt="One stop solution for travelers" class="home-22" src="assets/img/home/home22respsonsive.gif"/>
 </h1>
 <div class="fxd-srch-100">
-<div class="flight-tabs-outer text-left float-left col-xl-12">
-<select class="float-left country" id="country_id" name="">
-<option value="">Select Services</option>
-<option value="https://www.ozotrips.com/visas">Visas</option>
-<option value="https://www.ozotrips.com/flights">Flights</option>
-<option value="https://www.ozotrips.com/umrah">Umrah</option>
-<option value="https://www.ozotrips.com/tours">Tours</option>
-<option value="https://www.ozotrips.com/offers">Offers</option>
-<option value="https://www.ozotrips.com/cars">Rental Cars</option>
-<!-- <option value="https://www.ozotrips.com/group-flights">Promo Flights</option> -->
-<option value="https://www.ozotrips.com/application_tracking">Tracking</option>
-</select>
-<button class="rubik-medium float-right" id="countryBtn">Search</button>
-</div>
+  <div class="multi-search-container">
+    <!-- Tabs Header -->
+    <div class="search-tabs">
+      <button class="search-tab-btn active" data-tab="visas-tab" type="button">
+        <span class="tab-icon">🛂</span>
+        <span class="tab-label">Visas</span>
+      </button>
+      <button class="search-tab-btn" data-tab="flights-tab" type="button">
+        <span class="tab-icon">✈️</span>
+        <span class="tab-label">Flights</span>
+      </button>
+      <button class="search-tab-btn" data-tab="umrah-tab" type="button">
+        <span class="tab-icon">🕋</span>
+        <span class="tab-label">Umrah</span>
+      </button>
+      <button class="search-tab-btn" data-tab="tours-tab" type="button">
+        <span class="tab-icon">🗺️</span>
+        <span class="tab-label">Tours</span>
+      </button>
+      <button class="search-tab-btn" data-tab="cars-tab" type="button">
+        <span class="tab-icon">🚗</span>
+        <span class="tab-label">Car Rental</span>
+      </button>
+      <button class="search-tab-btn" data-tab="tracking-tab" type="button">
+        <span class="tab-icon">🔍</span>
+        <span class="tab-label">Tracking</span>
+      </button>
+    </div>
+
+    <!-- Tabs Content Panels -->
+    <div class="search-panels">
+      <!-- Visas Tab Panel -->
+      <div class="search-panel active" id="visas-tab">
+        <div class="search-fields-grid">
+          <div class="search-field">
+            <label>Select Destination Country</label>
+            <select id="visa_country_select">
+              <option value="">Where do you want to apply?</option>
+              <option value="visa/azerbaijan-visa.html">Azerbaijan</option>
+              <option value="visa/australia-visa.html">Australia</option>
+              <option value="visa/canada-visa.html">Canada</option>
+              <option value="visa/egypt-visa.html">Egypt</option>
+              <option value="visa/greece-visa.html">Greece</option>
+              <option value="visa/hong-kong-visa.html">Hong Kong</option>
+              <option value="visa/malaysia-visa.html">Malaysia</option>
+              <option value="visa/singapore-visa.html">Singapore</option>
+              <option value="visa/thailand-visa.html">Thailand</option>
+              <option value="visa/turkey-visa.html">Turkey</option>
+              <option value="visa/uae-30-days-visa.html">UAE (Dubai)</option>
+              <option value="visa/united-kingdom-visa.html">United Kingdom (UK)</option>
+              <option value="visa/usa-visa.html">United States (USA)</option>
+              <option value="visa/umrah-visa.html">Saudi Arabia (Umrah)</option>
+              <option value="visa/austria-visa.html">Schengen Support</option>
+            </select>
+          </div>
+          <button class="search-action-btn" id="visa_search_btn" type="button">Search Visas</button>
+        </div>
+      </div>
+
+      <!-- Flights Tab Panel -->
+      <div class="search-panel" id="flights-tab">
+        <div class="search-fields-grid grid-3">
+          <div class="search-field">
+            <label>Flying From</label>
+            <select id="flight_from">
+              <option value="LHE">Lahore (LHE)</option>
+              <option value="KHI">Karachi (KHI)</option>
+              <option value="ISB">Islamabad (ISB)</option>
+              <option value="MUX">Multan (MUX)</option>
+              <option value="PEW">Peshawar (PEW)</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Flying To</label>
+            <input type="text" id="flight_to" placeholder="e.g. Dubai, London">
+          </div>
+          <div class="search-field">
+            <label>Departure Date</label>
+            <input type="date" id="flight_date" value="2026-08-01">
+          </div>
+          <button class="search-action-btn" id="flight_search_btn" type="button">Search Flights</button>
+        </div>
+      </div>
+
+      <!-- Umrah Tab Panel -->
+      <div class="search-panel" id="umrah-tab">
+        <div class="search-fields-grid grid-2">
+          <div class="search-field">
+            <label>Package Category</label>
+            <select id="umrah_package">
+              <option value="5star">5 Star Premium Packages</option>
+              <option value="4star">4 Star Deluxe Packages</option>
+              <option value="3star">3 Star Economy Packages</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Duration</label>
+            <select id="umrah_duration">
+              <option value="7">7 Days</option>
+              <option value="14">14 Days</option>
+              <option value="21">21 Days</option>
+              <option value="28">28 Days</option>
+            </select>
+          </div>
+          <button class="search-action-btn" id="umrah_search_btn" type="button">Search Umrah</button>
+        </div>
+      </div>
+
+      <!-- Tours Tab Panel -->
+      <div class="search-panel" id="tours-tab">
+        <div class="search-fields-grid grid-2">
+          <div class="search-field">
+            <label>Tour Category</label>
+            <select id="tour_type">
+              <option value="international-group">✈️ International Group Tours</option>
+              <option value="international-private">💎 International Private Tours</option>
+              <option value="local-group">🇵🇰 Pakistan Local Group Tours</option>
+              <option value="local-private">🏡 Pakistan Local Private Tours</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Select Destination</label>
+            <select id="tour_destination">
+              <option value="">All Featured Tour Destinations</option>
+              <option value="baku">Baku, Azerbaijan</option>
+              <option value="thailand">Thailand Exotic Getaway</option>
+              <option value="skardu">Skardu Valley Adventure</option>
+              <option value="swat">Kalam & Swat Valley</option>
+              <option value="hunza">Hunza Valley Autumn Tour</option>
+            </select>
+          </div>
+          <button class="search-action-btn" id="tours_search_btn" type="button">Search Tours</button>
+        </div>
+      </div>
+
+      <!-- Car Rental Tab Panel -->
+      <div class="search-panel" id="cars-tab">
+        <div class="search-fields-grid grid-2">
+          <div class="search-field">
+            <label>Pick-up Location</label>
+            <select id="car_pickup">
+              <option value="lahore">Lahore City</option>
+              <option value="karachi">Karachi City</option>
+              <option value="islamabad">Islamabad City</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Vehicle Type</label>
+            <select id="car_type">
+              <option value="suv">Premium SUV (Prado, Fortuner, Revo)</option>
+              <option value="sedan">Sedan Cars (Civic, Corolla, City)</option>
+              <option value="coaster">Hiace / Coaster (For Groups)</option>
+            </select>
+          </div>
+          <button class="search-action-btn" id="car_search_btn" type="button">Search Cars</button>
+        </div>
+      </div>
+
+      <!-- Tracking Tab Panel -->
+      <div class="search-panel" id="tracking-tab">
+        <div class="search-fields-grid grid-2">
+          <div class="search-field">
+            <label>Application tracking ID</label>
+            <input type="text" id="track_id" placeholder="e.g. OZO-2026-9812">
+          </div>
+          <div class="search-field">
+            <label>Passport Number</label>
+            <input type="text" id="track_passport" placeholder="e.g. AB1234567">
+          </div>
+          <button class="search-action-btn" id="tracking_search_btn" type="button">Track Application</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="randm-rough-text">
 <div class="frst-half">
@@ -7912,31 +8260,66 @@ jQuery(document).ready(function () {
 
 </script>
 <script>
+    $(document).ready(function() {
+        // Tab switching handler
+        $(document).on('click', '.search-tab-btn', function() {
+            var tabId = $(this).data('tab');
+            
+            // Remove active classes
+            $('.search-tab-btn').removeClass('active');
+            $('.search-panel').removeClass('active');
+            
+            // Add active classes to clicked tab and corresponding panel
+            $(this).addClass('active');
+            $('#' + tabId).addClass('active');
+        });
 
-    document.getElementById('countryBtn').addEventListener('click', function() {
+        // Visas Search Action
+        $(document).on('click', '#visa_search_btn', function() {
+            var countryUrl = $('#visa_country_select').val();
+            if (countryUrl) {
+                window.location.href = countryUrl;
+            } else {
+                window.location.href = 'visas.html';
+            }
+        });
 
-        var selectElement = document.getElementById('country_id');
+        // Flights Search Action
+        $(document).on('click', '#flight_search_btn', function() {
+            var from = $('#flight_from').val();
+            var to = $('#flight_to').val().trim();
+            var date = $('#flight_date').val();
+            window.location.href = 'flights.html?from=' + encodeURIComponent(from) + '&to=' + encodeURIComponent(to) + '&date=' + encodeURIComponent(date);
+        });
 
-        var selectedUrl = selectElement.value;
+        // Umrah Search Action
+        $(document).on('click', '#umrah_search_btn', function() {
+            var category = $('#umrah_package').val();
+            var duration = $('#umrah_duration').val();
+            window.location.href = 'umrah.html?category=' + encodeURIComponent(category) + '&duration=' + encodeURIComponent(duration);
+        });
 
-        var baseUrl = window.location.origin;
+        // Tours Search Action
+        $(document).on('click', '#tours_search_btn', function() {
+            var tourType = $('#tour_type').val();
+            var destination = $('#tour_destination').val();
+            window.location.href = 'tours.html?type=' + encodeURIComponent(tourType) + '&dest=' + encodeURIComponent(destination);
+        });
 
+        // Car Rental Search Action
+        $(document).on('click', '#car_search_btn', function() {
+            var pickup = $('#car_pickup').val();
+            var carType = $('#car_type').val();
+            window.location.href = 'cars.html?pickup=' + encodeURIComponent(pickup) + '&type=' + encodeURIComponent(carType);
+        });
 
-
-        if (selectedUrl) {
-
-            var concatenatedUrl = baseUrl + "/" + selectedUrl.replace(baseUrl + "/", "");
-
-            window.location.href = concatenatedUrl;
-
-        } else {
-
-            alert('Please select a service.');
-
-        }
-
+        // Tracking Action
+        $(document).on('click', '#tracking_search_btn', function() {
+            var trackId = $('#track_id').val().trim();
+            var passport = $('#track_passport').val().trim();
+            window.location.href = 'application_tracking.html?id=' + encodeURIComponent(trackId) + '&passport=' + encodeURIComponent(passport);
+        });
     });
-
 </script>
 <script>
 
