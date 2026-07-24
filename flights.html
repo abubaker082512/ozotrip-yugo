@@ -5548,6 +5548,70 @@ jQuery(document).ready(function () {
 
             });
 
+            function rebuildDatePicker(containerId, isOneWay) {
+                var container = jQuery(containerId);
+                container.empty();
+                
+                var html = '';
+                if (isOneWay) {
+                    html = '<div class="departure-cities t-datepicker only-checkin">' +
+                           '  <div class="checkin-block position-relative">' +
+                           '    <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">' +
+                           '      <g fill="none">' +
+                           '        <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>' +
+                           '        <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>' +
+                           '        <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>' +
+                           '      </g>' +
+                           '    </svg>' +
+                           '    <div class="departure-city-item t-check-in"></div>' +
+                           '  </div>' +
+                           '  <hr style="background: transparent"/>' +
+                           '</div>';
+                } else {
+                    html = '<div class="departure-cities t-datepicker">' +
+                           '  <div class="checkin-block position-relative">' +
+                           '    <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">' +
+                           '      <g fill="none">' +
+                           '        <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>' +
+                           '        <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>' +
+                           '        <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>' +
+                           '      </g>' +
+                           '    </svg>' +
+                           '    <div class="departure-city-item t-check-in"></div>' +
+                           '  </div>' +
+                           '  <hr/>' +
+                           '  <div class="checkout-block position-relative">' +
+                           '    <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">' +
+                           '      <g fill="none">' +
+                           '        <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>' +
+                           '        <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>' +
+                           '        <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>' +
+                           '        <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>' +
+                           '      </g>' +
+                           '    </svg>' +
+                           '    <div class="departure-city-item t-check-out"></div>' +
+                           '  </div>' +
+                           '</div>';
+                }
+                container.html(html);
+                container.find('.t-datepicker').tDatePicker({
+                    titleCheckIn: 'Departure',
+                    titleCheckOut: 'Return',
+                    limitDateRanges: 365,
+                });
+            }
+
             jQuery('.yugo-search-bar .nav-item a').on('click', function(e) {
                 e.preventDefault();
                 jQuery('.yugo-search-bar .nav-item a').removeClass('active');
@@ -5569,15 +5633,11 @@ jQuery(document).ready(function () {
                     jQuery('#addMoreFlights').show();
                     
                     if (tabId === 'oneway-tab') {
-                        // One-Way: Set searchtype to oneway and hide checkout return date
                         jQuery('input[name="searchtype"]').val('oneway');
-                        jQuery('#dates-wrap .t-datepicker').addClass('only-checkin');
-                        jQuery('#dates-wrap .checkout-block').hide();
+                        rebuildDatePicker('#dates-wrap', true);
                     } else {
-                        // Roundtrip: Set searchtype to return and show checkout return date
                         jQuery('input[name="searchtype"]').val('return');
-                        jQuery('#dates-wrap .t-datepicker').removeClass('only-checkin');
-                        jQuery('#dates-wrap .checkout-block').show();
+                        rebuildDatePicker('#dates-wrap', false);
                     }
                 }
             });
@@ -5957,75 +6017,50 @@ jQuery(document).ready(function () {
 
 
         function search(e) {
-
-
-
             var list = $('.autocomplete-results-' + $(this).attr('mykey')).first();
-
             if (e.which === 38 || e.which === 13 || e.which === 40) {
-
                 return;
-
             }
-
-
 
             if ($(this).val().length > 0) {
-
                 results = _.take(fuse.search($(this).val()), 7);
-
                 numResults = results.length;
-
-
-
                 var divs = results.map(function(r, i) {
-
                     if (r.name == 'Chaklala') {
-
                         return '<div class="autocomplete-result" data-index="' + i + '">' +
-
-                            '<div><b>' + r.iata + '</b> ' + 'lslamabad International Airport' + '</div>' +
-
+                            '<div><b>' + r.iata + '</b> ' + 'Islamabad International Airport' + '</div>' +
                             '<div class="autocomplete-location">' + r.city + ', ' + r.country + '</div>' +
-
                             '</div>';
-
-
-
                     } else {
-
                         return '<div class="autocomplete-result" data-index="' + i + '">' +
-
                             '<div><b>' + r.iata + '</b> ' + r.name + '</div>' +
-
                             '<div class="autocomplete-location">' + r.city + ', ' + r.country + '</div>' +
-
                             '</div>';
-
                     }
-
-
-
                 });
-
-
-
                 selectedIndex = -1;
-
                 list.html(divs.join(''))
-
                     .attr('data-highlight', selectedIndex);
-
-
-
             } else {
-
-                numResults = 0;
-
-                list.empty();
-
+                // Show popular airports of the world as dropdown suggestions
+                var popularIatas = ['LHE', 'KHI', 'ISB', 'DXB', 'LHR', 'IST', 'JFK', 'BKK'];
+                results = airports.filter(function(a) {
+                    return popularIatas.indexOf(a.iata) !== -1;
+                });
+                results.sort(function(a, b) {
+                    return popularIatas.indexOf(a.iata) - popularIatas.indexOf(b.iata);
+                });
+                numResults = results.length;
+                var divs = results.map(function(r, i) {
+                    return '<div class="autocomplete-result" data-index="' + i + '">' +
+                        '<div>🛫 <b>' + r.iata + '</b> ' + r.name + '</div>' +
+                        '<div class="autocomplete-location">' + r.city + ', ' + r.country + '</div>' +
+                        '</div>';
+                });
+                selectedIndex = -1;
+                list.html(divs.join(''))
+                    .attr('data-highlight', selectedIndex);
             }
-
         }
 
 

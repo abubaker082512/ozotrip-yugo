@@ -7149,7 +7149,15 @@ div#pills-tabContent {
 }
 .t-check-in .t-date-info-title,
 .t-check-out .t-date-info-title {
-  position: static;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: 33px !important;
+  display: block !important;
+  color: #1c3659 !important;
+  opacity: 0.7 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
 }
 .departure-cities .departure-city-item .t-dates label {
   color: #1c3659;
