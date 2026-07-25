@@ -501,6 +501,170 @@
                 float: none;
                 width: 100%;
             }
+
+            /* Custom Styles for CEO Section, Tour Diary, and Recent Tours Showcase */
+            .ceo-section {
+              padding: 80px 0;
+              background: #f8fafc;
+              border-top: 1px solid rgba(28, 54, 89, 0.08);
+            }
+            .ceo-grid {
+              display: grid;
+              grid-template-columns: 350px 1fr;
+              gap: 60px;
+              align-items: center;
+            }
+            .ceo-image-wrapper {
+              position: relative;
+              border-radius: 20px;
+              overflow: hidden;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+              border: 1px solid rgba(28, 54, 89, 0.08);
+              aspect-ratio: 4 / 5;
+              background: #ffffff;
+            }
+            .ceo-image-wrapper img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.4s ease;
+            }
+            .ceo-image-wrapper:hover img {
+              transform: scale(1.05);
+            }
+            .ceo-badge {
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
+              right: 20px;
+              background: rgba(28, 54, 89, 0.95);
+              backdrop-filter: blur(8px);
+              padding: 12px;
+              border-radius: 8px;
+              color: #fff;
+              border: 1px solid rgba(255, 255, 255, 0.15);
+              text-align: center;
+            }
+            .ceo-content {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+            }
+            .ceo-quote {
+              font-size: 1.15rem;
+              line-height: 1.7;
+              color: #4a5d73;
+              font-style: italic;
+              position: relative;
+              padding-left: 24px;
+              border-left: 4px solid #e5a93b;
+            }
+            .ceo-signature {
+              margin-top: 20px;
+              font-weight: 700;
+              color: #1c3659;
+            }
+            @media (max-width: 768px) {
+              .ceo-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+              }
+              .ceo-image-wrapper {
+                max-width: 350px;
+                margin: 0 auto;
+              }
+            }
+
+            /* CEO Travels Marquee Carousel */
+            .ceo-travels-marquee-section {
+              padding: 80px 0;
+              background: #ffffff;
+              overflow: hidden;
+              border-top: 1px solid rgba(28, 54, 89, 0.08);
+              border-bottom: 1px solid rgba(28, 54, 89, 0.08);
+              position: relative;
+            }
+            .marquee-wrapper {
+              display: flex;
+              overflow: hidden;
+              width: 100%;
+              position: relative;
+              mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+              -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+            }
+            .marquee-track {
+              display: flex;
+              width: calc(300px * 40);
+              animation: marquee-infinite 45s linear infinite;
+              gap: 20px;
+            }
+            .marquee-item {
+              width: 280px;
+              height: 380px;
+              flex-shrink: 0;
+              border-radius: 16px;
+              overflow: hidden;
+              border: 1px solid rgba(28, 54, 89, 0.08);
+              box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+              transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+              background: #ffffff;
+            }
+            .marquee-item:hover {
+              transform: translateY(-8px) scale(1.02);
+              box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+              border-color: #1c3659;
+            }
+            .marquee-item img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              pointer-events: none;
+            }
+            @keyframes marquee-infinite {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-6000px); }
+            }
+            @media (max-width: 768px) {
+              .ceo-travels-marquee-section {
+                padding: 60px 0;
+              }
+              .marquee-item {
+                width: 220px;
+                height: 300px;
+              }
+              .marquee-track {
+                width: calc(240px * 40);
+                gap: 20px;
+                animation: marquee-infinite-mobile 45s linear infinite;
+              }
+            }
+            @keyframes marquee-infinite-mobile {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-4800px); }
+            }
+
+            /* Recent Tours Styling */
+            .recent-tours-section {
+              padding: 80px 0;
+              background: #f8fafc;
+              border-bottom: 1px solid rgba(28, 54, 89, 0.08);
+            }
+            .recent-tour-card img {
+              width: 100%;
+              height: 380px;
+              object-fit: cover;
+              display: block;
+            }
+            @media (max-width: 768px) {
+              .recent-tour-card img {
+                height: 250px;
+              }
+            }
+            @media (max-width: 480px) {
+              .recent-tour-card img {
+                height: 180px;
+              }
+            }
         </style>
 <!-- TikTok Pixel Code Start -->
 <script>
@@ -3256,39 +3420,34 @@ a.double-25 {
     </div>
   </div>
 </div>
-<div class="randm-rough-text">
-<div class="frst-half">
-<h1 class="drk-sty">
-
-                                03
-
-                                <p class="grey-sty">Offices</p>
-</h1>
-</div>
-<div class="scnd-half">
-<h1 class="drk-sty">
-
-                                50+
-
-                                <p class="grey-sty">Staff</p>
-</h1>
-</div>
-<div class="thrd-half">
-<h1 class="drk-sty">
-
-                                8+ 
-
-                                <p class="grey-sty">Years Experience</p>
-</h1>
-</div>
-<div class="four-half">
-<h1 class="drk-sty">
-
-                                 4.8
-
-                                <p class="grey-sty">Star Rating</p>
-</h1>
-</div>
+<div class="stats-cards-wrapper" style="padding: 40px 0 20px 0; width: 100%;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 15px;">
+    
+    <!-- Card 1 -->
+    <div style="background: #ffffff; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid rgba(28, 54, 89, 0.08); transition: transform 0.3s ease;">
+      <span class="stat-num" style="font-size: 2.5rem; font-weight: 800; color: #1c3659; display: block;" data-target="15000">15000+</span>
+      <span style="font-size: 0.85rem; color: #5a6e85; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; display: block; font-weight: 700;">Happy Travelers</span>
+    </div>
+    
+    <!-- Card 2 -->
+    <div style="background: #ffffff; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid rgba(28, 54, 89, 0.08); transition: transform 0.3s ease;">
+      <span class="stat-num" style="font-size: 2.5rem; font-weight: 800; color: #ff9c00; display: block;" data-target="4.9">4.9</span>
+      <span style="font-size: 0.85rem; color: #5a6e85; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; display: block; font-weight: 700;">Customer Rating</span>
+    </div>
+    
+    <!-- Card 3 -->
+    <div style="background: #ffffff; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid rgba(28, 54, 89, 0.08); transition: transform 0.3s ease;">
+      <span class="stat-num" style="font-size: 2.5rem; font-weight: 800; color: #ff9c00; display: block;" data-target="150">150+</span>
+      <span style="font-size: 0.85rem; color: #5a6e85; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; display: block; font-weight: 700;">Destinations</span>
+    </div>
+    
+    <!-- Card 4 -->
+    <div style="background: #ffffff; border-radius: 12px; padding: 30px 20px; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); border: 1px solid rgba(28, 54, 89, 0.08); transition: transform 0.3s ease;">
+      <span class="stat-num" style="font-size: 2.5rem; font-weight: 800; color: #1c3659; display: block;" data-target="24">24+</span>
+      <span style="font-size: 0.85rem; color: #5a6e85; text-transform: uppercase; letter-spacing: 1.5px; margin-top: 12px; display: block; font-weight: 700;">Hours Support</span>
+    </div>
+    
+  </div>
 </div>
 </div>
 </section>
@@ -5629,6 +5788,204 @@ $(document).ready(function(){
     }
 
 </style>
+<!-- CEO Section -->
+  <section class="ceo-section">
+    <div class="container">
+      <div class="ceo-grid">
+        <div class="ceo-image-wrapper fade-in">
+          <img src="assets/img/ceo.png" alt="Habib Ullah Sajid - CEO of OzoTrips">
+          <div class="ceo-badge">
+            <h4 style="font-size: 1.05rem; font-weight: 700;">Habib Ullah Sajid</h4>
+            <span style="font-size: 0.8rem; color: var(--color-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Founder & CEO</span>
+          </div>
+        </div>
+        <div class="ceo-content fade-in">
+          <span style="color: var(--color-secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Personal Commitment</span>
+          <h2 style="font-size: 2.5rem; font-weight: 800; line-height: 1.2;">Message From Our CEO</h2>
+          <div class="ceo-quote">
+            "At OzoTrips, we believe travel is not merely about visiting new locations; it is about building deep, lasting connections, experiencing cultures in their most authentic form, and returning home transformed."
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            Welcome to OzoTrips. Since our founding, our mission has been simple: to curate travel experiences that blend premium comfort with local depth. Whether you are embarking on a sacred Hajj & Umrah pilgrimage, exploring the majestic peaks of Northern Pakistan, or taking your family to the tropical beaches of Bali, we are dedicated to making every detail perfect.
+          </p>
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1rem;">
+            We personally inspect our hotel partners, verify our local guides, and offer round-the-clock concierge support so you can travel with complete peace of mind. Thank you for choosing us to craft your journey.
+          </p>
+          <div class="ceo-signature">
+            <p style="font-size: 1.1rem; margin-bottom: 4px;">With gratitude,</p>
+            <h4 style="font-size: 1.3rem; color: var(--color-primary); font-family: var(--font-sans);">Habib Ullah Sajid</h4>
+            <span style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;">Founder, OzoTrips</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+<!-- CEO's Tour Diary Carousel -->
+  <section class="ceo-travels-marquee-section">
+    <div class="container" style="text-align: center; margin-bottom: 40px;">
+      <span style="color: var(--color-secondary); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.9rem;">Verified Operations</span>
+      <h2 style="font-size: 2.2rem; margin-top: 8px;">CEO's Tour Diary</h2>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 12px auto 0; font-size: 0.95rem;">Real-time inspection of travel routes, hotel standards, transport facilities, and excursion spots. We visit firsthand to ensure quality.</p>
+    </div>
+    
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <!-- Slide items -->
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151123.webp" alt="CEO Tour 1"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151155.webp" alt="CEO Tour 2"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160927.webp" alt="CEO Tour 3"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.47%20PM%20%281%29.webp" alt="CEO Tour 4"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.58%20PM%20%281%29.webp" alt="CEO Tour 5"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160911.webp" alt="CEO Tour 6"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.37%20PM.webp" alt="CEO Tour 7"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_155725.webp" alt="CEO Tour 8"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_150950.webp" alt="CEO Tour 9"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160841.webp" alt="CEO Tour 10"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160941.webp" alt="CEO Tour 11"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.41%20PM.webp" alt="CEO Tour 12"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.41%20PM%20%281%29.webp" alt="CEO Tour 13"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151152.webp" alt="CEO Tour 14"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160408.webp" alt="CEO Tour 15"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160910.webp" alt="CEO Tour 16"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151207.webp" alt="CEO Tour 17"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_155729.webp" alt="CEO Tour 18"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.42%20PM.webp" alt="CEO Tour 19"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.49%20PM.webp" alt="CEO Tour 20"></div>
+        
+        <!-- Duplicate slide items for seamless infinite scroll -->
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151123.webp" alt="CEO Tour 1"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151155.webp" alt="CEO Tour 2"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160927.webp" alt="CEO Tour 3"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.47%20PM%20%281%29.webp" alt="CEO Tour 4"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.58%20PM%20%281%29.webp" alt="CEO Tour 5"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160911.webp" alt="CEO Tour 6"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.37%20PM.webp" alt="CEO Tour 7"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_155725.webp" alt="CEO Tour 8"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_150950.webp" alt="CEO Tour 9"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160841.webp" alt="CEO Tour 10"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160941.webp" alt="CEO Tour 11"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.41%20PM.webp" alt="CEO Tour 12"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.41%20PM%20%281%29.webp" alt="CEO Tour 13"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151152.webp" alt="CEO Tour 14"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160408.webp" alt="CEO Tour 15"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_160910.webp" alt="CEO Tour 16"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_151207.webp" alt="CEO Tour 17"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/AAA%20ABU%20BAKAR%20to%20sent/20250103_155729.webp" alt="CEO Tour 18"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.42%20PM.webp" alt="CEO Tour 19"></div>
+        <div class="marquee-item"><img src="assets/img/ceo_carousel/WhatsApp%20Image%202026-07-21%20at%201.39.49%20PM.webp" alt="CEO Tour 20"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Tours Section -->
+  
+
+<section class="recent-tours-section" style="padding: 80px 0; background: var(--bg-surface); border-bottom: 1px solid var(--border-glass);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <span style="color: var(--color-secondary); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; font-size: 0.9rem;">✨ Our Recent Explorations</span>
+        <h2 style="font-size: 2.2rem; margin-top: 8px;">Recent Tours Showcase</h2>
+        <p style="color: var(--text-secondary); max-width: 600px; margin: 12px auto 0; font-size: 0.95rem;">Glance at our most recent traveler groups and operations successfully executed across local valleys and international getaways.</p>
+      </div>
+
+      <div class="recent-tours-slider-wrapper" style="position: relative; overflow: hidden; max-width: 1100px; margin: 0 auto; padding: 0 40px;">
+        <!-- Slider Track -->
+        <div class="recent-tours-track" id="recent-tours-track" style="display: flex; gap: 24px; transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+          <!-- Slide cards -->
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.38.53%20PM.webp" alt="Recent Tour 1">
+            </div>
+          </div>
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.39.02%20PM.webp" alt="Recent Tour 2">
+            </div>
+          </div>
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.39.34%20PM%20%281%29.webp" alt="Recent Tour 3">
+            </div>
+          </div>
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.39.34%20PM%20%282%29.webp" alt="Recent Tour 4">
+            </div>
+          </div>
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.39.34%20PM.webp" alt="Recent Tour 5">
+            </div>
+          </div>
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.39.35%20PM%20%281%29.webp" alt="Recent Tour 6">
+            </div>
+          </div>
+          <div class="recent-tour-card" style="flex: 0 0 calc(50% - 12px); max-width: calc(50% - 12px); box-sizing: border-box;">
+            <div class="glass-panel" style="overflow: hidden; border-radius: var(--border-radius-md); border: 1px solid var(--border-glass); padding: 0; box-shadow: var(--shadow-sm);">
+              <img src="assets/img/recent_tours/WhatsApp%20Image%202026-07-21%20at%201.39.35%20PM%20%282%29.webp" alt="Recent Tour 7">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Controls -->
+        <button class="carousel-control prev" id="recent-prev-btn" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: var(--bg-surface); border: 1px solid var(--border-glass); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-primary); z-index: 10; box-shadow: var(--shadow-md); transition: all 0.3s ease;">❮</button>
+        <button class="carousel-control next" id="recent-next-btn" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: var(--bg-surface); border: 1px solid var(--border-glass); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-primary); z-index: 10; box-shadow: var(--shadow-md); transition: all 0.3s ease;">❯</button>
+      </div>
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const track = document.getElementById('recent-tours-track');
+        const prevBtn = document.getElementById('recent-prev-btn');
+        const nextBtn = document.getElementById('recent-next-btn');
+        if (!track || !prevBtn || !nextBtn) return;
+        
+        let index = 0;
+        const cardsCount = track.children.length;
+        const visibleCards = 2;
+        const maxIndex = cardsCount - visibleCards;
+        
+        const updateSlider = () => {
+          if (!track.children[0]) return;
+          const cardWidth = track.children[0].getBoundingClientRect().width;
+          const gap = 24;
+          const offset = index * (cardWidth + gap);
+          track.style.transform = `translateX(-${offset}px)`;
+          
+          prevBtn.style.opacity = index === 0 ? '0.3' : '1';
+          prevBtn.style.pointerEvents = index === 0 ? 'none' : 'auto';
+          nextBtn.style.opacity = index >= maxIndex ? '0.3' : '1';
+          nextBtn.style.pointerEvents = index >= maxIndex ? 'none' : 'auto';
+        };
+        
+        prevBtn.addEventListener('click', () => {
+          if (index > 0) {
+            index--;
+            updateSlider();
+          }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+          if (index < maxIndex) {
+            index++;
+            updateSlider();
+          }
+        });
+        
+        updateSlider();
+        window.addEventListener('resize', updateSlider);
+      });
+    </script>
+  </section>
+
+  <!-- Hajj & Umrah Section -->
+  
+
 <div class="wrapper change">
 <div class="col-xl-12 float-left subscribe text-center">
 <section class="wrapper">
@@ -9253,6 +9610,41 @@ jQuery(document).ready(function () {
 
         }
 
+    </script>
+
+    <!-- Stats Count Up Animation -->
+    <script>
+      (function() {
+        const stats = document.querySelectorAll('.stat-num');
+        if (stats.length > 0) {
+          const countUp = (el) => {
+            const target = parseFloat(el.getAttribute('data-target'));
+            const isFloat = target % 1 !== 0;
+            let count = 0;
+            const speed = isFloat ? 0.1 : Math.ceil(target / 100);
+            const interval = setInterval(() => {
+              count += speed;
+              if (count >= target) {
+                el.textContent = isFloat ? target.toFixed(1) : target.toLocaleString() + '+';
+                clearInterval(interval);
+              } else {
+                el.textContent = isFloat ? count.toFixed(1) : Math.floor(count).toLocaleString() + '+';
+              }
+            }, 20);
+          };
+
+          const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                countUp(entry.target);
+                statsObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.2 });
+
+          stats.forEach(stat => statsObserver.observe(stat));
+        }
+      })();
     </script>
 </body>
 </html>
