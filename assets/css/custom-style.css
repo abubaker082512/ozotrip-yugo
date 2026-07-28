@@ -12224,3 +12224,150 @@ img.gd-blue {
     box-shadow: 0 4px 10px rgba(255, 74, 90, 0.25) !important;
 }
 
+/* Premium White Page Hero Banner Redesign (Visas, Umrah, Tours, Offers) */
+.new-home-banner.visa-banner,
+.new-home-banner.umrah-banner,
+.new-home-banner.tours-banner,
+.new-home-banner.offers-banner {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    padding: 130px 0 60px 0 !important;
+    min-height: auto !important;
+    display: block !important;
+    position: relative !important;
+    border-bottom: 1px solid rgba(28, 54, 89, 0.08) !important;
+}
+
+.new-home-banner.visa-banner::before,
+.new-home-banner::before {
+    display: none !important; /* Remove dark gradient overlay */
+}
+
+.new-home-banner .wrapper {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+}
+
+/* Redesign titles to be dark blue/gold */
+.new-home-banner h1.chnge-txts,
+.hero-main-title {
+    font-size: 2.8rem !important;
+    font-weight: 800 !important;
+    color: #1c3659 !important; /* Navy Blue title */
+    line-height: 1.2 !important;
+    margin-bottom: 15px !important;
+    font-family: 'Outfit', sans-serif !important;
+    text-shadow: none !important;
+    text-align: center !important;
+}
+
+.new-home-banner h1.chnge-txts span,
+.hero-main-title span.highlight-gold {
+    color: #e5a93b !important; /* Golden accent */
+}
+
+.hero-sub-title,
+.new-home-banner p.sub-title {
+    font-size: 1.1rem !important;
+    color: #5a6e85 !important; /* Dark grey-blue subtitle */
+    max-width: 600px !important;
+    margin: 0 auto 30px auto !important;
+    text-align: center !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Adjust search tabs input container to match white background style */
+.flight-tabs-outer {
+    background: #ffffff !important;
+    border: 1px solid rgba(28, 54, 89, 0.12) !important;
+    box-shadow: 0 15px 35px rgba(28, 54, 89, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    max-width: 650px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    gap: 15px !important;
+    align-items: center !important;
+}
+
+.visa-banner .flight-tabs-outer select {
+    background: #ffffff !important;
+    color: #1c3659 !important;
+    border: 1px solid rgba(28, 54, 89, 0.15) !important;
+    border-radius: 30px !important;
+    padding: 12px 24px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    height: auto !important;
+    outline: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%231c3659' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 15px center !important;
+    float: none !important;
+    margin-top: 0 !important;
+}
+
+.visa-banner .flight-tabs-outer button {
+    background: #1c3659 !important;
+    color: #ffffff !important;
+    border: 1px solid #1c3659 !important;
+    border-radius: 30px !important;
+    padding: 12px 35px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    height: auto !important;
+    width: auto !important;
+    font-size: 1rem !important;
+    float: none !important;
+    text-transform: uppercase !important;
+}
+
+.visa-banner .flight-tabs-outer button:hover {
+    background: #e5a93b !important;
+    color: #1c3659 !important;
+    border-color: #e5a93b !important;
+    box-shadow: 0 4px 15px rgba(229, 169, 59, 0.3) !important;
+}
+
+/* Fix View Button container and text overriding */
+.explre-lnk {
+    width: auto !important;
+    float: none !important;
+    background: transparent !important; /* Reset default yellow background */
+    height: auto !important; /* Reset fixed height */
+    text-align: right !important; /* Align button to the right */
+    position: static !important;
+    margin-top: 12px !important;
+    display: block !important;
+}
+
+.explre-lnk a.lnk-main {
+    background-color: #1c3659 !important;
+    color: #ffffff !important;
+    padding: 8px 24px !important;
+    border-radius: 100px !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    display: inline-block !important;
+    border: 1px solid #1c3659 !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    line-height: normal !important; /* Reset inherited line-height */
+    height: auto !important;
+    width: auto !important;
+}
+
+.explre-lnk a.lnk-main:hover {
+    background-color: #e5a93b !important;
+    color: #1c3659 !important;
+    border-color: #e5a93b !important;
+    box-shadow: 0 4px 15px rgba(229, 169, 59, 0.3) !important;
+}
+
+
