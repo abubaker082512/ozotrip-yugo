@@ -12370,4 +12370,24 @@ img.gd-blue {
     box-shadow: 0 4px 15px rgba(229, 169, 59, 0.3) !important;
 }
 
+/* Force exactly 2 columns side-by-side on desktop/tablet for the offers_grid packages */
+#offers_grid .col-lg-6,
+#offers_grid .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+    #offers_grid .col-lg-6,
+    #offers_grid .col-md-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+
 
