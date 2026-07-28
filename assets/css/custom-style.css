@@ -11820,13 +11820,25 @@ img.show-mobile {
 .blue-btn,
 .booking-umrah-offer,
 .submit-btn-cls,
+.lnk-main,
+.custom-pkg,
+.rental-car-bttn,
+.need-help-bttn,
+.accept-btn,
 button[type="submit"]:not(.navbar-toggler):not(.close) {
     background-color: #1c3659 !important;
     color: #ffffff !important;
     border-radius: 100px !important;
     border: 1px solid #1c3659 !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
     font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    padding: 10px 24px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    text-align: center !important;
+    display: inline-block !important;
 }
 
 .search-action-btn:hover,
@@ -11844,11 +11856,371 @@ button[type="submit"]:not(.navbar-toggler):not(.close) {
 .blue-btn:hover,
 .booking-umrah-offer:hover,
 .submit-btn-cls:hover,
+.lnk-main:hover,
+.custom-pkg:hover,
+.rental-car-bttn:hover,
+.need-help-bttn:hover,
+.accept-btn:hover,
 button[type="submit"]:not(.navbar-toggler):not(.close):hover {
-    background-color: #ddb651 !important;
+    background-color: #e5a93b !important;
     color: #1c3659 !important;
-    border: 1px solid #ddb651 !important;
-    box-shadow: 0 4px 15px rgba(28, 54, 89, 0.2) !important;
-    transform: translateY(-1px) !important;
+    border: 1px solid #e5a93b !important;
+    box-shadow: 0 4px 15px rgba(229, 169, 59, 0.3) !important;
+    transform: translateY(-2px) !important;
+}
+
+.lnk-main {
+    text-transform: none !important;
+}
+
+.reject-btn {
+    background: transparent !important;
+    color: #5a6e85 !important;
+    border: 1px solid rgba(28, 54, 89, 0.15) !important;
+    border-radius: 100px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 10px 24px !important;
+    transition: all 0.3s ease !important;
+}
+
+.reject-btn:hover {
+    background: rgba(28, 54, 89, 0.05) !important;
+    color: #1c3659 !important;
+    border-color: #1c3659 !important;
+}
+
+/* Premium Card Redesign (Tours, Umrah, Offers) to match Homepage Style */
+.row.shadow-box {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(28, 54, 89, 0.05) !important;
+    border: 1px solid rgba(28, 54, 89, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    overflow: hidden !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.row.shadow-box:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(28, 54, 89, 0.08) !important;
+    border-color: rgba(229, 169, 59, 0.3) !important;
+}
+
+.img-outer {
+    height: 100% !important;
+    min-height: 140px !important;
+    overflow: hidden !important;
+    border-radius: 16px 0 0 16px !important;
+}
+
+img.pkg-bndle-cuntry,
+img.visa-bndl-cuntry {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 16px 0 0 16px !important;
+    transition: transform 0.4s ease !important;
+}
+
+.row.shadow-box:hover img.pkg-bndle-cuntry,
+.row.shadow-box:hover img.visa-bndl-cuntry {
+    transform: scale(1.06) !important;
+}
+
+.contnt-outer {
+    padding: 20px 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+}
+
+h1.cntry-name {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #1c3659 !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    line-height: 1.3 !important;
+    font-family: 'Outfit', 'Rubik', sans-serif !important;
+}
+
+.blue-name, 
+.bndle-name {
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: #e5a93b !important;
+    margin-bottom: 0 !important;
+}
+
+.contnt-outer hr {
+    margin-top: 6px !important;
+    margin-bottom: 8px !important;
+    border-color: rgba(28, 54, 89, 0.06) !important;
+}
+
+.text-bndle {
+    font-size: 0.9rem !important;
+    color: #5a6e85 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0 !important;
+}
+
+.text-bndle span.prc-bld {
+    font-size: 1.35rem !important;
+    font-weight: 800 !important;
+    color: #1c3659 !important;
+    margin-left: 5px !important;
+}
+
+.highlight-bld {
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    color: #ff4a5a !important;
+    background: rgba(255, 74, 90, 0.08) !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    margin-top: 4px !important;
+}
+
+.explre-lnk {
+    margin-top: 8px !important;
+}
+
+.explre-lnk a.lnk-main {
+    background: #1c3659 !important;
+    color: #ffffff !important;
+    padding: 8px 24px !important;
+    border-radius: 30px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+    border: 1px solid #1c3659 !important;
+    text-decoration: none !important;
+}
+
+.explre-lnk a.lnk-main:hover {
+    background: #e5a93b !important;
+    color: #1c3659 !important;
+    border-color: #e5a93b !important;
+    box-shadow: 0 4px 15px rgba(229, 169, 59, 0.3) !important;
+}
+
+@media (max-width: 576px) {
+    .row.shadow-box {
+        flex-direction: column !important;
+    }
+    .row.shadow-box > .col-3,
+    .row.shadow-box > .col-9 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+    .img-outer {
+        border-radius: 16px 16px 0 0 !important;
+        height: 180px !important;
+    }
+    img.pkg-bndle-cuntry,
+    img.visa-bndl-cuntry {
+        border-radius: 16px 16px 0 0 !important;
+    }
+    .contnt-outer {
+        padding: 16px !important;
+    }
+}
+
+/* Visas Page Destination Cards Redesign */
+.destinations {
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(28, 54, 89, 0.05) !important;
+    border: 1px solid rgba(28, 54, 89, 0.08) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    overflow: hidden !important;
+    margin-bottom: 30px !important;
+}
+
+.destinations:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(28, 54, 89, 0.08) !important;
+    border-color: rgba(229, 169, 59, 0.3) !important;
+}
+
+.destinations figure {
+    margin: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+    aspect-ratio: 16 / 10 !important;
+}
+
+.destinations figure img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.4s ease !important;
+}
+
+.destinations:hover figure img {
+    transform: scale(1.06) !important;
+}
+
+.destinations figure .name {
+    background: rgba(28, 54, 89, 0.9) !important;
+    backdrop-filter: blur(8px) !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    left: 15px !important;
+    bottom: 15px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.destinations figure .name a {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    letter-spacing: 1px !important;
+}
+
+.destination-inner {
+    padding: 16px 20px !important;
+    background: #ffffff !important;
+    border-top: 1px solid rgba(28, 54, 89, 0.06) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.destination-inner .float-left, 
+.destination-inner .float-right {
+    float: none !important;
+    display: block !important;
+}
+
+.destination-inner span.rubik-regular {
+    font-size: 0.75rem !important;
+    color: #5a6e85 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 4px !important;
+}
+
+.destination-inner div {
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #1c3659 !important;
+}
+
+.destination-inner div.text-right {
+    color: #e5a93b !important;
+    font-size: 1.05rem !important;
+}
+
+/* Premium Page Banner Redesign (Tours, Umrah, Offers) */
+.of-bnt-mr {
+    margin-top: 130px !important;
+    margin-bottom: 30px !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 35px rgba(28, 54, 89, 0.08) !important;
+    border: 1px solid rgba(28, 54, 89, 0.08) !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    transition: transform 0.3s ease !important;
+}
+
+.of-bnt-mr:hover {
+    transform: translateY(-2px) !important;
+}
+
+img.ofr-bndle,
+img.responsive-ofr-bndle {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 20px !important;
+    display: block !important;
+}
+
+/* Premium Filter Buttons Redesign (Tours, Umrah) */
+.vsaFlter-active,
+.vsaFlter-gray {
+    border-radius: 12px !important;
+    padding: 16px 20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 80px !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    cursor: pointer !important;
+    box-shadow: 0 4px 15px rgba(28, 54, 89, 0.03) !important;
+    border: 1px solid rgba(28, 54, 89, 0.08) !important;
+    position: relative !important;
+}
+
+.vsaFlter-active {
+    background: #1c3659 !important;
+    border-color: #1c3659 !important;
+}
+
+.vsaFlter-gray {
+    background: #ffffff !important;
+    border-color: rgba(28, 54, 89, 0.08) !important;
+}
+
+.vsaFlter-gray:hover {
+    border-color: #e5a93b !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(28, 54, 89, 0.06) !important;
+}
+
+.fnt-filter {
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    transition: color 0.3s ease !important;
+    display: block !important;
+}
+
+.vsaFlter-active .fnt-filter {
+    color: #ffffff !important;
+}
+
+.vsaFlter-gray .fnt-filter {
+    color: #5a6e85 !important;
+}
+
+.vsaFlter-gray:hover .fnt-filter {
+    color: #1c3659 !important;
+}
+
+img.gd-blue {
+    position: absolute !important;
+    top: -6px !important;
+    right: -6px !important;
+    width: 22px !important;
+    height: 22px !important;
+    background: #e5a93b !important;
+    border-radius: 50% !important;
+    padding: 3px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+}
+
+.urgency-badge {
+    background: #ff4a5a !important;
+    border-radius: 20px !important;
+    color: #ffffff !important;
+    font-size: 0.72rem !important;
+    padding: 3px 10px !important;
+    box-shadow: 0 4px 10px rgba(255, 74, 90, 0.25) !important;
 }
 
