@@ -1395,7 +1395,60 @@
         </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    /* Force exactly 2 columns side-by-side on desktop/tablet for the offers_grid packages */
+    #offers_grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+    #offers_grid > .col-lg-6 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+        padding: 0 12px !important;
+        box-sizing: border-box !important;
+    }
+    @media (max-width: 768px) {
+        #offers_grid > .col-lg-6 {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+
+    /* Force exactly 3 columns side-by-side on desktop/tablet for the Trending Visas cards */
+    #top_visa_destination {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        margin-top: 20px !important;
+    }
+    #top_visa_destination > .col-lg-4 {
+        flex: 0 0 33.333% !important;
+        max-width: 33.333% !important;
+        width: 33.333% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+    @media (max-width: 992px) {
+        #top_visa_destination > .col-lg-4 {
+            flex: 0 0 50% !important;
+            max-width: 50% !important;
+            width: 50% !important;
+        }
+    }
+    @media (max-width: 576px) {
+        #top_visa_destination > .col-lg-4 {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+    }
+</style>
 </head>
+
 <body>
 <noscript>
 <img height="1" src="https://www.facebook.com/tr?id=1753962158456915&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
@@ -1794,116 +1847,74 @@
 </div>
 <div class="col-xl-12 float-left">
 <section class="wrapper">
+
 <h2 class="rubik-medium" style="font-family: 'Outfit', sans-serif !important; font-weight: 800; font-size: 2.5rem; color: #1c3659; margin-top: 60px; margin-bottom: 10px; text-align: center; width: 100%;">Trending Visas</h2>
 <p style="color: #5a6e85; text-align: center; max-width: 600px; margin: 0 auto 40px auto; font-family: 'Outfit', sans-serif !important;">Select a country to view updated requirements, fees, processing times, and document check-lists.</p>
-<div class="" id="top_visa_destination">
-                            <div class="destinations  float-left data-34">
+<div class="row" id="top_visa_destination" style="margin: 0;">
+  
+  <!-- USA -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="destinations" style="margin: 0 !important; width: 100% !important;">
+      <figure class="position-relative">
+        <img class="one" src="assets/img/ItemMasterImages/Tile_images/usa.webp" alt="USA"/>
+        <div class="name rubik-medium position-absolute text-uppercase"><a href="visa/usa-visa.html">USA</a></div>
+      </figure>
+      <div class="destination-inner">
+        <div>
+          <span class="rubik-regular d-block">Processing time</span>
+          Same Day
+        </div>
+        <div class="text-right">
+          <span class="rubik-regular d-block">Starting from</span>
+          PKR 95,000
+        </div>
+      </div>
+    </div>
+  </div>
 
-                                <figure class="position-relative">
+  <!-- Canada -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="destinations" style="margin: 0 !important; width: 100% !important;">
+      <figure class="position-relative">
+        <img class="two" src="assets/img/ItemMasterImages/Tile_images/canada.webp" alt="Canada"/>
+        <div class="name rubik-medium position-absolute text-uppercase"><a href="visa/canada-visa.html">Canada</a></div>
+      </figure>
+      <div class="destination-inner">
+        <div>
+          <span class="rubik-regular d-block">Processing time</span>
+          10-21 Working Days
+        </div>
+        <div class="text-right">
+          <span class="rubik-regular d-block">Starting from</span>
+          PKR 95,000
+        </div>
+      </div>
+    </div>
+  </div>
 
-                                    <img class="one" src="https://www.ozotrips.com/assets/img/ItemMasterImages/Tile_images/tileImg_1706698436.png" alt=""/>
+  <!-- Australia -->
+  <div class="col-lg-4 col-md-6 mb-4">
+    <div class="destinations" style="margin: 0 !important; width: 100% !important;">
+      <figure class="position-relative">
+        <img class="three" src="assets/img/ItemMasterImages/Tile_images/uk.webp" alt="Australia"/>
+        <div class="name rubik-medium position-absolute text-uppercase"><a href="visa/australia-visa.html">Australia</a></div>
+      </figure>
+      <div class="destination-inner">
+        <div>
+          <span class="rubik-regular d-block">Processing time</span>
+          10-21 Working Days
+        </div>
+        <div class="text-right">
+          <span class="rubik-regular d-block">Starting from</span>
+          PKR 95,000
+        </div>
+      </div>
+    </div>
+  </div>
 
-                                    <div class="name rubik-medium position-absolute text-uppercase"><a
+</div>
 
-                                            href="https://www.ozotrips.com/visa/usa-visa">USA</a></div>
 
-                                </figure>
-
-                                <div class="destination-inner float-left col-xl-12">
-
-                                    <div class="float-left rubik-bold">
-
-                                        <span class="rubik-regular d-block">Processing time</span>
-
-                                        Same Day
-
-                                    </div>
-
-                                    <div class="float-right text-right rubik-bold">
-
-                                        <span class="rubik-regular d-block">Starting from</span>
-
-                                        PKR 95,000
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        
-
-                            <div class="destinations  float-left data-16">
-
-                                <figure class="position-relative">
-
-                                    <img class="two" src="https://www.ozotrips.com/assets/img/ItemMasterImages/Tile_images/tileImg_1706700053.png" alt=""/>
-
-                                    <div class="name rubik-medium position-absolute text-uppercase"><a
-
-                                            href="https://www.ozotrips.com/visa/canada-visa">Canada</a></div>
-
-                                </figure>
-
-                                <div class="destination-inner float-left col-xl-12">
-
-                                    <div class="float-left rubik-bold">
-
-                                        <span class="rubik-regular d-block">Processing time</span>
-
-                                        21 Working Days
-
-                                    </div>
-
-                                    <div class="float-right text-right rubik-bold">
-
-                                        <span class="rubik-regular d-block">Starting from</span>
-
-                                        PKR 95,000
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        
-
-                            <div class="destinations destinations2 float-left data-53">
-
-                                <figure class="position-relative">
-
-                                    <img class="three" src="https://www.ozotrips.com/assets/img/ItemMasterImages/Tile_images/tileImg_1706698488.png" alt=""/>
-
-                                    <div class="name rubik-medium position-absolute text-uppercase"><a
-
-                                            href="https://www.ozotrips.com/visa/australia-visa">Australia</a></div>
-
-                                </figure>
-
-                                <div class="destination-inner float-left col-xl-12">
-
-                                    <div class="float-left rubik-bold">
-
-                                        <span class="rubik-regular d-block">Processing time</span>
-
-                                        10-21 Working Days
-
-                                    </div>
-
-                                    <div class="float-right text-right rubik-bold">
-
-                                        <span class="rubik-regular d-block">Starting from</span>
-
-                                        PKR 95,000
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                                                            </div>
 </section>
 </div>
 <!-- Visa Category  FILTER -->
@@ -2464,7 +2475,6 @@
 <div class="col-xl-12 float-left p-0">
 <div class="offers_carousel w-100">
 <div class="row w-100" id="offers_grid" style="margin: 0;">
-
 <div class="col-lg-6 mb-4">
 <div class="row shadow-box">
 <div class="col-3 p-0">
@@ -2486,8 +2496,6 @@
 </p>
 <div class="explre-lnk">
 <a class="lnk-main" href="promotion/australia-visa-offer.html">View</a>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -2517,7 +2525,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="col-lg-6 mb-4">
 <div class="row shadow-box">
 <div class="col-3 p-0">
@@ -2539,7 +2546,6 @@
 </p>
 <div class="explre-lnk">
 <a class="lnk-main" href="promotion/poland-visa-offer.html">View</a>
-</div>
 </div>
 </div>
 </div>
@@ -2569,7 +2575,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="col-lg-6 mb-4">
 <div class="row shadow-box">
 <div class="col-3 p-0">
@@ -2591,7 +2596,6 @@
 </p>
 <div class="explre-lnk">
 <a class="lnk-main" href="promotion/switzerland-visa-offer.html">View</a>
-</div>
 </div>
 </div>
 </div>
@@ -2621,7 +2625,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="col-lg-6 mb-4">
 <div class="row shadow-box">
 <div class="col-3 p-0">
@@ -2643,7 +2646,6 @@
 </p>
 <div class="explre-lnk">
 <a class="lnk-main" href="promotion/uk-visa-offer.html">View</a>
-</div>
 </div>
 </div>
 </div>
@@ -2673,7 +2675,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="col-lg-6 mb-4">
 <div class="row shadow-box">
 <div class="col-3 p-0">
@@ -2695,7 +2696,6 @@
 </p>
 <div class="explre-lnk">
 <a class="lnk-main" href="promotion/usa-visa-offer.html">View</a>
-</div>
 </div>
 </div>
 </div>
@@ -2725,7 +2725,6 @@
 </div>
 </div>
 </div>
-</div>
 <div class="col-lg-6 mb-4">
 <div class="row shadow-box">
 <div class="col-3 p-0">
@@ -2747,7 +2746,6 @@
 </p>
 <div class="explre-lnk">
 <a class="lnk-main" href="promotion/spain-visa-offer.html">View</a>
-</div>
 </div>
 </div>
 </div>
@@ -2777,11 +2775,6 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</section>
 </div>
 </div>
 <!-- best-deals -->
