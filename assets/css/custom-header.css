@@ -414,7 +414,7 @@ img.promo-icon-head {
         z-index: 1111111111111111;
     }
     h1.save-20-prcnt {
-        color: #1c3659;
+        color: #ffffff !important;
         font-size: 13px;
         font-weight: 400;
         padding-top: 7px;
@@ -437,8 +437,8 @@ img.promo-icon-head {
     }
 
     span.bl-bld {
-        color: #1c3659;
-        font-weight: 500;
+        color: #e5a93b !important;
+        font-weight: 700 !important;
     }
     .\32 0-prcent-tag{
         display: none;
@@ -1031,16 +1031,27 @@ img.promo-icon-head {
         top: -5px !important;
     }
 
+    .u-hamburger__box {
+        position: relative !important;
+        display: block !important;
+        width: 30px !important;
+        height: 20px !important;
+    }
+
     .navbar-toggler-icon {
         outline: none !important;
         border-radius: 10px !important;
         width: 100% !important;
-        height: 3px !important;
+        height: 4px !important;
         background-color: #1c3659 !important; /* Brand dark blue */
         transition: all 0.3s ease-in-out !important;
-        margin: 0 !important;
+        margin: 4px 0 0 !important;
         float: none !important;
         display: block !important;
+    }
+
+    .navbar-toggler-icon:first-child {
+        margin-top: 0 !important;
     }
 
     .navbar-toggler:focus {
@@ -1056,8 +1067,8 @@ img.promo-icon-head {
     .navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(1) {
         position: absolute !important;
         top: 8px !important;
-        transform: rotate(135deg) !important;
-        opacity: 0.9 !important;
+        transform: rotate(45deg) !important;
+        opacity: 1 !important;
         left: 0 !important;
     }
 
@@ -1070,8 +1081,8 @@ img.promo-icon-head {
     .navbar-toggler:not(.collapsed) .navbar-toggler-icon:nth-child(3) {
         position: absolute !important;
         top: 8px !important;
-        transform: rotate(-135deg) !important;
-        opacity: 0.9 !important;
+        transform: rotate(-45deg) !important;
+        opacity: 1 !important;
         left: 0 !important;
     }
 
