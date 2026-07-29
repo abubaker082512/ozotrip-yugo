@@ -12935,6 +12935,108 @@ img.gd-blue {
     }
 }
 
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 85px !important; /* Float above the 75px bottom bar with 10px spacing */
+        right: 16px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+/* Premium Global Bottom Responsive Bar Styling for all Visa pages */
+.bg-fxd-resp {
+    background: #ffffff !important;
+    height: 75px !important;
+    margin: 0px !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08) !important;
+    position: fixed !important;
+    z-index: 99999 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    border-top: 1px solid rgba(28, 54, 89, 0.06) !important;
+    width: 100% !important;
+    padding: 10px 16px !important;
+    box-sizing: border-box !important;
+}
+
+.bg-fxd-resp .row,
+.bg-fxd-resp .col-lg-12 {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.bg-fxd-resp .col-lg-12 {
+    flex-direction: row !important;
+}
+
+.bg-fxd-resp .cut-line-resp,
+.bg-fxd-resp .actul-amunt,
+.bg-fxd-resp .list-modal {
+    position: static !important;
+    float: none !important;
+    display: inline-block !important;
+}
+
+.bg-fxd-resp .cut-line-resp {
+    width: auto !important;
+    font-size: 11px !important;
+    color: #64748b !important;
+    text-decoration: line-through !important;
+    margin-right: 8px !important;
+    font-weight: 500 !important;
+}
+
+.bg-fxd-resp .cut-line-resp::after {
+    display: none !important;
+}
+
+.bg-fxd-resp .actul-amunt {
+    width: auto !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+    color: #e5a93b !important;
+}
+
+.bg-fxd-resp .list-modal {
+    display: none !important; /* Hide to maintain maximum clarity and conversion focus */
+}
+
+.bg-fxd-resp .rght-aply {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    height: 42px !important;
+    background: #1c3659 !important;
+    border-radius: 30px !important;
+    line-height: 42px !important;
+    padding: 0 24px !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(28, 54, 89, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.bg-fxd-resp .rght-aply a {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+.bg-fxd-resp .rght-aply:hover {
+    background: #e5a93b !important;
+    box-shadow: 0 4px 12px rgba(229, 169, 59, 0.3) !important;
+}
+
 
 
 
