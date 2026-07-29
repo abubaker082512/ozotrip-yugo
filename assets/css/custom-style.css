@@ -12145,7 +12145,23 @@ img.responsive-ofr-bndle {
     width: 100% !important;
     height: auto !important;
     border-radius: 20px !important;
-    display: block;
+}
+
+img.ofr-bndle {
+    display: block !important;
+}
+
+img.responsive-ofr-bndle {
+    display: none !important;
+}
+
+@media (max-width: 525px) {
+    img.ofr-bndle {
+        display: none !important;
+    }
+    img.responsive-ofr-bndle {
+        display: block !important;
+    }
 }
 
 /* Premium Filter Buttons Redesign (Tours, Umrah) */
