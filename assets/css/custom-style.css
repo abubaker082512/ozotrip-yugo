@@ -12145,7 +12145,7 @@ img.responsive-ofr-bndle {
     width: 100% !important;
     height: auto !important;
     border-radius: 20px !important;
-    display: block !important;
+    display: block;
 }
 
 /* Premium Filter Buttons Redesign (Tours, Umrah) */
