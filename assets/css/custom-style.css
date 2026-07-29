@@ -12661,6 +12661,69 @@ img.gd-blue {
     }
 }
 
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #25D366 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+    z-index: 9999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-3px) !important;
+    background-color: #20ba59 !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6) !important;
+    color: #fff !important;
+}
+
+.whatsapp-float svg {
+    width: 32px !important;
+    height: 32px !important;
+    animation: whatsapp-bounce 2s infinite alternate !important;
+}
+
+@keyframes whatsapp-bounce {
+    0% {
+        transform: translateY(0) !important;
+    }
+    100% {
+        transform: translateY(-2px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px !important;
+        right: 20px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .whatsapp-float svg {
+        width: 26px !important;
+        height: 26px !important;
+    }
+}
+
+/* Remove old floating orange call button */
+.svg-chat-need,
+.svg-chat-need-mobile-con,
+.whts-chat-icon {
+    display: none !important;
+}
+
 
 
 
