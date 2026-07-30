@@ -4,7 +4,51 @@
  * @author HtmlStream
  * @version 1.0
  */
-;
+
+// Global Vanilla JS Capture-Phase Handler for Mobile Hamburger Menu (Bypasses Bootstrap collapse conflicts on all 100+ pages)
+(function() {
+  window.addEventListener('click', function(e) {
+    var toggler = e.target.closest('.navbar-toggler');
+    var openNav = document.querySelector('.navbar-collapse.show');
+
+    if (toggler) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+
+      var targetId = toggler.getAttribute('data-target') || '#navBar';
+      var targetEl = document.querySelector(targetId) || document.querySelector('.navbar-collapse');
+      if (!targetEl) return;
+
+      var isOpen = targetEl.classList.contains('show');
+
+      if (isOpen) {
+        targetEl.classList.remove('show');
+        document.querySelectorAll('.navbar-toggler').forEach(function(btn) {
+          btn.classList.add('collapsed');
+          btn.classList.remove('close2');
+        });
+      } else {
+        targetEl.classList.add('show');
+        document.querySelectorAll('.navbar-toggler').forEach(function(btn) {
+          btn.classList.remove('collapsed');
+          btn.classList.add('close2');
+        });
+      }
+      return;
+    }
+
+    // Backdrop click to close open mobile menu
+    if (openNav && !e.target.closest('.navbar-nav') && !e.target.closest('.navbar-toggler')) {
+      openNav.classList.remove('show');
+      document.querySelectorAll('.navbar-toggler').forEach(function(btn) {
+        btn.classList.add('collapsed');
+        btn.classList.remove('close2');
+      });
+    }
+  }, true);
+})();
+
 (function ($) {
 
   'use strict';
