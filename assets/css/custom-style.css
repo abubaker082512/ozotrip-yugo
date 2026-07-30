@@ -13037,6 +13037,17 @@ img.gd-blue {
     box-shadow: 0 4px 12px rgba(229, 169, 59, 0.3) !important;
 }
 
+/* Fix for search bars and headings going under the fixed mobile header */
+@media (max-width: 768px) {
+    .new-home-banner,
+    .visa-banner,
+    .umrah-banner,
+    .tours-banner,
+    .offers-banner {
+        padding-top: 115px !important;
+    }
+}
+
 
 
 

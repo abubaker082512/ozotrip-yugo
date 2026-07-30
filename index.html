@@ -2021,7 +2021,7 @@
 
         .only-checkin .t-check-in {
 
-            display: none;
+            width: 100%;
 
         }
 
@@ -8548,75 +8548,64 @@ jQuery(document).ready(function () {
 
 
         jQuery('.yugo-search-bar .nav-item a').on('click',function(e){
-
-
-
             e.preventDefault();
-
             jQuery('.yugo-search-bar .nav-item a').removeClass('active');
-
-
-
-
-
             jQuery(this).addClass('active');
 
             var id = jQuery(this).attr('id');
-
             var ret = id.split("-");
+            var tabName = ret[1]; // 'oneway', 'round', or 'multicity'
 
-            if(ret[0]=='round'){
-
-                var content = '<div class="departure-cities t-datepicker"><div class="checkin-block"><div class="departure-city-item t-check-in"></div></div><hr><div class="checkout-block"><div class="departure-city-item t-check-out"></div></div></div>';
-
+            if (tabName === 'multicity') {
+                jQuery('#home-round_oneWay').hide();
+                jQuery('#home-multiCity').show();
+                jQuery('#home-searchtype').val('multicity');
+            } else {
+                jQuery('#home-round_oneWay').show();
+                jQuery('#home-multiCity').hide();
+                
+                if (tabName === 'round') {
+                    jQuery('#home-searchtype').val('return');
+                    var content = '<div class="departure-cities t-datepicker">' +
+                                  '  <div class="checkin-block position-relative">' +
+                                  '    <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><g fill="none"><rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect><path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path><path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect></g></svg>' +
+                                  '    <div class="departure-city-item t-check-in"></div>' +
+                                  '  </div>' +
+                                  '  <hr/>' +
+                                  '  <div class="checkout-block position-relative">' +
+                                  '    <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><g fill="none"><rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect><path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path><path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect></g></svg>' +
+                                  '    <div class="departure-city-item t-check-out"></div>' +
+                                  '  </div>' +
+                                  '</div>';
+                } else {
+                    jQuery('#home-searchtype').val('oneway');
+                    var content = '<div class="departure-cities t-datepicker only-checkin">' +
+                                  '  <div class="checkin-block position-relative">' +
+                                  '    <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg"><g fill="none"><rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect><path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path><path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect><rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect></g></svg>' +
+                                  '    <div class="departure-city-item t-check-in"></div>' +
+                                  '  </div>' +
+                                  '  <hr style="background: transparent"/>' +
+                                  '</div>';
+                }
+                jQuery('#home-dates-wrap').html(content);
+                dateselect();
             }
-
-            else{
-
-                var content = '<div class="departure-cities t-datepicker only-checkin"><div class="checkin-block"><div class="departure-city-item t-check-in"></div></div><hr style="background: transparent">';
-
-            }
-
-            console.log(content);
-
-            jQuery('#dates-wrap').html(content);
-
-            dateselect();
-
-            jQuery('.search-bar-feilds input[name=searchtype]').val(ret[0]);
-
-
-
         });
 
     });
 
     function dateselect(){
-
         jQuery('.t-datepicker').tDatePicker({
-
             titleCheckIn: 'Departure',
-
-            titleCheckOut: 'Return',
-
+            titleCheckOut: 'Arrival',
             limitDateRanges:365,
-
-
-
         }).on('selectedCI',function(e, slDateCI) {
-
-            jQuery('#dates-wrap div.checkin-block').find('label').remove();
-
-            jQuery('#dates-wrap div.checkin-block').prepend('<label class="departure-lable">Departure</label>');
-
+            jQuery('#home-dates-wrap div.checkin-block, #home-multi-city-segments div.checkin-block').find('label').remove();
+            jQuery('#home-dates-wrap div.checkin-block, #home-multi-city-segments div.checkin-block').prepend('<label class="departure-lable">Departure</label>');
         }).on('selectedCO',function(e, slDateCI) {
-
-            jQuery('#dates-wrap div.checkout-block').find('label').remove();
-
-            jQuery('#dates-wrap div.checkout-block').prepend('<label class="departure-lable">Return</label>');
-
+            jQuery('#home-dates-wrap div.checkout-block').find('label').remove();
+            jQuery('#home-dates-wrap div.checkout-block').prepend('<label class="departure-lable">Arrival</label>');
         });
-
     }
 
     var options = {
