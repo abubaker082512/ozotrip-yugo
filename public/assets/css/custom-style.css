@@ -13301,31 +13301,47 @@ img.gd-blue {
 
 /* ============================================================
    FOOTER SOCIAL ICONS - Facebook, Instagram, WhatsApp only
+   Footer has a WHITE background, so icons use dark navy theme
    ============================================================ */
 .footer-social-icons {
     display: flex !important;
     flex-direction: row !important;
-    gap: 12px !important;
+    gap: 10px !important;
     flex-wrap: wrap !important;
     margin-top: 10px !important;
     padding: 0 !important;
     list-style: none !important;
 }
-.footer-social-icons li { display: inline-flex !important; }
+.footer-social-icons li {
+    display: inline-flex !important;
+    float: none !important;
+    margin: 0 !important;
+}
 .footer-social-icons li a {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 38px !important;
-    height: 38px !important;
-    border-radius: 50% !important;
-    background: rgba(255,255,255,0.12) !important;
-    color: #fff !important;
-    font-size: 16px !important;
-    transition: background 0.25s ease, transform 0.2s ease !important;
+    width: 39px !important;
+    height: 39px !important;
+    border-radius: 100% !important;
+    background: transparent !important;
+    color: #1c3659 !important;
+    font-size: 17px !important;
+    line-height: 39px !important;
+    box-shadow: 0 0 0 1px #1c3659 inset !important;
+    transition: color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.2s ease !important;
     text-decoration: none !important;
 }
-.footer-social-icons li a:hover { transform: translateY(-3px) !important; text-decoration: none !important; }
+.footer-social-icons li a span {
+    line-height: 39px !important;
+    color: inherit !important;
+}
+.footer-social-icons li a:hover {
+    color: #fff !important;
+    box-shadow: none !important;
+    transform: translateY(-2px) !important;
+    text-decoration: none !important;
+}
 .footer-social-icons li a[aria-label="Facebook"]:hover  { background: #1877f2 !important; }
 .footer-social-icons li a[aria-label="Instagram"]:hover { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888) !important; }
 .footer-social-icons li a[aria-label="WhatsApp"]:hover  { background: #25d366 !important; }
@@ -13335,17 +13351,17 @@ img.gd-blue {
    ============================================================ */
 .powered-by-abt {
     margin-top: 6px !important;
-    font-size: 12px !important;
-    color: rgba(255,255,255,0.65) !important;
+    font-size: 13px !important;
+    color: #1c3659 !important;
 }
 .powered-by-abt a {
-    color: rgba(255,255,255,0.9) !important;
+    color: #1c3659 !important;
     font-weight: 600 !important;
     text-decoration: none !important;
-    border-bottom: 1px solid rgba(255,255,255,0.35) !important;
+    border-bottom: 1px solid #1c3659 !important;
     transition: color 0.2s ease, border-color 0.2s ease !important;
 }
 .powered-by-abt a:hover {
-    color: #fff !important;
-    border-color: rgba(255,255,255,0.8) !important;
+    color: #ddb651 !important;
+    border-color: #ddb651 !important;
 }
