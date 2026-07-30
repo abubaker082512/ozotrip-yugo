@@ -11890,7 +11890,16 @@ button[type="submit"]:not(.navbar-toggler):not(.close):hover {
     border-color: #1c3659 !important;
 }
 
-/* Premium Card Redesign (Tours, Umrah, Offers) to match Homepage Style */
+/* Premium Card Redesign (Tours, Umrah, Offers) to match Homepage Style & Equal Height */
+.padng-small-ssc,
+#packagesList > div[class*="col-"],
+#offers_grid > div[class*="col-"],
+#umrah_grid > div[class*="col-"],
+#visa_offers div[class*="col-lg-6"] {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .row.shadow-box {
     background: #ffffff !important;
     border-radius: 16px !important;
@@ -11902,6 +11911,10 @@ button[type="submit"]:not(.navbar-toggler):not(.close):hover {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    display: flex !important;
+    flex: 1 1 auto !important;
+    height: 100% !important;
+    align-items: stretch !important;
 }
 
 .row.shadow-box:hover {
@@ -11910,17 +11923,32 @@ button[type="submit"]:not(.navbar-toggler):not(.close):hover {
     border-color: rgba(229, 169, 59, 0.3) !important;
 }
 
+.row.shadow-box > .col-3 {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+}
+
+.row.shadow-box > .col-9 {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+}
+
 .img-outer {
     height: 100% !important;
-    min-height: 140px !important;
+    min-height: 100% !important;
+    width: 100% !important;
     overflow: hidden !important;
     border-radius: 16px 0 0 16px !important;
+    display: flex !important;
 }
 
 img.pkg-bndle-cuntry,
 img.visa-bndl-cuntry {
     width: 100% !important;
     height: 100% !important;
+    min-height: 100% !important;
     object-fit: cover !important;
     border-radius: 16px 0 0 16px !important;
     transition: transform 0.4s ease !important;
@@ -11932,20 +11960,28 @@ img.visa-bndl-cuntry {
 }
 
 .contnt-outer {
-    padding: 20px 24px !important;
+    padding: 18px 20px !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    flex: 1 1 auto !important;
+    gap: 4px !important;
 }
 
 h1.cntry-name {
-    font-size: 1.25rem !important;
+    font-size: 1.15rem !important;
     font-weight: 700 !important;
     color: #1c3659 !important;
     margin-top: 4px !important;
     margin-bottom: 4px !important;
     line-height: 1.3 !important;
     font-family: 'Outfit', 'Rubik', sans-serif !important;
+    min-height: 2.6em !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
 }
 
 .blue-name, 
@@ -11965,10 +12001,15 @@ h1.cntry-name {
 }
 
 .text-bndle {
-    font-size: 0.9rem !important;
+    font-size: 0.88rem !important;
     color: #5a6e85 !important;
     line-height: 1.4 !important;
+    margin-top: auto !important;
     margin-bottom: 0 !important;
+    min-height: 48px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
 }
 
 .text-bndle span.prc-bld {
@@ -11990,7 +12031,9 @@ h1.cntry-name {
 }
 
 .explre-lnk {
-    margin-top: 8px !important;
+    margin-top: auto !important;
+    padding-top: 6px !important;
+    align-self: flex-end !important;
 }
 
 .explre-lnk a.lnk-main {
