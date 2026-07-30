@@ -13039,18 +13039,137 @@ img.gd-blue {
 
 
 /* ============================================================
-   Fix: Mobile Header Overlap on Banner Pages
-   - Fixed header height on mobile ~93px (promo bar + nav)
-   - Inline styles on pages use padding: 130px which is fine desktop but need to ensure mobile clears header
-   - flights.html has its own inline style @media override handled there
+   Comprehensive Responsive Mobile Layout Overhauls
    ============================================================ */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+    /* 1. Header Overlap Fix: Clear fixed mobile header (promo bar + navbar height) */
     .new-home-banner,
     .visa-banner,
+    .umrah-banner,
+    .tours-banner,
+    .offers-banner,
     div.new-home-banner.umrah-banner,
     div.new-home-banner.tours-banner,
-    div.new-home-banner.offers-banner {
-        padding-top: 115px !important;
+    div.new-home-banner.offers-banner,
+    div.new-home-banner.visa-banner {
+        padding-top: 170px !important;
+    }
+
+    /* 2. Center Category Filter Bar on Mobile without horizontal overflow */
+    .desktop-category,
+    .responsive-category {
+        display: block !important;
+        width: 92% !important;
+        max-width: 450px !important;
+        margin: 25px auto !important;
+        padding: 14px 10px !important;
+        box-sizing: border-box !important;
+        border-radius: 16px !important;
+        background: #ffffff !important;
+        box-shadow: 0 8px 25px rgba(28, 54, 89, 0.08) !important;
+        float: none !important;
+    }
+
+    .desktop-category .row,
+    .desktop-category .change-40,
+    .responsive-category .row,
+    #category_vsa,
+    .category-container,
+    .category_vsa {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        gap: 10px !important;
+        float: none !important;
+    }
+
+    .desktop-category .change-40 > div[class^="col-"],
+    .responsive-category div[class^="col-"] {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        float: none !important;
+    }
+
+    .vsaFlter-active,
+    .vsaFlter-gray,
+    .main-filter {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+    /* 3. Center Package & Offer Cards on Mobile */
+    .warpper,
+    .wrapper,
+    .box-main,
+    #visa_offers,
+    #offers_grid,
+    #tours_grid,
+    #umrah_grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        box-sizing: border-box !important;
+        overflow-x: hidden !important;
+    }
+
+    .box-main .row,
+    #offers_grid,
+    #tours_grid,
+    #umrah_grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .box-main .col-lg-6,
+    .box-main .col-md-6,
+    #offers_grid > div,
+    #tours_grid > div,
+    #umrah_grid > div {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .shadow-box {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+    }
+
+    /* Section Headings Centering */
+    .head-bdl,
+    h1.head-bdl,
+    .head-bdl-new {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-top: 20px !important;
     }
 
     /* Fix search bar icon + text spacing in flights search */
@@ -13095,4 +13214,5 @@ img.gd-blue {
     display: block !important;
     transition: none !important;
 }
+
 
