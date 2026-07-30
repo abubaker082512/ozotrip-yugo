@@ -254,6 +254,7 @@ button.close-btn-pkg{
         background: transparent;
     }
 }
+
 /* For laptop */
 @media only screen and (min-width: 1200px) and (max-width: 1300px){
     .modal-dialog.d-table.session-timeout-100 {
@@ -266,3 +267,14 @@ button.close-btn-pkg{
         width: 400px;
     }
 }
+
+/* ============================================================
+   HIDE FLOATING "CALL NOW" BUTTONS GLOBALLY
+   ============================================================ */
+.need-svg-box,
+.need-responsive-box,
+img.svg-chat-need,
+img.svg-chat-need-mobile-con {
+    display: none !important;
+}
+
