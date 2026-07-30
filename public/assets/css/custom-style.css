@@ -13039,10 +13039,10 @@ img.gd-blue {
 
 
 /* ============================================================
-   Comprehensive Responsive Mobile Layout Overhauls
+   Comprehensive Responsive Mobile & Desktop Layout Overhauls
    ============================================================ */
 @media (max-width: 991px) {
-    /* 1. Header Overlap Fix: Clear fixed mobile header (promo bar + navbar height) */
+    /* 1. Header Overlap Fix: Clear fixed mobile header */
     .new-home-banner,
     .visa-banner,
     .umrah-banner,
@@ -13052,16 +13052,45 @@ img.gd-blue {
     div.new-home-banner.tours-banner,
     div.new-home-banner.offers-banner,
     div.new-home-banner.visa-banner {
-        padding-top: 170px !important;
+        padding-top: 150px !important;
+        margin-top: 0 !important;
     }
 
-    /* 2. Center Category Filter Bar on Mobile without horizontal overflow */
-    .desktop-category,
+    .hero-main-title-container,
+    .hero-main-title,
+    h1.hero-main-title,
+    h1.rubik-regular {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        text-align: center !important;
+        font-size: 2rem !important;
+        line-height: 1.25 !important;
+        margin: 10px auto !important;
+    }
+
+    .hero-sub-title,
+    p.hero-sub-title {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        text-align: center !important;
+        font-size: 0.95rem !important;
+        margin: 8px auto 20px auto !important;
+        padding: 0 10px !important;
+    }
+
+    /* 2. Hide Desktop Category Filter Box on Mobile to Prevent Duplicate Category Boxes */
+    .desktop-category {
+        display: none !important;
+    }
+
+    /* 3. Show & Style Mobile Responsive Category Filter Box */
     .responsive-category {
         display: block !important;
         width: 92% !important;
         max-width: 450px !important;
-        margin: 25px auto !important;
+        margin: 20px auto !important;
         padding: 14px 10px !important;
         box-sizing: border-box !important;
         border-radius: 16px !important;
@@ -13070,8 +13099,6 @@ img.gd-blue {
         float: none !important;
     }
 
-    .desktop-category .row,
-    .desktop-category .change-40,
     .responsive-category .row,
     #category_vsa,
     .category-container,
@@ -13087,7 +13114,6 @@ img.gd-blue {
         float: none !important;
     }
 
-    .desktop-category .change-40 > div[class^="col-"],
     .responsive-category div[class^="col-"] {
         flex: 0 0 100% !important;
         max-width: 100% !important;
@@ -13097,9 +13123,9 @@ img.gd-blue {
         float: none !important;
     }
 
-    .vsaFlter-active,
-    .vsaFlter-gray,
-    .main-filter {
+    .responsive-category .vsaFlter-active,
+    .responsive-category .vsaFlter-gray,
+    .responsive-category .main-filter {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto !important;
@@ -13107,7 +13133,7 @@ img.gd-blue {
         text-align: center !important;
     }
 
-    /* 3. Center Package & Offer Cards on Mobile */
+    /* 4. Center Package & Offer Cards on Mobile */
     .warpper,
     .wrapper,
     .box-main,
@@ -13203,6 +13229,18 @@ img.gd-blue {
     }
 }
 
+@media (min-width: 992px) {
+    /* Hide Mobile Responsive Category Container on Desktop */
+    .responsive-category {
+        display: none !important;
+    }
+
+    /* Ensure Desktop Category Filter Box is displayed cleanly on Desktop */
+    .desktop-category {
+        display: block !important;
+    }
+}
+
 /* Prevent Bootstrap collapsing class from ruining the slide-drawer animation */
 .u-header__navbar-collapse.collapsing {
     position: fixed !important;
@@ -13214,5 +13252,6 @@ img.gd-blue {
     display: block !important;
     transition: none !important;
 }
+
 
 
