@@ -618,15 +618,20 @@ img.promo-icon-head {
     .u-header__navbar-collapse.collapse,
     .u-header__navbar-collapse.collapsing {
         position: fixed !important;
-        background: rgba(0, 0, 0, 0.7);
+        background: rgba(28, 54, 89, 0) !important;
         top: 0%;
         left: -100%;
         height: 100vh !important;
         width: 100%;
+        display: block !important;
+        transition: background-color 0.4s ease, left 0s 0.4s !important;
+        z-index: 9998 !important;
     }
 
     .u-header__navbar-collapse.collapse.show {
-        left: 0;
+        left: 0 !important;
+        background: rgba(28, 54, 89, 0.5) !important;
+        transition: background-color 0.4s ease, left 0s !important;
     }
 
     .u-header__navbar-collapse.collapse .navbar-nav,

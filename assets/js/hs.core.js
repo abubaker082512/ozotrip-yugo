@@ -119,12 +119,16 @@
             };
 
           $('body').on('click.HSMobileHideOnScroll', '.navbar-toggler', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
             var $navbar = $(this).closest('.navbar');
 
             if ($navbar.length) {
               $navbar.data('mobile-menu-scroll-position', $w.scrollTop());
             }
-            e.preventDefault();
+            var target = $(this).attr('data-target') || '#navBar';
+            $(target).toggleClass('show');
+            $(this).toggleClass('collapsed');
           });
 
           $w.on('scroll.HSMobileHideOnScroll', function (e) {
