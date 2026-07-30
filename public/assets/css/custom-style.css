@@ -13037,17 +13037,62 @@ img.gd-blue {
     box-shadow: 0 4px 12px rgba(229, 169, 59, 0.3) !important;
 }
 
-/* Fix for search bars and headings going under the fixed mobile header */
+
+/* ============================================================
+   Fix: Mobile Header Overlap on Banner Pages
+   - Fixed header height on mobile ~93px (promo bar + nav)
+   - Inline styles on pages use padding: 130px which is fine desktop but need to ensure mobile clears header
+   - flights.html has its own inline style @media override handled there
+   ============================================================ */
 @media (max-width: 768px) {
     .new-home-banner,
     .visa-banner,
-    .umrah-banner,
-    .tours-banner,
-    .offers-banner {
+    div.new-home-banner.umrah-banner,
+    div.new-home-banner.tours-banner,
+    div.new-home-banner.offers-banner {
         padding-top: 115px !important;
+    }
+
+    /* Fix search bar icon + text spacing in flights search */
+    .icons-wrap {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding-left: 10px !important;
+    }
+    .icons-wrap input.autocomplete {
+        font-size: 13px !important;
+        min-width: 0 !important;
+        flex: 1 !important;
+    }
+
+    /* Ensure traveler trigger is fully clickable */
+    #home-travelers-trigger,
+    #travelers-trigger {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    /* Ensure datepicker calendar is visible */
+    .t-datepicker-picker {
+        z-index: 99999 !important;
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 95vw !important;
     }
 }
 
-
-
+/* Prevent Bootstrap collapsing class from ruining the slide-drawer animation */
+.u-header__navbar-collapse.collapsing {
+    position: fixed !important;
+    background: rgba(28, 54, 89, 0) !important;
+    top: 0 !important;
+    left: -100% !important;
+    height: 100vh !important;
+    width: 100% !important;
+    display: block !important;
+    transition: none !important;
+}
 

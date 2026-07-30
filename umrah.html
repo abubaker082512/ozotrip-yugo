@@ -1151,7 +1151,7 @@
 <img alt="OzoTrips Logo" loading="lazy" src="assets/img/header/logo-light.png"/>
 </a>
 <!-- Responsive Toggle Button -->
-<button aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler btn u-hamburger u-hamburger--white collapsed" data-target="#navBar" data-toggle="collapse" type="button">
+<button aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler btn u-hamburger u-hamburger--white collapsed" data-target="#navBar" type="button" onclick="(function(btn){var target=document.getElementById('navBar');var isOpen=target.classList.contains('show');if(isOpen){target.classList.remove('show');btn.classList.add('collapsed');btn.classList.remove('close2');}else{target.classList.add('show');btn.classList.remove('collapsed');btn.classList.add('close2');}document.querySelectorAll('.navbar-toggler').forEach(function(b){if(b!==btn){if(isOpen){b.classList.add('collapsed');b.classList.remove('close2');}else{b.classList.remove('collapsed');b.classList.add('close2');}}});})(this);return false;">
 <span class="u-hamburger__box" id="hamburgerTrigger">
 <span class="navbar-toggler-icon"></span>
 <span class="navbar-toggler-icon"></span>
