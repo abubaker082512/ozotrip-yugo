@@ -21,6 +21,9 @@
     init: function () {
 
       $(document).ready(function (e) {
+        // Remove data-toggle collapse to prevent Bootstrap height-jump conflicts on mobile menu
+        $('.navbar-toggler').removeAttr('data-toggle');
+
         // Botostrap Tootltips
         $('[data-toggle="tooltip"]').tooltip();
 
@@ -127,8 +130,18 @@
               $navbar.data('mobile-menu-scroll-position', $w.scrollTop());
             }
             var target = $(this).attr('data-target') || '#navBar';
-            $(target).toggleClass('show');
-            $(this).toggleClass('collapsed');
+            var $target = $(target);
+            var isShowing = $target.hasClass('show');
+            
+            if (isShowing) {
+              $target.removeClass('show');
+              $('.navbar-toggler').addClass('collapsed');
+              $('.navbar-toggler').removeClass('close2');
+            } else {
+              $target.addClass('show');
+              $('.navbar-toggler').removeClass('collapsed');
+              $('.navbar-toggler').addClass('close2');
+            }
           });
 
           $w.on('scroll.HSMobileHideOnScroll', function (e) {
