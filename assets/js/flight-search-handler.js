@@ -198,12 +198,12 @@
         if (e.target === modalOverlay) closeModal();
     });
 
-    // Form Interceptor
-    document.addEventListener('submit', function(e) {
-        var form = e.target.closest('.flight-search-form');
-        if (!form) return;
-
-        e.preventDefault();
+    // Form Submission Interceptor Logic
+    function handleFormSubmit(form, e) {
+        if (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
 
         // 1. Determine Trip Type
         var searchTypeInput = form.querySelector('input[name="searchtype"]');
@@ -341,5 +341,29 @@
 
         // Show our WhatsApp booking card Modal
         modalOverlay.classList.add('show');
-    });
+        return false;
+    }
+
+    // Direct submit listener binding (Vanilla)
+    document.addEventListener('submit', function(e) {
+        var form = e.target.closest('.flight-search-form');
+        if (form) {
+            handleFormSubmit(form, e);
+        }
+    }, true); // useCapture to intercept early
+
+    // jQuery direct binding fallback
+    function bindJQuerySubmit() {
+        if (window.jQuery) {
+            jQuery(document).ready(function($) {
+                $('.flight-search-form').off('submit.ozotrips').on('submit.ozotrips', function(e) {
+                    handleFormSubmit(this, e);
+                    return false;
+                });
+            });
+        } else {
+            setTimeout(bindJQuerySubmit, 50);
+        }
+    }
+    bindJQuerySubmit();
 })();
