@@ -13367,3 +13367,140 @@ img.gd-blue {
     color: #ddb651 !important;
     border-color: #ddb651 !important;
 }
+
+/* Modern Accordion Styles for Visa Requirements */
+h1.tems-head {
+    color: #fff !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    padding-top: 8px !important;
+    margin: 0 !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+.mb-0 > a::after {
+    content: "+" !important;
+    font-family: 'FontAwesome' !important;
+    position: absolute !important;
+    right: 15px !important;
+    font-size: 28px !important;
+    color: #fff !important;
+    bottom: 50% !important;
+    transform: translateY(50%) !important;
+    font-weight: 900 !important;
+}
+.mb-0 > a[aria-expanded="true"]::after {
+    content: "-" !important;
+    font-size: 45px !important;
+    bottom: 50% !important;
+    transform: translateY(55%) !important;
+    font-weight: 100 !important;
+}
+.mb-0 > a {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    text-decoration: none !important;
+}
+#accordion .card-header.bg-offlg .mb-0 > a[aria-expanded="false"]::after {
+    content: "+" !important;
+    font-family: 'FontAwesome' !important;
+    font-size: 26px !important;
+    color: #696969 !important;
+    font-weight: 600 !important;
+    right: 10px !important;
+}
+#accordion .card-header.bg-offlg .mb-0 > a[aria-expanded="true"]::after {
+    content: "-" !important;
+    font-size: 37px !important;
+    color: #696969 !important;
+    font-weight: 600 !important;
+    right: 10px !important;
+}
+.collapse.show {
+    border-top: 1px solid rgb(231, 234, 243) !important;
+}
+h1.child-head {
+    color: #696969 !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+.card-header.bg-offlg {
+    background: #F8FAFC !important;
+    height: 57px !important;
+    padding: 17px 20px !important;
+    border-bottom: none !important;
+    position: relative !important;
+}
+h1.cls-outer-headng {
+    color: #fff !important;
+    font-size: 17px !important;
+    font-weight: 200 !important;
+    padding-top: 8px !important;
+    margin: 0 !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+span.weight-cls {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+.card-header.bg-dark {
+    background-color: #1c3659 !important;
+    border-bottom: 1px solid #e7eaf3 !important;
+    padding: 10px 20px !important;
+    position: relative !important;
+}
+.bg-orange {
+    background-color: rgb(229, 169, 59) !important; /* Premium Gold Match */
+    padding: 10px 20px !important;
+    position: relative !important;
+}
+.card-header.bg-orange h5 a h1 {
+    color: #fff !important;
+}
+h3.reqr-head {
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    color: #1c3659 !important;
+    margin: 24px 0 16px !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+.payment-steps-block {
+    background: #fff !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(28, 54, 89, 0.05) !important;
+}
+.payment-steps-block #accordion {
+    margin: 0 !important;
+}
+.payment-steps-block .card {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+.payment-steps-block .card-body {
+    padding: 20px !important;
+}
+.payment-steps-block .card-body ul {
+    margin: 0 !important;
+    padding-left: 20px !important;
+}
+.payment-steps-block .card-body ul li {
+    list-style: disc !important;
+    margin-bottom: 8px !important;
+    color: #4a5568 !important;
+    font-size: 14.5px !important;
+    line-height: 1.5 !important;
+}
+.payment-steps-block .card-body ul li:last-child {
+    margin-bottom: 0 !important;
+}
+.payment-steps-block h3.important-note-title {
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #1c3659 !important;
+    margin-bottom: 12px !important;
+}
