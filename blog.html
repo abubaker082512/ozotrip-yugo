@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="OzoTrips.com" property="og:site_name"/>
+    <!-- Title -->
+    <title>Blogs & Travel Guides - OzoTrips</title>
+    <meta content="Explore the latest travel guides, visa requirements, and Umrah tips from OzoTrips." name="description"/>
+    <!-- Favicon -->
+    <link href="assets/img/header/favicon.png" rel="shortcut icon"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <!-- Theme CSS -->
+    <link href="assets/css/theme.css" rel="stylesheet"/>
+    <link href="assets/css/custom-header.css" rel="stylesheet"/>
+    <link href="assets/css/custom-style.css" rel="stylesheet"/>
+    <link href="assets/css/custom-footer.css" rel="stylesheet"/>
+
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #1c3659 0%, #0f172a 100%);
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            margin-top: 130px;
+        }
+        @media (max-width: 768px) {
+            .blog-hero {
+                margin-top: 80px;
+                padding: 60px 20px;
+            }
+        }
+        .blog-hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .blog-hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .blog-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+        .blog-categories {
+            display: flex;
+            gap: 12px;
+            list-style: none;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        .category-tab {
+            padding: 8px 20px;
+            border-radius: 100px;
+            background: #f1f5f9;
+            color: #475569;
+            font-weight: 500;
+            font-size: 14.5px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+        .category-tab.active, .category-tab:hover {
+            background: #1c3659;
+            color: #ffffff;
+        }
+        .search-box {
+            position: relative;
+            max-width: 320px;
+            width: 100%;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px 16px 10px 40px;
+            border-radius: 100px;
+            border: 1px solid #cbd5e1;
+            font-size: 14.5px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .search-box input:focus {
+            border-color: #1c3659;
+        }
+        .search-box i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 32px;
+        }
+        @media (max-width: 480px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .blog-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        .blog-card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .blog-card-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+        .blog-card-category {
+            background: rgba(28, 54, 89, 0.08);
+            color: #1c3659;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        .blog-card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1c3659;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .blog-card-summary {
+            font-size: 14px;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .blog-card-link {
+            font-weight: 600;
+            color: #1c3659;
+            text-decoration: none !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14.5px;
+            transition: color 0.2s ease;
+        }
+        .blog-card-link:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="new-header yugo-header" id="header" style="position: fixed; top: 0; width: 100%; z-index: 1000; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <section class="wrapper" style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <a class="navbar-brand" href="index.html">
+                <img alt="OzoTrips Logo" src="assets/img/header/logo-light.png" style="max-height: 45px;"/>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px; list-style: none;">
+                <li><a href="index.html" style="font-weight: 500; color: #1c3659;">Home</a></li>
+                <li><a href="visas.html" style="font-weight: 500; color: #1c3659;">Visas</a></li>
+                <li><a href="flights.html" style="font-weight: 500; color: #1c3659;">Flights</a></li>
+                <li><a href="tours.html" style="font-weight: 500; color: #1c3659;">Tours</a></li>
+                <li><a href="blog.html" style="font-weight: 700; color: #1c3659; border-bottom: 2px solid #1c3659; padding-bottom: 4px;">Blogs</a></li>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <h1>Travel Diaries & Visa Guides</h1>
+        <p>Explore expert tips, official visa guide notes, and travel stories to inspire your next journey.</p>
+    </section>
+
+    <!-- Main Blogs Area -->
+    <div class="blog-container">
+        <div class="blog-controls">
+            <ul class="blog-categories" id="categoriesContainer">
+                <li class="category-tab active" data-cat="all">All Stories</li>
+                <li class="category-tab" data-cat="Visa">Visa Guides</li>
+                <li class="category-tab" data-cat="Flight">Flights</li>
+                <li class="category-tab" data-cat="Umrah">Umrah</li>
+            </ul>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search blog posts...">
+            </div>
+        </div>
+
+        <div class="blog-grid" id="blogsGrid">
+            <!-- Dynamic Blog Cards -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #1c3659; color: #ffffff; padding: 60px 20px; text-align: center; font-family: 'Rubik', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <img alt="OzoTrips" src="assets/img/header/logo-light.png" style="max-height: 45px; filter: brightness(0) invert(1);"/>
+            <p style="color: rgba(255,255,255,0.7); font-size: 14px;">© 2026 OzoTrips Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/db-client.js"></script>
+    <script>
+        var allBlogs = [];
+        var activeCategory = 'all';
+
+        function loadBlogsList() {
+            if (!window.OzoDB) return;
+            window.OzoDB.getBlogs().then(function(data) {
+                allBlogs = data;
+                renderBlogCards();
+                renderCategoryTabs();
+            });
+        }
+
+        function renderCategoryTabs() {
+            var categories = ['Visa', 'Flight', 'Umrah'];
+            allBlogs.forEach(function(b) {
+                if (b.category && !categories.includes(b.category)) {
+                    categories.push(b.category);
+                }
+            });
+
+            var container = document.getElementById('categoriesContainer');
+            container.innerHTML = '<li class="category-tab active" data-cat="all">All Stories</li>';
+            
+            categories.forEach(function(cat) {
+                var li = document.createElement('li');
+                li.className = 'category-tab';
+                li.setAttribute('data-cat', cat);
+                li.textContent = cat + 's';
+                container.appendChild(li);
+            });
+
+            // Re-bind click events
+            var tabs = container.querySelectorAll('.category-tab');
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(function(t) { t.classList.remove('active'); });
+                    tab.classList.add('active');
+                    activeCategory = tab.getAttribute('data-cat');
+                    renderBlogCards();
+                });
+            });
+        }
+
+        function renderBlogCards() {
+            var grid = document.getElementById('blogsGrid');
+            grid.innerHTML = '';
+
+            var searchQuery = document.getElementById('searchInput').value.toLowerCase().trim();
+
+            var filtered = allBlogs.filter(function(b) {
+                var matchesCat = activeCategory === 'all' || b.category === activeCategory;
+                var matchesSearch = !searchQuery || b.title.toLowerCase().includes(searchQuery) || b.summary.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;"><h3>No blog articles found matching your criteria.</h3></div>';
+                return;
+            }
+
+            filtered.forEach(function(blog) {
+                var card = document.createElement('div');
+                card.className = 'blog-card';
+                card.innerHTML = `
+                    <img class="blog-card-img" src="${blog.imageUrl || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80'}" alt="${blog.title}" loading="lazy">
+                    <div class="blog-card-body">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">${blog.category}</span>
+                            <span>${blog.publishedDate}</span>
+                        </div>
+                        <h3 class="blog-card-title">${blog.title}</h3>
+                        <p class="blog-card-summary">${blog.summary}</p>
+                        <a href="blog-detail.html?slug=${blog.slug}" class="blog-card-link">
+                            Read Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', renderBlogCards);
+
+        // Load initially
+        loadBlogsList();
+    </script>
+</body>
+</html>

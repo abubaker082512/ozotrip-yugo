@@ -154,7 +154,19 @@ export default defineConfig({
         visit_russia_central_asia: resolve(__dirname, 'visit-russia-central-asia.html'),
         visit_saudi: resolve(__dirname, 'visit-saudi.html'),
         yugo_rewards: resolve(__dirname, 'yugo-rewards.html'),
+        admin: resolve(__dirname, 'admin.html'),
+        blog: resolve(__dirname, 'blog.html'),
+        blog_detail: resolve(__dirname, 'blog-detail.html'),
       },
     },
   },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false
+      }
+    }
+  }
 });

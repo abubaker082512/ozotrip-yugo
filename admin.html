@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OzoTrips - Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1c3659;
+            --primary-hover: #152945;
+            --success: #25d366;
+            --danger: #ef4444;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --radius: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: var(--bg-page);
+            color: var(--text-main);
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        /* --- LOGIN PAGE STYLE --- */
+        .login-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 420px;
+            padding: 40px 32px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .login-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .login-title {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            font-size: 14.5px;
+            color: var(--text-main);
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.1);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.2s ease;
+            box-shadow: 0 6px 15px rgba(28, 54, 89, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        /* --- DASHBOARD PAGE STYLE --- */
+        .dashboard-container {
+            display: none; /* hidden until login success */
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 260px;
+            background: var(--primary);
+            color: #ffffff;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding: 32px 20px;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 40px;
+            padding-left: 12px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 14.5px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+        }
+
+        .nav-logout {
+            margin-top: auto;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .nav-logout:hover {
+            color: var(--danger);
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        /* Main Content area */
+        .main-content {
+            margin-left: 260px;
+            padding: 40px;
+            width: calc(100% - 260px);
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .page-title h2 {
+            font-size: 26px;
+            color: var(--primary);
+        }
+
+        .page-title p {
+            color: var(--text-muted);
+            font-size: 13.5px;
+            margin-top: 4px;
+        }
+
+        /* Metric Cards Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .metric-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(28, 54, 89, 0.08);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .metric-details h4 {
+            font-size: 24px;
+            color: var(--primary);
+        }
+
+        .metric-details span {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* Panel Wrapper Card */
+        .panel-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            padding: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .admin-table th {
+            padding: 16px;
+            background: #f8fafc;
+            color: var(--text-muted);
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .admin-table td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        .admin-table tr:hover td {
+            background: #f8fafc;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .badge-success { background: #dcfce7; color: #166534; }
+        .badge-info { background: #e0f2fe; color: #0369a1; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+
+        /* Action buttons */
+        .action-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 6px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn-view { color: var(--primary); }
+        .action-btn-delete { color: var(--danger); }
+        .action-btn:hover { background: #f1f5f9; }
+
+        /* Dialog / Modal popup */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 24px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        .modal-footer {
+            padding: 16px 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Detail display */
+        .detail-field {
+            margin-bottom: 16px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .detail-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .detail-value {
+            font-size: 14.5px;
+            color: var(--text-main);
+            margin-top: 4px;
+            word-break: break-all;
+        }
+
+        /* Form Switch elements */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px; width: 20px;
+            left: 4px; bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--success);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== LOGIN PAGE ==================== -->
+    <div id="loginPage" class="login-container">
+        <div class="login-card">
+            <div class="login-logo">OzoTrips Admin</div>
+            <div class="login-title">Sign in to manage submissions, popups, & blogs</div>
+            
+            <div id="loginError" style="color: var(--danger); font-size: 13.5px; margin-bottom: 20px; display: none;">
+                <i class="fas fa-exclamation-circle"></i> Invalid credentials, please try again.
+            </div>
+
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter username" required autocomplete="username">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn-primary" style="margin-top: 10px;">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== DASHBOARD PANEL ==================== -->
+    <div id="dashboardPage" class="dashboard-container">
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-brand">OzoTrips</div>
+            <ul class="nav-menu">
+                <li><a class="nav-item active" data-tab="submissions"><i class="fas fa-inbox"></i> Submissions</a></li>
+                <li><a class="nav-item" data-tab="popups"><i class="fas fa-bullhorn"></i> Popups</a></li>
+                <li><a class="nav-item" data-tab="blogs"><i class="fas fa-newspaper"></i> Blog Posts</a></li>
+                <li><a class="nav-item nav-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            
+            <!-- SUBMISSIONS TAB -->
+            <div id="tab-submissions" class="tab-pane">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Client Submissions</h2>
+                        <p>Manage and review inquiries, visas, and flight booking entries</p>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-envelope-open-text"></i></div>
+                        <div class="metric-details">
+                            <h4 id="count-total-subs">0</h4>
+                            <span>Total Submissions</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-passport"></i></div>
+                        <div class="metric-details">
+                            <h4 id="count-visa-subs">0</h4>
+                            <span>Visa Inquiries</span>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon"><i class="fas fa-plane"></i></div>
+                        <div class="metric-details">
+                            <h4 id="count-flight-subs">0</h4>
+                            <span>Flight Requests</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-card">
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Source Form</th>
+                                    <th>Email / Details</th>
+                                    <th>Full Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="submissionsTableBody">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POPUPS TAB -->
+            <div id="tab-popups" class="tab-pane" style="display: none;">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Popup Promotion Manager</h2>
+                        <p>Create and edit website-wide modal announcements for the homepage</p>
+                    </div>
+                </div>
+
+                <div class="panel-card" style="max-width: 650px;">
+                    <form id="popupConfigForm">
+                        <div class="form-group" style="display: flex; align-items: center; justify-content: space-between; background: #f8fafc; padding: 16px; border-radius: 12px; margin-bottom: 24px; border: 1px solid var(--border);">
+                            <div>
+                                <h4 style="font-size: 15px; font-weight: 600;">Enable Announcement Modal</h4>
+                                <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 2px;">Toggle to show or hide the promo popup on the homepage</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="popup-enabled">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Popup Type</label>
+                            <select id="popup-type" class="form-control" style="background: white;">
+                                <option value="text">Text & Button Banner</option>
+                                <option value="image">Full Image Popup</option>
+                            </select>
+                        </div>
+
+                        <!-- TEXT POPUP SECTION -->
+                        <div id="popup-text-fields">
+                            <div class="form-group">
+                                <label class="form-label">Popup Title</label>
+                                <input type="text" id="popup-title" class="form-control" placeholder="e.g. Special Promotion!">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Popup Content Description</label>
+                                <textarea id="popup-content" class="form-control" rows="3" placeholder="Enter announcement text body"></textarea>
+                            </div>
+                            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div>
+                                    <label class="form-label">CTA Button Text</label>
+                                    <input type="text" id="popup-cta-text" class="form-control" placeholder="e.g., Book Now">
+                                </div>
+                                <div>
+                                    <label class="form-label">CTA Link URL</label>
+                                    <input type="text" id="popup-cta-link" class="form-control" placeholder="e.g., /offers.html">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- IMAGE POPUP SECTION -->
+                        <div id="popup-image-fields" style="display: none;">
+                            <div class="form-group">
+                                <label class="form-label">Select Banner Image</label>
+                                <input type="file" id="popup-image-file" class="form-control" accept="image/*" style="padding: 8px;">
+                                <p style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">Or paste an external Image URL below</p>
+                                <input type="text" id="popup-image-url" class="form-control" placeholder="e.g., /uploads/image.png" style="margin-top: 8px;">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Image Redirect Link</label>
+                                <input type="text" id="popup-image-link" class="form-control" placeholder="e.g., /visas.html">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="max-width: 200px;">
+                            <label class="form-label">Appearance Delay (Seconds)</label>
+                            <input type="number" id="popup-delay" class="form-control" min="0" max="60" value="2">
+                        </div>
+
+                        <button type="submit" class="btn-primary" style="margin-top: 16px; max-width: 200px;"><i class="fas fa-save"></i> Save Configuration</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- BLOGS TAB -->
+            <div id="tab-blogs" class="tab-pane" style="display: none;">
+                <div class="page-header">
+                    <div class="page-title">
+                        <h2>Blog Article Editor</h2>
+                        <p>Create, customize, and edit dynamic traveler blogs and news posts</p>
+                    </div>
+                    <button class="btn-primary" style="max-width: 180px;" id="addNewBlogBtn"><i class="fas fa-plus"></i> Add New Blog</button>
+                </div>
+
+                <div class="panel-card">
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Banner</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Author</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="blogsTableBody">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==================== DIALOGS & MODALS ==================== -->
+    
+    <!-- Submission Details Modal -->
+    <div id="submissionModal" class="modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Submission Inquiry Fields</h3>
+                <button class="modal-close" onclick="closeSubmissionModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="submissionModalBody">
+                <!-- details -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-outline" onclick="closeSubmissionModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Editor Modal -->
+    <div id="blogEditorModal" class="modal">
+        <div class="modal-card" style="max-width: 700px;">
+            <div class="modal-header">
+                <h3 id="blogEditorModalTitle">Add New Blog Post</h3>
+                <button class="modal-close" onclick="closeBlogModal()">&times;</button>
+            </div>
+            <form id="blogEditorForm">
+                <input type="hidden" id="editor-blog-id">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="form-label">Article Title</label>
+                        <input type="text" id="editor-blog-title" class="form-control" required placeholder="e.g. How to book cheap flights from Lahore">
+                    </div>
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div>
+                            <label class="form-label">Category</label>
+                            <input type="text" id="editor-blog-category" class="form-control" required placeholder="e.g. Flight, Visa, Umrah">
+                        </div>
+                        <div>
+                            <label class="form-label">Author Name</label>
+                            <input type="text" id="editor-blog-author" class="form-control" required placeholder="e.g. Travel Desk">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Banner Image</label>
+                        <input type="file" id="editor-blog-file" class="form-control" accept="image/*" style="padding: 8px;">
+                        <input type="text" id="editor-blog-image" class="form-control" placeholder="Or paste Image URL" style="margin-top: 8px;">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Short Summary</label>
+                        <input type="text" id="editor-blog-summary" class="form-control" required placeholder="Short summary description cards display">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Detailed Content (HTML/Paragraphs supported)</label>
+                        <textarea id="editor-blog-content" class="form-control" rows="8" required placeholder="<h3>Write your travel guide details here</h3><p>...</p>"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-outline" onclick="closeBlogModal()">Cancel</button>
+                    <button type="submit" class="btn-primary" style="max-width: 120px;">Save Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script src="assets/js/db-client.js"></script>
+    <script>
+        // Simple auth state check
+        if (sessionStorage.getItem('ozotrips_admin_logged') === 'true') {
+            showDashboard();
+        }
+
+        // Handle Login Submission
+        document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var user = document.getElementById('username').value.trim();
+            var pass = document.getElementById('password').value.trim();
+
+            if (user === 'admin' && pass === 'admin123') {
+                sessionStorage.setItem('ozotrips_admin_logged', 'true');
+                document.getElementById('loginError').style.display = 'none';
+                showDashboard();
+            } else {
+                document.getElementById('loginError').style.display = 'block';
+            }
+        });
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            sessionStorage.removeItem('ozotrips_admin_logged');
+            window.location.reload();
+        });
+
+        function showDashboard() {
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('dashboardPage').style.display = 'flex';
+            loadSubmissions();
+            loadPopupConfig();
+            loadBlogs();
+        }
+
+        // Tab Navigation
+        var navItems = document.querySelectorAll('.sidebar .nav-menu a[data-tab]');
+        navItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                navItems.forEach(function(el) { el.classList.remove('active'); });
+                item.classList.add('active');
+
+                var selectedTab = item.getAttribute('data-tab');
+                document.querySelectorAll('.tab-pane').forEach(function(pane) {
+                    pane.style.display = 'none';
+                });
+                document.getElementById('tab-' + selectedTab).style.display = 'block';
+            });
+        });
+
+        // Popup Type toggle controls
+        document.getElementById('popup-type').addEventListener('change', function() {
+            var val = this.value;
+            if (val === 'image') {
+                document.getElementById('popup-text-fields').style.display = 'none';
+                document.getElementById('popup-image-fields').style.display = 'block';
+            } else {
+                document.getElementById('popup-text-fields').style.display = 'block';
+                document.getElementById('popup-image-fields').style.display = 'none';
+            }
+        });
+
+
+        // --- SUBMISSIONS LOGIC ---
+        var currentSubmissions = [];
+        function loadSubmissions() {
+            if (!window.OzoDB) return;
+            window.OzoDB.getSubmissions().then(function(data) {
+                currentSubmissions = data;
+                renderSubmissions();
+            });
+        }
+
+        function renderSubmissions() {
+            var tbody = document.getElementById('submissionsTableBody');
+            tbody.innerHTML = '';
+            
+            document.getElementById('count-total-subs').textContent = currentSubmissions.length;
+            
+            var visaCount = currentSubmissions.filter(function(s) { 
+                return s._formId && (s._formId.toLowerCase().includes('visa') || s._pageUrl.toLowerCase().includes('visa')); 
+            }).length;
+            var flightCount = currentSubmissions.filter(function(s) { 
+                return s._formId && (s._formId.toLowerCase().includes('flight') || s._formId.toLowerCase().includes('search')); 
+            }).length;
+
+            document.getElementById('count-visa-subs').textContent = visaCount;
+            document.getElementById('count-flight-subs').textContent = flightCount;
+
+            if (currentSubmissions.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">No form submissions found.</td></tr>';
+                return;
+            }
+
+            currentSubmissions.forEach(function(sub) {
+                var date = sub._submittedAt ? new Date(sub._submittedAt).toLocaleString() : 'N/A';
+                var name = sub.name || sub.fullname || sub.first_name || 'Anonymous';
+                var emailDetail = sub.email || sub.phone || sub.mobile || 'No contact details';
+
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${date}</td>
+                    <td><span class="badge ${sub._formId && sub._formId.includes('visa') ? 'badge-info' : 'badge-success'}">${sub._formId || 'Inquiry'}</span></td>
+                    <td><strong>${emailDetail}</strong></td>
+                    <td>${name}</td>
+                    <td>
+                        <button class="action-btn action-btn-view" onclick="viewSubmission('${sub.id}')"><i class="fas fa-eye"></i></button>
+                        <button class="action-btn action-btn-delete" onclick="deleteSubmission('${sub.id}')"><i class="fas fa-trash"></i></button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function viewSubmission(id) {
+            var sub = currentSubmissions.find(function(s) { return s.id === id; });
+            if (!sub) return;
+
+            var body = document.getElementById('submissionModalBody');
+            body.innerHTML = '';
+
+            // Generate field cards dynamically
+            Object.keys(sub).forEach(function(key) {
+                if (key.startsWith('_') || key === 'id') return; // skip metadata keys
+                var fieldCard = document.createElement('div');
+                fieldCard.className = 'detail-field';
+                fieldCard.innerHTML = `
+                    <div class="detail-label">${key.replace(/_/g, ' ')}</div>
+                    <div class="detail-value">${sub[key]}</div>
+                `;
+                body.appendChild(fieldCard);
+            });
+
+            // Metadata card
+            var metaCard = document.createElement('div');
+            metaCard.className = 'detail-field';
+            metaCard.style.background = '#f8fafc';
+            metaCard.style.padding = '10px';
+            metaCard.style.borderRadius = '8px';
+            metaCard.innerHTML = `
+                <div class="detail-label">Submission Context Details</div>
+                <div class="detail-value" style="font-size:12px; color: var(--text-muted);">
+                    Form ID: ${sub._formId}<br>
+                    Page: ${sub._pageUrl}<br>
+                    Date: ${new Date(sub._submittedAt).toLocaleString()}
+                </div>
+            `;
+            body.appendChild(metaCard);
+
+            document.getElementById('submissionModal').style.display = 'flex';
+        }
+
+        function closeSubmissionModal() {
+            document.getElementById('submissionModal').style.display = 'none';
+        }
+
+        function deleteSubmission(id) {
+            if (!confirm('Are you sure you want to delete this submission?')) return;
+            window.OzoDB.deleteSubmission(id).then(function() {
+                loadSubmissions();
+            });
+        }
+
+
+        // --- POPUP LOGIC ---
+        function loadPopupConfig() {
+            window.OzoDB.getPopup().then(function(popup) {
+                document.getElementById('popup-enabled').checked = popup.enabled;
+                document.getElementById('popup-type').value = popup.type;
+                document.getElementById('popup-title').value = popup.title || '';
+                document.getElementById('popup-content').value = popup.content || '';
+                document.getElementById('popup-cta-text').value = popup.ctaText || '';
+                document.getElementById('popup-cta-link').value = popup.ctaLink || '';
+                document.getElementById('popup-image-url').value = popup.imageUrl || '';
+                document.getElementById('popup-image-link').value = popup.imageLink || '';
+                document.getElementById('popup-delay').value = popup.delay || 2;
+
+                // trigger select change
+                document.getElementById('popup-type').dispatchEvent(new Event('change'));
+            });
+        }
+
+        // Popup upload logic
+        document.getElementById('popup-image-file').addEventListener('change', function() {
+            var file = this.files[0];
+            if (!file) return;
+            window.OzoDB.uploadImage(file)
+                .then(function(res) {
+                    document.getElementById('popup-image-url').value = res.url;
+                })
+                .catch(function() {
+                    alert('Image upload failed. Pasting url option remains.');
+                });
+        });
+
+        document.getElementById('popupConfigForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var data = {
+                enabled: document.getElementById('popup-enabled').checked,
+                type: document.getElementById('popup-type').value,
+                title: document.getElementById('popup-title').value,
+                content: document.getElementById('popup-content').value,
+                ctaText: document.getElementById('popup-cta-text').value,
+                ctaLink: document.getElementById('popup-cta-link').value,
+                imageUrl: document.getElementById('popup-image-url').value,
+                imageLink: document.getElementById('popup-image-link').value,
+                delay: parseInt(document.getElementById('popup-delay').value) || 2
+            };
+
+            window.OzoDB.savePopup(data).then(function() {
+                alert('Popup configuration saved successfully!');
+            });
+        });
+
+
+        // --- BLOGS LOGIC ---
+        var currentBlogs = [];
+        function loadBlogs() {
+            window.OzoDB.getBlogs().then(function(data) {
+                currentBlogs = data;
+                renderBlogs();
+            });
+        }
+
+        function renderBlogs() {
+            var tbody = document.getElementById('blogsTableBody');
+            tbody.innerHTML = '';
+
+            if (currentBlogs.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: var(--text-muted);">No blog posts found. Click "Add New Blog" to get started.</td></tr>';
+                return;
+            }
+
+            currentBlogs.forEach(function(blog) {
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${blog.publishedDate}</td>
+                    <td><img src="${blog.imageUrl || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=80&q=80'}" style="width: 50px; height: 35px; object-fit: cover; border-radius: 6px;"></td>
+                    <td><strong>${blog.title}</strong></td>
+                    <td><span class="badge badge-info">${blog.category}</span></td>
+                    <td>${blog.author}</td>
+                    <td>
+                        <button class="action-btn action-btn-view" onclick="editBlog('${blog.id}')"><i class="fas fa-edit"></i></button>
+                        <button class="action-btn action-btn-delete" onclick="deleteBlog('${blog.id}')"><i class="fas fa-trash"></i></button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Blog upload image handler
+        document.getElementById('editor-blog-file').addEventListener('change', function() {
+            var file = this.files[0];
+            if (!file) return;
+            window.OzoDB.uploadImage(file)
+                .then(function(res) {
+                    document.getElementById('editor-blog-image').value = res.url;
+                })
+                .catch(function() {
+                    alert('Image upload failed. Paste URL option remains.');
+                });
+        });
+
+        // Add Blog triggers
+        document.getElementById('addNewBlogBtn').addEventListener('click', function() {
+            document.getElementById('blogEditorForm').reset();
+            document.getElementById('editor-blog-id').value = '';
+            document.getElementById('blogEditorModalTitle').textContent = 'Add New Blog Post';
+            document.getElementById('blogEditorModal').style.display = 'flex';
+        });
+
+        function editBlog(id) {
+            var blog = currentBlogs.find(function(b) { return b.id === id; });
+            if (!blog) return;
+
+            document.getElementById('editor-blog-id').value = blog.id;
+            document.getElementById('editor-blog-title').value = blog.title;
+            document.getElementById('editor-blog-category').value = blog.category;
+            document.getElementById('editor-blog-author').value = blog.author;
+            document.getElementById('editor-blog-image').value = blog.imageUrl || '';
+            document.getElementById('editor-blog-summary').value = blog.summary;
+            document.getElementById('editor-blog-content').value = blog.content;
+
+            document.getElementById('blogEditorModalTitle').textContent = 'Edit Blog Post';
+            document.getElementById('blogEditorModal').style.display = 'flex';
+        }
+
+        function closeBlogModal() {
+            document.getElementById('blogEditorModal').style.display = 'none';
+        }
+
+        document.getElementById('blogEditorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var id = document.getElementById('editor-blog-id').value;
+            var data = {
+                title: document.getElementById('editor-blog-title').value.trim(),
+                category: document.getElementById('editor-blog-category').value.trim(),
+                author: document.getElementById('editor-blog-author').value.trim(),
+                imageUrl: document.getElementById('editor-blog-image').value.trim() || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80',
+                summary: document.getElementById('editor-blog-summary').value.trim(),
+                content: document.getElementById('editor-blog-content').value.trim(),
+                publishedDate: new Date().toISOString().split('T')[0]
+            };
+
+            if (id) {
+                // Update
+                window.OzoDB.updateBlog(id, data).then(function() {
+                    closeBlogModal();
+                    loadBlogs();
+                });
+            } else {
+                // Add
+                window.OzoDB.addBlog(data).then(function() {
+                    closeBlogModal();
+                    loadBlogs();
+                });
+            }
+        });
+
+        function deleteBlog(id) {
+            if (!confirm('Are you sure you want to delete this blog post?')) return;
+            window.OzoDB.deleteBlog(id).then(function() {
+                loadBlogs();
+            });
+        }
+    </script>
+</body>
+</html>

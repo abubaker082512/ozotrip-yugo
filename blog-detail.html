@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="OzoTrips.com" property="og:site_name"/>
+    <!-- Title -->
+    <title>Blog Details - OzoTrips</title>
+    <!-- Favicon -->
+    <link href="assets/img/header/favicon.png" rel="shortcut icon"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <!-- Theme CSS -->
+    <link href="assets/css/theme.css" rel="stylesheet"/>
+    <link href="assets/css/custom-header.css" rel="stylesheet"/>
+    <link href="assets/css/custom-style.css" rel="stylesheet"/>
+    <link href="assets/css/custom-footer.css" rel="stylesheet"/>
+
+    <style>
+        .detail-wrapper {
+            margin-top: 130px;
+            background: #f8fafc;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+        @media (max-width: 768px) {
+            .detail-wrapper {
+                margin-top: 80px;
+            }
+        }
+        .detail-banner {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .detail-banner {
+                height: 250px;
+            }
+        }
+        .detail-container {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 8fr 4fr;
+            gap: 40px;
+        }
+        @media (max-width: 992px) {
+            .detail-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .article-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+        }
+        @media (max-width: 576px) {
+            .article-card {
+                padding: 24px;
+            }
+        }
+        .article-category {
+            background: rgba(28, 54, 89, 0.08);
+            color: #1c3659;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .article-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1c3659;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 576px) {
+            .article-title {
+                font-size: 26px;
+            }
+        }
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #64748b;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+        .article-content {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #334155;
+            font-family: 'Rubik', sans-serif;
+        }
+        .article-content h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #1c3659;
+            font-size: 22px;
+            margin: 32px 0 16px;
+        }
+        .article-content h4 {
+            font-family: 'Outfit', sans-serif;
+            color: #1c3659;
+            font-size: 18px;
+            margin: 24px 0 12px;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content ul, .article-content ol {
+            margin: 0 0 24px 24px;
+        }
+        .article-content li {
+            margin-bottom: 8px;
+        }
+
+        /* Sidebar styling */
+        .sidebar-panel {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            position: sticky;
+            top: 150px;
+        }
+        .sidebar-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            color: #1c3659;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #1c3659;
+            padding-bottom: 8px;
+        }
+        .recent-post-link {
+            display: flex;
+            gap: 16px;
+            text-decoration: none !important;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        .recent-post-img {
+            width: 70px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .recent-post-details h4 {
+            font-size: 14.5px;
+            color: #1c3659;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .recent-post-details span {
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="new-header yugo-header" id="header" style="position: fixed; top: 0; width: 100%; z-index: 1000; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <section class="wrapper" style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <a class="navbar-brand" href="index.html">
+                <img alt="OzoTrips Logo" src="assets/img/header/logo-light.png" style="max-height: 45px;"/>
+            </a>
+            <nav class="nav-links" style="display: flex; gap: 24px; list-style: none;">
+                <li><a href="index.html" style="font-weight: 500; color: #1c3659;">Home</a></li>
+                <li><a href="visas.html" style="font-weight: 500; color: #1c3659;">Visas</a></li>
+                <li><a href="flights.html" style="font-weight: 500; color: #1c3659;">Flights</a></li>
+                <li><a href="tours.html" style="font-weight: 500; color: #1c3659;">Tours</a></li>
+                <li><a href="blog.html" style="font-weight: 700; color: #1c3659; border-bottom: 2px solid #1c3659; padding-bottom: 4px;">Blogs</a></li>
+            </nav>
+        </section>
+    </header>
+
+    <!-- Main Wrapper Section -->
+    <div class="detail-wrapper">
+        <img class="detail-banner" id="articleBanner" src="" alt="Blog Banner" style="display: none;">
+        
+        <div class="detail-container">
+            <!-- Article Body -->
+            <article class="article-card">
+                <span class="article-category" id="articleCategory">Travel</span>
+                <h1 class="article-title" id="articleTitle">Loading Article Title...</h1>
+                
+                <div class="article-meta">
+                    <span><i class="far fa-user"></i> By <span id="articleAuthor">Admin</span></span>
+                    <span><i class="far fa-calendar-alt"></i> Published: <span id="articleDate">Date</span></span>
+                </div>
+
+                <div class="article-content" id="articleContent">
+                    <!-- Dynamic details content -->
+                </div>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar-aside">
+                <div class="sidebar-panel">
+                    <h3 class="sidebar-title">Recent Stories</h3>
+                    <div id="recentPostsContainer">
+                        <!-- Recent blog list -->
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: #1c3659; color: #ffffff; padding: 60px 20px; text-align: center; font-family: 'Rubik', sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <img alt="OzoTrips" src="assets/img/header/logo-light.png" style="max-height: 45px; filter: brightness(0) invert(1);"/>
+            <p style="color: rgba(255,255,255,0.7); font-size: 14px;">© 2026 OzoTrips Private Limited. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/db-client.js"></script>
+    <script>
+        function loadBlogDetail() {
+            var params = new URLSearchParams(window.location.search);
+            var slug = params.get('slug');
+
+            if (!slug) {
+                window.location.href = 'blog.html';
+                return;
+            }
+
+            if (!window.OzoDB) return;
+
+            window.OzoDB.getBlogs().then(function(blogs) {
+                var blog = blogs.find(function(b) { return b.slug === slug; });
+                if (!blog) {
+                    // Fallback to title based matching if slug got updated slightly
+                    blog = blogs[0];
+                }
+
+                if (blog) {
+                    document.title = blog.title + " - OzoTrips Blogs";
+                    
+                    var banner = document.getElementById('articleBanner');
+                    if (blog.imageUrl) {
+                        banner.src = blog.imageUrl;
+                        banner.style.display = 'block';
+                    }
+
+                    document.getElementById('articleCategory').textContent = blog.category;
+                    document.getElementById('articleTitle').textContent = blog.title;
+                    document.getElementById('articleAuthor').textContent = blog.author || 'OzoTrips Desk';
+                    document.getElementById('articleDate').textContent = blog.publishedDate;
+                    document.getElementById('articleContent').innerHTML = blog.content;
+                }
+
+                // Render recent stories (excluding the current one)
+                var container = document.getElementById('recentPostsContainer');
+                container.innerHTML = '';
+                
+                var count = 0;
+                blogs.forEach(function(b) {
+                    if (b.slug === slug || count >= 4) return;
+                    
+                    var link = document.createElement('a');
+                    link.className = 'recent-post-link';
+                    link.href = 'blog-detail.html?slug=' + b.slug;
+                    link.innerHTML = `
+                        <img class="recent-post-img" src="${b.imageUrl || 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=80&q=80'}" alt="${b.title}">
+                        <div class="recent-post-details">
+                            <h4>${b.title}</h4>
+                            <span>${b.publishedDate}</span>
+                        </div>
+                    `;
+                    container.appendChild(link);
+                    count++;
+                });
+
+                if (container.children.length === 0) {
+                    container.innerHTML = '<p style="color: #64748b; font-size: 13.5px;">No other recent stories available.</p>';
+                }
+            });
+        }
+
+        // Initialize details page
+        loadBlogDetail();
+    </script>
+</body>
+</html>
