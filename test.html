@@ -2947,30 +2947,24 @@ a.double-25 {
         <div class="search-deck-opt1 col-xl-12 float-left p-0">
             <div class="fxd-srch-100">
   <div class="multi-search-container">
-    <!-- Tabs Header -->
+    <!-- Tabs Header (Icons Removed for a clean, text-only look) -->
     <div class="search-tabs">
-      <button class="search-tab-btn active" data-tab="opt1-visas-tab" type="button">
-        <span class="tab-icon">🛂</span>
+      <button class="search-tab-btn active" data-tab="visas-tab" type="button">
         <span class="tab-label">Visas</span>
       </button>
-      <button class="search-tab-btn" data-tab="opt1-flights-tab" type="button">
-        <span class="tab-icon">✈️</span>
+      <button class="search-tab-btn" data-tab="flights-tab" type="button">
         <span class="tab-label">Flights</span>
       </button>
-      <button class="search-tab-btn" data-tab="opt1-umrah-tab" type="button">
-        <span class="tab-icon">🕋</span>
+      <button class="search-tab-btn" data-tab="umrah-tab" type="button">
         <span class="tab-label">Umrah</span>
       </button>
-      <button class="search-tab-btn" data-tab="opt1-tours-tab" type="button">
-        <span class="tab-icon">🗺️</span>
+      <button class="search-tab-btn" data-tab="tours-tab" type="button">
         <span class="tab-label">Tours</span>
       </button>
-      <button class="search-tab-btn" data-tab="opt1-cars-tab" type="button">
-        <span class="tab-icon">🚗</span>
+      <button class="search-tab-btn" data-tab="cars-tab" type="button">
         <span class="tab-label">Car Rental</span>
       </button>
-      <button class="search-tab-btn" data-tab="opt1-tracking-tab" type="button">
-        <span class="tab-icon">🔍</span>
+      <button class="search-tab-btn" data-tab="tracking-tab" type="button">
         <span class="tab-label">Tracking</span>
       </button>
     </div>
@@ -2978,11 +2972,11 @@ a.double-25 {
     <!-- Tabs Content Panels -->
     <div class="search-panels">
       <!-- Visas Tab Panel -->
-      <div class="search-panel active" id="opt1-visas-tab">
+      <div class="search-panel active" id="visas-tab">
         <div class="search-fields-grid">
           <div class="search-field">
             <label>Select Destination Country</label>
-            <select id="visa_country_select">
+            <select id="visa_country_select" class="visa-country-select-class">
               <option value="">Where do you want to apply?</option>
               <option value="visa/azerbaijan-visa.html">Azerbaijan</option>
               <option value="visa/australia-visa.html">Australia</option>
@@ -3001,28 +2995,28 @@ a.double-25 {
               <option value="visa/austria-visa.html">Schengen Support</option>
             </select>
           </div>
-          <button class="search-action-btn" id="visa_search_btn" type="button">Search Visas</button>
+          <button class="search-action-btn visa-search-btn-class" id="visa_search_btn" type="button">Search Visas</button>
         </div>
       </div>
 
       <!-- Flights Tab Panel -->
-      <div class="search-panel" id="opt1-flights-tab">
+      <div class="search-panel" id="flights-tab">
         <div class="yugo-search-bar" style="background: none; padding: 0; box-shadow: none;">
           <div class="search-navbar" style="margin-bottom: 15px;">
             <ul class="nav nav-pills ml-0" style="gap: 5px;">
               <li class="nav-item">
-                <a class="flight-type-btn" href="#" id="opt1-oneway-tab">One-Way</a>
+                <a class="flight-type-btn" href="#" id="home-oneway-tab">One-Way</a>
               </li>
               <li class="nav-item">
-                <a class="flight-type-btn active" href="#" id="opt1-round-tab">Roundtrip</a>
+                <a class="flight-type-btn active" href="#" id="home-round-tab">Roundtrip</a>
               </li>
               <li class="nav-item">
-                <a class="flight-type-btn" href="#" id="opt1-multicity-tab">Multi-City</a>
+                <a class="flight-type-btn" href="#" id="home-multicity-tab">Multi-City</a>
               </li>
             </ul>
           </div>
           <div class="tab-content" id="home-pills-tabContent">
-            <div class="tab-pane show active" id="opt1-round_oneWay">
+            <div class="tab-pane show active" id="home-round_oneWay">
               <div class="search-bar-feilds" style="padding: 0; background: transparent;">
                 <form action="/flight-search" class="flight-search-form position-relative" method="get">
                   <input name="searchtype" type="hidden" value="return" id="home-searchtype"/>
@@ -3054,7 +3048,7 @@ a.double-25 {
                     </div>
                     
                     <!-- departure-dates -->
-                    <div class="departure-dates-main data-wraps" id="opt1-dates-wrap" style="flex: 1.2; min-width: 250px;">
+                    <div class="departure-dates-main data-wraps" id="home-dates-wrap" style="flex: 1.2; min-width: 250px;">
                       <div class="departure-cities t-datepicker">
                         <div class="checkin-block position-relative">
                           <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
@@ -3090,13 +3084,13 @@ a.double-25 {
                     
                     <!-- travelers & class -->
                     <div class="departure-dates-main" style="flex: 1.2; min-width: 250px; position: relative;">
-                      <div class="departure-cities" id="opt1-travelers-trigger">
+                      <div class="departure-cities" id="home-travelers-trigger">
                         <div class="travelars">
                           <span class="total_traveler last-right-icons">
                             <img alt="passenger" src="assets/img/passenger.png" width="15"/>Travelers
                           </span>
                           <div class="travelars-content">
-                            <div class="content" id="opt1-travelers-text">01</div>
+                            <div class="content" id="home-travelers-text">01</div>
                           </div>
                         </div>
                         <hr/>
@@ -3105,13 +3099,13 @@ a.double-25 {
                             <img alt="class" src="assets/img/tickets.png" width="12"/>Class
                           </span>
                           <div class="travelars-class-content">
-                            <div class="content" id="opt1-class-text">Economy</div>
+                            <div class="content" id="home-class-text">Economy</div>
                           </div>
                         </div>
                       </div>
                       
                       <!-- Travelers selector dropdown panel -->
-                      <div class="travelars-detl home-travelers-dropdown" id="opt1-travelers-dropdown" style="display: none; top: 100%; right: 0; position: absolute; z-index: 99999; background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); width: 280px;">
+                      <div class="travelars-detl home-travelers-dropdown" id="home-travelers-dropdown" style="display: none; top: 100%; right: 0; position: absolute; z-index: 99999; background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); width: 280px;">
                         <p style="font-weight:700; color:#1c3659; margin-bottom:10px;">Travelers</p>
                         <div class="travel-detl-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
                           <div class="travel-detl-inner">
@@ -3165,7 +3159,7 @@ a.double-25 {
               </div>
             </div>
             
-            <div class="tab-pane" id="opt1-multiCity" style="display: none;">
+            <div class="tab-pane" id="home-multiCity" style="display: none;">
               <div class="search-bar-feilds rounded-0" style="padding: 0; background: transparent;">
                 <form action="/flight-search" class="flight-search-form position-relative" method="get">
                   <input name="searchtype" type="hidden" value="multicity"/>
@@ -3197,33 +3191,23 @@ a.double-25 {
                             </div>
                           </div>
                         </div>
-                        <div class="departure-dates-main data-wraps" style="flex:1; min-width:180px;">
-                          <div class="departure-cities t-datepicker only-checkin">
-                            <div class="checkin-block position-relative">
-                              <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
-                                <g fill="none">
-                                  <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
-                                  <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
-                                  <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>
-                                </g>
-                              </svg>
-                              <div class="departure-city-item t-check-in"></div>
-                            </div>
+                        <div class="departure-dates-main t-datepicker only-checkin" style="flex:1; min-width:150px;">
+                          <div class="checkin-block position-relative">
+                            <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+                              <g fill="none">
+                                <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
+                                <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
+                                <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+                              </g>
+                            </svg>
+                            <div class="departure-city-item t-check-in"></div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    
                     <!-- Segment 2 -->
-                    <div class="multi-city-segment" data-segment="2" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:15px; margin-bottom:10px; display:none;">
-                      <div class="segment-header" style="font-weight:700; color:#1c3659; margin-bottom:10px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
-                        <span>Flight 2</span>
-                        <a href="javascript:" class="remove-segment" style="color:#ef4444; font-size:11px; font-weight:bold;">Remove</a>
-                      </div>
+                    <div class="multi-city-segment" data-segment="2" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:15px; margin-bottom:10px;">
+                      <div class="segment-header" style="font-weight:700; color:#1c3659; margin-bottom:10px; font-size:12px;">Flight 2</div>
                       <div class="multi-city-segment-inner" style="display:flex; gap:15px; flex-wrap:wrap; align-items:flex-end;">
                         <div class="departure-cities" style="flex:2; min-width:280px; display:flex;">
                           <div class="departure-city-item city-item" style="flex:1;">
@@ -3248,82 +3232,38 @@ a.double-25 {
                             </div>
                           </div>
                         </div>
-                        <div class="departure-dates-main data-wraps" style="flex:1; min-width:180px;">
-                          <div class="departure-cities t-datepicker only-checkin">
-                            <div class="checkin-block position-relative">
-                              <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
-                                <g fill="none">
-                                  <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
-                                  <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
-                                  <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>
-                                </g>
-                              </svg>
-                              <div class="departure-city-item t-check-in"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Segment 3 -->
-                    <div class="multi-city-segment" data-segment="3" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:15px; margin-bottom:10px; display:none;">
-                      <div class="segment-header" style="font-weight:700; color:#1c3659; margin-bottom:10px; font-size:12px; display:flex; justify-content:space-between; align-items:center;">
-                        <span>Flight 3</span>
-                        <a href="javascript:" class="remove-segment" style="color:#ef4444; font-size:11px; font-weight:bold;">Remove</a>
-                      </div>
-                      <div class="multi-city-segment-inner" style="display:flex; gap:15px; flex-wrap:wrap; align-items:flex-end;">
-                        <div class="departure-cities" style="flex:2; min-width:280px; display:flex;">
-                          <div class="departure-city-item city-item" style="flex:1;">
-                            <div class="code"></div>
-                            <input class="city" name="from[]" type="hidden"/>
-                            <div class="icons-wrap">
-                              <svg height="20" viewbox="0 0 576 512" width="15" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M372 143.9L172.7 40.2c-8-4.1-17.3-4.8-25.7-1.7l-41.1 15c-10.3 3.7-13.8 16.4-7.1 25l101.5 127.9l-100.2 36.4L40 206.2c-6.2-3.8-13.8-4.5-20.7-2.1l-16.3 6c-9.4 3.4-13.4 14.5-8.3 23.1L48.3 325c15.6 26.7 48.1 38.4 77.1 27.8l12.9-4.7l398.4-145c29.1-10.6 44-42.7 33.5-71.8s-42.7-44-71.8-33.5zM32.2 448c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32z" fill="currentColor"></path>
-                              </svg>
-                              <input class="autocomplete" placeholder="Departing From" type="text" style="outline: none !important;"/>
-                            </div>
-                          </div>
-                          <hr/>
-                          <div class="arrival-city-item city-item" style="flex:1;">
-                            <div class="code"></div>
-                            <input class="city" name="to[]" type="hidden"/>
-                            <div class="icons-wrap">
-                              <svg height="24" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 21q-.425 0-.712-.288T3 20t.288-.712T4 19h16q.425 0 .713.288T21 20t-.288.713T20 21zm14.55-5.05l-14.1-4q-.65-.2-1.05-.725t-.4-1.2V5.6q0-.5.4-.8t.9-.175l.575.15q.25.075.438.238t.262.412L6.6 8.4l3.45.975l-.7-6.775q-.075-.65.438-1.063t1.137-.212l.525.15q.275.075.488.288t.312.487l3 8.625l4.3 1.225q.625.2 1.038.725t.412 1.2q0 .875-.712 1.537t-1.738.388" fill="currentColor"></path>
-                              </svg>
-                              <input class="autocomplete" placeholder="Going to" type="text" style="outline: none !important;"/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="departure-dates-main data-wraps" style="flex:1; min-width:180px;">
-                          <div class="departure-cities t-datepicker only-checkin">
-                            <div class="checkin-block position-relative">
-                              <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
-                                <g fill="none">
-                                  <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
-                                  <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
-                                  <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>
-                                  <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>
-                                </g>
-                              </svg>
-                              <div class="departure-city-item t-check-in"></div>
-                            </div>
+                        <div class="departure-dates-main t-datepicker only-checkin" style="flex:1; min-width:150px;">
+                          <div class="checkin-block position-relative">
+                            <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+                              <g fill="none">
+                                <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
+                                <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
+                                <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+                              </g>
+                            </svg>
+                            <div class="departure-city-item t-check-in"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px;">
-                    <button type="button" class="btn btn-outline-primary btn-sm" id="home-addMoreFlights" style="border:1px dashed #1c3659; color:#1c3659; border-radius:4px; font-weight:bold; font-size:12px; outline: none !important;">+ Add Flight</button>
-                    <button class="search-action-btn" type="submit" style="height:40px;">Search Flights</button>
+                  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; width:100%;">
+                    <div>
+                      <button type="button" class="btn btn-outline-primary" id="home-add-flight-btn" style="border:1px solid #1c3659; color:#1c3659; border-radius:4px; font-weight:600; font-size:12px; padding:6px 16px; outline: none !important;">+ Add Flight</button>
+                    </div>
+                    <div style="display:flex; gap:15px; align-items:flex-end;">
+                      <div class="departure-dates-main" style="width:250px; position:relative;">
+                        <div class="departure-cities" id="home-multicity-travelers-trigger" style="display:flex; padding:8px 15px; border:1.5px solid #cbd5e1; border-radius:8px;">
+                          <span style="font-size:13px; font-weight:700; color:#1c3659; display:flex; align-items:center; gap:8px;">
+                            <img alt="passenger" src="assets/img/passenger.png" width="15"/>
+                            <span id="home-multicity-travelers-text">01</span> Travelers,
+                            <span id="home-multicity-class-text">Economy</span>
+                          </span>
+                        </div>
+                      </div>
+                      <button class="search-action-btn" type="submit" style="height:48px; padding:0 35px;">Search Flights</button>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -3333,23 +3273,15 @@ a.double-25 {
       </div>
 
       <!-- Umrah Tab Panel -->
-      <div class="search-panel" id="opt1-umrah-tab">
-        <div class="search-fields-grid grid-2">
+      <div class="search-panel" id="umrah-tab">
+        <div class="search-fields-grid">
           <div class="search-field">
-            <label>Package Category</label>
-            <select id="umrah_package">
-              <option value="5star">5 Star Premium Packages</option>
-              <option value="4star">4 Star Deluxe Packages</option>
-              <option value="3star">3 Star Economy Packages</option>
-            </select>
-          </div>
-          <div class="search-field">
-            <label>Duration</label>
-            <select id="umrah_duration">
-              <option value="7">7 Days</option>
-              <option value="14">14 Days</option>
-              <option value="21">21 Days</option>
-              <option value="28">28 Days</option>
+            <label>Select Umrah Package Type</label>
+            <select id="umrah_package_select">
+              <option value="">Choose Umrah Package...</option>
+              <option value="umrah.html">Economy Umrah Packages</option>
+              <option value="umrah.html">Star Umrah Packages</option>
+              <option value="umrah.html">Signature Umrah Packages</option>
             </select>
           </div>
           <button class="search-action-btn" id="umrah_search_btn" type="button">Search Umrah</button>
@@ -3357,26 +3289,16 @@ a.double-25 {
       </div>
 
       <!-- Tours Tab Panel -->
-      <div class="search-panel" id="opt1-tours-tab">
-        <div class="search-fields-grid grid-2">
+      <div class="search-panel" id="tours-tab">
+        <div class="search-fields-grid">
           <div class="search-field">
-            <label>Tour Category</label>
-            <select id="tour_type">
-              <option value="international-group">✈️ International Group Tours</option>
-              <option value="international-private">💎 International Private Tours</option>
-              <option value="local-group">🇵🇰 Pakistan Local Group Tours</option>
-              <option value="local-private">🏡 Pakistan Local Private Tours</option>
-            </select>
-          </div>
-          <div class="search-field">
-            <label>Select Destination</label>
-            <select id="tour_destination">
-              <option value="">All Featured Tour Destinations</option>
-              <option value="baku">Baku, Azerbaijan</option>
-              <option value="thailand">Thailand Exotic Getaway</option>
-              <option value="skardu">Skardu Valley Adventure</option>
-              <option value="swat">Kalam & Swat Valley</option>
-              <option value="hunza">Hunza Valley Autumn Tour</option>
+            <label>Choose Tour Destination</label>
+            <select id="tours_destination_select">
+              <option value="">Where would you like to tour?</option>
+              <option value="tours.html">Baku (Azerbaijan)</option>
+              <option value="tours.html">Europe Group Tours</option>
+              <option value="tours.html">Thailand Group Tours</option>
+              <option value="tours.html">Malaysia Holiday Packages</option>
             </select>
           </div>
           <button class="search-action-btn" id="tours_search_btn" type="button">Search Tours</button>
@@ -3384,38 +3306,22 @@ a.double-25 {
       </div>
 
       <!-- Car Rental Tab Panel -->
-      <div class="search-panel" id="opt1-cars-tab">
-        <div class="search-fields-grid grid-2">
+      <div class="search-panel" id="cars-tab">
+        <div class="search-fields-grid">
           <div class="search-field">
-            <label>Pick-up Location</label>
-            <select id="car_pickup">
-              <option value="lahore">Lahore City</option>
-              <option value="karachi">Karachi City</option>
-              <option value="islamabad">Islamabad City</option>
-            </select>
-          </div>
-          <div class="search-field">
-            <label>Vehicle Type</label>
-            <select id="car_type">
-              <option value="suv">Premium SUV (Prado, Fortuner, Revo)</option>
-              <option value="sedan">Sedan Cars (Civic, Corolla, City)</option>
-              <option value="coaster">Hiace / Coaster (For Groups)</option>
-            </select>
+            <label>Pickup Location</label>
+            <input id="car_pickup_location" placeholder="Enter pickup city or airport" type="text" />
           </div>
           <button class="search-action-btn" id="car_search_btn" type="button">Search Cars</button>
         </div>
       </div>
 
       <!-- Tracking Tab Panel -->
-      <div class="search-panel" id="opt1-tracking-tab">
-        <div class="search-fields-grid grid-2">
+      <div class="search-panel" id="tracking-tab">
+        <div class="search-fields-grid">
           <div class="search-field">
-            <label>Application tracking ID</label>
-            <input type="text" id="track_id" placeholder="e.g. OZO-2026-9812">
-          </div>
-          <div class="search-field">
-            <label>Passport Number</label>
-            <input type="text" id="track_passport" placeholder="e.g. AB1234567">
+            <label>Application / Booking ID</label>
+            <input id="tracking_order_id" placeholder="Enter your booking reference number (e.g. OZO-12345)" type="text" />
           </div>
           <button class="search-action-btn" id="tracking_search_btn" type="button">Track Application</button>
         </div>
@@ -10721,6 +10627,7 @@ jQuery(document).ready(function () {
     
     
     
+    
     <!-- Premium Overrides Styling for OzoTrips Redesign -->
     <style>
         :root {
@@ -10755,7 +10662,9 @@ jQuery(document).ready(function () {
             margin-bottom: 0 !important;
         }
 
-        /* --- GLOBAL BUTTONS: FORCE ROUNDED RECTANGLE STYLE (NON-HEADER) --- */
+        /* --- GLOBAL BUTTONS: FORCE ROUNDED RECTANGLE STYLE --- */
+        button, 
+        .btn, 
         .search-action-btn, 
         .tour-card-btn, 
         .bttn-22, .bttn-24, .bttn-25, 
@@ -10763,10 +10672,10 @@ jQuery(document).ready(function () {
         #newsletter_submit,
         .search_btn,
         .flight-type-btn {
-            border-radius: 8px !important;
+            border-radius: 8px !important; /* Rounded Rectangle shape */
         }
 
-        /* Hero header alignment fixes */
+        /* Hero text layout */
         .hero-main-title {
             color: var(--ozo-navy) !important;
             font-weight: 800 !important;
@@ -10782,298 +10691,263 @@ jQuery(document).ready(function () {
             margin-bottom: 30px !important;
         }
 
-        /* --- COMMON STYLES --- */
-        .search-panel {
-            display: none;
-        }
-        .search-panel.active {
-            display: block !important;
-        }
-        .search-fields-grid {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 15px;
-            align-items: flex-end;
-            width: 100%;
-        }
-        .search-field {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* --- OPTION 1: GLASSMORPHIC LUXURY DECK --- */
-        .search-deck-opt1 .multi-search-container {
-            background: rgba(255, 255, 255, 0.8) !important;
-            backdrop-filter: blur(20px) !important;
-            -webkit-backdrop-filter: blur(20px) !important;
-            border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
-            box-shadow: 0 30px 70px rgba(15, 30, 54, 0.12) !important;
+        /* --- NEW STYLISH SEARCH BAR: LUXURY MINIMALIST DECK --- */
+        .multi-search-container {
+            background: var(--ozo-white) !important;
+            border: 1px solid rgba(28, 54, 89, 0.08) !important;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02), 0 30px 70px rgba(28, 54, 89, 0.06) !important;
             border-radius: 16px !important;
             padding: 24px !important;
             width: 100% !important;
             box-sizing: border-box !important;
+            text-align: left !important;
         }
-        .search-deck-opt1 .search-tabs {
+
+        .search-tabs {
             background: transparent !important;
-            border-bottom: 2px solid rgba(28, 54, 89, 0.08) !important;
+            border-bottom: 2px solid #f1f5f9 !important;
             display: flex !important;
-            gap: 15px !important;
-            margin-bottom: 20px !important;
+            gap: 8px !important;
+            margin-bottom: 24px !important;
         }
-        .search-deck-opt1 .search-tab-btn {
+
+        .search-tab-btn {
             font-family: 'Outfit', sans-serif !important;
             font-weight: 600 !important;
-            color: var(--ozo-navy) !important;
+            font-size: 14.5px !important;
+            color: var(--ozo-text-muted) !important;
             border: none !important;
             border-bottom: 3px solid transparent !important;
-            padding: 12px 24px !important;
+            padding: 12px 28px !important;
             background: transparent !important;
-            transition: all 0.3s ease !important;
+            transition: all 0.25s ease !important;
             border-radius: 8px 8px 0 0 !important;
-            opacity: 0.75;
+            outline: none !important;
         }
-        .search-deck-opt1 .search-tab-btn:hover {
-            opacity: 1;
-            background: rgba(212, 175, 55, 0.05) !important;
+
+        .search-tab-btn:hover {
+            color: var(--ozo-navy) !important;
+            background: rgba(28, 54, 89, 0.03) !important;
         }
-        .search-deck-opt1 .search-tab-btn.active {
-            opacity: 1;
+
+        .search-tab-btn.active {
             color: var(--ozo-gold-dark) !important;
             border-bottom: 3.5px solid var(--ozo-gold) !important;
             font-weight: 700 !important;
             background: transparent !important;
         }
-        .search-deck-opt1 .search-field label {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 12px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
-            margin-bottom: 8px !important;
+
+        .search-panel {
+            display: none;
         }
-        .search-deck-opt1 .search-field input, 
-        .search-deck-opt1 .search-field select, 
-        .search-deck-opt1 .travelers-trigger {
-            background: #ffffff !important;
-            border: 1.5px solid #cbd5e1 !important;
-            border-radius: 8px !important;
-            height: 48px !important;
-            padding: 0 15px !important;
-            outline: none !important;
-            transition: all 0.25s ease !important;
-        }
-        .search-deck-opt1 .search-field input:focus, 
-        .search-deck-opt1 .search-field select:focus, 
-        .search-deck-opt1 .travelers-trigger:focus {
-            border-color: var(--ozo-gold) !important;
-            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15) !important;
-        }
-        .search-deck-opt1 .search-action-btn {
-            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%) !important;
-            color: #ffffff !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 800 !important;
-            height: 48px !important;
-            padding: 0 35px !important;
-            border: none !important;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3) !important;
-            transition: all 0.3s ease !important;
-        }
-        .search-deck-opt1 .search-action-btn:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4) !important;
+        
+        .search-panel.active {
+            display: block !important;
         }
 
-        /* --- OPTION 2: DARK NAVY CONSOLE --- */
-        .search-deck-opt2 .multi-search-container {
-            background: #0a1424 !important;
-            border-top: 4px solid var(--ozo-gold) !important;
-            box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35) !important;
-            border-radius: 12px !important;
-            padding: 24px !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
-        }
-        .search-deck-opt2 .search-tabs {
-            background: transparent !important;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.1) !important;
-            display: flex !important;
+        .search-fields-grid {
+            display: grid !important;
+            grid-template-columns: 1fr auto !important;
             gap: 15px !important;
-            margin-bottom: 20px !important;
-        }
-        .search-deck-opt2 .search-tab-btn {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            color: rgba(255, 255, 255, 0.7) !important;
-            border: none !important;
-            border-bottom: 3px solid transparent !important;
-            padding: 12px 24px !important;
-            background: transparent !important;
-            transition: all 0.3s ease !important;
-        }
-        .search-deck-opt2 .search-tab-btn:hover {
-            color: #ffffff !important;
-            background: rgba(255, 255, 255, 0.05) !important;
-        }
-        .search-deck-opt2 .search-tab-btn.active {
-            color: var(--ozo-gold) !important;
-            border-bottom: 3.5px solid var(--ozo-gold) !important;
-            font-weight: 700 !important;
-            background: transparent !important;
-        }
-        .search-deck-opt2 .search-field label {
-            color: rgba(255, 255, 255, 0.8) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 12px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
-            margin-bottom: 8px !important;
-        }
-        .search-deck-opt2 .search-field input, 
-        .search-deck-opt2 .search-field select, 
-        .search-deck-opt2 .travelers-trigger {
-            background: rgba(255, 255, 255, 0.06) !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
-            color: #ffffff !important;
-            border-radius: 8px !important;
-            height: 48px !important;
-            padding: 0 15px !important;
-            outline: none !important;
-            transition: all 0.25s ease !important;
-        }
-        .search-deck-opt2 .search-field input:focus, 
-        .search-deck-opt2 .search-field select:focus, 
-        .search-deck-opt2 .travelers-trigger:focus {
-            border-color: var(--ozo-gold) !important;
-            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.25) !important;
-        }
-        .search-deck-opt2 .search-action-btn {
-            background: var(--ozo-gold) !important;
-            color: #0a1424 !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 800 !important;
-            height: 48px !important;
-            padding: 0 35px !important;
-            border: none !important;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-        }
-        .search-deck-opt2 .search-action-btn:hover {
-            background: var(--ozo-white) !important;
-            color: #0a1424 !important;
-            transform: translateY(-2px) !important;
-        }
-        .search-deck-opt2 .flight-type-btn {
-            color: rgba(255, 255, 255, 0.7) !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
-            padding: 6px 16px !important;
-        }
-        .search-deck-opt2 .flight-type-btn.active {
-            background: var(--ozo-gold) !important;
-            color: #0a1424 !important;
-            border-color: var(--ozo-gold) !important;
+            align-items: flex-end !important;
+            width: 100% !important;
         }
 
-        /* --- OPTION 3: AIRBNB-STYLE MINIMLIST STRIP --- */
-        .search-deck-opt3 .multi-search-container {
-            background: #ffffff !important;
-            border: 1px solid #e2e8f0 !important;
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.05) !important;
-            border-radius: 20px !important;
-            padding: 24px !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
-        }
-        .search-deck-opt3 .search-tabs {
-            background: transparent !important;
-            border-bottom: 1px solid #f1f5f9 !important;
-            margin-bottom: 24px !important;
+        .search-field {
             display: flex !important;
-            justify-content: center !important;
-            gap: 10px !important;
-        }
-        .search-deck-opt3 .search-tab-btn {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            color: var(--ozo-text-muted) !important;
-            border: 1.5px solid #e2e8f0 !important;
-            border-radius: 30px !important;
-            padding: 8px 20px !important;
-            background: transparent !important;
-            transition: all 0.25s ease !important;
-        }
-        .search-deck-opt3 .search-tab-btn:hover {
-            color: var(--ozo-navy) !important;
-            background: #f8fafc !important;
-        }
-        .search-deck-opt3 .search-tab-btn.active {
-            color: #ffffff !important;
-            background: var(--ozo-navy) !important;
-            border-color: var(--ozo-navy) !important;
-            font-weight: 600 !important;
-        }
-        .search-deck-opt3 .search-fields-grid {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            gap: 0 !important;
-            border: 1px solid #cbd5e1 !important;
-            border-radius: 100px !important;
-            padding: 8px 12px 8px 24px !important;
-            background: #ffffff !important;
-            width: 100% !important;
-        }
-        .search-deck-opt3 .search-field {
-            flex: 1 !important;
-            border-right: 1px solid #e2e8f0 !important;
-            padding: 0 20px !important;
-            margin: 0 !important;
+            flex-direction: column !important;
             text-align: left !important;
         }
-        .search-deck-opt3 .search-field:last-of-type {
-            border-right: none !important;
-        }
-        .search-deck-opt3 .search-field label {
-            font-size: 11px !important;
-            margin-bottom: 2px !important;
-            color: var(--ozo-text-muted) !important;
+
+        .search-field label {
+            color: var(--ozo-navy) !important;
             font-family: 'Outfit', sans-serif !important;
-            text-transform: uppercase !important;
             font-weight: 700 !important;
+            font-size: 12px !important;
+            text-transform: uppercase !important;
             letter-spacing: 0.5px !important;
+            margin-bottom: 8px !important;
         }
-        .search-deck-opt3 .search-field input, 
-        .search-deck-opt3 .search-field select, 
-        .search-deck-opt3 .travelers-trigger {
-            border: none !important;
-            background: transparent !important;
-            height: 38px !important;
-            padding: 0 !important;
-            box-shadow: none !important;
+
+        .search-field input, 
+        .search-field select, 
+        .travelers-trigger,
+        #home-travelers-trigger {
+            background: #f8fafc !important;
+            border: 1.5px solid #cbd5e1 !important;
+            border-radius: 8px !important; /* Perfect Rounded Rectangle */
+            height: 50px !important;
+            padding: 0 15px !important;
             color: var(--ozo-navy) !important;
             font-family: 'Outfit', sans-serif !important;
-            font-size: 14px !important;
-            width: 100% !important;
+            font-size: 14.5px !important;
             outline: none !important;
+            transition: all 0.25s ease !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
         }
-        .search-deck-opt3 .search-action-btn {
-            height: 48px !important;
-            padding: 0 30px !important;
-            border-radius: 30px !important;
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+
+        .search-field input:focus, 
+        .search-field select:focus, 
+        .travelers-trigger:focus,
+        #home-travelers-trigger:focus {
+            border-color: var(--ozo-gold) !important;
+            background: #ffffff !important;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.12) !important;
+        }
+
+        /* Flight Sub-Tabs (Roundtrip, Oneway, Multicity) */
+        .flight-type-btn {
             font-family: 'Outfit', sans-serif !important;
-            font-weight: 800 !important;
-            border: none !important;
-            transition: all 0.3s ease !important;
+            font-weight: 600 !important;
+            font-size: 13px !important;
+            color: var(--ozo-navy) !important;
+            border: 1.5px solid #cbd5e1 !important;
+            background: transparent !important;
+            border-radius: 8px !important; /* Perfect Rounded Rectangle */
+            padding: 6px 18px !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            display: inline-block !important;
         }
-        .search-deck-opt3 .search-action-btn:hover {
+
+        .flight-type-btn:hover {
+            background: rgba(28, 54, 89, 0.05) !important;
+            border-color: var(--ozo-navy) !important;
+            color: var(--ozo-navy) !important;
+            text-decoration: none !important;
+        }
+
+        .flight-type-btn.active {
             background: var(--ozo-navy) !important;
             color: #ffffff !important;
-            transform: translateY(-1px) !important;
+            border-color: var(--ozo-navy) !important;
+        }
+
+        /* Search Submit Action buttons style */
+        .search-action-btn, 
+        #visa_search_btn, 
+        #umrah_search_btn, 
+        #tours_search_btn, 
+        #car_search_btn, 
+        #tracking_search_btn {
+            background: var(--ozo-navy) !important;
+            color: #ffffff !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 14px !important;
+            height: 50px !important;
+            padding: 0 35px !important;
+            border: none !important;
+            border-radius: 8px !important; /* Perfect Rounded Rectangle */
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            box-shadow: 0 4px 15px rgba(28, 54, 89, 0.1) !important;
+            transition: all 0.25s ease !important;
+        }
+
+        .search-action-btn:hover, 
+        #visa_search_btn:hover, 
+        #umrah_search_btn:hover, 
+        #tours_search_btn:hover, 
+        #car_search_btn:hover, 
+        #tracking_search_btn:hover {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25) !important;
+        }
+
+        /* --- 5. METRICS STRIP --- */
+        .nmber-strip {
+            font-family: 'Outfit', sans-serif !important;
+        }
+
+        /* --- 6. POPULAR TOUR CARDS --- */
+        .tour-slide-card {
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            border: 1px solid #e2e8f0 !important;
+            background: var(--ozo-white) !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01) !important;
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        }
+
+        .tour-slide-card:hover {
+            transform: translateY(-6px) !important;
+            border-color: var(--ozo-gold) !important;
+            box-shadow: var(--ozo-shadow-gold) !important;
+        }
+
+        .tour-badge {
+            background: var(--ozo-navy) !important;
+            color: var(--ozo-white) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            border-radius: 8px !important;
+            padding: 4px 12px !important;
+        }
+
+        .tour-card-title {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            color: var(--ozo-navy) !important;
+        }
+
+        .tour-card-price {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 800 !important;
+            color: var(--ozo-gold-dark) !important;
+        }
+
+        /* --- 7. SEO FILTER FEATURES --- */
+        .main-filter {
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            border: 1.5px solid rgba(212, 175, 55, 0.2) !important;
+            transition: all 0.3s ease !important;
+            background: var(--ozo-white) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
+        }
+
+        .main-filter:hover {
+            transform: translateY(-5px) !important;
+            border-color: var(--ozo-gold) !important;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08) !important;
+        }
+
+        /* --- 8. TRENDING VISA CARD GRID LIST --- */
+        .visa-yugo-box ul li {
+            border-radius: 8px !important;
+        }
+        
+        .visa-yugo-box ul li:hover {
+            border-color: var(--ozo-gold) !important;
+            box-shadow: var(--ozo-shadow-gold) !important;
+        }
+
+        /* --- 9. CLIENT TESTIMONIAL CARDS --- */
+        .testimonial-card {
+            border-radius: 12px !important;
+            border: 1.5px solid #cbd5e1 !important;
+            background: var(--ozo-white) !important;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--ozo-gold) !important;
+            box-shadow: var(--ozo-shadow-gold) !important;
+        }
+
+        /* --- 10. PREMIUM CEO MESSAGE SECTION --- */
+        .ceo-section {
+            background: var(--ozo-navy-dark) !important;
+            color: var(--ozo-white) !important;
+            padding: 85px 0 !important;
+        }
+        .ceo-badge {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            border-radius: 8px !important;
         }
 
         /* --- 12. LUXURY SLATE BLACK FOOTER REDESIGN --- */
@@ -11129,24 +11003,22 @@ jQuery(document).ready(function () {
 
     <script>
         $(document).ready(function() {
-            // General scoped tab switching handler for stacked search decks
+            // Scoped tab switcher handler
             $(document).on('click', '.search-tab-btn', function() {
                 var $container = $(this).closest('.multi-search-container');
                 var tabId = $(this).data('tab');
                 
-                // Clear active classes inside this local deck only
                 $container.find('.search-tab-btn').removeClass('active');
                 $container.find('.search-panel').removeClass('active');
                 
-                // Set active tab and panel
                 $(this).addClass('active');
                 $container.find('#' + tabId).addClass('active');
             });
 
-            // Local redirection for Visa searches in all three decks
-            $(document).on('click', '[id$="-visas-tab"] .search-action-btn', function() {
+            // Scoped Visa Search button handler
+            $(document).on('click', '#visa_search_btn', function() {
                 var $container = $(this).closest('.multi-search-container');
-                var countryUrl = $container.find('select').val();
+                var countryUrl = $container.find('#visa_country_select').val();
                 if (countryUrl) {
                     window.location.href = countryUrl;
                 } else {
@@ -11154,7 +11026,7 @@ jQuery(document).ready(function () {
                 }
             });
 
-            // Flights sub-tab toggler handler (One-Way / Roundtrip / Multi-City)
+            // Flight search tab toggle
             $(document).on('click', '.flight-type-btn', function(e) {
                 e.preventDefault();
                 var $container = $(this).closest('.multi-search-container');
@@ -11162,33 +11034,31 @@ jQuery(document).ready(function () {
                 $(this).addClass('active');
                 
                 var btnId = $(this).attr('id');
-                var isOneWay = btnId.indexOf('oneway-tab') !== -1;
-                var isMulti = btnId.indexOf('multicity-tab') !== -1;
+                var isOneWay = btnId === 'home-oneway-tab';
+                var isMulti = btnId === 'home-multicity-tab';
                 
-                // Find matching segment blocks in this container
-                var $roundOneWayBlock = $container.find('[id$="-round_oneWay"]');
-                var $multiBlock = $container.find('[id$="-multiCity"]');
-                var $datesWrap = $container.find('[id$="-dates-wrap"]');
+                var $roundOneWay = $container.find('#home-round_oneWay');
+                var $multiCity = $container.find('#home-multiCity');
+                var $datesWrap = $container.find('#home-dates-wrap');
                 
                 if (isMulti) {
-                    $roundOneWayBlock.hide();
-                    $multiBlock.show();
-                    $container.find('input[name="searchtype"]').val('multicity');
+                    $roundOneWay.hide();
+                    $multiCity.show();
+                    $container.find('#home-searchtype').val('multicity');
                 } else {
-                    $roundOneWayBlock.show();
-                    $multiBlock.hide();
+                    $roundOneWay.show();
+                    $multiCity.hide();
                     if (isOneWay) {
-                        $container.find('input[name="searchtype"]').val('oneway');
-                        rebuildLocalDatePicker($datesWrap, true);
+                        $container.find('#home-searchtype').val('oneway');
+                        rebuildSearchDatePicker($datesWrap, true);
                     } else {
-                        $container.find('input[name="searchtype"]').val('return');
-                        rebuildLocalDatePicker($datesWrap, false);
+                        $container.find('#home-searchtype').val('return');
+                        rebuildSearchDatePicker($datesWrap, false);
                     }
                 }
             });
 
-            // Helper to rebuild local datepickers correctly
-            function rebuildLocalDatePicker($datesWrap, isOneWay) {
+            function rebuildSearchDatePicker($datesWrap, isOneWay) {
                 $datesWrap.empty();
                 var html = '';
                 if (isOneWay) {
@@ -11212,7 +11082,6 @@ jQuery(document).ready(function () {
                            '      <g fill="none">' +
                            '        <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>' +
                            '        <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>' +
-                           '        <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>' +
                            '      </g>' +
                            '    </svg>' +
                            '    <div class="departure-city-item t-check-in"></div>' +
@@ -11237,18 +11106,15 @@ jQuery(document).ready(function () {
                 });
             }
 
-            // Travelers dropdown toggle logic for each deck option
-            $(document).on('click', '[id$="-travelers-trigger"]', function(e) {
+            // Travelers dropdown trigger
+            $(document).on('click', '#home-travelers-trigger', function(e) {
                 e.stopPropagation();
-                var $container = $(this).closest('.multi-search-container');
-                var $dropdown = $container.find('.home-travelers-dropdown');
-                $('.home-travelers-dropdown').not($dropdown).hide();
-                $dropdown.toggle();
+                $('#home-travelers-dropdown').toggle();
             });
 
             $(document).on('click', function(e) {
-                if (!$(e.target).closest('[id$="-travelers-trigger"]').length && !$(e.target).closest('.home-travelers-dropdown').length) {
-                    $('.home-travelers-dropdown').hide();
+                if (!$(e.target).closest('#home-travelers-trigger').length && !$(e.target).closest('#home-travelers-dropdown').length) {
+                    $('#home-travelers-dropdown').hide();
                 }
             });
         });
