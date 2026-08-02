@@ -9716,6 +9716,9 @@ jQuery(document).ready(function () {
     <script src="/assets/js/form-interceptor.js"></script>
     <script src="/assets/js/popup-renderer.js"></script>
 
+    
+</html>
+
     <!-- Premium Overrides Styling for OzoTrips Redesign -->
     <style>
         :root {
@@ -9904,40 +9907,43 @@ jQuery(document).ready(function () {
         /* --- 4. FLOATING SEARCH DECK REDESIGN --- */
         .multi-search-container {
             border-radius: 20px !important;
-            box-shadow: 0 20px 45px rgba(28, 54, 89, 0.12) !important;
-            border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+            box-shadow: 0 20px 50px rgba(15, 30, 54, 0.12) !important;
+            border: 1.5px solid var(--ozo-gold) !important;
             background: var(--ozo-white) !important;
             overflow: hidden !important;
+            padding: 10px !important;
         }
 
         .search-tabs {
-            background: #fdfdfd !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+            background: #ffffff !important;
+            border-bottom: 2px solid #f1f5f9 !important;
             padding: 0 10px !important;
             display: flex !important;
+            gap: 15px !important;
+            margin-bottom: 20px !important;
         }
 
-        /* Style active search tabs and labels */
         .search-tab-btn {
             font-family: 'Outfit', sans-serif !important;
             font-weight: 600 !important;
+            font-size: 14px !important;
             color: var(--ozo-text-muted) !important;
             border: none !important;
-            padding: 14px 16px !important;
-            border-bottom: 3.5px solid transparent !important;
+            padding: 12px 20px !important;
             background: transparent !important;
-            transition: all 0.25s ease !important;
-            outline: none !important;
+            transition: all 0.3s ease !important;
+            border-radius: 8px 8px 0 0 !important;
+            border-bottom: 3.5px solid transparent !important;
         }
 
         .search-tab-btn:hover {
             color: var(--ozo-navy) !important;
-            background: rgba(28, 54, 89, 0.03) !important;
+            background: rgba(28, 54, 89, 0.04) !important;
         }
 
         .search-tab-btn.active, .search-tabs button.active {
-            color: var(--ozo-navy) !important;
-            background: var(--ozo-white) !important;
+            color: var(--ozo-gold-dark) !important;
+            background: #ffffff !important;
             font-weight: 700 !important;
             border-bottom: 3.5px solid var(--ozo-gold) !important;
             border-top: none !important;
@@ -9961,49 +9967,59 @@ jQuery(document).ready(function () {
             height: 3.5px !important;
         }
 
+        /* Flight option sub-tab pill buttons */
+        .flight-type-btn {
+            border-radius: 100px !important;
+            border: 1.5px solid #cbd5e1 !important;
+            padding: 8px 22px !important;
+            color: var(--ozo-navy) !important;
+            background: transparent !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 13px !important;
+            transition: all 0.25s ease !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+        }
+        
+        .flight-type-btn.active, .flight-type-btn.active:hover {
+            background: var(--ozo-navy) !important;
+            color: #ffffff !important;
+            border-color: var(--ozo-navy) !important;
+            box-shadow: 0 4px 10px rgba(28, 54, 89, 0.2) !important;
+        }
+        
+        .flight-type-btn:hover {
+            background: rgba(28, 54, 89, 0.05) !important;
+            border-color: var(--ozo-navy) !important;
+        }
+
         /* Inputs and selector styling */
         .search-field label {
             color: var(--ozo-navy) !important;
             font-family: 'Outfit', sans-serif !important;
             font-weight: 700 !important;
-            font-size: 11px !important;
+            font-size: 12px !important;
+            text-transform: uppercase !important;
             letter-spacing: 0.5px !important;
-            margin-bottom: 6px !important;
+            margin-bottom: 8px !important;
         }
 
         .search-field input, .search-field select, .travelers-trigger {
-            border-radius: 10px !important;
+            border-radius: 12px !important;
             border: 1.5px solid #cbd5e1 !important;
-            height: 44px !important;
-            font-size: 13.5px !important;
+            height: 48px !important;
+            font-size: 14px !important;
+            color: var(--ozo-navy) !important;
+            font-family: 'Outfit', sans-serif !important;
             outline: none !important;
-            transition: all 0.2s ease !important;
+            background: #ffffff !important;
+            transition: all 0.25s ease !important;
         }
 
         .search-field input:focus, .search-field select:focus, .travelers-trigger:focus {
             border-color: var(--ozo-gold) !important;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15) !important;
-        }
-
-        /* Flight type inner active pill sub-tabs */
-        .flight-type-btn {
-            border-radius: 100px !important;
-            border: 1.5px solid #cbd5e1 !important;
-            padding: 6px 18px !important;
-            color: var(--ozo-navy) !important;
-            background: transparent !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13px !important;
-            transition: all 0.2s ease !important;
-        }
-        .flight-type-btn.active, .flight-type-btn.active:hover {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
-            border-color: var(--ozo-navy) !important;
-        }
-        .flight-type-btn:hover {
-            background: rgba(28, 54, 89, 0.04) !important;
+            box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.15) !important;
         }
 
         /* Main Search button styles (Flights, Visas, Tours, Cars, etc.) */
@@ -10017,13 +10033,15 @@ jQuery(document).ready(function () {
             background: var(--ozo-gold) !important;
             color: var(--ozo-navy) !important;
             border: none !important;
-            border-radius: 10px !important;
+            border-radius: 12px !important;
             font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            height: 44px !important;
-            padding: 0 28px !important;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25) !important;
-            transition: all 0.3s ease !important;
+            font-weight: 800 !important;
+            height: 48px !important;
+            padding: 0 35px !important;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3) !important;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.8px !important;
         }
 
         .search-action-btn:hover, 
@@ -10035,7 +10053,8 @@ jQuery(document).ready(function () {
         button[type="submit"].search-action-btn:hover {
             background: var(--ozo-navy) !important;
             color: #ffffff !important;
-            box-shadow: 0 4px 15px rgba(28, 54, 89, 0.25) !important;
+            box-shadow: 0 6px 20px rgba(28, 54, 89, 0.3) !important;
+            transform: translateY(-2px) !important;
         }
 
         /* --- 5. METRICS STRIP --- */
@@ -10325,4 +10344,3 @@ jQuery(document).ready(function () {
         }
     </style>
 </body>
-</html>
