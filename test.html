@@ -2668,287 +2668,7 @@ a.double-25 {
         </script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Premium Overrides Styling for Option 1 -->
-    <style>
-        :root {
-            --ozo-navy: #1c3659;
-            --ozo-navy-dark: #0f1e36;
-            --ozo-gold: #d4af37;
-            --ozo-gold-dark: #c59b27;
-            --ozo-white: #ffffff;
-            --ozo-text: #1e293b;
-            --ozo-text-muted: #64748b;
-            --ozo-bg: #faf9f6;
-        }
-
-        h1, h2, h3, h4, h5, h6, .outfit-font {
-            font-family: 'Outfit', 'Rubik', sans-serif !important;
-        }
-
-        /* --- NAVBAR OVERRIDES --- */
-        .new-header.yugo-header {
-            border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
-            background: var(--ozo-white) !important;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
-            padding: 5px 0 !important;
-        }
-        
-        /* Align logo and nav links vertically */
-        .new-header.yugo-header #logoAndNav nav {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            height: auto !important;
-        }
-
-        .nav-links li a {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13.5px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.8px !important;
-            position: relative;
-            padding: 6px 0 !important;
-            transition: color 0.3s ease !important;
-            text-decoration: none !important;
-        }
-
-        .nav-links li a.active-link, .nav-links li a:hover {
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        .nav-links li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--ozo-gold);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-links li a:hover::after {
-            width: 100%;
-        }
-
-        /* --- FLOATING SEARCH DECK OVERRIDES --- */
-        .multi-search-container {
-            border-radius: 20px !important;
-            box-shadow: 0 20px 45px rgba(28, 54, 89, 0.12) !important;
-            border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
-            background: var(--ozo-white) !important;
-            overflow: hidden !important;
-        }
-
-        .search-tabs {
-            background: #fcfcfc !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-        }
-
-        .search-tab-btn {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            color: var(--ozo-text-muted) !important;
-            border: none !important;
-            padding: 12px 10px !important;
-            transition: all 0.25s ease !important;
-        }
-
-        .search-tab-btn:hover {
-            color: var(--ozo-navy) !important;
-            background: rgba(28, 54, 89, 0.03) !important;
-        }
-
-        .search-tab-btn.active {
-            color: var(--ozo-navy) !important;
-            background: var(--ozo-white) !important;
-            font-weight: 700 !important;
-        }
-
-        .search-tab-btn.active::after {
-            background: var(--ozo-gold) !important;
-            height: 3px !important;
-            border-radius: 3px 3px 0 0 !important;
-        }
-
-        .search-field label {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 11px !important;
-            letter-spacing: 0.5px !important;
-            margin-bottom: 6px !important;
-        }
-
-        .search-field input, .search-field select, .travelers-trigger {
-            border-radius: 10px !important;
-            border: 1.5px solid #cbd5e1 !important;
-            height: 44px !important;
-            font-size: 13.5px !important;
-            outline: none !important;
-            transition: all 0.2s ease !important;
-        }
-
-        .search-field input:focus, .search-field select:focus, .travelers-trigger:focus {
-            border-color: var(--ozo-navy) !important;
-            box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.06) !important;
-        }
-
-        .search-action-btn {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            border: none !important;
-            border-radius: 10px !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            height: 44px !important;
-            padding: 0 28px !important;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .search-action-btn:hover {
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 15px rgba(28, 54, 89, 0.2) !important;
-        }
-
-        /* --- SEO FILTERS / FEATURE BADGES --- */
-        .main-filter {
-            border-radius: 16px !important;
-            overflow: hidden !important;
-            border: 1.5px solid rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-            background: var(--ozo-white) !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
-        }
-
-        .main-filter:hover {
-            transform: translateY(-5px) !important;
-            border-color: var(--ozo-gold) !important;
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08) !important;
-        }
-
-        .main-filter .bg-pink-10, .main-filter .vsaFlter-blue-100 {
-            background: var(--ozo-white) !important;
-            padding: 24px !important;
-            height: 100% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-        }
-
-        .main-filter a.double-22, 
-        .main-filter a.double-21, 
-        .main-filter a.double-24, 
-        .main-filter a.double-25 {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 15px !important;
-            line-height: 1.4 !important;
-            text-decoration: none !important;
-        }
-
-        .main-filter a span {
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        /* --- VISA / TRAVEL TRENDING CARDS --- */
-        .destinations {
-            border-radius: 16px !important;
-            overflow: hidden !important;
-            border: 1px solid #cbd5e1 !important;
-            background: var(--ozo-white) !important;
-            transition: all 0.3s ease !important;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01) !important;
-        }
-
-        .destinations:hover {
-            transform: translateY(-6px) !important;
-            border-color: var(--ozo-gold) !important;
-            box-shadow: var(--ozo-shadow-gold) !important;
-        }
-
-        .destinations figure img {
-            transition: transform 0.4s ease !important;
-        }
-
-        .destinations:hover figure img {
-            transform: scale(1.03) !important;
-        }
-
-        .destination-inner {
-            background: var(--ozo-white) !important;
-            border-top: 1px solid #f1f5f9 !important;
-            padding: 16px 20px !important;
-        }
-
-        .destination-inner .rubik-bold {
-            font-family: 'Outfit', sans-serif !important;
-            color: var(--ozo-navy) !important;
-        }
-
-        .destination-inner .rubik-regular {
-            color: var(--ozo-text-muted) !important;
-            font-size: 11px !important;
-        }
-
-        .destinations .name.rubik-medium {
-            font-family: 'Outfit', sans-serif !important;
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            border-radius: 100px !important;
-            padding: 6px 16px !important;
-            font-size: 12px !important;
-            letter-spacing: 0.5px !important;
-        }
-
-        /* --- TESTIMONIALS SLIDER --- */
-        .client-slider .item {
-            border-radius: 16px !important;
-            border: 1px solid #cbd5e1 !important;
-            background: var(--ozo-white) !important;
-            padding: 24px !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
-        }
-
-        /* --- GLOBAL RATINGS STARS --- */
-        .fa-star, .fas.fa-star {
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        /* --- GENERAL CALL TO ACTION BUTTONS --- */
-        .bttn-22, .bttn-24, .bttn-25 {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            border-radius: 100px !important;
-            border: none !important;
-            padding: 10px 24px !important;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-            cursor: pointer !important;
-        }
-
-        .bttn-22:hover, .bttn-24:hover, .bttn-25:hover {
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 12px rgba(28, 54, 89, 0.2) !important;
-        }
-
-        /* Footer Accent */
-        .yugo-footer-new {
-            border-top: 3px solid var(--ozo-gold) !important;
-        }
-    </style>
 </head>
-
 <body>
 <noscript>
 <img height="1" src="https://www.facebook.com/tr?id=1753962158456915&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
@@ -9995,5 +9715,439 @@ jQuery(document).ready(function () {
 <a href="https://wa.me/923211840777" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 448 512" width="30" height="30"><path fill="#fff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>\n    <script src="/assets/js/db-client.js"></script>
     <script src="/assets/js/form-interceptor.js"></script>
     <script src="/assets/js/popup-renderer.js"></script>
+
+    <!-- Premium Overrides Styling for OzoTrips Redesign -->
+    <style>
+        :root {
+            --ozo-navy: #1c3659;
+            --ozo-navy-dark: #0f1e36;
+            --ozo-gold: #d4af37;
+            --ozo-gold-dark: #c59b27;
+            --ozo-white: #ffffff;
+            --ozo-text: #1e293b;
+            --ozo-text-muted: #64748b;
+            --ozo-bg: #faf9f6;
+        }
+
+        /* Set premium Google Fonts globally */
+        h1, h2, h3, h4, h5, h6, 
+        .hero-main-title, .tour-card-title, .user-name, 
+        .search-tab-btn, .search-action-btn, .nav-links li a {
+            font-family: 'Outfit', 'Rubik', sans-serif !important;
+        }
+
+        /* --- 1. PROMO CODE RIBBON --- */
+        .off-save-20-bg, .20-prcent-tag {
+            background: var(--ozo-navy-dark) !important;
+            border-bottom: 2px solid var(--ozo-gold) !important;
+        }
+        .save-20-prcnt, .tag-line-save {
+            color: var(--ozo-white) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-size: 13.5px !important;
+            font-weight: 500 !important;
+        }
+        .save-20-prcnt .bl-bld, .tag-line-save .sve-bld {
+            color: var(--ozo-gold) !important;
+            font-weight: 700 !important;
+        }
+
+        /* --- 2. PREMIUM HEADER NAVIGATION --- */
+        .new-header.yugo-header {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+            background: var(--ozo-white) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
+            padding: 5px 0 !important;
+        }
+        
+        /* Align logo, links and widgets vertically */
+        .new-header.yugo-header #logoAndNav nav {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            height: auto !important;
+        }
+
+        .nav-links li a {
+            color: var(--ozo-navy) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 13.5px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.8px !important;
+            position: relative;
+            padding: 6px 0 !important;
+            transition: color 0.3s ease !important;
+            text-decoration: none !important;
+        }
+
+        /* Make Home page link active in gold on test preview page */
+        .nav-links li a[href="index.html"], .nav-links li a:hover {
+            color: var(--ozo-gold-dark) !important;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--ozo-gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links li a[href="index.html"]::after, .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        /* --- 3. HERO TITLES --- */
+        .hero-main-title {
+            color: var(--ozo-navy) !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.5px !important;
+        }
+        .hero-main-title .highlight-gold {
+            color: var(--ozo-gold-dark) !important;
+        }
+        .hero-sub-title {
+            color: var(--ozo-text-muted) !important;
+            font-weight: 500 !important;
+        }
+
+        /* --- 4. FLOATING SEARCH DECK --- */
+        .multi-search-container {
+            border-radius: 20px !important;
+            box-shadow: 0 20px 45px rgba(28, 54, 89, 0.12) !important;
+            border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
+            background: var(--ozo-white) !important;
+            overflow: hidden !important;
+        }
+
+        .search-tabs {
+            background: #fdfdfd !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+            padding: 0 10px !important;
+        }
+
+        .search-tab-btn {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 600 !important;
+            color: var(--ozo-text-muted) !important;
+            border: none !important;
+            padding: 12px 16px !important;
+            transition: all 0.25s ease !important;
+        }
+
+        .search-tab-btn:hover {
+            color: var(--ozo-navy) !important;
+            background: rgba(28, 54, 89, 0.03) !important;
+        }
+
+        .search-tab-btn.active {
+            color: var(--ozo-navy) !important;
+            background: var(--ozo-white) !important;
+            font-weight: 700 !important;
+        }
+
+        .search-tab-btn.active::after {
+            background: var(--ozo-gold) !important;
+            height: 3px !important;
+            border-radius: 3px 3px 0 0 !important;
+        }
+
+        .search-field label {
+            color: var(--ozo-navy) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            letter-spacing: 0.5px !important;
+            margin-bottom: 6px !important;
+        }
+
+        .search-field input, .search-field select, .travelers-trigger {
+            border-radius: 10px !important;
+            border: 1.5px solid #cbd5e1 !important;
+            height: 44px !important;
+            font-size: 13.5px !important;
+            outline: none !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .search-field input:focus, .search-field select:focus, .travelers-trigger:focus {
+            border-color: var(--ozo-navy) !important;
+            box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.06) !important;
+        }
+
+        /* Flight type inner active pill */
+        .flight-type-btn.active {
+            background: var(--ozo-navy) !important;
+            color: var(--ozo-white) !important;
+            font-weight: 600 !important;
+        }
+
+        .search-action-btn {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            border: none !important;
+            border-radius: 10px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            height: 44px !important;
+            padding: 0 28px !important;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .search-action-btn:hover {
+            background: var(--ozo-navy) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(28, 54, 89, 0.25) !important;
+        }
+
+        /* --- 5. METRICS STRIP --- */
+        .nmber-strip {
+            font-family: 'Outfit', sans-serif !important;
+        }
+
+        /* --- 6. POPULAR TOUR CARDS --- */
+        .tour-slide-card {
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            border: 1px solid #e2e8f0 !important;
+            background: var(--ozo-white) !important;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01) !important;
+            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        }
+
+        .tour-slide-card:hover {
+            transform: translateY(-6px) !important;
+            border-color: var(--ozo-gold) !important;
+            box-shadow: var(--ozo-shadow-gold) !important;
+        }
+
+        .tour-badge {
+            background: var(--ozo-navy) !important;
+            color: var(--ozo-white) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            border-radius: 100px !important;
+            padding: 4px 12px !important;
+        }
+
+        .tour-card-title {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            color: var(--ozo-navy) !important;
+        }
+
+        .tour-card-price {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 800 !important;
+            color: var(--ozo-gold-dark) !important;
+        }
+
+        .tour-card-btn {
+            background: var(--ozo-navy) !important;
+            color: var(--ozo-white) !important;
+            border-radius: 8px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 600 !important;
+            text-align: center !important;
+            padding: 10px 0 !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+        }
+
+        .tour-slide-card:hover .tour-card-btn {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            font-weight: 700 !important;
+        }
+
+        /* --- 7. SEO FILTER FEATURES --- */
+        .main-filter {
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            border: 1.5px solid rgba(212, 175, 55, 0.2) !important;
+            transition: all 0.3s ease !important;
+            background: var(--ozo-white) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
+        }
+
+        .main-filter:hover {
+            transform: translateY(-5px) !important;
+            border-color: var(--ozo-gold) !important;
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08) !important;
+        }
+
+        .main-filter .bg-pink-10, .main-filter .vsaFlter-blue-100 {
+            background: var(--ozo-white) !important;
+            padding: 24px !important;
+            height: 100% !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+
+        .main-filter a.double-22, 
+        .main-filter a.double-21, 
+        .main-filter a.double-24, 
+        .main-filter a.double-25 {
+            color: var(--ozo-navy) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 15px !important;
+            line-height: 1.4 !important;
+            text-decoration: none !important;
+        }
+
+        .main-filter a span {
+            color: var(--ozo-gold-dark) !important;
+        }
+
+        /* --- 8. TRENDING VISA CARD GRID LIST --- */
+        .visa-yugo-box ul {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) !important;
+            gap: 16px !important;
+            width: 100% !important;
+            padding: 0 !important;
+        }
+        
+        .visa-yugo-box ul li {
+            background: var(--ozo-white) !important;
+            border: 1px solid #cbd5e1 !important;
+            border-radius: 12px !important;
+            padding: 12px 16px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01) !important;
+            float: none !important;
+            width: auto !important;
+            margin: 0 !important;
+        }
+        
+        .visa-yugo-box ul li:hover {
+            transform: translateY(-3px) !important;
+            border-color: var(--ozo-gold) !important;
+            box-shadow: var(--ozo-shadow-gold) !important;
+        }
+        
+        .visa-yugo-box ul li img.w-flg-cls {
+            width: 34px !important;
+            height: 34px !important;
+            object-fit: cover !important;
+            border-radius: 50% !important;
+            margin: 0 !important;
+            float: none !important;
+        }
+        
+        .visa-yugo-box ul li a {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 13.5px !important;
+            color: var(--ozo-navy) !important;
+            text-decoration: none !important;
+            line-height: 1.3 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
+        .visa-yugo-box ul li a span {
+            color: var(--ozo-gold-dark) !important;
+            font-weight: 700 !important;
+            font-size: 12px !important;
+            margin-top: 2px !important;
+            display: block !important;
+        }
+
+        /* --- 9. CLIENT TESTIMONIAL CARDS --- */
+        .testimonial-card {
+            border-radius: 16px !important;
+            border: 1.5px solid #cbd5e1 !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
+            transition: all 0.3s ease !important;
+            background: var(--ozo-white) !important;
+        }
+
+        .testimonial-card:hover {
+            border-color: var(--ozo-gold) !important;
+            transform: translateY(-4px) !important;
+            box-shadow: var(--ozo-shadow-gold) !important;
+        }
+
+        .star-rating, .testimonial-rating span {
+            color: var(--ozo-gold) !important;
+        }
+
+        .user-avatar {
+            background: var(--ozo-navy) !important;
+            color: var(--ozo-white) !important;
+        }
+
+        /* --- 10. PREMIUM CEO MESSAGE SECTION --- */
+        .ceo-section {
+            background: var(--ozo-navy-dark) !important;
+            color: var(--ozo-white) !important;
+            padding: 85px 0 !important;
+        }
+        .ceo-badge {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+        }
+        .ceo-badge h4 {
+            color: var(--ozo-navy) !important;
+        }
+        .ceo-badge span {
+            color: rgba(28, 54, 89, 0.75) !important;
+        }
+        .ceo-content h2 {
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 800 !important;
+            color: var(--ozo-white) !important;
+        }
+        .ceo-content span {
+            color: var(--ozo-gold) !important;
+        }
+        .ceo-quote {
+            border-left: 4px solid var(--ozo-gold) !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-style: italic !important;
+            padding-left: 20px !important;
+            font-size: 1.15rem !important;
+            margin: 24px 0 !important;
+        }
+        .ceo-signature h4 {
+            color: var(--ozo-gold) !important;
+            font-family: 'Outfit', sans-serif !important;
+        }
+
+        /* --- 11. GENERAL CALL TO ACTIONS --- */
+        .booking-umrah, .bttn-22, .bttn-24, .bttn-25 {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            border-radius: 100px !important;
+            border: none !important;
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .booking-umrah:hover, .bttn-22:hover, .bttn-24:hover, .bttn-25:hover {
+            background: var(--ozo-white) !important;
+            color: var(--ozo-navy) !important;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2) !important;
+        }
+
+        /* Footer line border */
+        .yugo-footer-new {
+            border-top: 3px solid var(--ozo-gold) !important;
+        }
+    </style>
 </body>
 </html>
