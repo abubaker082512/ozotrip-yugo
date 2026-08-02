@@ -9774,6 +9774,7 @@ jQuery(document).ready(function () {
             border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
             padding: 5px 0 !important;
+            margin: 0 !important;
         }
         
         /* Align logo, links and widgets vertically */
@@ -9951,8 +9952,13 @@ jQuery(document).ready(function () {
         }
 
         .search-tab-btn.active .tab-label, .search-tabs button.active .tab-label {
-            color: var(--ozo-navy) !important;
+            color: var(--ozo-gold-dark) !important; /* GOLD ACTIVE TEXT */
             font-weight: 700 !important;
+        }
+
+        .search-tab-btn.active::after, .search-tabs button.active::after {
+            background: var(--ozo-gold) !important;
+            height: 3.5px !important;
         }
 
         /* Inputs and selector styling */
@@ -9975,8 +9981,8 @@ jQuery(document).ready(function () {
         }
 
         .search-field input:focus, .search-field select:focus, .travelers-trigger:focus {
-            border-color: var(--ozo-navy) !important;
-            box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.06) !important;
+            border-color: var(--ozo-gold) !important;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15) !important;
         }
 
         /* Flight type inner active pill sub-tabs */
@@ -10271,13 +10277,17 @@ jQuery(document).ready(function () {
         }
 
         /* --- 12. LUXURY SLATE BLACK FOOTER REDESIGN --- */
-        .yugo-footer-new {
+        footer.footer {
             background: #0a1120 !important; /* Premium Slate Black */
             border-top: 4px solid var(--ozo-gold) !important;
             padding: 80px 0 20px !important;
+            float: left !important;
+            width: 100% !important;
         }
         
-        .yugo-footer-new h4, .yugo-footer-new .heading-footer, .custom-footer h4, footer h4 {
+        footer.footer h4, 
+        footer.footer h4.rubik-medium, 
+        footer.footer .heading-footer {
             font-family: 'Outfit', sans-serif !important;
             color: var(--ozo-gold) !important;
             font-weight: 700 !important;
@@ -10287,7 +10297,7 @@ jQuery(document).ready(function () {
             margin-bottom: 24px !important;
         }
         
-        .yugo-footer-new a, .custom-footer a, footer a {
+        footer.footer a {
             color: rgba(255, 255, 255, 0.75) !important;
             font-size: 13.5px !important;
             transition: all 0.25s ease !important;
@@ -10296,18 +10306,18 @@ jQuery(document).ready(function () {
             padding: 4px 0 !important;
         }
         
-        .yugo-footer-new a:hover, .custom-footer a:hover, footer a:hover {
+        footer.footer a:hover {
             color: var(--ozo-gold) !important;
             transform: translateX(4px) !important;
         }
         
-        .yugo-footer-new p, .yugo-footer-new span, .yugo-footer-new li {
+        footer.footer p, footer.footer span, footer.footer li, footer.footer div {
             color: rgba(255, 255, 255, 0.6) !important;
             font-size: 13.5px !important;
             line-height: 1.6 !important;
         }
         
-        .yugo-footer-new .copyright-footer {
+        footer.footer .copyright {
             border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
             padding-top: 24px !important;
             margin-top: 40px !important;
