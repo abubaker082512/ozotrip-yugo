@@ -321,8 +321,34 @@
                      (infants > 0 ? ", " + infants + " Infant" + (infants > 1 ? "s" : "") : "") + ")\n\n" +
                      "Please share the best flight deals and live schedules!";
 
-        if (totalPassengers > 1) {
-            gfQuery += " for " + totalPassengers + " passengers";
+        // Save Flight Search Submission to database
+        var flightSubmission = {
+            trip_type: searchType.toUpperCase(),
+            cabin_class: cabinClass,
+            passengers: totalPassengers + " (" + adults + " Adults, " + children + " Children, " + infants + " Infants)",
+            origin: origin || "Multi-City Route",
+            destination: dest || "Multi-City Route",
+            departure_date: depDate || "See segments",
+            return_date: retDate || "N/A",
+            _formId: "FLIGHT SEARCH FORM",
+            _pageTitle: document.title,
+            _pageUrl: window.location.pathname,
+            _submittedAt: new Date().toISOString()
+        };
+
+        if (searchType === 'multicity' && typeof segments !== 'undefined') {
+            segments.forEach(function(s, i) {
+                flightSubmission["segment_" + (i + 1)] = s.origin + " -> " + s.dest + " on " + s.date;
+            });
+        }
+
+        if (window.OzoDB) {
+            window.OzoDB.addSubmission(flightSubmission);
+        } else {
+            var submissions = JSON.parse(localStorage.getItem('ozotrips_submissions') || '[]');
+            flightSubmission.id = Date.now().toString();
+            submissions.unshift(flightSubmission);
+            localStorage.setItem('ozotrips_submissions', JSON.stringify(submissions));
         }
 
         // Build URLs

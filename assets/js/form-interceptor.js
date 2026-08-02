@@ -59,7 +59,7 @@
     document.addEventListener('submit', function(e) {
         var form = e.target;
 
-        // Skip search or dynamic filters
+        // Skip flight search forms (handled by flight-search-handler.js)
         if (form.classList.contains('flight-search-form') || form.action.includes('search')) {
             return;
         }
@@ -71,9 +71,8 @@
         
         formData.forEach(function(value, key) {
             if (value instanceof File) {
-                // Skip file inputs for standard JSON payload, or convert to metadata
                 if (value.name) {
-                    data[key] = "[File: " + value.name + " (" + value.size + " bytes)]";
+                    data[key] = "[File: " + value.name + " (" + Math.round(value.size / 1024) + " KB)]";
                 }
             } else {
                 if (data[key]) {
@@ -102,15 +101,56 @@
             submitBtn.innerHTML = 'Sending Inquiry... <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>';
         }
 
+        // Build WhatsApp Message Content
+        var serviceType = "INQUIRY";
+        var pageLower = data._pageUrl.toLowerCase();
+        var idLower = data._formId.toLowerCase();
+        
+        if (pageLower.includes('visa') || idLower.includes('visa')) serviceType = "VISA APPLICATION";
+        else if (pageLower.includes('cars') || idLower.includes('car')) serviceType = "CAR RENTAL";
+        else if (pageLower.includes('umrah') || idLower.includes('umrah')) serviceType = "UMRAH PACKAGE";
+        else if (pageLower.includes('tour') || idLower.includes('tour')) serviceType = "TOUR PACKAGE";
+        
+        var waMessage = "Hi OzoTrips, I have submitted a " + serviceType + " form on your website with the following details:\n\n";
+        
+        Object.keys(data).forEach(function(key) {
+            if (key.startsWith('_') || key === 'id') return;
+            var val = data[key];
+            if (Array.isArray(val)) val = val.join(', ');
+            if (val) {
+                var prettyKey = key.replace(/_/g, ' ').toUpperCase();
+                waMessage += "👉 " + prettyKey + ": " + val + "\n";
+            }
+        });
+        
+        waMessage += "\nPage Link: https://www.ozotrips.com" + data._pageUrl + "\n";
+        waMessage += "Please review my details and contact me. Thanks!";
+
+        var whatsappUrl = "https://wa.me/923211840777?text=" + encodeURIComponent(waMessage);
+
+        function handleSuccess() {
+            showToast('Saved successfully! Redirecting you to WhatsApp...', false);
+            form.reset();
+            
+            // Redirect to WhatsApp
+            setTimeout(function() {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+        }
+
         // Call the unified OzoDB client helper
         if (window.OzoDB) {
             window.OzoDB.addSubmission(data)
                 .then(function() {
-                    showToast('Inquiry submitted! Our representative will contact you shortly.', false);
-                    form.reset();
+                    handleSuccess();
                 })
                 .catch(function() {
-                    showToast('Submission error. Please try again.', true);
+                    // Local fallback
+                    var submissions = JSON.parse(localStorage.getItem('ozotrips_submissions') || '[]');
+                    data.id = Date.now().toString();
+                    submissions.unshift(data);
+                    localStorage.setItem('ozotrips_submissions', JSON.stringify(submissions));
+                    handleSuccess();
                 })
                 .finally(function() {
                     if (submitBtn) {
@@ -119,14 +159,13 @@
                     }
                 });
         } else {
-            // LocalStorage direct backup
+            // LocalStorage fallback
             var submissions = JSON.parse(localStorage.getItem('ozotrips_submissions') || '[]');
             data.id = Date.now().toString();
             submissions.unshift(data);
             localStorage.setItem('ozotrips_submissions', JSON.stringify(submissions));
             
-            showToast('Saved successfully! Our representative will contact you shortly.', false);
-            form.reset();
+            handleSuccess();
             if (submitBtn) {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
