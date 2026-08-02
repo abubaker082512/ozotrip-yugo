@@ -9721,6 +9721,7 @@ jQuery(document).ready(function () {
 </html>
 
     
+    
     <!-- Premium Overrides Styling for OzoTrips Redesign -->
     <style>
         :root {
@@ -9737,7 +9738,7 @@ jQuery(document).ready(function () {
         /* Set premium Google Fonts globally */
         h1, h2, h3, h4, h5, h6, 
         .hero-main-title, .tour-card-title, .user-name, 
-        .search-tab-btn, .search-action-btn, .nav-links li a {
+        .search-tab-btn, .search-action-btn {
             font-family: 'Outfit', 'Rubik', sans-serif !important;
         }
 
@@ -9750,16 +9751,11 @@ jQuery(document).ready(function () {
             overflow-x: hidden !important;
         }
 
-        /* Responsive body padding for fixed header */
+        /* Clear body padding-top overrides to restore old header flow */
         body {
-            padding-top: 114px !important; /* ribbon 36px + header 78px */
+            padding-top: 0 !important;
             padding-bottom: 0 !important;
             margin-bottom: 0 !important;
-        }
-        @media (max-width: 991px) {
-            body {
-                padding-top: 80px !important;
-            }
         }
 
         /* --- GLOBAL BUTTONS: FORCE ROUNDED RECTANGLE STYLE --- */
@@ -9794,116 +9790,12 @@ jQuery(document).ready(function () {
             font-weight: 700 !important;
         }
 
-        /* Force top promo ribbon full width and sticky */
-        .off-save-20-bg {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            z-index: 100000 !important;
-            height: 36px !important;
-            margin: 0 !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-
-        /* --- 2. STICKY HEADER FIXED POSITION & VERTICAL ALIGNMENT --- */
-        #header.new-header.yugo-header {
-            position: fixed !important;
-            top: 36px !important; /* Sits directly below the 36px ribbon */
-            left: 0 !important;
-            right: 0 !important;
-            width: 100% !important;
-            max-width: 100% !important;
-            z-index: 99999 !important;
-            background: var(--ozo-white) !important;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-
-        /* Eliminate container-fluid 25px excessive vertical padding */
-        #header.new-header.yugo-header .container-fluid {
-            padding: 4px 0 !important;
-        }
-        
-        /* Flex alignment on header navbar items */
-        #header.new-header.yugo-header #logoAndNav nav {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            flex-wrap: nowrap !important;
-            height: 74px !important;
-            padding: 0 15px !important;
-        }
-
-        .navbar-brand {
-            margin: 0 !important;
-            padding: 0 !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        .nav-links {
-            margin: 0 !important;
-            padding: 0 !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        .nav-links ul {
-            display: flex !important;
-            align-items: center !important;
-            gap: 20px !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        .nav-links li a {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13.5px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.8px !important;
-            position: relative;
-            padding: 6px 0 !important;
-            transition: color 0.3s ease !important;
-            text-decoration: none !important;
-        }
-
-        /* Make Home page link active in gold */
-        .nav-links li a[href="index.html"], .nav-links li a:hover {
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        .nav-links li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--ozo-gold);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-links li a[href="index.html"]::after, .nav-links li a:hover::after {
-            width: 100%;
-        }
-
-        /* Align header top buttons block */
+        /* Restore old header buttons layout */
         .box-navigation-top {
             display: flex !important;
             gap: 10px !important;
             align-items: center !important;
             float: none !important;
-            margin: 0 !important;
         }
         .inner-text-tripple {
             background: transparent !important;
@@ -9954,17 +9846,6 @@ jQuery(document).ready(function () {
             line-height: 1.3 !important;
             margin: 0 !important;
             padding: 0 !important;
-        }
-
-        /* Mobile Viewport Overrides */
-        @media (max-width: 991px) {
-            #header.new-header.yugo-header {
-                top: 0 !important;
-            }
-            .off-save-20-bg {
-                position: static !important;
-                height: auto !important;
-            }
         }
 
         /* --- 3. HERO TITLES --- */
