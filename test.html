@@ -9712,13 +9712,15 @@ jQuery(document).ready(function () {
 })();
 </script>
 <script src="assets/js/flight-search-handler.js"></script>
-<a href="https://wa.me/923211840777" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 448 512" width="30" height="30"><path fill="#fff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>\n    <script src="/assets/js/db-client.js"></script>
+<a href="https://wa.me/923211840777" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 448 512" width="30" height="30"><path fill="#fff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+    <script src="/assets/js/db-client.js"></script>
     <script src="/assets/js/form-interceptor.js"></script>
     <script src="/assets/js/popup-renderer.js"></script>
 
     
 </html>
 
+    
     <!-- Premium Overrides Styling for OzoTrips Redesign -->
     <style>
         :root {
@@ -9739,14 +9741,41 @@ jQuery(document).ready(function () {
             font-family: 'Outfit', 'Rubik', sans-serif !important;
         }
 
+        /* Set page background and clear margins */
+        html, body {
+            background-color: var(--ozo-bg) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            overflow-x: hidden !important;
+        }
+
         /* Responsive body padding for fixed header */
         body {
-            padding-top: 140px !important;
+            padding-top: 114px !important; /* ribbon 36px + header 78px */
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
         }
         @media (max-width: 991px) {
             body {
-                padding-top: 100px !important;
+                padding-top: 80px !important;
             }
+        }
+
+        /* --- GLOBAL BUTTONS: FORCE ROUNDED RECTANGLE STYLE --- */
+        button, 
+        .btn, 
+        .search-action-btn, 
+        .tour-card-btn, 
+        .bttn-22, .bttn-24, .bttn-25, 
+        .booking-umrah,
+        .inner-text-tripple, 
+        .inner-text-tripple-cont,
+        .new-header .navbar-expand-xl .navbar-nav .nav-item.my-accounts .nav-link,
+        #newsletter_submit,
+        .search_btn,
+        .flight-type-btn {
+            border-radius: 8px !important; /* Rounded Rectangle shape */
         }
 
         /* --- 1. PROMO CODE RIBBON --- */
@@ -9765,27 +9794,73 @@ jQuery(document).ready(function () {
             font-weight: 700 !important;
         }
 
-        /* --- 2. STICKY HEADER FIXED POSITION --- */
-        #header.new-header.yugo-header {
+        /* Force top promo ribbon full width and sticky */
+        .off-save-20-bg {
             position: fixed !important;
             top: 0 !important;
             left: 0 !important;
             right: 0 !important;
             width: 100% !important;
+            max-width: 100% !important;
+            z-index: 100000 !important;
+            height: 36px !important;
+            margin: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        /* --- 2. STICKY HEADER FIXED POSITION & VERTICAL ALIGNMENT --- */
+        #header.new-header.yugo-header {
+            position: fixed !important;
+            top: 36px !important; /* Sits directly below the 36px ribbon */
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            max-width: 100% !important;
             z-index: 99999 !important;
             background: var(--ozo-white) !important;
             border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
-            padding: 5px 0 !important;
+            padding: 0 !important;
             margin: 0 !important;
         }
+
+        /* Eliminate container-fluid 25px excessive vertical padding */
+        #header.new-header.yugo-header .container-fluid {
+            padding: 4px 0 !important;
+        }
         
-        /* Align logo, links and widgets vertically */
+        /* Flex alignment on header navbar items */
         #header.new-header.yugo-header #logoAndNav nav {
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
-            height: auto !important;
+            flex-wrap: nowrap !important;
+            height: 74px !important;
+            padding: 0 15px !important;
+        }
+
+        .navbar-brand {
+            margin: 0 !important;
+            padding: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .nav-links {
+            margin: 0 !important;
+            padding: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .nav-links ul {
+            display: flex !important;
+            align-items: center !important;
+            gap: 20px !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
         .nav-links li a {
@@ -9822,27 +9897,19 @@ jQuery(document).ready(function () {
             width: 100%;
         }
 
-        /* --- HEADER BUTTONS (Call Us / WhatsApp Us) --- */
+        /* Align header top buttons block */
         .box-navigation-top {
             display: flex !important;
             gap: 10px !important;
             align-items: center !important;
             float: none !important;
-        }
-        .call-outer, .whats-outer {
-            background: transparent !important;
-            border: none !important;
-            float: none !important;
-            display: inline-block !important;
             margin: 0 !important;
-            padding: 0 !important;
         }
         .inner-text-tripple {
             background: transparent !important;
             border: 1.5px solid var(--ozo-gold) !important;
             color: var(--ozo-navy) !important;
             padding: 8px 18px !important;
-            border-radius: 8px !important;
             font-family: 'Outfit', sans-serif !important;
             font-weight: 700 !important;
             font-size: 13px !important;
@@ -9862,7 +9929,6 @@ jQuery(document).ready(function () {
             background: var(--ozo-gold) !important;
             color: var(--ozo-navy) !important;
             padding: 8px 18px !important;
-            border-radius: 8px !important;
             font-family: 'Outfit', sans-serif !important;
             font-weight: 700 !important;
             font-size: 13px !important;
@@ -9890,6 +9956,17 @@ jQuery(document).ready(function () {
             padding: 0 !important;
         }
 
+        /* Mobile Viewport Overrides */
+        @media (max-width: 991px) {
+            #header.new-header.yugo-header {
+                top: 0 !important;
+            }
+            .off-save-20-bg {
+                position: static !important;
+                height: auto !important;
+            }
+        }
+
         /* --- 3. HERO TITLES --- */
         .hero-main-title {
             color: var(--ozo-navy) !important;
@@ -9906,7 +9983,7 @@ jQuery(document).ready(function () {
 
         /* --- 4. FLOATING SEARCH DECK REDESIGN --- */
         .multi-search-container {
-            border-radius: 20px !important;
+            border-radius: 12px !important; /* Rounded Rectangle shape */
             box-shadow: 0 20px 50px rgba(15, 30, 54, 0.12) !important;
             border: 1.5px solid var(--ozo-gold) !important;
             background: var(--ozo-white) !important;
@@ -9923,6 +10000,7 @@ jQuery(document).ready(function () {
             margin-bottom: 20px !important;
         }
 
+        /* Style active search tabs and labels */
         .search-tab-btn {
             font-family: 'Outfit', sans-serif !important;
             font-weight: 600 !important;
@@ -9958,40 +10036,13 @@ jQuery(document).ready(function () {
         }
 
         .search-tab-btn.active .tab-label, .search-tabs button.active .tab-label {
-            color: var(--ozo-gold-dark) !important; /* GOLD ACTIVE TEXT */
+            color: var(--ozo-gold-dark) !important;
             font-weight: 700 !important;
         }
 
         .search-tab-btn.active::after, .search-tabs button.active::after {
             background: var(--ozo-gold) !important;
             height: 3.5px !important;
-        }
-
-        /* Flight option sub-tab pill buttons */
-        .flight-type-btn {
-            border-radius: 100px !important;
-            border: 1.5px solid #cbd5e1 !important;
-            padding: 8px 22px !important;
-            color: var(--ozo-navy) !important;
-            background: transparent !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 13px !important;
-            transition: all 0.25s ease !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
-        }
-        
-        .flight-type-btn.active, .flight-type-btn.active:hover {
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            border-color: var(--ozo-navy) !important;
-            box-shadow: 0 4px 10px rgba(28, 54, 89, 0.2) !important;
-        }
-        
-        .flight-type-btn:hover {
-            background: rgba(28, 54, 89, 0.05) !important;
-            border-color: var(--ozo-navy) !important;
         }
 
         /* Inputs and selector styling */
@@ -10006,7 +10057,7 @@ jQuery(document).ready(function () {
         }
 
         .search-field input, .search-field select, .travelers-trigger {
-            border-radius: 12px !important;
+            border-radius: 8px !important; /* Rounded Rectangle shape */
             border: 1.5px solid #cbd5e1 !important;
             height: 48px !important;
             font-size: 14px !important;
@@ -10033,7 +10084,7 @@ jQuery(document).ready(function () {
             background: var(--ozo-gold) !important;
             color: var(--ozo-navy) !important;
             border: none !important;
-            border-radius: 12px !important;
+            border-radius: 8px !important; /* Rounded Rectangle shape */
             font-family: 'Outfit', sans-serif !important;
             font-weight: 800 !important;
             height: 48px !important;
@@ -10064,7 +10115,7 @@ jQuery(document).ready(function () {
 
         /* --- 6. POPULAR TOUR CARDS --- */
         .tour-slide-card {
-            border-radius: 16px !important;
+            border-radius: 12px !important; /* Rounded Rectangle shape */
             overflow: hidden !important;
             border: 1px solid #e2e8f0 !important;
             background: var(--ozo-white) !important;
@@ -10083,7 +10134,7 @@ jQuery(document).ready(function () {
             color: var(--ozo-white) !important;
             font-family: 'Outfit', sans-serif !important;
             font-weight: 700 !important;
-            border-radius: 100px !important;
+            border-radius: 8px !important; /* Rounded Rectangle shape */
             padding: 4px 12px !important;
         }
 
@@ -10099,27 +10150,9 @@ jQuery(document).ready(function () {
             color: var(--ozo-gold-dark) !important;
         }
 
-        .tour-card-btn {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
-            border-radius: 8px !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            text-align: center !important;
-            padding: 10px 0 !important;
-            transition: all 0.25s ease !important;
-            text-decoration: none !important;
-        }
-
-        .tour-slide-card:hover .tour-card-btn {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            font-weight: 700 !important;
-        }
-
         /* --- 7. SEO FILTER FEATURES --- */
         .main-filter {
-            border-radius: 16px !important;
+            border-radius: 12px !important; /* Rounded Rectangle shape */
             overflow: hidden !important;
             border: 1.5px solid rgba(212, 175, 55, 0.2) !important;
             transition: all 0.3s ease !important;
@@ -10133,111 +10166,26 @@ jQuery(document).ready(function () {
             box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08) !important;
         }
 
-        .main-filter .bg-pink-10, .main-filter .vsaFlter-blue-100 {
-            background: var(--ozo-white) !important;
-            padding: 24px !important;
-            height: 100% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-        }
-
-        .main-filter a.double-22, 
-        .main-filter a.double-21, 
-        .main-filter a.double-24, 
-        .main-filter a.double-25 {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 15px !important;
-            line-height: 1.4 !important;
-            text-decoration: none !important;
-        }
-
-        .main-filter a span {
-            color: var(--ozo-gold-dark) !important;
-        }
-
         /* --- 8. TRENDING VISA CARD GRID LIST --- */
-        .visa-yugo-box ul {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) !important;
-            gap: 16px !important;
-            width: 100% !important;
-            padding: 0 !important;
-        }
-        
         .visa-yugo-box ul li {
-            background: var(--ozo-white) !important;
-            border: 1px solid #cbd5e1 !important;
-            border-radius: 12px !important;
-            padding: 12px 16px !important;
-            display: flex !important;
-            align-items: center !important;
-            gap: 12px !important;
-            transition: all 0.3s ease !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.01) !important;
-            float: none !important;
-            width: auto !important;
-            margin: 0 !important;
+            border-radius: 8px !important; /* Rounded Rectangle shape */
         }
         
         .visa-yugo-box ul li:hover {
-            transform: translateY(-3px) !important;
             border-color: var(--ozo-gold) !important;
             box-shadow: var(--ozo-shadow-gold) !important;
-        }
-        
-        .visa-yugo-box ul li img.w-flg-cls {
-            width: 34px !important;
-            height: 34px !important;
-            object-fit: cover !important;
-            border-radius: 50% !important;
-            margin: 0 !important;
-            float: none !important;
-        }
-        
-        .visa-yugo-box ul li a {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13.5px !important;
-            color: var(--ozo-navy) !important;
-            text-decoration: none !important;
-            line-height: 1.3 !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-        
-        .visa-yugo-box ul li a span {
-            color: var(--ozo-gold-dark) !important;
-            font-weight: 700 !important;
-            font-size: 12px !important;
-            margin-top: 2px !important;
-            display: block !important;
         }
 
         /* --- 9. CLIENT TESTIMONIAL CARDS --- */
         .testimonial-card {
-            border-radius: 16px !important;
+            border-radius: 12px !important; /* Rounded Rectangle shape */
             border: 1.5px solid #cbd5e1 !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
-            transition: all 0.3s ease !important;
             background: var(--ozo-white) !important;
         }
 
         .testimonial-card:hover {
             border-color: var(--ozo-gold) !important;
-            transform: translateY(-4px) !important;
             box-shadow: var(--ozo-shadow-gold) !important;
-        }
-
-        .star-rating, .testimonial-rating span {
-            color: var(--ozo-gold) !important;
-        }
-
-        .user-avatar {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
         }
 
         /* --- 10. PREMIUM CEO MESSAGE SECTION --- */
@@ -10249,668 +10197,18 @@ jQuery(document).ready(function () {
         .ceo-badge {
             background: var(--ozo-gold) !important;
             color: var(--ozo-navy) !important;
-        }
-        .ceo-badge h4 {
-            color: var(--ozo-navy) !important;
-        }
-        .ceo-badge span {
-            color: rgba(28, 54, 89, 0.75) !important;
-        }
-        .ceo-content h2 {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 800 !important;
-            color: var(--ozo-white) !important;
-        }
-        .ceo-content span {
-            color: var(--ozo-gold) !important;
-        }
-        .ceo-quote {
-            border-left: 4px solid var(--ozo-gold) !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-style: italic !important;
-            padding-left: 20px !important;
-            font-size: 1.15rem !important;
-            margin: 24px 0 !important;
-        }
-        .ceo-signature h4 {
-            color: var(--ozo-gold) !important;
-            font-family: 'Outfit', sans-serif !important;
+            border-radius: 8px !important;
         }
 
-        /* --- 11. GENERAL CALL TO ACTIONS --- */
-        .booking-umrah, .bttn-22, .bttn-24, .bttn-25 {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            border-radius: 100px !important;
-            border: none !important;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .booking-umrah:hover, .bttn-22:hover, .bttn-24:hover, .bttn-25:hover {
-            background: var(--ozo-white) !important;
-            color: var(--ozo-navy) !important;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2) !important;
-        }
-
-        /* --- 12. LUXURY SLATE BLACK FOOTER REDESIGN --- */
+        /* --- 12. LUXURY SLATE BLACK FOOTER REDESIGN (FULL-WIDTH) --- */
         footer.footer {
             background: #0a1120 !important; /* Premium Slate Black */
             border-top: 4px solid var(--ozo-gold) !important;
             padding: 80px 0 20px !important;
             float: left !important;
             width: 100% !important;
-        }
-        
-        footer.footer h4, 
-        footer.footer h4.rubik-medium, 
-        footer.footer .heading-footer {
-            font-family: 'Outfit', sans-serif !important;
-            color: var(--ozo-gold) !important;
-            font-weight: 700 !important;
-            font-size: 16px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.8px !important;
-            margin-bottom: 24px !important;
-        }
-        
-        footer.footer a {
-            color: rgba(255, 255, 255, 0.75) !important;
-            font-size: 13.5px !important;
-            transition: all 0.25s ease !important;
-            text-decoration: none !important;
-            display: inline-block !important;
-            padding: 4px 0 !important;
-        }
-        
-        footer.footer a:hover {
-            color: var(--ozo-gold) !important;
-            transform: translateX(4px) !important;
-        }
-        
-        footer.footer p, footer.footer span, footer.footer li, footer.footer div {
-            color: rgba(255, 255, 255, 0.6) !important;
-            font-size: 13.5px !important;
-            line-height: 1.6 !important;
-        }
-        
-        footer.footer .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-            padding-top: 24px !important;
-            margin-top: 40px !important;
-            color: rgba(255, 255, 255, 0.45) !important;
-        }
-    </style>
-
-    <!-- Premium Overrides Styling for OzoTrips Redesign -->
-    <style>
-        :root {
-            --ozo-navy: #1c3659;
-            --ozo-navy-dark: #0f1e36;
-            --ozo-gold: #d4af37;
-            --ozo-gold-dark: #c59b27;
-            --ozo-white: #ffffff;
-            --ozo-text: #1e293b;
-            --ozo-text-muted: #64748b;
-            --ozo-bg: #faf9f6;
-        }
-
-        /* Set premium Google Fonts globally */
-        h1, h2, h3, h4, h5, h6, 
-        .hero-main-title, .tour-card-title, .user-name, 
-        .search-tab-btn, .search-action-btn, .nav-links li a {
-            font-family: 'Outfit', 'Rubik', sans-serif !important;
-        }
-
-        /* Responsive body padding for fixed header */
-        body {
-            padding-top: 140px !important;
-        }
-        @media (max-width: 991px) {
-            body {
-                padding-top: 100px !important;
-            }
-        }
-
-        /* --- 1. PROMO CODE RIBBON --- */
-        .off-save-20-bg, .20-prcent-tag {
-            background: var(--ozo-navy-dark) !important;
-            border-bottom: 2px solid var(--ozo-gold) !important;
-        }
-        .save-20-prcnt, .tag-line-save {
-            color: var(--ozo-white) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-size: 13.5px !important;
-            font-weight: 500 !important;
-        }
-        .save-20-prcnt .bl-bld, .tag-line-save .sve-bld {
-            color: var(--ozo-gold) !important;
-            font-weight: 700 !important;
-        }
-
-        /* --- 2. STICKY HEADER FIXED POSITION --- */
-        #header.new-header.yugo-header {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            width: 100% !important;
-            z-index: 99999 !important;
-            background: var(--ozo-white) !important;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03) !important;
-            padding: 5px 0 !important;
+            max-width: 100% !important;
             margin: 0 !important;
-        }
-        
-        /* Align logo, links and widgets vertically */
-        #header.new-header.yugo-header #logoAndNav nav {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            height: auto !important;
-        }
-
-        .nav-links li a {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13.5px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.8px !important;
-            position: relative;
-            padding: 6px 0 !important;
-            transition: color 0.3s ease !important;
-            text-decoration: none !important;
-        }
-
-        /* Make Home page link active in gold on test preview page */
-        .nav-links li a[href="index.html"], .nav-links li a:hover {
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        .nav-links li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: var(--ozo-gold);
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-links li a[href="index.html"]::after, .nav-links li a:hover::after {
-            width: 100%;
-        }
-
-        /* --- HEADER BUTTONS (Call Us / WhatsApp Us) --- */
-        .box-navigation-top {
-            display: flex !important;
-            gap: 10px !important;
-            align-items: center !important;
-            float: none !important;
-        }
-        .call-outer, .whats-outer {
-            background: transparent !important;
-            border: none !important;
-            float: none !important;
-            display: inline-block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-        .inner-text-tripple {
-            background: transparent !important;
-            border: 1.5px solid var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            padding: 8px 18px !important;
-            border-radius: 8px !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 13px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
-            transition: all 0.25s ease !important;
-            text-decoration: none !important;
-            display: inline-block !important;
-            line-height: 1.2 !important;
-        }
-        .inner-text-tripple:hover {
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            border-color: var(--ozo-navy) !important;
-        }
-        .inner-text-tripple-cont {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            padding: 8px 18px !important;
-            border-radius: 8px !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 13px !important;
-            text-transform: uppercase !important;
-            letter-spacing: 0.5px !important;
-            transition: all 0.25s ease !important;
-            text-decoration: none !important;
-            display: inline-block !important;
-            line-height: 1.2 !important;
-            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.15) !important;
-        }
-        .inner-text-tripple-cont:hover {
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 10px rgba(28, 54, 89, 0.15) !important;
-        }
-        
-        /* Week Class timing text */
-        .week-cls {
-            color: var(--ozo-text-muted) !important;
-            font-size: 10px !important;
-            font-weight: 600 !important;
-            line-height: 1.3 !important;
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        /* --- 3. HERO TITLES --- */
-        .hero-main-title {
-            color: var(--ozo-navy) !important;
-            font-weight: 800 !important;
-            letter-spacing: -0.5px !important;
-        }
-        .hero-main-title .highlight-gold {
-            color: var(--ozo-gold-dark) !important;
-        }
-        .hero-sub-title {
-            color: var(--ozo-text-muted) !important;
-            font-weight: 500 !important;
-        }
-
-        /* --- 4. FLOATING SEARCH DECK REDESIGN --- */
-        .multi-search-container {
-            border-radius: 20px !important;
-            box-shadow: 0 20px 45px rgba(28, 54, 89, 0.12) !important;
-            border: 1.5px solid rgba(212, 175, 55, 0.25) !important;
-            background: var(--ozo-white) !important;
-            overflow: hidden !important;
-        }
-
-        .search-tabs {
-            background: #fdfdfd !important;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
-            padding: 0 10px !important;
-            display: flex !important;
-        }
-
-        /* Aggressively style active search tabs and labels */
-        .search-tab-btn {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            color: var(--ozo-text-muted) !important;
-            border: none !important;
-            padding: 14px 16px !important;
-            border-bottom: 3.5px solid transparent !important;
-            background: transparent !important;
-            transition: all 0.25s ease !important;
-            outline: none !important;
-        }
-
-        .search-tab-btn:hover {
-            color: var(--ozo-navy) !important;
-            background: rgba(28, 54, 89, 0.03) !important;
-        }
-
-        .search-tab-btn.active, .search-tabs button.active {
-            color: var(--ozo-navy) !important;
-            background: var(--ozo-white) !important;
-            font-weight: 700 !important;
-            border-bottom: 3.5px solid var(--ozo-gold) !important;
-            border-top: none !important;
-            border-left: none !important;
-            border-right: none !important;
-        }
-
-        .search-tab-btn .tab-label {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            color: var(--ozo-text-muted) !important;
-        }
-
-        .search-tab-btn.active .tab-label, .search-tabs button.active .tab-label {
-            color: var(--ozo-gold-dark) !important; /* GOLD ACTIVE TEXT */
-            font-weight: 700 !important;
-        }
-
-        .search-tab-btn.active::after, .search-tabs button.active::after {
-            background: var(--ozo-gold) !important;
-            height: 3.5px !important;
-        }
-
-        /* Inputs and selector styling */
-        .search-field label {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 11px !important;
-            letter-spacing: 0.5px !important;
-            margin-bottom: 6px !important;
-        }
-
-        .search-field input, .search-field select, .travelers-trigger {
-            border-radius: 10px !important;
-            border: 1.5px solid #cbd5e1 !important;
-            height: 44px !important;
-            font-size: 13.5px !important;
-            outline: none !important;
-            transition: all 0.2s ease !important;
-        }
-
-        .search-field input:focus, .search-field select:focus, .travelers-trigger:focus {
-            border-color: var(--ozo-gold) !important;
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15) !important;
-        }
-
-        /* Flight type inner active pill sub-tabs */
-        .flight-type-btn {
-            border-radius: 100px !important;
-            border: 1.5px solid #cbd5e1 !important;
-            padding: 6px 18px !important;
-            color: var(--ozo-navy) !important;
-            background: transparent !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13px !important;
-            transition: all 0.2s ease !important;
-        }
-        .flight-type-btn.active, .flight-type-btn.active:hover {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
-            border-color: var(--ozo-navy) !important;
-        }
-        .flight-type-btn:hover {
-            background: rgba(28, 54, 89, 0.04) !important;
-        }
-
-        /* Main Search button styles (Flights, Visas, Tours, Cars, etc.) */
-        .search-action-btn, 
-        #visa_search_btn, 
-        #umrah_search_btn, 
-        #tours_search_btn, 
-        #car_search_btn, 
-        #tracking_search_btn,
-        button[type="submit"].search-action-btn {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            border: none !important;
-            border-radius: 10px !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            height: 44px !important;
-            padding: 0 28px !important;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .search-action-btn:hover, 
-        #visa_search_btn:hover, 
-        #umrah_search_btn:hover, 
-        #tours_search_btn:hover, 
-        #car_search_btn:hover, 
-        #tracking_search_btn:hover,
-        button[type="submit"].search-action-btn:hover {
-            background: var(--ozo-navy) !important;
-            color: #ffffff !important;
-            box-shadow: 0 4px 15px rgba(28, 54, 89, 0.25) !important;
-        }
-
-        /* --- 5. METRICS STRIP --- */
-        .nmber-strip {
-            font-family: 'Outfit', sans-serif !important;
-        }
-
-        /* --- 6. POPULAR TOUR CARDS --- */
-        .tour-slide-card {
-            border-radius: 16px !important;
-            overflow: hidden !important;
-            border: 1px solid #e2e8f0 !important;
-            background: var(--ozo-white) !important;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01) !important;
-            transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-        }
-
-        .tour-slide-card:hover {
-            transform: translateY(-6px) !important;
-            border-color: var(--ozo-gold) !important;
-            box-shadow: var(--ozo-shadow-gold) !important;
-        }
-
-        .tour-badge {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            border-radius: 100px !important;
-            padding: 4px 12px !important;
-        }
-
-        .tour-card-title {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            color: var(--ozo-navy) !important;
-        }
-
-        .tour-card-price {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 800 !important;
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        .tour-card-btn {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
-            border-radius: 8px !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            text-align: center !important;
-            padding: 10px 0 !important;
-            transition: all 0.25s ease !important;
-            text-decoration: none !important;
-        }
-
-        .tour-slide-card:hover .tour-card-btn {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            font-weight: 700 !important;
-        }
-
-        /* --- 7. SEO FILTER FEATURES --- */
-        .main-filter {
-            border-radius: 16px !important;
-            overflow: hidden !important;
-            border: 1.5px solid rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-            background: var(--ozo-white) !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
-        }
-
-        .main-filter:hover {
-            transform: translateY(-5px) !important;
-            border-color: var(--ozo-gold) !important;
-            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.08) !important;
-        }
-
-        .main-filter .bg-pink-10, .main-filter .vsaFlter-blue-100 {
-            background: var(--ozo-white) !important;
-            padding: 24px !important;
-            height: 100% !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-        }
-
-        .main-filter a.double-22, 
-        .main-filter a.double-21, 
-        .main-filter a.double-24, 
-        .main-filter a.double-25 {
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            font-size: 15px !important;
-            line-height: 1.4 !important;
-            text-decoration: none !important;
-        }
-
-        .main-filter a span {
-            color: var(--ozo-gold-dark) !important;
-        }
-
-        /* --- 8. TRENDING VISA CARD GRID LIST --- */
-        .visa-yugo-box ul {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) !important;
-            gap: 16px !important;
-            width: 100% !important;
-            padding: 0 !important;
-        }
-        
-        .visa-yugo-box ul li {
-            background: var(--ozo-white) !important;
-            border: 1px solid #cbd5e1 !important;
-            border-radius: 12px !important;
-            padding: 12px 16px !important;
-            display: flex !important;
-            align-items: center !important;
-            gap: 12px !important;
-            transition: all 0.3s ease !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.01) !important;
-            float: none !important;
-            width: auto !important;
-            margin: 0 !important;
-        }
-        
-        .visa-yugo-box ul li:hover {
-            transform: translateY(-3px) !important;
-            border-color: var(--ozo-gold) !important;
-            box-shadow: var(--ozo-shadow-gold) !important;
-        }
-        
-        .visa-yugo-box ul li img.w-flg-cls {
-            width: 34px !important;
-            height: 34px !important;
-            object-fit: cover !important;
-            border-radius: 50% !important;
-            margin: 0 !important;
-            float: none !important;
-        }
-        
-        .visa-yugo-box ul li a {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 13.5px !important;
-            color: var(--ozo-navy) !important;
-            text-decoration: none !important;
-            line-height: 1.3 !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-        
-        .visa-yugo-box ul li a span {
-            color: var(--ozo-gold-dark) !important;
-            font-weight: 700 !important;
-            font-size: 12px !important;
-            margin-top: 2px !important;
-            display: block !important;
-        }
-
-        /* --- 9. CLIENT TESTIMONIAL CARDS --- */
-        .testimonial-card {
-            border-radius: 16px !important;
-            border: 1.5px solid #cbd5e1 !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01) !important;
-            transition: all 0.3s ease !important;
-            background: var(--ozo-white) !important;
-        }
-
-        .testimonial-card:hover {
-            border-color: var(--ozo-gold) !important;
-            transform: translateY(-4px) !important;
-            box-shadow: var(--ozo-shadow-gold) !important;
-        }
-
-        .star-rating, .testimonial-rating span {
-            color: var(--ozo-gold) !important;
-        }
-
-        .user-avatar {
-            background: var(--ozo-navy) !important;
-            color: var(--ozo-white) !important;
-        }
-
-        /* --- 10. PREMIUM CEO MESSAGE SECTION --- */
-        .ceo-section {
-            background: var(--ozo-navy-dark) !important;
-            color: var(--ozo-white) !important;
-            padding: 85px 0 !important;
-        }
-        .ceo-badge {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-        }
-        .ceo-badge h4 {
-            color: var(--ozo-navy) !important;
-        }
-        .ceo-badge span {
-            color: rgba(28, 54, 89, 0.75) !important;
-        }
-        .ceo-content h2 {
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 800 !important;
-            color: var(--ozo-white) !important;
-        }
-        .ceo-content span {
-            color: var(--ozo-gold) !important;
-        }
-        .ceo-quote {
-            border-left: 4px solid var(--ozo-gold) !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            font-style: italic !important;
-            padding-left: 20px !important;
-            font-size: 1.15rem !important;
-            margin: 24px 0 !important;
-        }
-        .ceo-signature h4 {
-            color: var(--ozo-gold) !important;
-            font-family: 'Outfit', sans-serif !important;
-        }
-
-        /* --- 11. GENERAL CALL TO ACTIONS --- */
-        .booking-umrah, .bttn-22, .bttn-24, .bttn-25 {
-            background: var(--ozo-gold) !important;
-            color: var(--ozo-navy) !important;
-            font-family: 'Outfit', sans-serif !important;
-            font-weight: 700 !important;
-            border-radius: 100px !important;
-            border: none !important;
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .booking-umrah:hover, .bttn-22:hover, .bttn-24:hover, .bttn-25:hover {
-            background: var(--ozo-white) !important;
-            color: var(--ozo-navy) !important;
-            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2) !important;
-        }
-
-        /* --- 12. LUXURY SLATE BLACK FOOTER REDESIGN --- */
-        footer.footer {
-            background: #0a1120 !important; /* Premium Slate Black */
-            border-top: 4px solid var(--ozo-gold) !important;
-            padding: 80px 0 20px !important;
-            float: left !important;
-            width: 100% !important;
         }
         
         footer.footer h4, 
