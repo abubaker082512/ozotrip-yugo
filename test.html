@@ -9802,6 +9802,74 @@ jQuery(document).ready(function () {
             width: 100%;
         }
 
+        /* --- HEADER BUTTONS (Call Us / WhatsApp Us) --- */
+        .box-navigation-top {
+            display: flex !important;
+            gap: 10px !important;
+            align-items: center !important;
+            float: none !important;
+        }
+        .call-outer, .whats-outer {
+            background: transparent !important;
+            border: none !important;
+            float: none !important;
+            display: inline-block !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        .inner-text-tripple {
+            background: transparent !important;
+            border: 1.5px solid var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            padding: 8px 18px !important;
+            border-radius: 8px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 13px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            line-height: 1.2 !important;
+        }
+        .inner-text-tripple:hover {
+            background: var(--ozo-navy) !important;
+            color: #ffffff !important;
+            border-color: var(--ozo-navy) !important;
+        }
+        .inner-text-tripple-cont {
+            background: var(--ozo-gold) !important;
+            color: var(--ozo-navy) !important;
+            padding: 8px 18px !important;
+            border-radius: 8px !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 700 !important;
+            font-size: 13px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            transition: all 0.25s ease !important;
+            text-decoration: none !important;
+            display: inline-block !important;
+            line-height: 1.2 !important;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.15) !important;
+        }
+        .inner-text-tripple-cont:hover {
+            background: var(--ozo-navy) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 10px rgba(28, 54, 89, 0.15) !important;
+        }
+        
+        /* Week Class timing text */
+        .week-cls {
+            color: var(--ozo-text-muted) !important;
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            line-height: 1.3 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
         /* --- 3. HERO TITLES --- */
         .hero-main-title {
             color: var(--ozo-navy) !important;
@@ -9887,7 +9955,14 @@ jQuery(document).ready(function () {
             font-weight: 600 !important;
         }
 
-        .search-action-btn {
+        /* All main Search button styles (Flights, Visas, Tours, Cars, etc.) */
+        .search-action-btn, 
+        #visa_search_btn, 
+        #umrah_search_btn, 
+        #tours_search_btn, 
+        #car_search_btn, 
+        #tracking_search_btn,
+        button[type="submit"].search-action-btn {
             background: var(--ozo-gold) !important;
             color: var(--ozo-navy) !important;
             border: none !important;
@@ -9900,7 +9975,13 @@ jQuery(document).ready(function () {
             transition: all 0.3s ease !important;
         }
 
-        .search-action-btn:hover {
+        .search-action-btn:hover, 
+        #visa_search_btn:hover, 
+        #umrah_search_btn:hover, 
+        #tours_search_btn:hover, 
+        #car_search_btn:hover, 
+        #tracking_search_btn:hover,
+        button[type="submit"].search-action-btn:hover {
             background: var(--ozo-navy) !important;
             color: #ffffff !important;
             box-shadow: 0 4px 15px rgba(28, 54, 89, 0.25) !important;
@@ -10144,9 +10225,45 @@ jQuery(document).ready(function () {
             box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2) !important;
         }
 
-        /* Footer line border */
+        /* --- 12. FOOTER ACCENT & READABILITY FIX --- */
         .yugo-footer-new {
+            background: var(--ozo-navy-dark) !important;
             border-top: 3px solid var(--ozo-gold) !important;
+            padding: 60px 0 20px !important;
+        }
+        
+        .yugo-footer-new h4, .yugo-footer-new .heading-footer {
+            font-family: 'Outfit', sans-serif !important;
+            color: var(--ozo-gold) !important;
+            font-weight: 700 !important;
+            font-size: 15px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.8px !important;
+            margin-bottom: 20px !important;
+        }
+        
+        .yugo-footer-new a, .custom-footer a, footer a {
+            color: rgba(255, 255, 255, 0.75) !important;
+            font-size: 13.5px !important;
+            transition: color 0.2s ease !important;
+            text-decoration: none !important;
+        }
+        
+        .yugo-footer-new a:hover, .custom-footer a:hover, footer a:hover {
+            color: var(--ozo-gold) !important;
+            text-decoration: none !important;
+        }
+        
+        .yugo-footer-new p, .yugo-footer-new span, .yugo-footer-new li {
+            color: rgba(255, 255, 255, 0.6) !important;
+            font-size: 13.5px !important;
+        }
+        
+        .yugo-footer-new .copyright-footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+            padding-top: 20px !important;
+            margin-top: 30px !important;
+            color: rgba(255, 255, 255, 0.5) !important;
         }
     </style>
 </body>
