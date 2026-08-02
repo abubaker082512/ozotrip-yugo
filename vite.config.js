@@ -157,6 +157,7 @@ export default defineConfig({
         admin: resolve(__dirname, 'admin.html'),
         blog: resolve(__dirname, 'blog.html'),
         blog_detail: resolve(__dirname, 'blog-detail.html'),
+        test: resolve(__dirname, 'test.html'),
       },
     },
   },
