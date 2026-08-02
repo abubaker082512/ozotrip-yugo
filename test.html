@@ -25,14 +25,15 @@
         /* CSS Variables for design system tokens */
         :root {
             --ozo-navy: #1c3659;
-            --ozo-gold: #c5a880;
-            --ozo-gold-hover: #b09166;
+            --ozo-navy-dark: #0f1e36;
+            --ozo-gold: #d4af37; /* Rich radiant Gold */
+            --ozo-gold-dark: #c59b27; /* Gold with better contrast for text */
             --ozo-white: #ffffff;
             --ozo-text: #1e293b;
             --ozo-text-muted: #64748b;
-            --ozo-bg: #fcfbfa; /* Warm background neutral */
-            --ozo-shadow-gold: 0 20px 40px rgba(197, 168, 128, 0.15);
-            --ozo-radius: 24px;
+            --ozo-bg: #faf9f6; /* Elegant soft cream background */
+            --ozo-shadow-gold: 0 15px 30px rgba(212, 175, 55, 0.08);
+            --ozo-shadow-navy: 0 15px 35px rgba(28, 54, 89, 0.1);
         }
 
         body {
@@ -46,95 +47,118 @@
             font-weight: 600;
         }
 
-        /* --- 1. NAVBAR OVERRIDES --- */
+        /* --- 1. PREMIUM HEADER OVERRIDES --- */
         .new-header.yugo-header {
-            border-bottom: 2px solid var(--ozo-gold) !important;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important; /* Subtle thin gold border */
             background: var(--ozo-white) !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            padding: 5px 0;
         }
 
-        .nav-links a {
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Nav links styling */
+        .nav-links-list {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-links-list a {
             color: var(--ozo-navy) !important;
-            font-weight: 500 !important;
+            font-family: 'Outfit', sans-serif !important;
+            font-weight: 600 !important;
+            font-size: 13.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
             position: relative;
-            padding-bottom: 6px;
+            padding: 6px 0;
+            text-decoration: none !important;
             transition: color 0.3s ease;
         }
 
-        /* Active Nav Link is Gold */
-        .nav-links a.active-link {
-            color: var(--ozo-gold) !important;
-            font-weight: 700 !important;
+        /* Active Nav Link in Rich Gold */
+        .nav-links-list a.active-link {
+            color: var(--ozo-gold-dark) !important;
         }
 
-        .nav-links a.active-link::after {
+        .nav-links-list a.active-link::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 2.5px;
+            height: 2px;
             background-color: var(--ozo-gold);
-            border-radius: 2px;
         }
 
-        /* Hover animation with gold underline expanding outwards */
-        .nav-links a::after {
+        /* Hover animation with gold underline expanding */
+        .nav-links-list a::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
             width: 0;
-            height: 2.5px;
+            height: 2px;
             background-color: var(--ozo-gold);
             transition: all 0.3s ease;
             transform: translateX(-50%);
-            border-radius: 2px;
         }
 
-        .nav-links a:hover {
-            color: var(--ozo-gold) !important;
+        .nav-links-list a:hover {
+            color: var(--ozo-gold-dark) !important;
         }
 
-        .nav-links a:hover::after {
+        .nav-links-list a:hover::after {
             width: 100%;
         }
 
         /* --- 2. HERO SEARCH PANEL OVERRIDES --- */
         .hero-banner-new {
-            background: linear-gradient(135deg, var(--ozo-navy) 0%, #0f172a 100%);
-            padding: 180px 20px 100px;
+            background: linear-gradient(135deg, var(--ozo-navy-dark) 0%, var(--ozo-navy) 100%);
+            padding: 170px 20px 90px;
             position: relative;
             text-align: center;
             color: #ffffff;
         }
 
         .hero-banner-new h1 {
-            font-size: 46px;
+            font-size: 44px;
             font-weight: 700;
             margin-bottom: 12px;
             color: #ffffff;
+            letter-spacing: -0.5px;
         }
 
         .hero-banner-new p {
-            font-size: 18px;
+            font-size: 17.5px;
             color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
 
         /* Floating Search Deck container */
         .search-deck-container {
             background: var(--ozo-white);
-            border-radius: var(--ozo-radius);
-            box-shadow: var(--ozo-shadow-gold);
-            padding: 32px;
-            max-width: 950px;
+            border-radius: 20px;
+            box-shadow: var(--ozo-shadow-navy);
+            padding: 30px;
+            max-width: 980px;
             margin: 0 auto;
-            border: 1px solid rgba(197, 168, 128, 0.2);
+            border: 1px solid rgba(28, 54, 89, 0.08);
             color: var(--ozo-text);
             text-align: left;
         }
@@ -142,36 +166,40 @@
         /* Search Tabs Navigation as Pill buttons */
         .search-deck-tabs {
             display: flex;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 10px;
+            margin-bottom: 20px;
             list-style: none;
             padding: 0;
             border-bottom: 1px solid #f1f5f9;
-            padding-bottom: 16px;
+            padding-bottom: 14px;
         }
 
         .search-deck-tab {
-            padding: 10px 24px;
+            padding: 8px 20px;
             border-radius: 100px;
             background: #f1f5f9;
             color: var(--ozo-navy);
             font-family: 'Outfit', sans-serif;
             font-weight: 600;
-            font-size: 14.5px;
+            font-size: 13.5px;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
-        .search-deck-tab.active, .search-deck-tab:hover {
-            background: var(--ozo-gold);
+        .search-deck-tab.active {
+            background: var(--ozo-navy);
             color: #ffffff;
-            transform: translateY(-1px);
+        }
+
+        .search-deck-tab:not(.active):hover {
+            background: rgba(28, 54, 89, 0.06);
+            color: var(--ozo-navy);
         }
 
         /* Search Form Fields Row */
         .search-form-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
             align-items: end;
         }
@@ -179,57 +207,62 @@
         .search-field-group {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
 
         .search-field-label {
-            font-size: 12.5px;
-            font-weight: 600;
+            font-size: 11px;
+            font-weight: 700;
             text-transform: uppercase;
             color: var(--ozo-navy);
             font-family: 'Outfit', sans-serif;
+            letter-spacing: 0.5px;
         }
 
         .search-field-control {
-            border: 1.5px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 12px 16px;
-            font-size: 14.5px;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 14px;
             color: var(--ozo-text);
             outline: none;
             transition: all 0.2s ease;
+            height: 44px;
+            box-sizing: border-box;
         }
 
         .search-field-control:focus {
-            border-color: var(--ozo-gold);
-            box-shadow: 0 0 0 3px rgba(197, 168, 128, 0.15);
+            border-color: var(--ozo-navy);
+            box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.08);
         }
 
+        /* Highly readable button: Gold with Dark Navy Text */
         .search-submit-btn {
             background: var(--ozo-gold);
-            color: #ffffff;
+            color: var(--ozo-navy) !important;
             border: none;
-            padding: 14px 28px;
-            border-radius: 100px;
+            height: 44px;
+            border-radius: 10px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14.5px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(197, 168, 128, 0.25);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
+            width: 100%;
         }
 
         .search-submit-btn:hover {
-            background: var(--ozo-gold-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 10px 24px rgba(197, 168, 128, 0.35);
+            background: var(--ozo-navy);
+            color: #ffffff !important;
+            box-shadow: 0 4px 15px rgba(28, 54, 89, 0.2);
         }
 
-        /* --- 3. PREMIUM SERVICE CARDS OVERRIDES --- */
+        /* --- 3. PREMIUM SERVICE CARDS --- */
         .packages-section {
             padding: 80px 20px;
             max-width: 1200px;
@@ -242,7 +275,7 @@
         }
 
         .section-intro h2 {
-            font-size: 36px;
+            font-size: 34px;
             color: var(--ozo-navy);
             font-family: 'Outfit', sans-serif;
             margin-bottom: 8px;
@@ -250,7 +283,7 @@
 
         .section-intro p {
             color: var(--ozo-text-muted);
-            font-size: 15.5px;
+            font-size: 15px;
         }
 
         .packages-grid {
@@ -262,33 +295,33 @@
         /* Luxury card outline and lift animations */
         .pkg-card-luxury {
             background: var(--ozo-white);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative;
             display: flex;
             flex-direction: column;
         }
 
         .pkg-card-luxury:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             border-color: var(--ozo-gold);
-            box-shadow: 0 20px 40px rgba(197, 168, 128, 0.12);
+            box-shadow: var(--ozo-shadow-gold);
         }
 
         .pkg-card-badge {
             position: absolute;
-            top: 16px;
-            left: 16px;
-            background: var(--ozo-gold);
+            top: 14px;
+            left: 14px;
+            background: var(--ozo-navy);
             color: #ffffff;
-            padding: 6px 12px;
+            padding: 4px 10px;
             border-radius: 100px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             z-index: 5;
@@ -296,23 +329,24 @@
 
         .pkg-card-img-box {
             position: relative;
-            height: 220px;
+            height: 210px;
             overflow: hidden;
+            background: #cbd5e1;
         }
 
         .pkg-card-img-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: transform 0.4s ease;
         }
 
         .pkg-card-luxury:hover .pkg-card-img-box img {
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
 
         .pkg-card-body-luxury {
-            padding: 24px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
@@ -322,34 +356,34 @@
             display: flex;
             align-items: center;
             gap: 4px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .pkg-card-rating i {
-            color: var(--ozo-gold); /* Gold stars */
-            font-size: 13.5px;
+            color: var(--ozo-gold-dark); /* Premium golden stars */
+            font-size: 13px;
         }
 
         .pkg-card-rating span {
             font-size: 12px;
             color: var(--ozo-text-muted);
-            margin-left: 6px;
+            margin-left: 4px;
         }
 
         .pkg-card-title-luxury {
-            font-size: 20px;
+            font-size: 19px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
             color: var(--ozo-navy);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             line-height: 1.4;
         }
 
         .pkg-card-desc-luxury {
-            font-size: 13.5px;
+            font-size: 13px;
             color: var(--ozo-text-muted);
-            line-height: 1.5;
-            margin-bottom: 20px;
+            line-height: 1.6;
+            margin-bottom: 18px;
             flex-grow: 1;
         }
 
@@ -358,7 +392,7 @@
             justify-content: space-between;
             align-items: center;
             border-top: 1px solid #f1f5f9;
-            padding-top: 16px;
+            padding-top: 14px;
         }
 
         .pkg-card-price-luxury {
@@ -367,14 +401,15 @@
         }
 
         .pkg-card-price-label {
-            font-size: 11px;
+            font-size: 10px;
             text-transform: uppercase;
             color: var(--ozo-text-muted);
-            font-weight: 500;
+            font-weight: 600;
+            letter-spacing: 0.3px;
         }
 
         .pkg-card-price-value {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--ozo-navy);
             font-family: 'Outfit', sans-serif;
@@ -383,19 +418,20 @@
         .pkg-card-btn-luxury {
             background: var(--ozo-navy);
             color: #ffffff !important;
-            padding: 10px 22px;
-            border-radius: 100px;
+            padding: 8px 18px;
+            border-radius: 6px;
             font-weight: 600;
-            font-size: 13.5px;
+            font-size: 13px;
             text-decoration: none !important;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
         .pkg-card-luxury:hover .pkg-card-btn-luxury {
             background: var(--ozo-gold);
+            color: var(--ozo-navy) !important;
         }
 
-        /* --- 4. FEATURE SECTIONS WITH CONCIERGE BADGES --- */
+        /* --- 4. FEATURE SECTIONS WITH CLEAN BADGES --- */
         .features-section {
             background: var(--ozo-navy);
             color: #ffffff;
@@ -415,36 +451,39 @@
             font-family: 'Rubik', sans-serif;
         }
 
-        /* Round gold badge enclosures for features */
+        /* White Badge with Gold boundary & Navy Icon - Ultra clean */
         .feature-icon-badge {
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            background: var(--ozo-gold);
-            color: #ffffff;
+            background: var(--ozo-white);
+            color: var(--ozo-navy);
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(197, 168, 128, 0.2);
-            transition: transform 0.3s ease;
+            border: 2px solid var(--ozo-gold);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
         }
 
         .feature-item-luxury:hover .feature-icon-badge {
-            transform: scale(1.06) rotate(5deg);
+            background: var(--ozo-gold);
+            color: var(--ozo-navy);
+            transform: translateY(-4px);
         }
 
         .feature-item-luxury h3 {
             font-family: 'Outfit', sans-serif;
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             color: #ffffff;
         }
 
         .feature-item-luxury p {
-            font-size: 13.5px;
+            font-size: 13px;
             color: rgba(255, 255, 255, 0.75);
             line-height: 1.5;
             max-width: 250px;
@@ -456,18 +495,20 @@
 
     <!-- Header Section -->
     <header class="new-header yugo-header" id="header">
-        <section class="wrapper" style="max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;">
+        <div class="header-container">
             <a class="navbar-brand" href="index.html">
-                <img alt="OzoTrips Logo" src="assets/img/header/logo-light.png" style="max-height: 45px;"/>
+                <img alt="OzoTrips Logo" src="assets/img/header/logo-light.png" style="max-height: 40px;"/>
             </a>
-            <nav class="nav-links" style="display: flex; gap: 24px; list-style: none;">
-                <li><a href="#" class="active-link">Home</a></li>
-                <li><a href="visas.html">Visas</a></li>
-                <li><a href="flights.html">Flights</a></li>
-                <li><a href="tours.html">Tours</a></li>
-                <li><a href="blog.html">Blogs</a></li>
+            <nav class="nav-links">
+                <ul class="nav-links-list">
+                    <li><a href="#" class="active-link">Home</a></li>
+                    <li><a href="visas.html">Visas</a></li>
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                </ul>
             </nav>
-        </section>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -478,9 +519,9 @@
         <!-- Floating Search Deck -->
         <div class="search-deck-container">
             <ul class="search-deck-tabs">
-                <li class="search-deck-tab active">🛄 Visas</li>
-                <li class="search-deck-tab">✈️ Flights</li>
-                <li class="search-deck-tab">🏨 Packages</li>
+                <li class="search-deck-tab active">Visas</li>
+                <li class="search-deck-tab">Flights</li>
+                <li class="search-deck-tab">Packages</li>
             </ul>
             <div class="search-form-row">
                 <div class="search-field-group">
@@ -521,7 +562,7 @@
             <div class="pkg-card-luxury">
                 <span class="pkg-card-badge">Featured</span>
                 <div class="pkg-card-img-box">
-                    <img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&w=400&q=80" alt="Umrah Package">
+                    <img src="https://images.unsplash.com/photo-1591604021695-0c69b7c05981?auto=format&fit=crop&w=600&q=80" alt="Umrah Package">
                 </div>
                 <div class="pkg-card-body-luxury">
                     <div class="pkg-card-rating">
@@ -548,7 +589,7 @@
             <div class="pkg-card-luxury">
                 <span class="pkg-card-badge" style="background: var(--ozo-navy);">Popular</span>
                 <div class="pkg-card-img-box">
-                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&w=400&q=80" alt="UK Visa">
+                    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ca1ad?auto=format&fit=crop&w=600&q=80" alt="UK Visa">
                 </div>
                 <div class="pkg-card-body-luxury">
                     <div class="pkg-card-rating">
@@ -575,7 +616,7 @@
             <div class="pkg-card-luxury">
                 <span class="pkg-card-badge">Best Selling</span>
                 <div class="pkg-card-img-box">
-                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=400&q=80" alt="Japan Tour">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=600&q=80" alt="Japan Tour">
                 </div>
                 <div class="pkg-card-body-luxury">
                     <div class="pkg-card-rating">
