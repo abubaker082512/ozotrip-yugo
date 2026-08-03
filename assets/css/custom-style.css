@@ -13638,7 +13638,8 @@ h2.section-title-navy,
     font-weight: 800 !important;
     text-transform: none !important;
     letter-spacing: normal !important;
-    margin: 0 auto !important;
+    margin: 0 auto 35px !important;
+    line-height: 1.3 !important;
     text-align: center !important;
     background: transparent !important;
     border: none !important;
@@ -13840,15 +13841,23 @@ section.wrapper,
 .tour-carousel-section,
 .unique-wrapper,
 .seo-point-box,
-.seo-res-box,
 .video-boxes,
 .main-box-vsa,
 .umrah-outer-2desk,
-.scrn-rr,
 .wrapper-newschnage,
 .features,
 .desktop-offices,
 .wrapper-wrapss22 {
     display: flow-root !important;
     clear: both !important;
+}
+
+/* Force-hide mobile sections on desktop views */
+@media (min-width: 992px) {
+    section.seo-res-box,
+    .seo-res-box,
+    div.scrn-rr,
+    .col-xl-12.float-left.scrn-rr {
+        display: none !important;
+    }
 }

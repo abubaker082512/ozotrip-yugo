@@ -2716,101 +2716,101 @@ a.double-25 {
   /* ── Beach Video / Offers Banner ─────────────── */
   div.wrapper.video-boxes,
   div.video-boxes {
-    margin-top: 60px !important;
+    margin-top: 30px !important;
     margin-bottom: 0 !important;
   }
 
   /* ── Trending Visas ───────────────────────────── */
   div.main-box-vsa,
   div.main-box-vsa.col-xl-12.float-left {
-    margin-top: 60px !important;
-    margin-bottom: 60px !important;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 35px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
   }
 
   /* ── Umrah Banner Desktop ─────────────────────── */
   div.umrah-outer-2desk,
   .col-xl-12.float-left.umrah-outer-2desk {
-    margin-top: 60px !important;
-    margin-bottom: 40px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   /* ── Umrah Banner Mobile ──────────────────────── */
   div.scrn-rr,
   .col-xl-12.float-left.scrn-rr {
-    margin-top: 50px !important;
-    margin-bottom: 40px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   /* ── Why Clients / Testimonials Outer ────────── */
   div.wrapper-newschnage {
-    margin-top: 60px !important;
-    margin-bottom: 60px !important;
-    padding-top: 30px !important;
-    padding-bottom: 20px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
   }
 
   /* ── Testimonials Slider ──────────────────────── */
   section.testimonial-section-new {
-    margin-top: 30px !important;
-    margin-bottom: 20px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 
   /* ── SEO Read More Text Block ─────────────────── */
   div.wrapper-wrapss22 {
-    margin-top: 60px !important;
-    margin-bottom: 60px !important;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
 
   /* ── Why Book With Us ─────────────────────────── */
   div.features,
   div.features.col-xl-12.float-left {
-    margin-top: 60px !important;
-    margin-bottom: 60px !important;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
   }
 
   /* ── Our Hotel Partners ───────────────────────── */
   div.desktop-offices {
-    margin-top: 40px !important;
-    margin-bottom: 60px !important;
-    padding-top: 20px !important;
-    padding-bottom: 30px !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+    padding-top: 10px !important;
+    padding-bottom: 15px !important;
   }
 
   /* ── CEO Message Section ──────────────────────── */
   section.ceo-section {
-    margin-top: 20px !important;
-    margin-bottom: 20px !important;
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   /* ── CEO Tour Diary ───────────────────────────── */
   section.ceo-travels-marquee-section {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
-    padding-top: 60px !important;
-    padding-bottom: 60px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 
   /* ── Recent Tours Showcase ────────────────────── */
   section.recent-tours-section {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
   }
 
   /* ── Section wrapper gaps ─────────────────────── */
   section.wrapper {
     overflow: visible !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
   }
 
   /* ── Float Containment & Height Collapse Fix ──── */
@@ -2821,15 +2821,12 @@ a.double-25 {
   div.tour-carousel-section,
   div.unique-wrapper,
   div.seo-point-box,
-  section.seo-res-box,
   div.wrapper.video-boxes,
   div.video-boxes,
   div.main-box-vsa,
   div.main-box-vsa.col-xl-12.float-left,
   div.umrah-outer-2desk,
   .col-xl-12.float-left.umrah-outer-2desk,
-  div.scrn-rr,
-  .col-xl-12.float-left.scrn-rr,
   div.wrapper-newschnage,
   section.testimonial-section-new,
   div.wrapper-wrapss22,
@@ -2838,6 +2835,16 @@ a.double-25 {
   div.desktop-offices {
     display: flow-root !important;
     clear: both !important;
+  }
+
+  /* Force-hide mobile sections on desktop views */
+  @media (min-width: 992px) {
+    section.seo-res-box,
+    .seo-res-box,
+    div.scrn-rr,
+    .col-xl-12.float-left.scrn-rr {
+      display: none !important;
+    }
   }
 
 </style>
