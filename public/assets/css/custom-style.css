@@ -13469,3 +13469,138 @@ footer.footer .copyright {
     color: rgba(255, 255, 255, 0.45) !important;
 }
 /* ------------------------------------------ */
+
+
+/* --- GLOBAL HEADINGS AND CAPSULE BUTTONS HARMONIZATION --- */
+:root {
+    --color-secondary: #ff9c00 !important;
+    --color-primary: #1c3659 !important;
+    --ozo-gold: #ff9c00 !important;
+    --ozo-gold-dark: #e08500 !important;
+}
+
+.highlight-gold,
+.sub-heading-gold,
+.ceo-signature p,
+.ceo-signature h4,
+.ceo-signature span {
+    color: #ff9c00 !important;
+}
+
+h2.rubik-medium,
+.heading.white-heading,
+.heading,
+h2.section-title-navy,
+.main-box-vsa h2.rubik-medium,
+.ceo-travels-marquee-section h2,
+.recent-tours-section-new h2,
+.desktop-offices .heading.white-heading {
+    font-family: 'Outfit', sans-serif !important;
+    color: #1c3659 !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.heading.white-heading, .heading {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    padding: 0 !important;
+    margin-bottom: 25px !important;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+.search-action-btn,
+.unique-booking-offers-100,
+.unique-booking-offers-500,
+.booking-umrah,
+#newsletter_submit,
+#countryBtn,
+.btn-primary,
+.search_btn,
+.phone-40-none,
+.bttn-22,
+.booking-btn-22,
+.btn-blue,
+.blue-btn,
+.booking-btn-new,
+.booking-umrah-offer,
+.submit-btn-cls,
+.lnk-main,
+.custom-pkg,
+.rental-car-bttn,
+.need-help-bttn,
+.accept-btn,
+.whatsapp-btn,
+.view-all-visas-btn,
+.view-all-btn,
+.btn-primary-custom,
+.search_btn_tour,
+.search_btn_umrah,
+.search_btn_flight,
+.search_btn_car,
+.view-all-visas,
+.view-all-tours,
+.view-all-umrah,
+.view-all-packages {
+    background-color: #1c3659 !important;
+    color: #ffffff !important;
+    border-radius: 100px !important;
+    border: 1px solid #1c3659 !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    font-weight: 700 !important;
+    font-family: 'Outfit', sans-serif !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    padding: 12px 30px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    text-align: center !important;
+    display: inline-block !important;
+    box-shadow: 0 4px 15px rgba(28, 54, 89, 0.15) !important;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+.search-action-btn:hover,
+.unique-booking-offers-100:hover,
+.unique-booking-offers-500:hover,
+.booking-umrah:hover,
+#newsletter_submit:hover,
+#countryBtn:hover,
+.btn-primary:hover,
+.search_btn:hover,
+.phone-40-none:hover,
+.bttn-22:hover,
+.booking-btn-22:hover,
+.btn-blue:hover,
+.blue-btn:hover,
+.booking-btn-new:hover,
+.booking-umrah-offer:hover,
+.submit-btn-cls:hover,
+.lnk-main:hover,
+.custom-pkg:hover,
+.rental-car-bttn:hover,
+.need-help-bttn:hover,
+.accept-btn:hover,
+.whatsapp-btn:hover,
+.view-all-visas-btn:hover,
+.view-all-btn:hover,
+.btn-primary-custom:hover {
+    background-color: #ff9c00 !important;
+    border-color: #ff9c00 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 156, 0, 0.3) !important;
+}
+/* ---------------------------------------------------------- */
