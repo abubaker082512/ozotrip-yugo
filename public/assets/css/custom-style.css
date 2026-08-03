@@ -13400,3 +13400,9 @@ img.gd-blue {
     color: #ddb651 !important;
     border-color: #ddb651 !important;
 }
+\n
+/* --- HOME HERO TOP PADDING ADJUSTMENT --- */
+.new-home-banner {
+    padding-top: 100px !important;
+}
+/* ---------------------------------------- */

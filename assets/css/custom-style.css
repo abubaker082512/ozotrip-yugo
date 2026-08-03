@@ -13537,3 +13537,9 @@ h3.reqr-head {
     color: #1c3659 !important;
     margin-bottom: 12px !important;
 }
+\n
+/* --- HOME HERO TOP PADDING ADJUSTMENT --- */
+.new-home-banner {
+    padding-top: 100px !important;
+}
+/* ---------------------------------------- */

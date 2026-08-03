@@ -1182,3 +1182,16 @@ img.promo-icon-head {
     max-height: 72px !important;
     width: auto !important;
 }
+\n
+/* --- NAVBAR SPACING ADJUSTMENT FOR 7 ITEMS --- */
+.nav-links {
+    width: auto !important;
+    max-width: max-content !important;
+}
+.nav-links ul li {
+    margin: 0 14px !important;
+}
+.main-topper-11 {
+    left: 14px !important;
+}
+/* --------------------------------------------- */
