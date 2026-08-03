@@ -2,8 +2,8 @@
 :root {
     --ozo-navy: #1c3659;
     --ozo-navy-dark: #0f1e36;
-    --ozo-gold: #d4af37;
-    --ozo-gold-dark: #c59b27;
+    --ozo-gold: #ff9c00;
+    --ozo-gold-dark: #e08500;
     --ozo-white: #ffffff;
     --ozo-text: #1e293b;
     --ozo-text-muted: #64748b;
@@ -550,20 +550,20 @@ td.day.disabled {
   font-size: 16px;
   padding: 6px 0;
   border-radius: 30px;
-  box-shadow: 0 0 0 2px #ddb651 inset;
-  background-color: #ddb651;
+  box-shadow: 0 0 0 2px #ff9c00 inset;
+  background-color: #ff9c00;
 }
 
 .subscribe button:hover {
   background-color: #fff;
-  color: #ddb651;
+  color: #ff9c00;
 }
 @media (max-width: 667px) {
   .subscribe button {
     width: 34%;
     font-size: 12px;
     padding: 9px 0;
-    background-color: #ddb651;
+    background-color: #ff9c00;
   }
   .subscribe h4 {
     font-size: 17px;
@@ -987,7 +987,7 @@ td.day.disabled {
 }
 
 .cash-back2 {
-  color: #ddb651;
+  color: #ff9c00;
   padding: 6px 10px 4px;
   border-radius: 8px;
   background-color: #fff;
@@ -1069,7 +1069,7 @@ button.book {
 
 .flight-box2 ul li span,
 .go-reward {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .flight-box3 {
@@ -1663,7 +1663,7 @@ input.select2-search__field,
 .save-tag {
   color: #fff;
   border-radius: 30px;
-  background-color: #ddb651;
+  background-color: #ff9c00;
   font-size: 14px;
   padding: 3px 14px;
 }
@@ -1712,7 +1712,7 @@ input.select2-search__field,
 
 .pkr-discount,
 .more-discounts h3 span {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .signup-btn {
@@ -1741,7 +1741,7 @@ img.offer-resp-gif {
 .ph-number,
 .sitemap-info address,
 .copyright p {
-  color: #ddb651;
+  color: #ff9c00;
   font-size: 17px;
   line-height: 18px;
 }
@@ -1798,7 +1798,7 @@ img.offer-resp-gif {
 
 .sitemap li a:hover,
 .ph-number span {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .ph-number {
@@ -1832,8 +1832,8 @@ img.offer-resp-gif {
 }
 
 .sitemap-info ul li a:hover {
-  color: #ddb651;
-  box-shadow: 0 0 0 1px #ddb651 inset;
+  color: #ff9c00;
+  box-shadow: 0 0 0 1px #ff9c00 inset;
 }
 
 .sitemap-info address {
@@ -1865,7 +1865,7 @@ img.offer-resp-gif {
   height: 2px;
   border: none;
   margin: 5px 0 0;
-  background-color: #ddb651;
+  background-color: #ff9c00;
 }
 
 .prices .ui-state-default,
@@ -2028,7 +2028,7 @@ img.offer-resp-gif {
 .login-section p a:hover,
 .login-section .otp-box p a,
 .login-section p.forgot-pin a {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .enter-pin input {
@@ -2063,7 +2063,7 @@ img.offer-resp-gif {
 }
 
 .login-section .otp-box p a {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .enter-otp button {
@@ -2458,7 +2458,7 @@ img.w-flg-cls {
 }
 
 .visa_overview-box a {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .visa_overview-box p a {
@@ -2592,7 +2592,7 @@ img.w-flg-cls {
   color: #fff;
   text-align: center;
   border-radius: 30px;
-  background-color: #ddb651;
+  background-color: #ff9c00;
 }
 
 .important-note p,
@@ -2634,7 +2634,7 @@ img.w-flg-cls {
 
 .important-note h6,
 .visa_detail h6 {
-  color: #ddb651;
+  color: #ff9c00;
   margin: 0 0 8px;
 }
 
@@ -2651,7 +2651,7 @@ img.w-flg-cls {
 }
 
 .customer-info h4 {
-  color: #ddb651;
+  color: #ff9c00;
   margin: 0 0 5px;
   font-size: 13px;
 }
@@ -2770,7 +2770,7 @@ img.w-flg-cls {
   height: 2px;
   border: none;
   margin: 5px 0 0;
-  background-color: #ddb651;
+  background-color: #ff9c00;
 }
 
 .prices .ui-state-default,
@@ -2934,7 +2934,7 @@ img.w-flg-cls {
 .login-section p a:hover,
 .login-section .otp-box p a,
 .login-section p.forgot-pin a {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .enter-pin input {
@@ -2969,7 +2969,7 @@ img.w-flg-cls {
 }
 
 .login-section .otp-box p a {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 /*  */
@@ -3202,7 +3202,7 @@ img.w-flg-cls {
 
 .visa-price-summary ul.price-pay li.style1,
 .visa-price-summary ul li.style1 .style1 span {
-  color: #ddb651;
+  color: #ff9c00;
 }
 
 .visa-price-summary ul li.style1 .style1 {
@@ -3286,13 +3286,13 @@ img.w-flg-cls {
 
 .contact-app a {
   color: #fff !important;
-  background: #ddb651 !important;
-  box-shadow: 0 0 0 1px #ddb651 inset !important;
+  background: #ff9c00 !important;
+  box-shadow: 0 0 0 1px #ff9c00 inset !important;
 }
 
 .contact-online .contact-app a:hover {
   background: #fff !important;
-  color: #ddb651 !important;
+  color: #ff9c00 !important;
 }
 
 .passenger-login {
@@ -3406,12 +3406,12 @@ img.w-flg-cls {
 }
 
 .fights_tabs_ot .signup-outer .signup-btn a {
-  background: #ddb651;
+  background: #ff9c00;
   color: #fff;
 }
 
 .yugo_reward_in {
-  background: #ddb651;
+  background: #ff9c00;
 }
 
 .yugo_reward_in span {
@@ -3504,7 +3504,7 @@ img.w-flg-cls {
 }
 
 .carasoul-item-ot p {
-  color: #ddb651;
+  color: #ff9c00;
   margin-bottom: 5px !important;
   font-weight: 700;
 }
@@ -7611,7 +7611,7 @@ div.active {
   text-align: center;
 }
 .flight-fly-box-1 p {
-  color: #ddb651;
+  color: #ff9c00;
   font-size: 12px;
 }
 .flight-fly-box-1 img {
@@ -7654,7 +7654,7 @@ img.exclamation.position-absolute {
   text-align: center;
 }
 .flight-fly p:nth-child(1) {
-  color: #ddb651;
+  color: #ff9c00;
   font-size: 12px;
   margin-bottom: 0;
 }
@@ -7776,7 +7776,7 @@ img.exclamation.position-absolute {
   font-weight: 600;
 }
 .flights-flying-text h1 {
-  color: #ddb651;
+  color: #ff9c00;
   font-size: 21px;
   position: relative;
   max-width: 75px;
@@ -7799,7 +7799,7 @@ img.exclamation.position-absolute {
   margin-right: 5px;
 }
 .flights-flying-text p:nth-child(4) {
-  color: #ddb651;
+  color: #ff9c00;
 }
 .flights-flying-text p:nth-child(5) {
   color: #1c3659;
@@ -7908,14 +7908,14 @@ td.t-range {
   display: inline-block;
   padding: 3px 15px;
   font-size: 12px;
-  color: #ddb651;
+  color: #ff9c00;
   background: #fff;
   border-radius: 50px;
-  border: 1px solid #ddb651;
+  border: 1px solid #ff9c00;
   cursor: pointer;
 }
 .bound-flights .options-section .option.selected {
-  background: #ddb651;
+  background: #ff9c00;
   color: #fff;
 }
 .flights-flying-width {
@@ -9846,15 +9846,15 @@ td.t-range {
     cursor: pointer;
     padding: 6px;
     font-size: 13px;
-    color: #ddb651 !important;
+    color: #ff9c00 !important;
     background: none !important;
-    border-color: #ddb651 !important;
+    border-color: #ff9c00 !important;
   }
 
   .flight-s-btn .flight-s.active,
   .flight-s-btn .price-s.active {
     color: #fff !important;
-    background: #ddb651 !important;
+    background: #ff9c00 !important;
   }
 
   .price-flight-mb-view {
@@ -10101,14 +10101,14 @@ td.t-range {
     text-decoration: none;
     border-radius: 20px;
     color: #fff;
-    box-shadow: 0 0 0 1px #ddb651;
-    background: url(../../assets/img/home/card-rate-1.png) no-repeat 92% center #ddb651;
+    box-shadow: 0 0 0 1px #ff9c00;
+    background: url(../../assets/img/home/card-rate-1.png) no-repeat 92% center #ff9c00;
     font-size: 11px;
     padding: 1px 16px 0 7px;
   }
 
   .pay-price-mb-box .rate-card.active {
-    color: #ddb651;
+    color: #ff9c00;
     background: url(../../assets/img/home/card-rate-2.png) no-repeat 92% center;
   }
 
@@ -10119,7 +10119,7 @@ td.t-range {
   }
 
   .pay-price-mb-box .yugo-rewards span {
-    color: #ddb651;
+    color: #ff9c00;
   }
 
   .visa-application-box {
@@ -11532,8 +11532,8 @@ img.show-mobile {
   .contact-inquiry {
     color: #fff;
     font-size: 13px;
-    background: #ddb651;
-    border: 1px solid #ddb651;
+    background: #ff9c00;
+    border: 1px solid #ff9c00;
     text-transform: capitalize;
     border-radius: 30px;
     padding: 0px 17px;
@@ -11618,8 +11618,8 @@ img.show-mobile {
   .contact-inquiry {
     color: #fff;
     font-size: 12px;
-    background: #ddb651;
-    border: 1px solid #ddb651;
+    background: #ff9c00;
+    border: 1px solid #ff9c00;
     text-transform: capitalize;
     border-radius: 30px;
     padding: 4px 11px !important;
@@ -11724,7 +11724,7 @@ img.show-mobile {
     font-size: 7px;
     font-weight: 400;
     line-height: 7px;
-    color: #ddb651;
+    color: #ff9c00;
   }
 }
 
@@ -13408,8 +13408,8 @@ img.gd-blue {
     transition: color 0.2s ease, border-color 0.2s ease !important;
 }
 .powered-by-abt a:hover {
-    color: #ddb651 !important;
-    border-color: #ddb651 !important;
+    color: #ff9c00 !important;
+    border-color: #ff9c00 !important;
 }
 
 /* Modern Accordion Styles for Visa Requirements */

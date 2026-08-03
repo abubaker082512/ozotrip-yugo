@@ -205,7 +205,7 @@ a.active.choose-11-user{
 
 .header-links li a:hover {
     border-radius: 8px;
-    background-color: #ddb651;
+    background-color: #ff9c00;
 }
 
 .mobile_nav_sticky {
@@ -353,7 +353,7 @@ p.tag-line-save{
     color: #ffffff;
 }
 span.sve-bld {
-    color: #ddb651;
+    color: #ff9c00;
     font-weight: 500;
 }
 img.promo-icon-head {
@@ -498,7 +498,7 @@ img.promo-icon-head {
     }
     a.inner-text-tripple-find{
         font-size: 12px;
-        color: #ddb651 !important;
+        color: #ff9c00 !important;
         padding: 9px;
         font-weight: 600;
         text-decoration: none;

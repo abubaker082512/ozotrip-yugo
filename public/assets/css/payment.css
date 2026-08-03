@@ -553,7 +553,7 @@ button.blue-btn.d-inline-block.align-top {
 
 .payment-table table tr:last-child td {
     background-color: #fbebeb;
-    border-top: 3px solid #ddb651;
+    border-top: 3px solid #ff9c00;
 }
 
 .payment-table table tr:nth-child(2) td {
@@ -735,7 +735,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .thankyou p a {
-    color: #ddb651;
+    color: #ff9c00;
 }
 
 .thankyou p {
@@ -937,7 +937,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .pay-price {
-    color: #ddb651;
+    color: #ff9c00;
     padding: 8px 0 0;
     margin: 12px 0 0;
     font-size: 14px;
@@ -1068,7 +1068,7 @@ button.blue-btn.d-inline-block.align-top {
 }
 
 .steps-info-bt .rewards-promo ul li.pay-your-price {
-    color: #ddb651;
+    color: #ff9c00;
 }
 
 div#navbarSupportedContent2 {
@@ -1094,7 +1094,7 @@ div#navbarSupportedContent2 {
 }
 
 .steps-info-bt .rewards-promo ul li .pay-now a {
-    background-color: #ddb651;
+    background-color: #ff9c00;
 }
 
 .visa-price-summary {
@@ -1260,7 +1260,7 @@ div#navbarSupportedContent2 {
 }
 
 .criteria-text h3 {
-    color: #ddb651;
+    color: #ff9c00;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -1284,7 +1284,7 @@ div#navbarSupportedContent2 {
 
 .criteria-text p a:last-child {
     text-decoration: none;
-    color: #ddb651;
+    color: #ff9c00;
 }
 
 .criteria-text {
@@ -1367,7 +1367,7 @@ div#navbarSupportedContent2 {
 /* ****************** Criteria Left ****************** */
 
 .criteria-left {
-    background: #ddb651;
+    background: #ff9c00;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1431,7 +1431,7 @@ div#navbarSupportedContent2 {
 }
 
 .condition-text h3 {
-    color: #ddb651;
+    color: #ff9c00;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: 700;
@@ -1474,7 +1474,7 @@ div#navbarSupportedContent2 {
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #ddb651;
+    background: #ff9c00;
     left: 0;
     top: 13px;
 }
@@ -1492,7 +1492,7 @@ div#navbarSupportedContent2 {
 }
 
 .condition-text ul li span:nth-child(3) {
-    color: #ddb651;
+    color: #ff9c00;
 }
 
 .condition-text ul li span:nth-child(4) {

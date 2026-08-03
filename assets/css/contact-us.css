@@ -52,8 +52,8 @@
 }
 
 .write-us a {
-    background-color: #ddb651;
-    box-shadow: 0 0 0 2px #ddb651 inset;
+    background-color: #ff9c00;
+    box-shadow: 0 0 0 2px #ff9c00 inset;
 }
 
 .call-us a:hover,
@@ -76,7 +76,7 @@
 }
 
 .write-us a:hover {
-    color: #ddb651;
+    color: #ff9c00;
 }
 
 @media screen and (max-width: 991px) {
