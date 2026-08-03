@@ -13693,3 +13693,25 @@ h2.section-title-navy,
     margin-bottom: 20px !important;
 }
 
+/* ==========================================
+   FLOAT CONTAINMENT & CLEARING SYSTEM
+   Prevents height-collapse on float children.
+   ========================================== */
+section.wrapper,
+.wrapper,
+.stats-cards-wrapper,
+.tour-carousel-section,
+.unique-wrapper,
+.seo-point-box,
+.seo-res-box,
+.video-boxes,
+.main-box-vsa,
+.umrah-outer-2desk,
+.scrn-rr,
+.wrapper-newschnage,
+.features,
+.desktop-offices,
+.wrapper-wrapss22 {
+    display: flow-root !important;
+    clear: both !important;
+}

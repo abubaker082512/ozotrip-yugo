@@ -2813,6 +2813,33 @@ a.double-25 {
     padding-bottom: 20px !important;
   }
 
+  /* ── Float Containment & Height Collapse Fix ──── */
+  /* Establishes a BFC so floated children expand
+     the parent container height correctly.          */
+  section.wrapper,
+  div.stats-cards-wrapper,
+  div.tour-carousel-section,
+  div.unique-wrapper,
+  div.seo-point-box,
+  section.seo-res-box,
+  div.wrapper.video-boxes,
+  div.video-boxes,
+  div.main-box-vsa,
+  div.main-box-vsa.col-xl-12.float-left,
+  div.umrah-outer-2desk,
+  .col-xl-12.float-left.umrah-outer-2desk,
+  div.scrn-rr,
+  .col-xl-12.float-left.scrn-rr,
+  div.wrapper-newschnage,
+  section.testimonial-section-new,
+  div.wrapper-wrapss22,
+  div.features,
+  div.features.col-xl-12.float-left,
+  div.desktop-offices {
+    display: flow-root !important;
+    clear: both !important;
+  }
+
 </style>
 </head>
 <body>
