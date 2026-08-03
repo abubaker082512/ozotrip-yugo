@@ -1,3 +1,14 @@
+
+:root {
+    --ozo-navy: #1c3659;
+    --ozo-navy-dark: #0f1e36;
+    --ozo-gold: #d4af37;
+    --ozo-gold-dark: #c59b27;
+    --ozo-white: #ffffff;
+    --ozo-text: #1e293b;
+    --ozo-text-muted: #64748b;
+    --ozo-bg: #faf9f6;
+}
 /* --- GLOBAL TYPOGRAPHY REDESIGN: OPTION 1 (OUTFIT + INTER) --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -13543,3 +13554,55 @@ h3.reqr-head {
     padding-top: 100px !important;
 }
 /* ---------------------------------------- */
+
+
+/* --- LUXURY SLATE BLACK FOOTER REDESIGN --- */
+footer.footer {
+    background: #0a1120 !important;
+    border-top: 4px solid var(--ozo-gold) !important;
+    padding: 80px 0 20px !important;
+    float: left !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+footer.footer h4, 
+footer.footer h4.rubik-medium, 
+footer.footer .heading-footer {
+    font-family: 'Outfit', sans-serif !important;
+    color: var(--ozo-gold) !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.8px !important;
+    margin-bottom: 24px !important;
+}
+
+footer.footer a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 13.5px !important;
+    transition: all 0.25s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    padding: 4px 0 !important;
+}
+
+footer.footer a:hover {
+    color: var(--ozo-gold) !important;
+    transform: translateX(4px) !important;
+}
+
+footer.footer p, footer.footer span, footer.footer li, footer.footer div {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 13.5px !important;
+    line-height: 1.6 !important;
+}
+
+footer.footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding-top: 24px !important;
+    margin-top: 40px !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+/* ------------------------------------------ */
