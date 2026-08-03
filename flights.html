@@ -1755,37 +1755,40 @@ a.double-25 {
 </div>
 </section>
 <!-- end -->
-<!--videos  -->
-<div class="row">
-<div class="col-lg-12 p-0">
-<div class="outer-wd-20">
-<div class="outer-vid-20">
-<div class="custom-row-20">
-<div class="custom-col-20-left">
-<h1 class="f-deals-20">Cheap <span class="bl-300">domestic</span> &amp; <span class="dbl-300">international</span> flights</h1>
-</div>
-<div class="custom-col-30-right">
-<a href="">
-<video autoplay="" class="vid-deals-20" loop="" muted="" poster="">
-<source src="assets/img/home/Spain!-deals-off.mp4" type="video/mp4"/>
-</video>
-</a>
-<a href="">
-<video autoplay="" class="vid-deals-20" loop="" muted="" poster="">
-<source src="assets/img/home/Switzerland-deal-off.mp4" type="video/mp4"/>
-</video>
-</a>
-<a href="">
-<video autoplay="" class="vid-deals-20" loop="" muted="" poster="">
-<source src="assets/img/home/Dubai-deals-off.mp4" type="video/mp4"/>
-</video>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<!-- Popular Airlines Worldwide Carousel -->
+<section class="wrapper" style="margin-top: 50px; margin-bottom: 50px;">
+  <div class="col-xl-12 float-left p-0">
+    <h3 style="color: #1c3659; font-weight: 800; text-align: center; margin-bottom: 30px; font-family: 'Outfit', sans-serif; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
+      Popular Airlines Worldwide
+    </h3>
+    <div class="airline-marquee-container">
+      <div class="airline-marquee-track">
+        <div class="airline-logo-card"><span style="color:#d71921; font-weight:900; letter-spacing:1px; font-family:'Outfit';">Emirates</span></div>
+        <div class="airline-logo-card"><span style="color:#5c0632; font-weight:800; font-family:'Outfit';">QATAR <span style="font-weight:300;">AIRWAYS</span></span></div>
+        <div class="airline-logo-card"><span style="color:#002244; font-weight:800; font-family:'Outfit'; border-bottom: 2px solid #D4AF37; padding-bottom:1px;">SINGAPORE</span></div>
+        <div class="airline-logo-card"><span style="color:#d81e06; font-weight:800; font-family:'Outfit';">TURKISH <span style="font-weight:400; color:#555;">AIRLINES</span></span></div>
+        <div class="airline-logo-card"><span style="color:#006643; font-weight:800; font-family:'Outfit';">SAUDIA</span></div>
+        <div class="airline-logo-card"><span style="color:#8c7853; font-weight:700; font-family:'Outfit'; letter-spacing:2px;">ETIHAD</span></div>
+        <div class="airline-logo-card"><span style="color:#0071ba; font-weight:800; font-family:'Outfit';">fly<span style="color:#f26522;">dubai</span></span></div>
+        <div class="airline-logo-card"><span style="color:#115e3b; font-weight:900; font-style:italic; font-family:'Outfit';">PIA</span></div>
+        <div class="airline-logo-card"><span style="color:#806620; font-weight:700; font-family:'Outfit'; letter-spacing:1px;">GULF AIR</span></div>
+        <div class="airline-logo-card"><span style="color:#e21a22; font-weight:800; font-family:'Outfit';">Air Arabia</span></div>
+        
+        <!-- Duplicate for seamless infinite wrapping -->
+        <div class="airline-logo-card"><span style="color:#d71921; font-weight:900; letter-spacing:1px; font-family:'Outfit';">Emirates</span></div>
+        <div class="airline-logo-card"><span style="color:#5c0632; font-weight:800; font-family:'Outfit';">QATAR <span style="font-weight:300;">AIRWAYS</span></span></div>
+        <div class="airline-logo-card"><span style="color:#002244; font-weight:800; font-family:'Outfit'; border-bottom: 2px solid #D4AF37; padding-bottom:1px;">SINGAPORE</span></div>
+        <div class="airline-logo-card"><span style="color:#d81e06; font-weight:800; font-family:'Outfit';">TURKISH <span style="font-weight:400; color:#555;">AIRLINES</span></span></div>
+        <div class="airline-logo-card"><span style="color:#006643; font-weight:800; font-family:'Outfit';">SAUDIA</span></div>
+        <div class="airline-logo-card"><span style="color:#8c7853; font-weight:700; font-family:'Outfit'; letter-spacing:2px;">ETIHAD</span></div>
+        <div class="airline-logo-card"><span style="color:#0071ba; font-weight:800; font-family:'Outfit';">fly<span style="color:#f26522;">dubai</span></span></div>
+        <div class="airline-logo-card"><span style="color:#115e3b; font-weight:900; font-style:italic; font-family:'Outfit';">PIA</span></div>
+        <div class="airline-logo-card"><span style="color:#806620; font-weight:700; font-family:'Outfit'; letter-spacing:1px;">GULF AIR</span></div>
+        <div class="airline-logo-card"><span style="color:#e21a22; font-weight:800; font-family:'Outfit';">Air Arabia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 <!-- -->
 <div class="wrapper-newschnage">
 <div class="row">
@@ -4553,7 +4556,69 @@ div#cokieMdl{
 
 }
 
-</style>
+
+    /* Infinite Marquee Scroll for Airline Logos */
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .airline-marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 24px 0;
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid rgba(28, 54, 89, 0.08);
+        box-shadow: 0 10px 30px rgba(28, 54, 89, 0.03);
+        position: relative;
+        width: 100%;
+    }
+    .airline-marquee-container::before,
+    .airline-marquee-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 120px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .airline-marquee-container::before {
+        left: 0;
+        background: linear-gradient(to right, #ffffff, transparent);
+    }
+    .airline-marquee-container::after {
+        right: 0;
+        background: linear-gradient(to left, #ffffff, transparent);
+    }
+    .airline-marquee-track {
+        display: inline-flex;
+        align-items: center;
+        gap: 30px;
+        animation: marquee 28s linear infinite;
+        width: max-content;
+    }
+    .airline-logo-card {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 30px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        min-width: 170px;
+        height: 54px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+        user-select: none;
+    }
+    .airline-logo-card:hover {
+        transform: translateY(-2px);
+        border-color: #d4af37;
+        background: #ffffff;
+        box-shadow: 0 8px 20px rgba(28, 54, 89, 0.06);
+    }
+    </style>
 <!-- Scripts -->
 <!-- JS Global Compulsory -->
 <script src="assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
