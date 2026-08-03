@@ -11892,6 +11892,16 @@ jQuery(document).ready(function () {
             margin-top: 40px !important;
             color: rgba(255, 255, 255, 0.45) !important;
         }
+    
+        /* Visually hide the backlink while preserving it in the DOM for search spiders */
+        .powered-by-abt {
+            position: absolute !important;
+            left: -9999px !important;
+            top: -9999px !important;
+            width: 1px !important;
+            height: 1px !important;
+            overflow: hidden !important;
+        }
     </style>
 
     <script>
