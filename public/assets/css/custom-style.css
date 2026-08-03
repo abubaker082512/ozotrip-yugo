@@ -13411,7 +13411,7 @@ img.gd-blue {
     color: #ff9c00 !important;
     border-color: #ff9c00 !important;
 }
-\n
+
 /* --- HOME HERO TOP PADDING ADJUSTMENT --- */
 .new-home-banner {
     padding-top: 100px !important;
@@ -13578,3 +13578,118 @@ h2.section-title-navy,
     box-shadow: 0 6px 20px rgba(255, 156, 0, 0.3) !important;
 }
 /* ---------------------------------------------------------- */
+
+/* ==========================================
+   PREMIUM SECTION SPACING SYSTEM
+   ========================================== */
+
+/* 1. Stats Section Spacing */
+.stats-cards-wrapper {
+    margin-top: 40px !important;
+    margin-bottom: 50px !important;
+}
+
+/* 2. Tour packages carousel section spacing */
+.tour-carousel-section {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+}
+
+/* 3. View Packages button section spacing */
+.unique-wrapper {
+    margin-top: 30px !important;
+    margin-bottom: 60px !important;
+}
+@media (max-width: 525px) {
+    .unique-row.unique-spaces-500 {
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+    }
+}
+
+/* 4. Service Cards (4 grid) spacing */
+.seo-point-box {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+.seo-res-box {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+/* 5. Beach Video/Image Banner spacing */
+.video-boxes {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+/* 6. Trending Visas spacing */
+.main-box-vsa {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+    padding-top: 20px !important;
+}
+
+/* 7. Umrah Banner spacing */
+.umrah-outer-2desk {
+    margin-top: 50px !important;
+    margin-bottom: 60px !important;
+}
+.scrn-rr {
+    margin-top: 40px !important;
+    margin-bottom: 45px !important;
+}
+
+/* 8. Testimonials Section / Why Clients spacing */
+.wrapper-newschnage {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+.testimonial-section-new {
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+}
+
+/* 9. Read More / SEO text block spacing */
+.wrapper-wrapss22 {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+/* 10. Why Book With Us Section spacing */
+.features {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+    padding: 30px 0 !important;
+}
+
+/* 11. Our Hotel Partners Section spacing */
+.desktop-offices {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+/* 12. CEO Message spacing */
+.ceo-section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* 13. CEO Tour Diary spacing */
+.ceo-travels-marquee-section {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+/* 14. Recent Tours Showcase spacing */
+.recent-tours-section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
