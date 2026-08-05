@@ -3136,19 +3136,278 @@ a.double-25 {
 
       <!-- Flights Tab Panel -->
       <div class="search-panel" id="flights-tab">
-                <div class="skyscanner-widget-container" style="background: #ffffff; padding: 20px; border-radius: 16px; box-shadow: 0 15px 35px rgba(28, 54, 89, 0.08); border: 1px solid rgba(28, 54, 89, 0.12); margin-top: 15px;">
-          <div
-            data-skyscanner-widget="FlightSearchWidget"
-            data-locale="en-GB"
-            data-market="UK"
-            data-currency="GBP"
-            data-hide-powered-by="false"
-            data-arrow-icon="false"
-            data-responsive="false"
-          ></div>
-          <script src="https://widgets.skyscanner.net/widget-server/js/loader.js" async></script>
+        <div class="yugo-search-bar" style="background: none; padding: 0; box-shadow: none;">
+          <div class="search-navbar" style="margin-bottom: 15px;">
+            <ul class="nav nav-pills ml-0" style="gap: 5px;">
+              <li class="nav-item">
+                <a class="flight-type-btn" href="#" id="home-oneway-tab">One-Way</a>
+              </li>
+              <li class="nav-item">
+                <a class="flight-type-btn active" href="#" id="home-round-tab">Roundtrip</a>
+              </li>
+              <li class="nav-item">
+                <a class="flight-type-btn" href="#" id="home-multicity-tab">Multi-City</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tab-content" id="home-pills-tabContent">
+            <div class="tab-pane show active" id="home-round_oneWay">
+              <div class="search-bar-feilds" style="padding: 0; background: transparent;">
+                <form action="/flight-search" class="flight-search-form position-relative" method="get">
+                  <input name="searchtype" type="hidden" value="return" id="home-searchtype"/>
+                  
+                  <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: flex-end; width: 100%;">
+                    <!-- departure -->
+                    <div class="departure-cities" style="flex: 1; min-width: 200px;">
+                      <div class="departure-city-item city-item">
+                        <div class="code"></div>
+                        <input class="city" name="from[]" type="hidden"/>
+                        <div class="icons-wrap">
+                          <svg height="20" viewbox="0 0 576 512" width="15" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M372 143.9L172.7 40.2c-8-4.1-17.3-4.8-25.7-1.7l-41.1 15c-10.3 3.7-13.8 16.4-7.1 25l101.5 127.9l-100.2 36.4L40 206.2c-6.2-3.8-13.8-4.5-20.7-2.1l-16.3 6c-9.4 3.4-13.4 14.5-8.3 23.1L48.3 325c15.6 26.7 48.1 38.4 77.1 27.8l12.9-4.7l398.4-145c29.1-10.6 44-42.7 33.5-71.8s-42.7-44-71.8-33.5zM32.2 448c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32z" fill="currentColor"></path>
+                          </svg>
+                          <input class="autocomplete" placeholder="Departing From" type="text" style="outline: none !important;"/>
+                        </div>
+                      </div>
+                      <hr/>
+                      <div class="arrival-city-item city-item">
+                        <div class="code"></div>
+                        <input class="city" name="to[]" type="hidden"/>
+                        <div class="icons-wrap">
+                          <svg height="24" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 21q-.425 0-.712-.288T3 20t.288-.712T4 19h16q.425 0 .713.288T21 20t-.288.713T20 21zm14.55-5.05l-14.1-4q-.65-.2-1.05-.725t-.4-1.2V5.6q0-.5.4-.8t.9-.175l.575.15q.25.075.438.238t.262.412L6.6 8.4l3.45.975l-.7-6.775q-.075-.65.438-1.063t1.137-.212l.525.15q.275.075.488.288t.312.487l3 8.625l4.3 1.225q.625.2 1.038.725t.412 1.2q0 .875-.712 1.537t-1.738.388" fill="currentColor"></path>
+                          </svg>
+                          <input class="autocomplete" placeholder="Going to" type="text" style="outline: none !important;"/>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- departure-dates -->
+                    <div class="departure-dates-main data-wraps" id="home-dates-wrap" style="flex: 1.2; min-width: 250px;">
+                      <div class="departure-cities t-datepicker">
+                        <div class="checkin-block position-relative">
+                          <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none">
+                              <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
+                              <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
+                              <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>
+                            </g>
+                          </svg>
+                          <div class="departure-city-item t-check-in"></div>
+                        </div>
+                        <hr/>
+                        <div class="checkout-block position-relative">
+                          <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="none">
+                              <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
+                              <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
+                              <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="12"></rect>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="7" y="16"></rect>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="12"></rect>
+                              <rect fill="currentColor" height="2" rx=".5" width="4" x="13" y="16"></rect>
+                            </g>
+                          </svg>
+                          <div class="departure-city-item t-check-out"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- travelers & class -->
+                    <div class="departure-dates-main" style="flex: 1.2; min-width: 250px; position: relative;">
+                      <div class="departure-cities" id="home-travelers-trigger">
+                        <div class="travelars">
+                          <span class="total_traveler last-right-icons">
+                            <img alt="passenger" src="assets/img/passenger.png" width="15"/>Travelers
+                          </span>
+                          <div class="travelars-content">
+                            <div class="content" id="home-travelers-text">01</div>
+                          </div>
+                        </div>
+                        <hr/>
+                        <div class="travelars travelars-class">
+                          <span class="span-class last-right-icons">
+                            <img alt="class" src="assets/img/tickets.png" width="12"/>Class
+                          </span>
+                          <div class="travelars-class-content">
+                            <div class="content" id="home-class-text">Economy</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- Travelers selector dropdown panel -->
+                      <div class="travelars-detl home-travelers-dropdown" id="home-travelers-dropdown" style="display: none; top: 100%; right: 0; position: absolute; z-index: 99999; background: #fff; border: 1px solid #ddd; padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); width: 280px;">
+                        <p style="font-weight:700; color:#1c3659; margin-bottom:10px;">Travelers</p>
+                        <div class="travel-detl-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                          <div class="travel-detl-inner">
+                            <p style="margin:0; font-weight:600;">Adults</p>
+                          </div>
+                          <div class="plus-minus-input-group" style="display:flex; align-items:center; gap:8px;">
+                            <button type="button" class="btn-minuse home-adult-minus" style="width:24px; height:24px; border:1px solid #1c3659; border-radius:50%; background:none; color:#1c3659; font-weight:bold;">-</button>
+                            <input class="plus-minus-counter" id="home-adult" name="adult" type="number" value="1" readonly style="width:20px; text-align:center; border:none; font-weight:bold;"/>
+                            <button type="button" class="btn-pluss home-adult-plus" style="width:24px; height:24px; border:1px solid #1c3659; border-radius:50%; background:none; color:#1c3659; font-weight:bold;">+</button>
+                          </div>
+                        </div>
+                        <div class="travel-detl-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                          <div class="travel-detl-inner">
+                            <p style="margin:0; font-weight:600;">Children</p>
+                            <span style="font-size:11px; color:#666;">2 - 12 Years</span>
+                          </div>
+                          <div class="plus-minus-input-group" style="display:flex; align-items:center; gap:8px;">
+                            <button type="button" class="btn-minuse home-child-minus" style="width:24px; height:24px; border:1px solid #1c3659; border-radius:50%; background:none; color:#1c3659; font-weight:bold;">-</button>
+                            <input class="plus-minus-counter" id="home-child" name="children" type="number" value="0" readonly style="width:20px; text-align:center; border:none; font-weight:bold;"/>
+                            <button type="button" class="btn-pluss home-child-plus" style="width:24px; height:24px; border:1px solid #1c3659; border-radius:50%; background:none; color:#1c3659; font-weight:bold;">+</button>
+                          </div>
+                        </div>
+                        <div class="travel-detl-item" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                          <div class="travel-detl-inner">
+                            <p style="margin:0; font-weight:600;">Infants</p>
+                            <span style="font-size:11px; color:#666;">0 - 23 Months</span>
+                          </div>
+                          <div class="plus-minus-input-group" style="display:flex; align-items:center; gap:8px;">
+                            <button type="button" class="btn-minuse home-infant-minus" style="width:24px; height:24px; border:1px solid #1c3659; border-radius:50%; background:none; color:#1c3659; font-weight:bold;">-</button>
+                            <input class="plus-minus-counter" id="home-infant" name="infant" type="number" value="0" readonly style="width:20px; text-align:center; border:none; font-weight:bold;"/>
+                            <button type="button" class="btn-pluss home-infant-plus" style="width:24px; height:24px; border:1px solid #1c3659; border-radius:50%; background:none; color:#1c3659; font-weight:bold;">+</button>
+                          </div>
+                        </div>
+                        <p style="font-weight:700; color:#1c3659; margin-bottom:5px;">Class</p>
+                        <div class="travl-class" style="display:flex; gap:5px; margin-bottom:15px;">
+                          <input id="home-cabinclass" name="cabinclass" type="hidden" value="economy"/>
+                          <button type="button" class="home-cabin-btn active" data-class="economy" style="flex:1; padding:5px 8px; border:1px solid #1c3659; background:#1c3659; color:#fff; border-radius:4px; font-size:12px; font-weight:600; outline: none !important;">Economy</button>
+                          <button type="button" class="home-cabin-btn" data-class="business" style="flex:1; padding:5px 8px; border:1px solid #1c3659; background:none; color:#1c3659; border-radius:4px; font-size:12px; font-weight:600; outline: none !important;">Business</button>
+                          <button type="button" class="home-cabin-btn" data-class="first" style="flex:1; padding:5px 8px; border:1px solid #1c3659; background:none; color:#1c3659; border-radius:4px; font-size:12px; font-weight:600; outline: none !important;">First</button>
+                        </div>
+                        <button class="travel-dropdown-apply home-travel-apply" type="button" style="width:100%; padding:8px; background:#1c3659; color:#fff; border:none; border-radius:4px; font-weight:bold; font-size:13px; outline: none !important;">Apply</button>
+                      </div>
+                    </div>
+                    
+                    <!-- search action -->
+                    <div style="flex: 0.8; min-width: 150px;">
+                      <button class="search-action-btn w-100" type="submit" style="height: 48px;">Search Flights</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <div class="tab-pane" id="home-multiCity" style="display: none;">
+              <div class="search-bar-feilds rounded-0" style="padding: 0; background: transparent;">
+                <form action="/flight-search" class="flight-search-form position-relative" method="get">
+                  <input name="searchtype" type="hidden" value="multicity"/>
+                  <div class="multi-city-segments" id="home-multi-city-segments">
+                    <!-- Segment 1 -->
+                    <div class="multi-city-segment" data-segment="1" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:15px; margin-bottom:10px;">
+                      <div class="segment-header" style="font-weight:700; color:#1c3659; margin-bottom:10px; font-size:12px;">Flight 1</div>
+                      <div class="multi-city-segment-inner" style="display:flex; gap:15px; flex-wrap:wrap; align-items:flex-end;">
+                        <div class="departure-cities" style="flex:2; min-width:280px; display:flex;">
+                          <div class="departure-city-item city-item" style="flex:1;">
+                            <div class="code"></div>
+                            <input class="city" name="from[]" type="hidden"/>
+                            <div class="icons-wrap">
+                              <svg height="20" viewbox="0 0 576 512" width="15" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M372 143.9L172.7 40.2c-8-4.1-17.3-4.8-25.7-1.7l-41.1 15c-10.3 3.7-13.8 16.4-7.1 25l101.5 127.9l-100.2 36.4L40 206.2c-6.2-3.8-13.8-4.5-20.7-2.1l-16.3 6c-9.4 3.4-13.4 14.5-8.3 23.1L48.3 325c15.6 26.7 48.1 38.4 77.1 27.8l12.9-4.7l398.4-145c29.1-10.6 44-42.7 33.5-71.8s-42.7-44-71.8-33.5zM32.2 448c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32z" fill="currentColor"></path>
+                              </svg>
+                              <input class="autocomplete" placeholder="Departing From" type="text" style="outline: none !important;"/>
+                            </div>
+                          </div>
+                          <hr/>
+                          <div class="arrival-city-item city-item" style="flex:1;">
+                            <div class="code"></div>
+                            <input class="city" name="to[]" type="hidden"/>
+                            <div class="icons-wrap">
+                              <svg height="24" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 21q-.425 0-.712-.288T3 20t.288-.712T4 19h16q.425 0 .713.288T21 20t-.288.713T20 21zm14.55-5.05l-14.1-4q-.65-.2-1.05-.725t-.4-1.2V5.6q0-.5.4-.8t.9-.175l.575.15q.25.075.438.238t.262.412L6.6 8.4l3.45.975l-.7-6.775q-.075-.65.438-1.063t1.137-.212l.525.15q.275.075.488.288t.312.487l3 8.625l4.3 1.225q.625.2 1.038.725t.412 1.2q0 .875-.712 1.537t-1.738.388" fill="currentColor"></path>
+                              </svg>
+                              <input class="autocomplete" placeholder="Going to" type="text" style="outline: none !important;"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="departure-dates-main t-datepicker only-checkin" style="flex:1; min-width:150px;">
+                          <div class="checkin-block position-relative">
+                            <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+                              <g fill="none">
+                                <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
+                                <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
+                                <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+                              </g>
+                            </svg>
+                            <div class="departure-city-item t-check-in"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Segment 2 -->
+                    <div class="multi-city-segment" data-segment="2" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:15px; margin-bottom:10px;">
+                      <div class="segment-header" style="font-weight:700; color:#1c3659; margin-bottom:10px; font-size:12px;">Flight 2</div>
+                      <div class="multi-city-segment-inner" style="display:flex; gap:15px; flex-wrap:wrap; align-items:flex-end;">
+                        <div class="departure-cities" style="flex:2; min-width:280px; display:flex;">
+                          <div class="departure-city-item city-item" style="flex:1;">
+                            <div class="code"></div>
+                            <input class="city" name="from[]" type="hidden"/>
+                            <div class="icons-wrap">
+                              <svg height="20" viewbox="0 0 576 512" width="15" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M372 143.9L172.7 40.2c-8-4.1-17.3-4.8-25.7-1.7l-41.1 15c-10.3 3.7-13.8 16.4-7.1 25l101.5 127.9l-100.2 36.4L40 206.2c-6.2-3.8-13.8-4.5-20.7-2.1l-16.3 6c-9.4 3.4-13.4 14.5-8.3 23.1L48.3 325c15.6 26.7 48.1 38.4 77.1 27.8l12.9-4.7l398.4-145c29.1-10.6 44-42.7 33.5-71.8s-42.7-44-71.8-33.5zM32.2 448c-17.7 0-32 14.3-32 32s14.3 32 32 32h512c17.7 0 32-14.3 32-32s-14.3-32-32-32z" fill="currentColor"></path>
+                              </svg>
+                              <input class="autocomplete" placeholder="Departing From" type="text" style="outline: none !important;"/>
+                            </div>
+                          </div>
+                          <hr/>
+                          <div class="arrival-city-item city-item" style="flex:1;">
+                            <div class="code"></div>
+                            <input class="city" name="to[]" type="hidden"/>
+                            <div class="icons-wrap">
+                              <svg height="24" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 21q-.425 0-.712-.288T3 20t.288-.712T4 19h16q.425 0 .713.288T21 20t-.288.713T20 21zm14.55-5.05l-14.1-4q-.65-.2-1.05-.725t-.4-1.2V5.6q0-.5.4-.8t.9-.175l.575.15q.25.075.438.238t.262.412L6.6 8.4l3.45.975l-.7-6.775q-.075-.65.438-1.063t1.137-.212l.525.15q.275.075.488.288t.312.487l3 8.625l4.3 1.225q.625.2 1.038.725t.412 1.2q0 .875-.712 1.537t-1.738.388" fill="currentColor"></path>
+                              </svg>
+                              <input class="autocomplete" placeholder="Going to" type="text" style="outline: none !important;"/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="departure-dates-main t-datepicker only-checkin" style="flex:1; min-width:150px;">
+                          <div class="checkin-block position-relative">
+                            <svg class="depart-icon" height="24" viewbox="0 0 24 24" width="15" xmlns="http://www.w3.org/2000/svg">
+                              <g fill="none">
+                                <rect height="15" rx="2" stroke="currentColor" stroke-width="2" width="18" x="3" y="6"></rect>
+                                <path d="M3 10c0-1.886 0-2.828.586-3.414S5.114 6 7 6h10c1.886 0 2.828 0 3.414.586S21 8.114 21 10z" fill="currentColor"></path>
+                                <path d="M7 3v3m10-3v3" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+                              </g>
+                            </svg>
+                            <div class="departure-city-item t-check-in"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px; width:100%;">
+                    <div>
+                      <button type="button" class="btn btn-outline-primary" id="home-add-flight-btn" style="border:1px solid #1c3659; color:#1c3659; border-radius:4px; font-weight:600; font-size:12px; padding:6px 16px; outline: none !important;">+ Add Flight</button>
+                    </div>
+                    <div style="display:flex; gap:15px; align-items:flex-end;">
+                      <div class="departure-dates-main" style="width:250px; position:relative;">
+                        <div class="departure-cities" id="home-multicity-travelers-trigger" style="display:flex; padding:8px 15px; border:1.5px solid #cbd5e1; border-radius:8px;">
+                          <span style="font-size:13px; font-weight:700; color:#1c3659; display:flex; align-items:center; gap:8px;">
+                            <img alt="passenger" src="assets/img/passenger.png" width="15"/>
+                            <span id="home-multicity-travelers-text">01</span> Travelers,
+                            <span id="home-multicity-class-text">Economy</span>
+                          </span>
+                        </div>
+                      </div>
+                      <button class="search-action-btn" type="submit" style="height:48px; padding:0 35px;">Search Flights</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-</div>
+        <!-- Flight Search Results Container -->
+        <div id="flight-results-container" class="flight-results-wrap" style="display: none;"></div>
+      </div>
 
       <!-- Umrah Tab Panel -->
       <div class="search-panel" id="umrah-tab">

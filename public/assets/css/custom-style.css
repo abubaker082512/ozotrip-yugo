@@ -13774,3 +13774,232 @@ footer.footer {
     margin-right: 0 !important;
     box-sizing: border-box !important;
 }
+
+/* --- FLIGHT SEARCH RESULTS STYLING --- */
+.flight-results-wrap {
+    width: 100%;
+    margin-top: 30px;
+    font-family: 'Outfit', sans-serif;
+    clear: both;
+}
+
+.results-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1c3659;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.flight-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(28, 54, 89, 0.1);
+    box-shadow: 0 10px 25px rgba(28, 54, 89, 0.04);
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.flight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(28, 54, 89, 0.08);
+    border-color: rgba(28, 54, 89, 0.2);
+}
+
+.flight-carrier-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1.5;
+}
+
+.carrier-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #f8fafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+.carrier-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.carrier-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1c3659;
+}
+
+.flight-route-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex: 3;
+    text-align: center;
+}
+
+.route-point {
+    display: flex;
+    flex-direction: column;
+}
+
+.route-time {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1c3659;
+}
+
+.route-airport {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.route-path {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 100px;
+}
+
+.route-duration {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.route-line {
+    width: 100%;
+    height: 2px;
+    background: #cbd5e1;
+    position: relative;
+}
+
+.route-line::after {
+    content: '✈️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    font-size: 10px;
+    color: #94a3b8;
+    background: #ffffff;
+    padding: 0 4px;
+}
+
+.route-stops {
+    font-size: 11px;
+    color: #ef4444;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+.route-stops.nonstop {
+    color: #22c55e;
+}
+
+.flight-price-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex: 1.5;
+}
+
+.flight-price {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff9c00;
+}
+
+.flight-price-label {
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.flight-book-btn {
+    background: #25d366;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none !important;
+    transition: background 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.flight-book-btn:hover {
+    background: #20ba56;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+/* Loading skeleton styles */
+.flight-skeleton-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(28, 54, 89, 0.06);
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skeleton-item {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: loading-skeleton 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes loading-skeleton {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+@media (max-width: 768px) {
+    .flight-card, .flight-skeleton-card {
+        flex-direction: column;
+        gap: 20px;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .flight-carrier-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .flight-price-action {
+        align-items: center;
+    }
+}
