@@ -60,7 +60,7 @@
         var form = e.target;
 
         // Skip flight search forms (handled by flight-search-handler.js)
-        if (form.classList.contains('flight-search-form') || form.action.includes('search')) {
+        if (form.classList.contains('flight-search-form') || form.action.includes('search') || form.action.includes('flights')) {
             return;
         }
 

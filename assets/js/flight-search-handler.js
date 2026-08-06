@@ -230,9 +230,18 @@
         var depDate = depDateIn ? depDateIn.value.trim() : "";
         var retDate = (retDateIn && searchType === 'return') ? retDateIn.value.trim() : "";
 
-        // Extract airport codes e.g. LHE, DXB
-        var oCode = originName.match(/\(([^)]+)\)/) ? originName.match(/\(([^)]+)\)/)[1] : originName;
-        var dCode = destName.match(/\(([^)]+)\)/) ? destName.match(/\(([^)]+)\)/)[1] : destName;
+        // Extract airport codes e.g. LHE, DXB from hidden inputs or fallback to parsing the visible input
+        var originHidden = form.querySelector('input[name="from[]"]');
+        var destHidden = form.querySelector('input[name="to[]"]');
+        var oCode = (originHidden && originHidden.value && originHidden.value.trim().length === 3) ? originHidden.value.trim() : "";
+        var dCode = (destHidden && destHidden.value && destHidden.value.trim().length === 3) ? destHidden.value.trim() : "";
+
+        if (!oCode) {
+            oCode = originName.match(/\(([^)]+)\)/) ? originName.match(/\(([^)]+)\)/)[1] : originName;
+        }
+        if (!dCode) {
+            dCode = destName.match(/\(([^)]+)\)/) ? destName.match(/\(([^)]+)\)/)[1] : destName;
+        }
 
         if (!oCode) {
             alert("Please select a valid departing location.");
@@ -562,5 +571,75 @@
         }
     }
     bindJQuerySubmit();
+
+    // Auto-execute flight search on page load if query parameters are present in URL
+    function autoExecuteSearchFromUrl() {
+        if (!document.getElementById('flight-results-container')) {
+            return;
+        }
+        var params = new URLSearchParams(window.location.search);
+        var fromVal = params.get('from[]');
+        if (!fromVal) {
+            fromVal = params.get('from');
+        }
+        var toVal = params.get('to[]') || params.get('to');
+        var depDateVal = params.get('departure_date[]') || params.get('departure_date');
+        var retDateVal = params.get('return_date');
+        var searchTypeVal = params.get('searchtype');
+
+        if (fromVal) {
+            var form = document.querySelector('.flight-search-form');
+            if (form) {
+                if (searchTypeVal) {
+                    var searchTypeInput = form.querySelector('input[name="searchtype"]');
+                    if (searchTypeInput) searchTypeInput.value = searchTypeVal;
+                }
+
+                var originIn = form.querySelector('input[placeholder*="Departing"]');
+                var destIn = form.querySelector('input[placeholder*="Going to"]');
+                var originHidden = form.querySelector('input[name="from[]"]');
+                var destHidden = form.querySelector('input[name="to[]"]');
+
+                if (originIn) originIn.value = fromVal;
+                if (originHidden) originHidden.value = fromVal;
+
+                if (toVal) {
+                    if (destIn) destIn.value = toVal;
+                    if (destHidden) destHidden.value = toVal;
+                }
+
+                var depDateIn = form.querySelector('.t-input-check-in, input[name="departure_date[]"]');
+                var retDateIn = form.querySelector('.t-input-check-out');
+
+                if (depDateIn && depDateVal) {
+                    depDateIn.value = depDateVal;
+                }
+                if (retDateIn && retDateVal) {
+                    retDateIn.value = retDateVal;
+                }
+
+                // If tDatePicker instances exist, try updating them
+                try {
+                    var $datesWrap = jQuery(form).find('.t-datepicker');
+                    if ($datesWrap.length && $datesWrap.data('tDatePicker')) {
+                        var dp = $datesWrap.data('tDatePicker');
+                        if (depDateVal) {
+                            dp.setStartDate(new Date(depDateVal));
+                        }
+                        if (retDateVal) {
+                            dp.setEndDate(new Date(retDateVal));
+                        }
+                    }
+                } catch (e) {
+                    console.warn("Could not sync tDatePicker values:", e);
+                }
+
+                setTimeout(function() {
+                    handleFormSubmit(form);
+                }, 500);
+            }
+        }
+    }
+    autoExecuteSearchFromUrl();
 
 })();
