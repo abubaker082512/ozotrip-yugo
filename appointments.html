@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<meta content="5g5nhJTOW5T6j1Gmjd3g0HzSVuxk06oKKoO1SQaC" name="csrf-token"/>
+<title>Book Appointment - OzoTrips</title>
+<meta content="Book your official visa consultancy and documentation appointment with OzoTrips experts." name="description"/>
+<link href="appointments.html" rel="canonical"/>
+
+<!-- Favicon -->
+<link href="assets/img/header/favicon.png" rel="shortcut icon"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<!-- CSS Implementing Plugins -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="assets/css/theme.css" rel="stylesheet"/>
+<link href="assets/css/custom-header.css" rel="stylesheet"/>
+<link href="assets/css/custom-style.css" rel="stylesheet"/>
+<link href="assets/css/custom-footer.css" rel="stylesheet"/>
+<link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+    .appointments-banner {
+        margin-top: 130px !important;
+    }
+    @media (max-width: 991px) {
+        .appointments-banner {
+            margin-top: 80px !important;
+        }
+    }
+    .form-group label {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #2d3748;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+        display: block;
+    }
+    .form-control-custom {
+        display: block;
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #1a202c;
+        background-color: #f7fafc;
+        border: 1px solid #cbd5e0;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        font-family: 'Inter', sans-serif;
+    }
+    .form-control-custom:focus {
+        background-color: #ffffff;
+        border-color: #1c3659;
+        box-shadow: 0 0 0 3px rgba(28, 54, 89, 0.1);
+        outline: 0;
+    }
+    .btn-submit-appt {
+        background: #1c3659;
+        color: #ffffff;
+        padding: 14px 28px;
+        border: none;
+        border-radius: 12px;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 12px rgba(28, 54, 89, 0.2);
+        width: 100%;
+    }
+    .btn-submit-appt:hover {
+        background: #ff9c00;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 156, 0, 0.3);
+        color: #ffffff !important;
+    }
+    .card-info {
+        background: #f7fafc;
+        border-radius: 16px;
+        padding: 24px;
+        border: 1px solid #e2e8f0;
+    }
+    .info-list li {
+        margin-bottom: 12px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #4a5568;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .info-list li i {
+        color: #ff9c00;
+        margin-top: 4px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="row" style="margin:0px;">
+    <div class="col-lg-12 p-0">
+        <div class="col-xl-12 p-0 off-save-20-bg">
+            <h1 class="save-20-prcnt">Use Promo Code 'SAVE10' to <span class="bl-bld">SAVE 10% </span> on Visas</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="float-left col-xl-12 p-0">
+        <header class="new-header yugo-header" id="header">
+            <div class="20-prcent-tag">
+                <p class="tag-line-save">
+                    <img alt="percentage icon" class="promo-icon-head" loading="lazy" src="assets/img/home/prcnt-con.png"/>
+                    Amazing Discount! Use Promo Code 'SAVE10' to  
+                    <span class="sve-bld">SAVE 10%</span> on Visas
+                </p>
+            </div>
+            <section class="wrapper">
+                <div class="u-header__section u-header__shadow-on-show-hide">
+                    <div class="container-fluid" id="logoAndNav">
+                        <!-- Nav -->
+                        <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space">
+                            <!-- Handheld Logo -->
+                            <a aria-label="OzoTrips" class="navbar-brand" href="index.html">
+                                <img alt="OzoTrips Logo" loading="lazy" src="assets/img/header/logo-light.png"/>
+                            </a>
+                            <!-- Responsive Toggle Button -->
+                            <button aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler btn u-hamburger u-hamburger--white collapsed" data-target="#navBar" type="button" onclick="(function(btn){var target=document.getElementById('navBar');var isOpen=target.classList.contains('show');if(isOpen){target.classList.remove('show');btn.classList.add('collapsed');btn.classList.remove('close2');}else{target.classList.add('show');btn.classList.remove('collapsed');btn.classList.add('close2');}document.querySelectorAll('.navbar-toggler').forEach(function(b){if(b!==btn){if(isOpen){b.classList.add('collapsed');b.classList.remove('close2');}else{b.classList.remove('collapsed');b.classList.add('close2');}}});})(this);return false;">
+                                <span class="u-hamburger__box" id="hamburgerTrigger">
+                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon"></span>
+                                </span>
+                            </button>
+                            <!-- End Responsive Toggle Button -->
+                            <div class="nav-links">
+                                <ul class="m-0 p-0 list-unstyled">
+                                    <li class=""><a href="index.html">Home</a></li>
+                                    <li class=""><a href="umrah.html">Umrah</a></li>
+                                    <li class=""><a href="visas.html">Visas</a></li>
+                                    <li class=""><a href="tours.html">Tours</a></li>
+                                    <li class=""><a href="flights.html">Flights</a></li>
+                                    <li class=""><a href="offers.html">Offers</a></li>
+                                    <div class="main-topper-11">
+                                        <div class="select-11" id="user-selection">
+                                            More
+                                            <img class="more-icon-11" src="assets/img/home/arrow-more.png"/>
+                                        </div>
+                                        <div class="main-box-open" id="dropdown-menu">
+                                            <a class="choose-11-user" href="cars.html">Car Rental</a>
+                                            <a class="choose-11-user" href="application_tracking.html">Tracking</a>
+                                            <a class="choose-11-user" href="appointments.html">Appointments</a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                            <!-- End Handheld Logo -->
+                            <!-- Navigation -->
+                            <div class="navbar-collapse u-header__navbar-collapse collapse position-relative" id="navBar">
+                                <ul class="navbar-nav text-center u-header__navbar-nav">
+                                    <!-- Home -->
+                                    <li class="nav-item"><a class="nav-link" href="index.html"><div class="h-icon"><span class="lft-ham">Home</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="umrah.html"><div class="kaba-icon"><span class="lft-ham">Umrah</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="visas.html"><div class="v-icon"><span class="lft-ham" style="margin-left: 23px !important;">Visas</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tours.html"><div class="pkgz-iconz"><span class="lft-ham">Tours</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="flights.html"><div class="f-icon"><span class="lft-ham" style="line-height: 13px;">Flights</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="offers.html"><div class="o-icon"><span class="lft-ham">Offers</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="cars.html"><div class="rental-icon"><span class="rental-ham">Car Rental</span></div></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="application_tracking.html"><div class="t-icon"><span class="lft-ham">Tracking</span></div></a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="appointments.html"><div class="appt-icon"><span class="lft-ham">Appointments</span></div></a></li>
+                                    <li class="nav-item log-sign">
+                                        <a class="nav-link" href="login.html"><div class="ll-icon"><span class="lft-ham" style="position: relative;left: 30px;top: -6px;"> Sign In /</span></div></a>
+                                        <a class="nav-link" href="login.html">Signup</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Navigation -->
+                        </nav>
+                        <!-- End Nav -->
+                    </div>
+                </div>
+            </section>
+        </header>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#user-selection').on('click', function () {
+            $('#dropdown-menu').toggle();
+        });
+        $(document).on('click', function (event) {
+            if(!$(event.target).closest('.main-topper-11').length){
+                $('#dropdown-menu').hide();
+            };
+        });
+    });
+</script>
+
+<!-- Main Banner -->
+<div class="appointments-banner float-left w-100 text-center" style="background: linear-gradient(135deg, #1c3659 0%, #061b53 100%); padding: 80px 20px 60px 20px; color: white;">
+    <h1 style="font-family: 'Outfit', sans-serif !important; font-weight: 800; font-size: 3rem; margin-bottom: 15px;">Book Visa Appointment</h1>
+    <p style="font-family: 'Inter', sans-serif !important; font-size: 1.15rem; max-width: 700px; margin: 0 auto; opacity: 0.9; line-height: 1.6;">Schedule your official visa consultancy and documentation appointment with OzoTrips experts. Select your destination country and secure your slot today.</p>
+</div>
+
+<!-- Form and Details Section -->
+<div class="col-xl-12 float-left my-5 py-2">
+    <div class="wrapper">
+        <div class="row">
+            <!-- Booking Form -->
+            <div class="col-lg-8 mb-4">
+                <div class="card shadow-sm border-0" style="border-radius: 20px; padding: 40px; background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.05) !important;">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1c3659; margin-bottom: 30px;">Appointment Details</h3>
+                    <form id="visa-appointment-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" class="form-control-custom" placeholder="John Doe" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-control-custom" placeholder="john@example.com" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="phone">WhatsApp Number</label>
+                                    <input type="text" id="phone" name="phone" class="form-control-custom" placeholder="+92 300 1234567" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="passport">Passport Number</label>
+                                    <input type="text" id="passport" name="passport" class="form-control-custom" placeholder="AB1234567" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="country">Target Country</label>
+                                    <select id="country" name="country" class="form-control-custom" required>
+                                        <option value="" disabled selected>Select Destination</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Austria">Austria</option>
+                                        <option value="Azerbaijan">Azerbaijan</option>
+                                        <option value="Bahrain">Bahrain</option>
+                                        <option value="Belgium">Belgium</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="China">China</option>
+                                        <option value="Czech Republic">Czech Republic</option>
+                                        <option value="Denmark">Denmark</option>
+                                        <option value="Egypt">Egypt</option>
+                                        <option value="Greece">Greece</option>
+                                        <option value="Hong Kong">Hong Kong</option>
+                                        <option value="Malaysia">Malaysia</option>
+                                        <option value="New Zealand">New Zealand</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="Thailand">Thailand</option>
+                                        <option value="Turkey">Turkey</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="United States">United States</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <label for="visa_type">Visa Type</label>
+                                    <select id="visa_type" name="visa_type" class="form-control-custom" required>
+                                        <option value="" disabled selected>Select Visa Category</option>
+                                        <option value="Tourist / Visit Visa">Tourist / Visit Visa</option>
+                                        <option value="Student Visa">Student Visa</option>
+                                        <option value="Work / Employment Visa">Work / Employment Visa</option>
+                                        <option value="Business Visa">Business Visa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="date">Appointment Date</label>
+                                    <input type="date" id="date" name="date" class="form-control-custom" required />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="form-group">
+                                    <label for="time_slot">Preferred Time Slot</label>
+                                    <select id="time_slot" name="time_slot" class="form-control-custom" required>
+                                        <option value="" disabled selected>Select Time Slot</option>
+                                        <option value="10:00 AM - 11:30 AM">10:00 AM - 11:30 AM</option>
+                                        <option value="11:30 AM - 01:00 PM">11:30 AM - 01:00 PM</option>
+                                        <option value="02:00 PM - 03:30 PM">02:00 PM - 03:30 PM</option>
+                                        <option value="03:30 PM - 05:00 PM">03:30 PM - 05:00 PM</option>
+                                        <option value="05:00 PM - 06:30 PM">05:00 PM - 06:30 PM</option>
+                                        <option value="06:30 PM - 08:00 PM">06:30 PM - 08:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button type="submit" class="btn-submit-appt">Book Appointment Slot</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Side Panel Information -->
+            <div class="col-lg-4">
+                <div class="card-info shadow-sm mb-4">
+                    <h4 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1c3659; margin-bottom: 20px;">Why Book With Us?</h4>
+                    <ul class="list-unstyled info-list m-0 p-0">
+                        <li><i class="fas fa-check-circle"></i> <span><strong>Certified Visa Consultants:</strong> Get expert review of your documentation checklist.</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span><strong>High Approval Rate Support:</strong> Tailored guidance to maximize your visa success chances.</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span><strong>Quick Appointments:</strong> Instant slots with our dedicated visa documentation experts.</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span><strong>Tracking Updates:</strong> Track your visa application status in real-time.</span></li>
+                    </ul>
+                </div>
+                <div class="card-info shadow-sm">
+                    <h4 style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #1c3659; margin-bottom: 20px;">Need Help?</h4>
+                    <p style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #4a5568; line-height: 1.6; margin-bottom: 20px;">If you have any questions or would like to schedule an appointment via phone or WhatsApp, feel free to contact us.</p>
+                    <div style="font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #1c3659; font-weight: 600;">
+                        <div class="mb-2"><i class="fas fa-phone-alt mr-2" style="color: #ff9c00;"></i> 0321 1840777</div>
+                        <div><i class="fab fa-whatsapp mr-2" style="color: #25d366; font-size: 1.2rem;"></i> +92 321 1840777</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer float-left w-100">
+    <section class="wrapper">
+        <div class="float-left sitemap-info">
+            <div class="ph-number w-100 float-left">
+                MON to SAT - 10 am to 8 pm <br/>
+                SUN &amp; Public Holidays are OFF <br/>
+                Call Us: <a class="rubik-bold" href="tel:+923211840777">0321 1840777</a><br/>
+                Visit Us: <a class="rubik-bold" href="https://www.google.com/maps/place/yugo/@31.4805576,74.3973852,18.06z/data=!4m14!1m7!3m6!1s0x39190600b80315a9:0x4bcb6335f123ca1c!2sH+Block,+264%2F2+Street+160,+Sector+L+Dha+Phase+1,+Lahore!3b1!8m2!3d31.4799012!4d74.4003409!3m5!1s0x391905dca9a05ecd:0x2f5edca3fa9e72e4!8m2!3d31.4811785!4d74.3954493!16s%2Fg%2F11s8k7d257?entry=ttu&amp;g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">Shop # 4 First floor expo tower, Lahore, Pakistan.</a>
+            </div>
+            <ul class="m-0 p-0 list-unstyled footer-social-icons">
+                <li><a href="https://www.facebook.com/share/1bPP8HGH4s/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="https://www.instagram.com/ozotrips.com?igsh=Z3Q4N3JwczdldzQ0" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
+                <li><a href="https://wa.me/923211840777" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="fab fa-whatsapp"></span></a></li>
+            </ul>
+        </div>
+        <div class="float-left sitemap">
+            <h4 class="rubik-medium mb-3">OzoTrips Products</h4>
+            <ul class="m-0 p-0 list-unstyled">
+                <li><a href="visas.html">Visas</a></li>
+                <li><a href="yugo-rewards.html">OzoTrips Rewards</a></li>
+                <li><a href="sitemap.html">Site Map</a></li>
+            </ul>
+        </div>
+        <div class="float-left sitemap">
+            <h4 class="rubik-medium mb-3">Company</h4>
+            <ul class="m-0 p-0 list-unstyled">
+                <li><a href="about-us.html">Our Story</a></li>
+                <li><a href="term-conditions.html">Terms and Conditions</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </div>
+        <div class="float-left sitemap">
+            <h4 class="rubik-medium mb-3">Support</h4>
+            <ul class="m-0 p-0 list-unstyled">
+                <li><a href="login.html">My Account</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="copyright float-left w-100">
+            <p class="mb-0">© 2026 OzoTrips PVT LTD. All rights reserved</p>
+            <p class="mb-0 powered-by-abt">Powered by <a href="https://www.abtit.online/" target="_blank" rel="noopener noreferrer">ABT IT Innovations PVT LTD.</a></p>
+        </div>
+    </section>
+</footer>
+
+<div class="clearfix"></div>
+
+<a href="https://wa.me/923211840777" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><svg viewBox="0 0 448 512" width="30" height="30"><path fill="#fff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
+
+<script src="/assets/js/db-client.js"></script>
+<script src="/assets/js/form-interceptor.js"></script>
+<script>
+    // Validate appointment date so users cannot select a past date
+    var today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').setAttribute('min', today);
+</script>
+</body>
+</html>

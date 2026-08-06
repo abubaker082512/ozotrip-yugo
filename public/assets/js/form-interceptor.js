@@ -107,6 +107,7 @@
         var idLower = data._formId.toLowerCase();
         
         if (pageLower.includes('visa') || idLower.includes('visa')) serviceType = "VISA APPLICATION";
+        else if (pageLower.includes('appointment') || idLower.includes('appointment')) serviceType = "VISA APPOINTMENT";
         else if (pageLower.includes('cars') || idLower.includes('car')) serviceType = "CAR RENTAL";
         else if (pageLower.includes('umrah') || idLower.includes('umrah')) serviceType = "UMRAH PACKAGE";
         else if (pageLower.includes('tour') || idLower.includes('tour')) serviceType = "TOUR PACKAGE";
