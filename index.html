@@ -2847,6 +2847,52 @@ a.double-25 {
     }
   }
 
+  /* Appointments Desktop Button overrides */
+  .appt-btn-item {
+      display: none;
+  }
+  @media (min-width: 1200px) {
+      .appt-btn-item {
+          display: block !important;
+          margin-right: 15px !important;
+          padding-right: 0 !important;
+      }
+      .appt-btn-link {
+          color: #fff !important;
+          padding: 10px 20px !important;
+          border-radius: 35px !important;
+          background-color: #1c3659 !important;
+          font-size: 15px !important;
+          line-height: 15px !important;
+          font-family: 'Outfit', sans-serif !important;
+          font-weight: 500 !important;
+          transition: all 0.3s ease !important;
+          display: inline-block !important;
+          text-decoration: none !important;
+      }
+      .appt-btn-link:hover {
+          background-color: #ff9c00 !important;
+          color: #fff !important;
+      }
+      .appt-btn-item .appt-icon {
+          background: none !important;
+          left: 0 !important;
+          display: inline-block !important;
+          float: none !important;
+          height: auto !important;
+          width: auto !important;
+          position: static !important;
+          top: 0 !important;
+      }
+      .appt-btn-item .appt-icon span.lft-ham {
+          margin-left: 0 !important;
+          color: #fff !important;
+      }
+      .appt-btn-item .appt-icon:hover span.lft-ham {
+          color: #fff !important;
+      }
+  }
+
 </style>
 </head>
 <body>
