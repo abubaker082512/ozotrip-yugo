@@ -48,7 +48,7 @@
               border-radius: 16px;
               box-shadow: 0 15px 35px rgba(28, 54, 89, 0.25);
               border: 1px solid rgba(28, 54, 89, 0.1);
-              overflow: hidden;
+              overflow: visible;
               text-align: left;
             }
 
@@ -9505,22 +9505,7 @@ jQuery(document).ready(function () {
                 }
             }
         });
-
-        // Toggle Home Travelers dropdown
-        jQuery('#home-travelers-trigger').on('click', function(e) {
-            e.stopPropagation();
-            jQuery('#home-travelers-dropdown').slideToggle('fast');
-        });
-
-        jQuery('#home-travelers-dropdown').click(function (e) {
-            e.stopPropagation();
-        });
-
-        jQuery(document).on('click', function(e) {
-            if (!jQuery(e.target).closest('#home-travelers-trigger, #home-travelers-dropdown').length) {
-                jQuery('#home-travelers-dropdown').slideUp('fast');
-            }
-        });
+        // Toggle Home Travelers dropdown removed (handled by reinitHomeSearch below)
 
         // Travelers Counter logic
         function updateHomeCounter(type, isIncrement) {
@@ -9971,6 +9956,7 @@ jQuery(document).ready(function () {
             width: 100% !important;
             box-sizing: border-box !important;
             text-align: left !important;
+            overflow: visible !important;
         }
 
         .search-tabs {
@@ -10055,6 +10041,7 @@ jQuery(document).ready(function () {
             transition: all 0.25s ease !important;
             width: 100% !important;
             box-sizing: border-box !important;
+            cursor: pointer !important;
         }
 
         .search-field input:focus, 
@@ -10391,17 +10378,7 @@ jQuery(document).ready(function () {
                 });
             }
 
-            // Travelers dropdown trigger
-            $(document).on('click', '#home-travelers-trigger', function(e) {
-                e.stopPropagation();
-                $('#home-travelers-dropdown').toggle();
-            });
-
-            $(document).on('click', function(e) {
-                if (!$(e.target).closest('#home-travelers-trigger').length && !$(e.target).closest('#home-travelers-dropdown').length) {
-                    $('#home-travelers-dropdown').hide();
-                }
-            });
+            // Travelers dropdown trigger removed (handled by reinitHomeSearch)
         });
     </script>
 </body>
