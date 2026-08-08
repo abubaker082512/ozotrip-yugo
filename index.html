@@ -2246,7 +2246,7 @@
 
     margin-bottom: 0px !important;
 
-    margin-top: 48px;
+    margin-top: 15px;
 
 }
 
@@ -2693,18 +2693,18 @@ a.double-25 {
 
   /* ── View Packages Button ─────────────────────── */
   div.unique-wrapper {
-    margin-top: 20px !important;
-    margin-bottom: 50px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
   }
 
   /* ── Service Cards Desktop (4-grid) ───────────── */
   div.seo-point-box,
   div.wrapper > div.seo-point-box {
-    margin-top: 60px !important;
-    margin-bottom: 40px !important;
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+    margin-top: 15px !important;
+    margin-bottom: 20px !important;
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
   }
 
   /* ── Service Cards Mobile Slider ─────────────── */
@@ -3191,8 +3191,8 @@ a.double-25 {
       <!-- Flights Tab Panel -->
       <div class="search-panel" id="flights-tab">
         <div class="yugo-search-bar" style="background: none; padding: 0; box-shadow: none;">
-          <div class="search-navbar" style="margin-bottom: 15px;">
-            <ul class="nav nav-pills ml-0" style="gap: 5px;">
+          <div class="search-navbar" style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <ul class="nav nav-pills ml-0" style="gap: 5px; display: flex;">
               <li class="nav-item">
                 <a class="flight-type-btn" href="#" id="home-oneway-tab">One-Way</a>
               </li>
@@ -3203,6 +3203,17 @@ a.double-25 {
                 <a class="flight-type-btn" href="#" id="home-multicity-tab">Multi-City</a>
               </li>
             </ul>
+            <div class="currency-select-wrap" style="display: flex; align-items: center; gap: 8px;">
+              <label style="margin: 0; font-size: 13.5px; font-weight: 600; color: #1c3659; font-family: 'Outfit', sans-serif;">Currency:</label>
+              <select id="flight-currency" name="currency" style="padding: 6px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 13.5px; font-weight: 600; color: #1c3659; outline: none; background: #fff; cursor: pointer; font-family: 'Outfit', sans-serif; transition: border-color 0.25s ease;">
+                <option value="PKR">PKR (Rs)</option>
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="AED">AED (Dh)</option>
+                <option value="SAR">SAR (SR)</option>
+              </select>
+            </div>
           </div>
           <div class="tab-content" id="home-pills-tabContent">
             <div class="tab-pane show active" id="home-round_oneWay">
@@ -9811,15 +9822,16 @@ jQuery(document).ready(function () {
         }
         var $ = jQuery;
         // Remove any previous handlers to avoid duplicates
-        $('#home-travelers-trigger').off('click.homeSearch');
+        $('#home-travelers-trigger').off('click');
         $(document).off('click.homeSearchOutside');
 
         // Travelers dropdown toggle
-        $('#home-travelers-trigger').on('click.homeSearch', function(e) {
+        $('#home-travelers-trigger').on('click', function(e) {
             e.stopPropagation();
+            e.preventDefault();
             $('#home-travelers-dropdown').slideToggle('fast');
         });
-        $('#home-travelers-dropdown').off('click.homeSearch').on('click.homeSearch', function(e) {
+        $('#home-travelers-dropdown').off('click').on('click', function(e) {
             e.stopPropagation();
         });
         $(document).on('click.homeSearchOutside', function(e) {

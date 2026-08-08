@@ -1127,8 +1127,8 @@ a.double-25 {
 <div class="position-relative float-left col-xl-12 p-0 inner">
 <h1 class="rubik-regular m-0">Get <span class="rubik-bold">Best Prices</span> on <br/> Domestic &amp; International Flights</h1>
 <div class="yugo-search-bar">
-<div class="search-navbar">
-<ul class="nav nav-pills ml-0">
+<div class="search-navbar" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+<ul class="nav nav-pills ml-0" style="display: flex; gap: 5px;">
 <li class="nav-item">
 <a href="#" id="oneway-tab">One-Way</a>
 </li>
@@ -1139,6 +1139,17 @@ a.double-25 {
 <a href="#" id="multicity-tab">Multi-City</a>
 </li>
 </ul>
+<div class="currency-select-wrap" style="display: flex; align-items: center; gap: 8px;">
+  <label style="margin: 0; font-size: 13.5px; font-weight: 600; color: #1c3659; font-family: 'Outfit', sans-serif;">Currency:</label>
+  <select id="flight-currency" name="currency" style="padding: 6px 12px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 13.5px; font-weight: 600; color: #1c3659; outline: none; background: #fff; cursor: pointer; font-family: 'Outfit', sans-serif; transition: border-color 0.25s ease;">
+    <option value="PKR">PKR (Rs)</option>
+    <option value="USD">USD ($)</option>
+    <option value="EUR">EUR (€)</option>
+    <option value="GBP">GBP (£)</option>
+    <option value="AED">AED (Dh)</option>
+    <option value="SAR">SAR (SR)</option>
+  </select>
+</div>
 </div>
 <div class="tab-content" id="pills-tabContent">
 <div class="tab-pane show active" id="round_oneWay">

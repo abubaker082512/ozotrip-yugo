@@ -264,7 +264,11 @@
         // Make API Call
         var url = 'https://sky-scrapper.p.rapidapi.com/api/v1/flights/searchFlightEverywhereDetails';
         url += '?oneWay=' + (searchType === 'return' ? 'false' : 'true');
-        url += '&currency=USD';
+        
+        var currencySelect = form.querySelector('select[name="currency"]') || document.getElementById('flight-currency');
+        var selectedCurrency = currencySelect ? currencySelect.value : 'PKR';
+        url += '&currency=' + encodeURIComponent(selectedCurrency);
+        
         url += '&originSkyId=' + encodeURIComponent(oCode);
         url += '&travelDate=' + encodeURIComponent(depDate);
         if (searchType === 'return' && retDate && retDate !== "Return" && retDate !== "null") {
@@ -382,7 +386,11 @@
         `;
 
         itineraries.slice(0, 10).forEach(function(itinerary) {
-            var price = itinerary.price ? (itinerary.price.formatted || ('$' + itinerary.price.raw)) : "$299";
+            var currencySelect = document.querySelector('select[name="currency"]') || document.getElementById('flight-currency');
+            var selectedCurrency = currencySelect ? currencySelect.value : 'PKR';
+            var currencySym = selectedCurrency === 'PKR' ? 'Rs ' : (selectedCurrency === 'USD' ? '$' : (selectedCurrency === 'EUR' ? '€' : (selectedCurrency === 'GBP' ? '£' : (selectedCurrency === 'AED' ? 'AED ' : (selectedCurrency === 'SAR' ? 'SAR ' : '$')))));
+            
+            var price = itinerary.price ? (itinerary.price.formatted || (currencySym + itinerary.price.raw)) : (currencySym + "299");
             var leg = itinerary.legs ? itinerary.legs[0] : null;
             if (!leg) return;
 
@@ -441,10 +449,20 @@
         container.innerHTML = html;
     }
 
-    // Load Mock Flight results when API is rate-limited or fails
     function loadMockResults(container, fromCode, toCode, depDate, retDate, searchType) {
         var toLabel = toCode && toCode !== "Everywhere" ? toCode : "DXB";
+        
+        var currencySelect = document.querySelector('select[name="currency"]') || document.getElementById('flight-currency');
+        var selectedCurrency = currencySelect ? currencySelect.value : 'PKR';
+        var conversionRate = 1;
         var currencySym = "$";
+        
+        if (selectedCurrency === 'PKR') { conversionRate = 280; currencySym = "Rs "; }
+        else if (selectedCurrency === 'USD') { conversionRate = 1; currencySym = "$"; }
+        else if (selectedCurrency === 'EUR') { conversionRate = 0.92; currencySym = "€"; }
+        else if (selectedCurrency === 'GBP') { conversionRate = 0.79; currencySym = "£"; }
+        else if (selectedCurrency === 'AED') { conversionRate = 3.67; currencySym = "AED "; }
+        else if (selectedCurrency === 'SAR') { conversionRate = 3.75; currencySym = "SAR "; }
         
         var mockDeals = [
             { airline: "PIA", iata: "PK", dep: "08:30 AM", arr: "11:15 AM", dur: "3h 45m", price: 290, nonstop: true },
@@ -480,7 +498,8 @@
 
         mockDeals.forEach(function(deal) {
             var logoUrl = `https://images.kiwi.com/airlines/64/${deal.iata}.png`;
-            var priceFormatted = currencySym + deal.price;
+            var convertedPrice = Math.round(deal.price * conversionRate);
+            var priceFormatted = currencySym + convertedPrice.toLocaleString();
 
             // WhatsApp booking Link
             var waMsg = `Hi OzoTrips! I searched flights on your website and would like to book:\n\n✈️ *FLIGHT DETAILS*\nCarrier: ${deal.airline}\nRoute: ${fromCode} ➡️ ${toLabel}\nSchedule: ${deal.dep} - ${deal.arr} (${deal.dur})\nDate: ${depDate}\nPrice: ${priceFormatted}\nClass: Economy\n\nPlease confirm availability and help me book this flight!`;
