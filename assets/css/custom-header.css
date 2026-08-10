@@ -1221,12 +1221,12 @@ img.promo-icon-head {
 }
 
 /* Appointments Desktop Button overrides */
-.new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item,
-.yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item {
+.appt-btn-item {
     display: none;
 }
 
 @media (min-width: 1200px) {
+    .appt-btn-item,
     .new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item {
         display: block !important;
@@ -1234,6 +1234,7 @@ img.promo-icon-head {
         padding-right: 0 !important;
     }
     
+    .appt-btn-link,
     .new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link {
         color: #fff !important;
@@ -1246,14 +1247,17 @@ img.promo-icon-head {
         font-weight: 500 !important;
         transition: all 0.3s ease !important;
         display: inline-block !important;
+        text-decoration: none !important;
     }
     
+    .appt-btn-link:hover,
     .new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link:hover,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link:hover {
         background-color: #ff9c00 !important;
         color: #fff !important;
     }
     
+    .appt-btn-item .appt-icon,
     .new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-icon,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-icon {
         background: none !important;
@@ -1266,14 +1270,17 @@ img.promo-icon-head {
         top: 0 !important;
     }
     
+    .appt-btn-item .appt-icon span.lft-ham,
     .new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-icon span.lft-ham,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-icon span.lft-ham {
         margin-left: 0 !important;
         color: #fff !important;
     }
     
+    .appt-btn-item .appt-icon:hover span.lft-ham,
     .new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-icon:hover span.lft-ham,
     .yugo-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-icon:hover span.lft-ham {
         color: #fff !important;
     }
 }
+
