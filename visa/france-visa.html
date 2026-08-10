@@ -2186,7 +2186,7 @@ Marriage Registration Certificate ( If married)"
 <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space">
 <!-- Handheld Logo -->
 <a aria-label="OzoTrips" class="navbar-brand" href="../index.html">
-<img alt="OzoTrips Logo" loading="lazy" src="assets/img/header/logo-light.png"/>
+<img alt="OzoTrips Logo" loading="lazy" src="/assets/img/header/logo-light.png"/>
 </a>
 <!-- Responsive Toggle Button -->
 <button aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler btn u-hamburger u-hamburger--white collapsed" data-target="#navBar" type="button" onclick="(function(btn){var target=document.getElementById('navBar');var isOpen=target.classList.contains('show');if(isOpen){target.classList.remove('show');btn.classList.add('collapsed');btn.classList.remove('close2');}else{target.classList.add('show');btn.classList.remove('collapsed');btn.classList.add('close2');}document.querySelectorAll('.navbar-toggler').forEach(function(b){if(b!==btn){if(isOpen){b.classList.add('collapsed');b.classList.remove('close2');}else{b.classList.remove('collapsed');b.classList.add('close2');}}});})(this);return false;">
@@ -8671,31 +8671,33 @@ jQuery(document).ready(function () {
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     document.body.addEventListener("click", function(e) {
-        var toggle = e.target.closest('#accordion a[data-toggle="collapse"], #accordion a[data-bs-toggle="collapse"], #parentAccordion a[data-toggle="collapse"], #parentAccordion a[data-bs-toggle="collapse"]');
+        var toggle = e.target.closest('[data-toggle="collapse"], [data-bs-toggle="collapse"]');
         if (toggle) {
             e.preventDefault();
             
-            var targetId = toggle.getAttribute("href") || toggle.getAttribute("data-target") || toggle.getAttribute("data-bs-target");
-            if (!targetId || !targetId.startsWith("#")) return;
+            var targetSelector = toggle.getAttribute("href") || toggle.getAttribute("data-target") || toggle.getAttribute("data-bs-target");
+            if (!targetSelector || !targetSelector.startsWith("#")) return;
             
-            var targetEl = document.querySelector(targetId);
+            var targetEl = document.querySelector(targetSelector);
             if (!targetEl) return;
             
             var isExpanded = toggle.getAttribute("aria-expanded") === "true";
             
-            var parentId = toggle.getAttribute("data-parent") || toggle.getAttribute("data-bs-parent");
-            if (parentId) {
-                var parentEl = document.querySelector(parentId);
+            var parentSelector = toggle.getAttribute("data-parent") || toggle.getAttribute("data-bs-parent");
+            if (parentSelector) {
+                var parentEl = document.querySelector(parentSelector);
                 if (parentEl) {
-                    var siblings = parentEl.querySelectorAll(".collapse.show");
+                    var siblings = parentEl.querySelectorAll(".collapse");
                     siblings.forEach(function(sib) {
                         if (sib !== targetEl) {
                             sib.classList.remove("show");
                             var sibId = sib.getAttribute("id");
-                            var sibToggle = parentEl.querySelector('[href="#' + sibId + '"], [data-target="#' + sibId + '"], [data-bs-target="#' + sibId + '"]');
-                            if (sibToggle) {
-                                sibToggle.setAttribute("aria-expanded", "false");
-                                sibToggle.classList.add("collapsed");
+                            if (sibId) {
+                                var sibToggles = document.querySelectorAll('[href="#' + sibId + '"], [data-target="#' + sibId + '"], [data-bs-target="#' + sibId + '"]');
+                                sibToggles.forEach(function(st) {
+                                    st.setAttribute("aria-expanded", "false");
+                                    st.classList.add("collapsed");
+                                });
                             }
                         }
                     });
