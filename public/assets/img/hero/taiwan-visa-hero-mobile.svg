@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGradM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="60%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="accentGradM" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bgGradM)"/>
+  <circle cx="650" cy="100" r="180" fill="#6366f1" opacity="0.2" filter="blur(40px)"/>
+
+  <g transform="translate(40, 60)">
+    <rect x="0" y="0" width="200" height="32" rx="16" fill="url(#accentGradM)"/>
+    <text x="100" y="20" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle">OFFICIAL VISA SERVICES</text>
+
+    <text x="0" y="90" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="40" font-weight="800">Taiwan Visa</text>
+    <text x="0" y="130" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="400">Online Application for Pakistanis</text>
+
+    <g transform="translate(0, 165)">
+      <rect x="0" y="0" width="150" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="75" y="20" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">⚡ Fast Approval</text>
+      
+      <rect x="160" y="0" width="160" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="240" y="20" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">📄 Easy Documents</text>
+    </g>
+  </g>
+</svg>

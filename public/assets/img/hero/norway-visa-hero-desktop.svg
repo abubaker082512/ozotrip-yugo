@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b192c"/>
+      <stop offset="50%" stop-color="#1e3e62"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="60" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="450" fill="url(#bgGrad)"/>
+  
+  <!-- Decorative Ambient Glows -->
+  <circle cx="1350" cy="120" r="280" fill="#0284c7" opacity="0.18" filter="blur(60px)"/>
+  <circle cx="1500" cy="350" r="220" fill="#38bdf8" opacity="0.12" filter="blur(50px)"/>
+  
+  <!-- Decorative Grid Lines & Travel Waves -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="90" x2="1600" y2="90"/>
+    <line x1="0" y1="180" x2="1600" y2="180"/>
+    <line x1="0" y1="270" x2="1600" y2="270"/>
+    <line x1="0" y1="360" x2="1600" y2="360"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="800" y1="0" x2="800" y2="450"/>
+    <line x1="1200" y1="0" x2="1200" y2="450"/>
+  </g>
+
+  <!-- Right Decorative Compass / Passport Stamp Motif -->
+  <g transform="translate(1300, 225)" opacity="0.12">
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="8 6"/>
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="0,-90 20,0 0,90 -20,0" fill="#38bdf8"/>
+    <polygon points="-90,0 0,20 90,0 0,-20" fill="#ffffff"/>
+  </g>
+
+  <!-- Content Group -->
+  <g transform="translate(90, 80)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="220" height="34" rx="17" fill="url(#accentGrad)"/>
+    <text x="110" y="21" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" letter-spacing="1">OFFICIAL VISA SERVICES</text>
+    
+    <!-- Title -->
+    <text x="0" y="105" fill="url(#textGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="-0.5">Norway Visa</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="150" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="20" font-weight="400">Fast &amp; Hassle-Free Online Application for Pakistani Passport Holders</text>
+
+    <!-- Feature Pills -->
+    <g transform="translate(0, 185)">
+      <rect x="0" y="0" width="160" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="80" y="21" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">⚡ Fast Approval</text>
+      
+      <rect x="175" y="0" width="170" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="260" y="21" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">📄 Simple Documents</text>
+      
+      <rect x="360" y="0" width="165" height="34" rx="17" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="442.5" y="21" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">💬 24/7 Assistance</text>
+    </g>
+  </g>
+</svg>
