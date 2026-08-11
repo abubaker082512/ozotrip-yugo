@@ -49,15 +49,15 @@
     <rect x="0" y="0" width="340" height="350" rx="24" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1.5"/>
     
     <!-- Flag Backdrop Glow -->
-    <rect x="60" y="45" width="220" height="140" rx="16" fill="#f59e0b" opacity="0.3" filter="blur(20px)"/>
+    <rect x="60" y="45" width="220" height="140" rx="16" fill="#f59e0b" opacity="0.35" filter="blur(20px)"/>
 
-    <!-- Official Flag Image inside Card -->
+    <!-- Official Flag Image (Base64 Inlined) -->
     <g transform="translate(60, 45)" filter="url(#flagShadow)">
       <g clip-path="url(#flagClip)">
-        <image href="/assets/img/flags/my.png" xlink:href="/assets/img/flags/my.png" x="0" y="0" width="220" height="140" preserveAspectRatio="xMidYMid slice"/>
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAANlBMVEUAAGYzAE0YE1wtJFTYPz/yv7//zADMAAD////lf3+CZzKcfSdkUD61kB3vvwbhtAtGOErPpRLmimgSAAACS0lEQVRo3u2YzXLkIAyEe6VE2Ugg4P1fNgc8P7uGTFJlGw70ZaaKg7+SUCMJOFgfBwsLcAHODcg58+8A3w7Wd3CWREREUrT8Y8C/B6uPF2WTRzVTngxQNzoLGxnxVIClxk5pf/SC9BJAqnxxl3YAyPn+dxhg5dN93gFAw/1vS58Hq/WNWh62PwgKwOxOOcgHg4iIlFbqhYEYARYaB0guIuL/EWQCgFKAlOovQHkIYDWY3bdjAKCiEIGKAghxSARrAFOjcgqDRYJIEGHkUsakOHQqGJTE6Pb4kUlpX8P3g9Up4dbHKYnfAF0SDfJBb5QwVRh2ucu5HtDVgNR8Q7J5KtHiAzBaLMkbXc7ZgNw16Se6jTGMSHHu1QhA+oynnTt4dpFwF5DVnwG9Q3i2zfRSvM9wJ8en+2DrISaN0VSDPeAsqFos+zCeDpg6D8n9fm7Ko5qFGiVu85XaKUopXcLTAXPPZ9g9wCWJJHEEdx7UsKb2W8duhCzOIuySQdYmPL/lD80QUmQAJgEiCGIAONKYmaSGMDTmJaRYm9WY0JucLgCst9CpdQ2ptvzkQ6c63Xq+/UEGoAog69Cxs1pN2kUpAED4fuy8ZnlkTz3fc6U8BveBU12NVW0MYuOqEU2xH6R4e3MzAcQcfriBu26ByfZPczXjhpWCJRGPGn6xZZ1+R33ZhnUBLsCrAP8crMPHzo/JtQAX4HDAz8l1uG8d7oMLcAGOBnybXMuoF+BwwOmLZPngAlyALwCnb1iXUS/ABfgC8H1yLaNegAvwhb4ANKYYr+PS7sQAAAAASUVORK5CYII=" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAANlBMVEUAAGYzAE0YE1wtJFTYPz/yv7//zADMAAD////lf3+CZzKcfSdkUD61kB3vvwbhtAtGOErPpRLmimgSAAACS0lEQVRo3u2YzXLkIAyEe6VE2Ugg4P1fNgc8P7uGTFJlGw70ZaaKg7+SUCMJOFgfBwsLcAHODcg58+8A3w7Wd3CWREREUrT8Y8C/B6uPF2WTRzVTngxQNzoLGxnxVIClxk5pf/SC9BJAqnxxl3YAyPn+dxhg5dN93gFAw/1vS58Hq/WNWh62PwgKwOxOOcgHg4iIlFbqhYEYARYaB0guIuL/EWQCgFKAlOovQHkIYDWY3bdjAKCiEIGKAghxSARrAFOjcgqDRYJIEGHkUsakOHQqGJTE6Pb4kUlpX8P3g9Up4dbHKYnfAF0SDfJBb5QwVRh2ucu5HtDVgNR8Q7J5KtHiAzBaLMkbXc7ZgNw16Se6jTGMSHHu1QhA+oynnTt4dpFwF5DVnwG9Q3i2zfRSvM9wJ8en+2DrISaN0VSDPeAsqFos+zCeDpg6D8n9fm7Ko5qFGiVu85XaKUopXcLTAXPPZ9g9wCWJJHEEdx7UsKb2W8duhCzOIuySQdYmPL/lD80QUmQAJgEiCGIAONKYmaSGMDTmJaRYm9WY0JucLgCst9CpdQ2ptvzkQ6c63Xq+/UEGoAog69Cxs1pN2kUpAED4fuy8ZnlkTz3fc6U8BveBU12NVW0MYuOqEU2xH6R4e3MzAcQcfriBu26ByfZPczXjhpWCJRGPGn6xZZ1+R33ZhnUBLsCrAP8crMPHzo/JtQAX4HDAz8l1uG8d7oMLcAGOBnybXMuoF+BwwOmLZPngAlyALwCnb1iXUS/ABfgC8H1yLaNegAvwhb4ANKYYr+PS7sQAAAAASUVORK5CYII=" x="0" y="0" width="220" height="140" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <!-- Flag Border -->
-      <rect x="0" y="0" width="220" height="140" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2"/>
+      <rect x="0" y="0" width="220" height="140" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="2"/>
     </g>
 
     <!-- Country Label Below Flag -->
@@ -74,9 +74,9 @@
   <g transform="translate(80, 75)">
     <!-- Top Pill Badge with Mini Country Flag -->
     <g>
-      <rect x="0" y="0" width="260" height="38" rx="19" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1.5"/>
+      <rect x="0" y="0" width="260" height="38" rx="19" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1.5"/>
       <g transform="translate(8, 7)" clip-path="url(#miniFlagClip)">
-        <image href="/assets/img/flags/my.png" xlink:href="/assets/img/flags/my.png" x="0" y="0" width="36" height="24" preserveAspectRatio="xMidYMid slice"/>
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAANlBMVEUAAGYzAE0YE1wtJFTYPz/yv7//zADMAAD////lf3+CZzKcfSdkUD61kB3vvwbhtAtGOErPpRLmimgSAAACS0lEQVRo3u2YzXLkIAyEe6VE2Ugg4P1fNgc8P7uGTFJlGw70ZaaKg7+SUCMJOFgfBwsLcAHODcg58+8A3w7Wd3CWREREUrT8Y8C/B6uPF2WTRzVTngxQNzoLGxnxVIClxk5pf/SC9BJAqnxxl3YAyPn+dxhg5dN93gFAw/1vS58Hq/WNWh62PwgKwOxOOcgHg4iIlFbqhYEYARYaB0guIuL/EWQCgFKAlOovQHkIYDWY3bdjAKCiEIGKAghxSARrAFOjcgqDRYJIEGHkUsakOHQqGJTE6Pb4kUlpX8P3g9Up4dbHKYnfAF0SDfJBb5QwVRh2ucu5HtDVgNR8Q7J5KtHiAzBaLMkbXc7ZgNw16Se6jTGMSHHu1QhA+oynnTt4dpFwF5DVnwG9Q3i2zfRSvM9wJ8en+2DrISaN0VSDPeAsqFos+zCeDpg6D8n9fm7Ko5qFGiVu85XaKUopXcLTAXPPZ9g9wCWJJHEEdx7UsKb2W8duhCzOIuySQdYmPL/lD80QUmQAJgEiCGIAONKYmaSGMDTmJaRYm9WY0JucLgCst9CpdQ2ptvzkQ6c63Xq+/UEGoAog69Cxs1pN2kUpAED4fuy8ZnlkTz3fc6U8BveBU12NVW0MYuOqEU2xH6R4e3MzAcQcfriBu26ByfZPczXjhpWCJRGPGn6xZZ1+R33ZhnUBLsCrAP8crMPHzo/JtQAX4HDAz8l1uG8d7oMLcAGOBnybXMuoF+BwwOmLZPngAlyALwCnb1iXUS/ABfgC8H1yLaNegAvwhb4ANKYYr+PS7sQAAAAASUVORK5CYII=" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAANlBMVEUAAGYzAE0YE1wtJFTYPz/yv7//zADMAAD////lf3+CZzKcfSdkUD61kB3vvwbhtAtGOErPpRLmimgSAAACS0lEQVRo3u2YzXLkIAyEe6VE2Ugg4P1fNgc8P7uGTFJlGw70ZaaKg7+SUCMJOFgfBwsLcAHODcg58+8A3w7Wd3CWREREUrT8Y8C/B6uPF2WTRzVTngxQNzoLGxnxVIClxk5pf/SC9BJAqnxxl3YAyPn+dxhg5dN93gFAw/1vS58Hq/WNWh62PwgKwOxOOcgHg4iIlFbqhYEYARYaB0guIuL/EWQCgFKAlOovQHkIYDWY3bdjAKCiEIGKAghxSARrAFOjcgqDRYJIEGHkUsakOHQqGJTE6Pb4kUlpX8P3g9Up4dbHKYnfAF0SDfJBb5QwVRh2ucu5HtDVgNR8Q7J5KtHiAzBaLMkbXc7ZgNw16Se6jTGMSHHu1QhA+oynnTt4dpFwF5DVnwG9Q3i2zfRSvM9wJ8en+2DrISaN0VSDPeAsqFos+zCeDpg6D8n9fm7Ko5qFGiVu85XaKUopXcLTAXPPZ9g9wCWJJHEEdx7UsKb2W8duhCzOIuySQdYmPL/lD80QUmQAJgEiCGIAONKYmaSGMDTmJaRYm9WY0JucLgCst9CpdQ2ptvzkQ6c63Xq+/UEGoAog69Cxs1pN2kUpAED4fuy8ZnlkTz3fc6U8BveBU12NVW0MYuOqEU2xH6R4e3MzAcQcfriBu26ByfZPczXjhpWCJRGPGn6xZZ1+R33ZhnUBLsCrAP8crMPHzo/JtQAX4HDAz8l1uG8d7oMLcAGOBnybXMuoF+BwwOmLZPngAlyALwCnb1iXUS/ABfgC8H1yLaNegAvwhb4ANKYYr+PS7sQAAAAASUVORK5CYII=" x="0" y="0" width="36" height="24" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <text x="54" y="24" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1">OFFICIAL VISA SERVICES</text>
     </g>

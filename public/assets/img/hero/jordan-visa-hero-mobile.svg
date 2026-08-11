@@ -21,11 +21,11 @@
   <circle cx="680" cy="120" r="220" fill="#f59e0b" opacity="0.22" filter="blur(50px)"/>
 
   <!-- Right Floating Flag Graphic on Mobile -->
-  <g transform="translate(620, 60)" opacity="0.9">
+  <g transform="translate(620, 60)" opacity="0.95">
     <g clip-path="url(#mobileFlagClip)">
-      <image href="/assets/img/flags/jo.png" xlink:href="/assets/img/flags/jo.png" x="0" y="0" width="120" height="76" preserveAspectRatio="xMidYMid slice"/>
+      <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAAM1BMVEXOESbzxMmbKis1YDhAQEBAm23aS1v///8Aej0AAACaDBwzBAnULT/qmKH76+zvrrXkeYUdzOPUAAABUElEQVRo3t3YyU7EMBBF0RsaUgZsJ///tSwYxOB0J5GwLzwp6zryWA5Pz4/qAG4iyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiZ3J33y+cyzxFp4CcCHIiyIkgJ4KcCHLidlkJcbPolB2j2C6XyVEco9gslmOaoi61CNZiu1aJiIhq2C7tSmtERBxbhr9EbM7we5U6O4HzWmpExFJW6xRToh4+xHtuEpaaSyhOwq0RzK+f9KA23cZ/t1n4J+2WvGGVt/zyR5P82Sl/uOfLQ7ec+TNzSR0j5x0G9uYdBPbnHQKO4B0AjuHtBo7i7QSO4+0CjuTtAI7l3QSO5t0AjuddBRp4V4AO3ibQwtsAenhNoInXALp4P4A23jegj/cFaOR9Ajp5H0Ar7w3o5aUk56Uk56X0ApxTMNZk/t4OAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAAM1BMVEXOESbzxMmbKis1YDhAQEBAm23aS1v///8Aej0AAACaDBwzBAnULT/qmKH76+zvrrXkeYUdzOPUAAABUElEQVRo3t3YyU7EMBBF0RsaUgZsJ///tSwYxOB0J5GwLzwp6zryWA5Pz4/qAG4iyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiZ3J33y+cyzxFp4CcCHIiyIkgJ4KcCHLidlkJcbPolB2j2C6XyVEco9gslmOaoi61CNZiu1aJiIhq2C7tSmtERBxbhr9EbM7we5U6O4HzWmpExFJW6xRToh4+xHtuEpaaSyhOwq0RzK+f9KA23cZ/t1n4J+2WvGGVt/zyR5P82Sl/uOfLQ7ec+TNzSR0j5x0G9uYdBPbnHQKO4B0AjuHtBo7i7QSO4+0CjuTtAI7l3QSO5t0AjuddBRp4V4AO3ibQwtsAenhNoInXALp4P4A23jegj/cFaOR9Ajp5H0Ar7w3o5aUk56Uk56X0ApxTMNZk/t4OAAAAAElFTkSuQmCC" x="0" y="0" width="120" height="76" preserveAspectRatio="xMidYMid slice"/>
     </g>
-    <rect x="0" y="0" width="120" height="76" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="0" y="0" width="120" height="76" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
   </g>
 
   <g transform="translate(40, 50)">
@@ -33,7 +33,7 @@
     <g>
       <rect x="0" y="0" width="220" height="34" rx="17" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
       <g transform="translate(8, 7)" clip-path="url(#miniFlagClipM)">
-        <image href="/assets/img/flags/jo.png" xlink:href="/assets/img/flags/jo.png" x="0" y="0" width="30" height="20" preserveAspectRatio="xMidYMid slice"/>
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAAM1BMVEXOESbzxMmbKis1YDhAQEBAm23aS1v///8Aej0AAACaDBwzBAnULT/qmKH76+zvrrXkeYUdzOPUAAABUElEQVRo3t3YyU7EMBBF0RsaUgZsJ///tSwYxOB0J5GwLzwp6zryWA5Pz4/qAG4iyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiZ3J33y+cyzxFp4CcCHIiyIkgJ4KcCHLidlkJcbPolB2j2C6XyVEco9gslmOaoi61CNZiu1aJiIhq2C7tSmtERBxbhr9EbM7we5U6O4HzWmpExFJW6xRToh4+xHtuEpaaSyhOwq0RzK+f9KA23cZ/t1n4J+2WvGGVt/zyR5P82Sl/uOfLQ7ec+TNzSR0j5x0G9uYdBPbnHQKO4B0AjuHtBo7i7QSO4+0CjuTtAI7l3QSO5t0AjuddBRp4V4AO3ibQwtsAenhNoInXALp4P4A23jegj/cFaOR9Ajp5H0Ar7w3o5aUk56Uk56X0ApxTMNZk/t4OAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQCAMAAACpg44GAAAAM1BMVEXOESbzxMmbKis1YDhAQEBAm23aS1v///8Aej0AAACaDBwzBAnULT/qmKH76+zvrrXkeYUdzOPUAAABUElEQVRo3t3YyU7EMBBF0RsaUgZsJ///tSwYxOB0J5GwLzwp6zryWA5Pz4/qAG4iyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiyIkgJ4KcCHIiZ3J33y+cyzxFp4CcCHIiyIkgJ4KcCHLidlkJcbPolB2j2C6XyVEco9gslmOaoi61CNZiu1aJiIhq2C7tSmtERBxbhr9EbM7we5U6O4HzWmpExFJW6xRToh4+xHtuEpaaSyhOwq0RzK+f9KA23cZ/t1n4J+2WvGGVt/zyR5P82Sl/uOfLQ7ec+TNzSR0j5x0G9uYdBPbnHQKO4B0AjuHtBo7i7QSO4+0CjuTtAI7l3QSO5t0AjuddBRp4V4AO3ibQwtsAenhNoInXALp4P4A23jegj/cFaOR9Ajp5H0Ar7w3o5aUk56Uk56X0ApxTMNZk/t4OAAAAAElFTkSuQmCC" x="0" y="0" width="30" height="20" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <text x="46" y="21" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">OFFICIAL VISA SERVICES</text>
     </g>

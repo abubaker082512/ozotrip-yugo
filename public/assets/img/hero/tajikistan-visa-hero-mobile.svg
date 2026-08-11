@@ -21,11 +21,11 @@
   <circle cx="680" cy="120" r="220" fill="#f59e0b" opacity="0.22" filter="blur(50px)"/>
 
   <!-- Right Floating Flag Graphic on Mobile -->
-  <g transform="translate(620, 60)" opacity="0.9">
+  <g transform="translate(620, 60)" opacity="0.95">
     <g clip-path="url(#mobileFlagClip)">
-      <image href="/assets/img/flags/tj.png" xlink:href="/assets/img/flags/tj.png" x="0" y="0" width="120" height="76" preserveAspectRatio="xMidYMid slice"/>
+      <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQBAMAAABsc2MHAAAAIVBMVEX///8AZgDMAABAjUDZQED5xQr61Ef+88r84Hn/++z96aCR3NMgAAABPklEQVRYw+3WoVLDQBDG8b+hdxfHK/AKvAIPgNkQqmoSmqgzJVAVk0KrYggdFKYB+pSIIsoMqKyo2M9kYn6ze3t3c1woBwMNNNBAAw08WfBKOVj+S+iUweRdU4uEPO1wamAJL7fQa3kLaahrvNxorV96+OZa65i8dQDhSwcMxz8am8cD4CIAjUK/7RMQiqIDHjKFrvMGmEQ3A3yq0HLVAGfr7TXgB42ZdIAfqkb3LHtlTxFMfoOjp+x29TFYT+PYmUgJwGQGQC9jQYpDaYvDTeOL8Vd/hCFus3btKnBBYy4uFSl7kTyqjHkyz8s8e31ssz5dzTTqk7SP9CVJmYtKjS62Gbsp7dRFpc19v64/N/X2TuuwuEFERKRSKjCIzPcfy/1KROn5sPmpzD3bk+zPXCqHc+UYaKCBBhpo4MmC31P9yr7l4iDLAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQBAMAAABsc2MHAAAAIVBMVEX///8AZgDMAABAjUDZQED5xQr61Ef+88r84Hn/++z96aCR3NMgAAABPklEQVRYw+3WoVLDQBDG8b+hdxfHK/AKvAIPgNkQqmoSmqgzJVAVk0KrYggdFKYB+pSIIsoMqKyo2M9kYn6ze3t3c1woBwMNNNBAAw08WfBKOVj+S+iUweRdU4uEPO1wamAJL7fQa3kLaahrvNxorV96+OZa65i8dQDhSwcMxz8am8cD4CIAjUK/7RMQiqIDHjKFrvMGmEQ3A3yq0HLVAGfr7TXgB42ZdIAfqkb3LHtlTxFMfoOjp+x29TFYT+PYmUgJwGQGQC9jQYpDaYvDTeOL8Vd/hCFus3btKnBBYy4uFSl7kTyqjHkyz8s8e31ssz5dzTTqk7SP9CVJmYtKjS62Gbsp7dRFpc19v64/N/X2TuuwuEFERKRSKjCIzPcfy/1KROn5sPmpzD3bk+zPXCqHc+UYaKCBBhpo4MmC31P9yr7l4iDLAAAAAElFTkSuQmCC" x="0" y="0" width="120" height="76" preserveAspectRatio="xMidYMid slice"/>
     </g>
-    <rect x="0" y="0" width="120" height="76" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="0" y="0" width="120" height="76" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
   </g>
 
   <g transform="translate(40, 50)">
@@ -33,7 +33,7 @@
     <g>
       <rect x="0" y="0" width="220" height="34" rx="17" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
       <g transform="translate(8, 7)" clip-path="url(#miniFlagClipM)">
-        <image href="/assets/img/flags/tj.png" xlink:href="/assets/img/flags/tj.png" x="0" y="0" width="30" height="20" preserveAspectRatio="xMidYMid slice"/>
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQBAMAAABsc2MHAAAAIVBMVEX///8AZgDMAABAjUDZQED5xQr61Ef+88r84Hn/++z96aCR3NMgAAABPklEQVRYw+3WoVLDQBDG8b+hdxfHK/AKvAIPgNkQqmoSmqgzJVAVk0KrYggdFKYB+pSIIsoMqKyo2M9kYn6ze3t3c1woBwMNNNBAAw08WfBKOVj+S+iUweRdU4uEPO1wamAJL7fQa3kLaahrvNxorV96+OZa65i8dQDhSwcMxz8am8cD4CIAjUK/7RMQiqIDHjKFrvMGmEQ3A3yq0HLVAGfr7TXgB42ZdIAfqkb3LHtlTxFMfoOjp+x29TFYT+PYmUgJwGQGQC9jQYpDaYvDTeOL8Vd/hCFus3btKnBBYy4uFSl7kTyqjHkyz8s8e31ssz5dzTTqk7SP9CVJmYtKjS62Gbsp7dRFpc19v64/N/X2TuuwuEFERKRSKjCIzPcfy/1KROn5sPmpzD3bk+zPXCqHc+UYaKCBBhpo4MmC31P9yr7l4iDLAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABQBAMAAABsc2MHAAAAIVBMVEX///8AZgDMAABAjUDZQED5xQr61Ef+88r84Hn/++z96aCR3NMgAAABPklEQVRYw+3WoVLDQBDG8b+hdxfHK/AKvAIPgNkQqmoSmqgzJVAVk0KrYggdFKYB+pSIIsoMqKyo2M9kYn6ze3t3c1woBwMNNNBAAw08WfBKOVj+S+iUweRdU4uEPO1wamAJL7fQa3kLaahrvNxorV96+OZa65i8dQDhSwcMxz8am8cD4CIAjUK/7RMQiqIDHjKFrvMGmEQ3A3yq0HLVAGfr7TXgB42ZdIAfqkb3LHtlTxFMfoOjp+x29TFYT+PYmUgJwGQGQC9jQYpDaYvDTeOL8Vd/hCFus3btKnBBYy4uFSl7kTyqjHkyz8s8e31ssz5dzTTqk7SP9CVJmYtKjS62Gbsp7dRFpc19v64/N/X2TuuwuEFERKRSKjCIzPcfy/1KROn5sPmpzD3bk+zPXCqHc+UYaKCBBhpo4MmC31P9yr7l4iDLAAAAAElFTkSuQmCC" x="0" y="0" width="30" height="20" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <text x="46" y="21" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">OFFICIAL VISA SERVICES</text>
     </g>

@@ -21,11 +21,11 @@
   <circle cx="680" cy="120" r="220" fill="#0284c7" opacity="0.22" filter="blur(50px)"/>
 
   <!-- Right Floating Flag Graphic on Mobile -->
-  <g transform="translate(620, 60)" opacity="0.9">
+  <g transform="translate(620, 60)" opacity="0.95">
     <g clip-path="url(#mobileFlagClip)">
-      <image href="/assets/img/flags/nl.png" xlink:href="/assets/img/flags/nl.png" x="0" y="0" width="120" height="76" preserveAspectRatio="xMidYMid slice"/>
+      <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABrBAMAAAACzpRpAAAAD1BMVEX///+uHCghRovIZm5rhLLGwc52AAAAP0lEQVRo3u3MQREAIAwDsFrAAhawgH9NmOhnRyIgWWURCoVCoVAoFApnhacsAADwuVuWXSYUCoVCoVAoFM4KH79WUx8PoCOAAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABrBAMAAAACzpRpAAAAD1BMVEX///+uHCghRovIZm5rhLLGwc52AAAAP0lEQVRo3u3MQREAIAwDsFrAAhawgH9NmOhnRyIgWWURCoVCoVAoFApnhacsAADwuVuWXSYUCoVCoVAoFM4KH79WUx8PoCOAAAAAAElFTkSuQmCC" x="0" y="0" width="120" height="76" preserveAspectRatio="xMidYMid slice"/>
     </g>
-    <rect x="0" y="0" width="120" height="76" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
+    <rect x="0" y="0" width="120" height="76" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5"/>
   </g>
 
   <g transform="translate(40, 50)">
@@ -33,7 +33,7 @@
     <g>
       <rect x="0" y="0" width="220" height="34" rx="17" fill="#1e293b" fill-opacity="0.85" stroke="#334155" stroke-width="1"/>
       <g transform="translate(8, 7)" clip-path="url(#miniFlagClipM)">
-        <image href="/assets/img/flags/nl.png" xlink:href="/assets/img/flags/nl.png" x="0" y="0" width="30" height="20" preserveAspectRatio="xMidYMid slice"/>
+        <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABrBAMAAAACzpRpAAAAD1BMVEX///+uHCghRovIZm5rhLLGwc52AAAAP0lEQVRo3u3MQREAIAwDsFrAAhawgH9NmOhnRyIgWWURCoVCoVAoFApnhacsAADwuVuWXSYUCoVCoVAoFM4KH79WUx8PoCOAAAAAAElFTkSuQmCC" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABrBAMAAAACzpRpAAAAD1BMVEX///+uHCghRovIZm5rhLLGwc52AAAAP0lEQVRo3u3MQREAIAwDsFrAAhawgH9NmOhnRyIgWWURCoVCoVAoFApnhacsAADwuVuWXSYUCoVCoVAoFM4KH79WUx8PoCOAAAAAAElFTkSuQmCC" x="0" y="0" width="30" height="20" preserveAspectRatio="xMidYMid slice"/>
       </g>
       <text x="46" y="21" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">OFFICIAL VISA SERVICES</text>
     </g>
