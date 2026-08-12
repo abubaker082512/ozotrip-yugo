@@ -1112,12 +1112,12 @@ div#navbarSupportedContent2 {
     border: 1px solid #e8e7e7;
 }
 
-.payment-steps ul.yugo-email-list {
+.payment-steps ul.ozotrips-email-list {
     display: block;
 }
 
-.booking-confirm ul.yugo-email-list li,
-.booking-confirm ul.yugo-email-list li:last-child {
+.booking-confirm ul.ozotrips-email-list li,
+.booking-confirm ul.ozotrips-email-list li:last-child {
     width: 33.333%;
 }
 
@@ -1223,7 +1223,7 @@ div#navbarSupportedContent2 {
     height: auto;
 }
 
-.yugo-logo img {
+.ozotrips-logo img {
     width: 210px;
     height: auto;
 }
@@ -2160,7 +2160,7 @@ input.float-left.contact-user-detail.contact-detail-number {
     .olx-logo img {
         width: 120px;
     }
-    .yugo-logo img {
+    .ozotrips-logo img {
         width: 120px;
     }
     .hero-text h3 {

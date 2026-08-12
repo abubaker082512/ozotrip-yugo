@@ -188,36 +188,36 @@ td.old.day.disabled,
 td.day.disabled {
   color: #999 !important;
 }
-.yugo-hero-banner {
+.ozotrips-hero-banner {
   padding: 310px 0 150px;
 }
 
-.yugo-hero-banner .tab-shadow {
+.ozotrips-hero-banner .tab-shadow {
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.5);
 }
 
-.yugo-hero-banner .tab-nav-rounded .nav-link.active {
+.ozotrips-hero-banner .tab-nav-rounded .nav-link.active {
   border-radius: 40px;
 }
 
-.yugo-hero-banner .radio-custom {
+.ozotrips-hero-banner .radio-custom {
   opacity: 0;
   position: absolute;
 }
 
-.yugo-hero-banner .radio-custom,
-.yugo-hero-banner .radio-custom-label {
+.ozotrips-hero-banner .radio-custom,
+.ozotrips-hero-banner .radio-custom-label {
   display: inline-block;
   vertical-align: middle;
   margin: 5px;
   cursor: pointer;
 }
 
-.yugo-hero-banner .radio-custom-label {
+.ozotrips-hero-banner .radio-custom-label {
   position: relative;
 }
 
-.yugo-hero-banner .radio-custom + .radio-custom-label:before {
+.ozotrips-hero-banner .radio-custom + .radio-custom-label:before {
   content: "";
   border: 1px solid #fff;
   display: inline-block;
@@ -230,8 +230,8 @@ td.day.disabled {
   border-radius: 50%;
 }
 
-.yugo-hero-banner .radio-custom:checked + .radio-custom-label:before,
-.yugo-hero-banner .tab-nav-rounded .nav-link.active .radio-custom-label:before {
+.ozotrips-hero-banner .radio-custom:checked + .radio-custom-label:before,
+.ozotrips-hero-banner .tab-nav-rounded .nav-link.active .radio-custom-label:before {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -252,29 +252,29 @@ td.day.disabled {
   display: none;
 }
 
-.yugo-hero-banner .radio-custom:focus + .radio-custom-label {
+.ozotrips-hero-banner .radio-custom:focus + .radio-custom-label {
   outline: 1px solid #ddd;
 }
 
-.yugo-hero-banner .tab-nav-rounded .nav-item {
+.ozotrips-hero-banner .tab-nav-rounded .nav-item {
   margin: 0 0 0 15px;
 }
 
-.yugo-hero-banner .tab-nav-rounded .nav-link {
+.ozotrips-hero-banner .tab-nav-rounded .nav-link {
   font-size: 20px;
   line-height: 24px;
   padding: 3px 8px 6px 6px;
 }
 
-.yugo-hero-banner .tab-nav-rounded .nav-link label {
+.ozotrips-hero-banner .tab-nav-rounded .nav-link label {
   margin: 0;
 }
 
-.yugo-hero-banner .tab-nav-rounded .nav-link.active {
+.ozotrips-hero-banner .tab-nav-rounded .nav-link.active {
   background-color: #1c3659;
 }
 
-.yugo-hero-banner .tab-nav-rounded .nav-link.active label {
+.ozotrips-hero-banner .tab-nav-rounded .nav-link.active label {
   color: #272727;
 }
 
@@ -579,15 +579,15 @@ td.day.disabled {
   padding-top: 20px;
 }
 
-.yugo-offers::before {
+.ozotrips-offers::before {
   background: none;
 }
 
-.yugo-offers {
+.ozotrips-offers {
   padding: 45px 0;
 }
 
-.yugo-offers .tab-nav-rounded .nav-link .text-white {
+.ozotrips-offers .tab-nav-rounded .nav-link .text-white {
   color: #272727 !important;
 }
 
@@ -822,7 +822,7 @@ td.day.disabled {
 }
 
 .main-banner .flight-tabs .trav-2,
-.yugo-class {
+.ozotrips-class {
   border-bottom: 1px solid #d7d7d7;
 }
 
@@ -1642,7 +1642,7 @@ input.select2-search__field,
 .famous-airlines h2,
 .features h2,
 .top-destinations h2,
-.visa-yugo h2,
+.visa-ozotrips h2,
 .routes h3 {
   color: #1c3659;
   font-size: 25px;
@@ -2386,21 +2386,21 @@ h2.rubik-medium-featured {
   margin: 50px 0 0;
 }
 
-.visa-yugo {
+.visa-ozotrips {
   padding: 42px 0 0;
 }
 
-.visa-yugo-box {
+.visa-ozotrips-box {
   padding: 10px 25px;
   background-color: #fff;
 }
 
-.visa-yugo-box ul {
+.visa-ozotrips-box ul {
   width: 100%;
   margin: 0;
 }
 
-.visa-yugo-box ul li {
+.visa-ozotrips-box ul li {
   float: left;
   width: 32%;
   margin: 0 2% 0 0;
@@ -2412,7 +2412,7 @@ h2.rubik-medium-featured {
   background: url(../../assets/img/home/arrow-right.png) no-repeat right center;
 }
 
-.visa-yugo-box ul li span {
+.visa-ozotrips-box ul li span {
   color: #1c3659;
   font-size: 12px;
   line-height: 14px;
@@ -2422,7 +2422,7 @@ img.w-flg-cls {
   width: 20px;
   margin-right: 8px;
 }
-.visa-yugo-box ul li:nth-child(3n) {
+.visa-ozotrips-box ul li:nth-child(3n) {
   margin: 0;
 }
 
@@ -3410,15 +3410,15 @@ img.w-flg-cls {
   color: #fff;
 }
 
-.yugo_reward_in {
+.ozotrips_reward_in {
   background: #ff9c00;
 }
 
-.yugo_reward_in span {
+.ozotrips_reward_in span {
   color: #fff;
 }
 
-.yugo_reward_in a {
+.ozotrips_reward_in a {
   display: inline-block;
   color: #1c3659;
   padding: 7px 60px;
@@ -3429,7 +3429,7 @@ img.w-flg-cls {
   margin-top: 13px;
 }
 
-.yugo_reward_in img {
+.ozotrips_reward_in img {
   width: auto;
 }
 
@@ -3544,7 +3544,7 @@ img.w-flg-cls {
   background: #f5f8f1;
 }
 
-.yugo-payment-form {
+.ozotrips-payment-form {
   padding: 0 10px;
 }
 
@@ -4234,7 +4234,7 @@ input:focus {
     width: 97%;
     margin-left: 6px;
   }
-  .visa-yugo-box ul li span {
+  .visa-ozotrips-box ul li span {
     font-size: 11px;
     line-height: 12px;
     margin: 3px 24px 0;
@@ -4343,7 +4343,7 @@ input:focus {
 }
 
 @media screen and (max-width: 1199px) {
-  .yugo-hero-banner {
+  .ozotrips-hero-banner {
     padding: 110px 0 30px;
   }
 
@@ -4421,11 +4421,11 @@ input:focus {
     line-height: 29px;
   }
 
-  .yugo-hero-banner::before {
+  .ozotrips-hero-banner::before {
     display: none;
   }
 
-  .yugo-hero-banner .tab-nav-rounded .nav-link > div {
+  .ozotrips-hero-banner .tab-nav-rounded .nav-link > div {
     color: #fff !important;
   }
 
@@ -4515,7 +4515,7 @@ input:focus {
     color: #fff;
   }
 
-  .yugo-hero-banner {
+  .ozotrips-hero-banner {
     background: #051425;
     background: -moz-linear-gradient(top, #051425 0%, #1c3659 100%);
     background: -webkit-linear-gradient(top, #051425 0%, #1c3659 100%);
@@ -4567,7 +4567,7 @@ input:focus {
     font-size: 12px;
   }
 
-  .yugo-hero-banner .tab-nav-rounded .nav-link {
+  .ozotrips-hero-banner .tab-nav-rounded .nav-link {
     font-size: 17px;
     line-height: 21px;
   }
@@ -4961,7 +4961,7 @@ input:focus {
     margin: 7px 0 0;
   }
 
-  .visa-yugo {
+  .visa-ozotrips {
     padding: 30px 0 0;
   }
 
@@ -5346,12 +5346,12 @@ input:focus {
 }
 
 @media screen and (max-width: 991px) {
-  .yugo-hero-banner .tab-nav-rounded .nav-link {
+  .ozotrips-hero-banner .tab-nav-rounded .nav-link {
     font-size: 18px;
     line-height: 21px;
   }
 
-  .yugo-hero-banner .tab-nav-rounded .nav-item {
+  .ozotrips-hero-banner .tab-nav-rounded .nav-item {
     margin: 0 0 0 10px;
   }
 
@@ -6180,7 +6180,7 @@ input:focus {
   width: 80px;
 }
 
-.yugo-payment-form {
+.ozotrips-payment-form {
   padding: 20px 10px;
 }
 
@@ -6441,7 +6441,7 @@ input.select2-search__field,
   font-size: 18px;
 }
 
-.visa-yugo-box ul li {
+.visa-ozotrips-box ul li {
   padding: 8px 0;
   font-size: 15px;
   line-height: 15px;
@@ -6449,7 +6449,7 @@ input.select2-search__field,
   margin: 0;
 }
 
-.visa-yugo-box ul li:nth-child(2n) {
+.visa-ozotrips-box ul li:nth-child(2n) {
   float: right;
 }
 
@@ -6747,29 +6747,29 @@ input.select2-search__field,
   padding: 8px 25px;
   border-radius: 30px;
 }
-.yugo-hero {
+.ozotrips-hero {
   width: 100%;
   background: url("../images/home-banner.jpg") no-repeat center;
   background-size: cover;
   padding: 100px 0 20px;
 }
-.yugo-content {
+.ozotrips-content {
   max-width: 500px;
   margin: auto;
   text-align: center;
   padding: 60px 0;
 }
-.yugo-content h1 {
+.ozotrips-content h1 {
   color: #fff;
   font-size: 24px;
   line-height: 0.7;
   font-weight: 400;
   margin-bottom: 0;
 }
-.yugo-content h1 strong {
+.ozotrips-content h1 strong {
   background: #1c3659;
 }
-.yugo-content p {
+.ozotrips-content p {
   color: #fff;
   font-size: 24px;
   font-weight: 400;
@@ -6843,7 +6843,7 @@ input.select2-search__field,
   margin-left: 50px !important;
 }
 
-.wraper-with-bg .yugo-search-bar ul {
+.wraper-with-bg .ozotrips-search-bar ul {
   margin-left: 50px !important;
   margin: 0;
   max-width: fit-content;
@@ -6903,7 +6903,7 @@ input.select2-search__field,
   margin-right: 5px;
 }
 
-.wraper-with-bg .yugo-search-bar ul li {
+.wraper-with-bg .ozotrips-search-bar ul li {
   width: auto;
 }
 
@@ -6942,7 +6942,7 @@ input.select2-search__field,
     width: 100%;
   }
 
-  .wraper-with-bg .yugo-search-bar ul {
+  .wraper-with-bg .ozotrips-search-bar ul {
     margin-left: 0 !important;
     background-color: #ecf4ff;
     max-width: 100%;
@@ -6952,7 +6952,7 @@ input.select2-search__field,
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .wraper-with-bg .yugo-search-bar {
+  .wraper-with-bg .ozotrips-search-bar {
     background: #fff;
   }
 
@@ -6971,7 +6971,7 @@ input.select2-search__field,
     border-radius: 15px;
   }
 
-  .wraper-with-bg .yugo-search-bar ul li a {
+  .wraper-with-bg .ozotrips-search-bar ul li a {
     padding: 3px 10px;
   }
   .wraper-with-bg .mobilepop-flight-filed .autocomplete-wrapper input {
@@ -7065,12 +7065,12 @@ input.select2-search__field,
 /*                          EHMASUK signout                                   */
 /* -------------------------------------------------------------------------- */
 
-/* **************** Yugo Searchbar **************** */
-.yugo-search-bar {
+/* **************** OzoTrips Searchbar **************** */
+.ozotrips-search-bar {
   position: relative;
   /* padding: 0 30px; */
 }
-.yugo-search-bar ul {
+.ozotrips-search-bar ul {
   background: #dbe9ee;
   border-radius: 30px;
   margin: 30px 0 0 27px;
@@ -7078,14 +7078,14 @@ input.select2-search__field,
   float: left;
   justify-content: space-between;
 }
-.yugo-search-bar ul li {
+.ozotrips-search-bar ul li {
   width: 48%;
 }
-.yugo-search-bar ul li a.active {
+.ozotrips-search-bar ul li a.active {
   background: #1c3659;
   color: #fff;
 }
-.yugo-search-bar ul li a {
+.ozotrips-search-bar ul li a {
   padding: 3px 30px;
   border-radius: 30px;
   color: #1c3659;
@@ -7955,7 +7955,7 @@ td.t-range {
     width: 100%;
     max-width: 100%;
   }
-  .yugo-search-bar ul {
+  .ozotrips-search-bar ul {
     margin: 57px auto;
   }
 }
@@ -7980,13 +7980,13 @@ td.t-range {
   }
 }
 @media only screen and (max-width: 575px) {
-  .yugo-search-bar ul {
+  .ozotrips-search-bar ul {
     max-width: 100%;
   }
-  .yugo-search-bar ul li {
+  .ozotrips-search-bar ul li {
     width: 48%;
   }
-  .yugo-search-bar {
+  .ozotrips-search-bar {
     background: #f5f8f1;
     padding: 30px 10px;
   }
@@ -8001,7 +8001,7 @@ td.t-range {
   .departure-city-item span,
   .travelars,
   .search-bar-btn,
-  .yugo-search-bar ul li a {
+  .ozotrips-search-bar ul li a {
     font-size: 13px;
   }
   .mobilepop-flight-filed .autocomplete-wrapper input {
@@ -8326,11 +8326,11 @@ td.t-range {
 }
 
 @media screen and (max-width: 575px) {
-  .yugo-hero-banner .tab-nav-rounded .nav-item {
+  .ozotrips-hero-banner .tab-nav-rounded .nav-item {
     margin: 0 0 0 5px;
   }
 
-  .yugo-hero-banner .tab-nav-rounded .nav-link {
+  .ozotrips-hero-banner .tab-nav-rounded .nav-link {
     font-size: 15px;
     line-height: 17px;
     padding: 3px 6px 4px 4px;
@@ -8446,7 +8446,7 @@ td.t-range {
     float: none !important;
   }
 
-  .yugo-hero-banner {
+  .ozotrips-hero-banner {
     padding: 50px 0 40px;
     float: left;
     width: 100%;
@@ -9310,20 +9310,20 @@ td.t-range {
     padding: 20px 2%;
   }
 
-  .visa-yugo {
+  .visa-ozotrips {
     padding: 20px 0 0;
   }
 
-  .visa-yugo-box {
+  .visa-ozotrips-box {
     padding: 10px;
   }
 
-  .visa-yugo-box ul li {
+  .visa-ozotrips-box ul li {
     font-size: 11px;
     line-height: 13px;
   }
 
-  .visa-yugo-box ul li span {
+  .visa-ozotrips-box ul li span {
     font-size: 11px;
     line-height: 12px;
     margin: 3px 24px 0;
@@ -9485,7 +9485,7 @@ td.t-range {
     background: #fff !important;
   }
 
-  .yugo-header .container-fluid {
+  .ozotrips-header .container-fluid {
     background: #fff;
     border-bottom: 1px solid #dddedf;
   }
@@ -10112,13 +10112,13 @@ td.t-range {
     background: url(../../assets/img/home/card-rate-2.png) no-repeat 92% center;
   }
 
-  .pay-price-mb-box .yugo-rewards {
+  .pay-price-mb-box .ozotrips-rewards {
     color: #1c3659;
     margin: 0 0 4px;
     font-size: 11px;
   }
 
-  .pay-price-mb-box .yugo-rewards span {
+  .pay-price-mb-box .ozotrips-rewards span {
     color: #ff9c00;
   }
 
@@ -10226,7 +10226,7 @@ td.t-range {
     height: 100vh;
   }
 
-  .flight-visa-search .yugo-class .blue-btn {
+  .flight-visa-search .ozotrips-class .blue-btn {
     width: 100%;
     position: relative;
     left: 0;
@@ -13871,7 +13871,7 @@ html, body {
 }
 
 /* Force header to be full width relative to viewport and not overflow on the right */
-.new-header, .yugo-header {
+.new-header, .ozotrips-header {
     width: 100% !important;
     left: 0 !important;
     right: 0 !important;
