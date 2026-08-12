@@ -22,6 +22,8 @@ function getHtmlEntries(dir, baseDir = dir) {
 
 export default defineConfig({
   build: {
+    reportCompressedSize: false,
+    chunkSizeWarningLimit: 2000,
     rollupOptions: {
       input: getHtmlEntries(__dirname)
     }
