@@ -699,3 +699,252 @@
   font-weight: 600;
 }
 
+/* ==========================================================================
+   HOMEPAGE HERO, SEARCH HUB, CEO & FOOTER CONTRAST FIXES
+   ========================================================================== */
+.new-home-banner.visa-banner,
+.new-home-banner {
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.76) 0%, rgba(11, 17, 32, 0.56) 45%, rgba(11, 17, 32, 0.90) 100%),
+              url('../img/home/luxe-hero-bg.jpg') center/cover no-repeat !important;
+  min-height: 760px !important;
+  padding: 130px 20px 80px !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  float: none !important;
+  width: 100% !important;
+}
+
+.new-home-banner .hero-main-title-container {
+  margin-top: 0 !important;
+  margin-bottom: 28px !important;
+  text-align: center !important;
+}
+
+.new-home-banner .hero-main-title {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(2.4rem, 4.8vw, 4rem) !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.025em !important;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35) !important;
+  margin-bottom: 14px !important;
+}
+
+.new-home-banner .hero-main-title .highlight-gold {
+  background: linear-gradient(135deg, #00D2FF 0%, #38BDF8 45%, #FF9900 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #FF9900 !important;
+}
+
+.new-home-banner .hero-sub-title {
+  font-size: clamp(1rem, 1.8vw, 1.22rem) !important;
+  color: rgba(241, 245, 249, 0.92) !important;
+  font-weight: 500 !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.new-home-banner .multi-search-container {
+  max-width: 1040px !important;
+  margin: 28px auto 0 !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 0 24px 60px rgba(7, 13, 24, 0.42) !important;
+  overflow: hidden !important;
+}
+
+.new-home-banner .search-tabs {
+  background: #F1F5F9 !important;
+  padding: 6px 12px 0 !important;
+  gap: 4px !important;
+}
+
+.new-home-banner .search-tab-btn {
+  padding: 13px 16px !important;
+  border-radius: 14px 14px 0 0 !important;
+  color: #475569 !important;
+  font-weight: 700 !important;
+}
+
+.new-home-banner .search-tab-btn.active {
+  background: #FFFFFF !important;
+  color: #0066FF !important;
+}
+
+.new-home-banner .search-tab-btn.active::after {
+  background: linear-gradient(90deg, #00D2FF 0%, #0066FF 100%) !important;
+  height: 3px !important;
+}
+
+.new-home-banner .search-action-btn {
+  background: linear-gradient(135deg, #FF9900 0%, #F97316 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  padding: 13px 26px !important;
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.32) !important;
+  transition: all 0.25s ease !important;
+}
+
+.new-home-banner .search-action-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 26px rgba(255, 153, 0, 0.45) !important;
+}
+
+/* Hero Stat Cards (Frosted Dark Glass) */
+.new-home-banner .hero-stats-grid {
+  max-width: 1040px !important;
+  margin: 30px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+@media (max-width: 768px) {
+  .new-home-banner .hero-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.new-home-banner .hero-stat-card {
+  background: rgba(11, 17, 32, 0.62) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-radius: 16px !important;
+  padding: 16px 14px !important;
+  text-align: center !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+.new-home-banner .hero-stat-number {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.65rem !important;
+  font-weight: 800 !important;
+  color: #00D2FF !important;
+  line-height: 1.2 !important;
+}
+
+.new-home-banner .hero-stat-label {
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: #E2E8F0 !important;
+  margin-top: 4px !important;
+}
+
+/* Curated Collections Centered CTA */
+.ozo-collections-cta-wrap {
+  text-align: center;
+  margin-top: 44px;
+}
+
+.ozo-collections-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  background: linear-gradient(135deg, #FF9900 0%, #F97316 100%);
+  color: #FFFFFF !important;
+  border-radius: 100px;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none !important;
+  box-shadow: 0 10px 28px rgba(255, 153, 0, 0.34);
+  transition: all 0.25s ease;
+}
+
+.ozo-collections-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(255, 153, 0, 0.48);
+  color: #FFFFFF !important;
+}
+
+/* CEO Section Contrast Fix */
+.ceo-section {
+  background: linear-gradient(135deg, #070D18 0%, #0B162C 100%) !important;
+  color: #F8FAFC !important;
+  padding: 85px 20px !important;
+}
+
+.ceo-section h2,
+.ceo-section .ceo-content h2 {
+  color: #FFFFFF !important;
+  text-align: left !important;
+  margin-bottom: 18px !important;
+}
+
+.ceo-section .ceo-quote {
+  color: #38BDF8 !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  font-style: italic !important;
+  border-left: 4px solid #FF9900 !important;
+  padding-left: 18px !important;
+  margin: 18px 0 22px !important;
+  line-height: 1.65 !important;
+}
+
+.ceo-section .ceo-content p {
+  color: #CBD5E1 !important;
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+}
+
+.ceo-section .ceo-signature p {
+  color: #94A3B8 !important;
+}
+
+.ceo-section .ceo-signature h4 {
+  color: #FFFFFF !important;
+}
+
+.ceo-section .ceo-signature span {
+  color: #FF9900 !important;
+}
+
+/* Footer Contrast Fix */
+footer.footer {
+  background: #070D18 !important;
+  border-top: 3px solid #FF9900 !important;
+  color: #CBD5E1 !important;
+}
+
+footer.footer h4,
+footer.footer h4.rubik-medium,
+footer.footer .heading-footer {
+  color: #38BDF8 !important;
+}
+
+footer.footer a {
+  color: #E2E8F0 !important;
+}
+
+footer.footer a:hover {
+  color: #FF9900 !important;
+}
+
+footer.footer p,
+footer.footer span,
+footer.footer li {
+  color: #94A3B8 !important;
+}
+
+/* Hide redundant legacy clutter below Curated Collections */
+.unique-wrapper,
+.unique-row.unique-spaces-500,
+.seo-point-box,
+.seo-res-box {
+  display: none !important;
+}
+
+
