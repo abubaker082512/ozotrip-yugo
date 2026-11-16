@@ -1511,4 +1511,82 @@ p.tag-line-save {
     height: auto !important;
 }
 
+/* Mobile & Tablet Responsive Header + Drawer Fixes (< 1200px) */
+@media (max-width: 1199px) {
+    .ozotrips-header,
+    .new-header,
+    .ozotrips-header.header-fixed,
+    .new-header.header-fixed {
+        background: rgba(11, 17, 32, 0.96) !important;
+        max-width: 100vw !important;
+    }
+
+    .ozotrips-header .nav-links {
+        display: none !important;
+    }
+
+    .ozotrips-header .navbar-brand img,
+    .new-header .navbar-brand img {
+        height: 36px !important;
+        width: auto !important;
+    }
+
+    .ozotrips-header .navbar-toggler {
+        display: flex !important;
+        z-index: 10001 !important;
+    }
+
+    .ozotrips-header .navbar-toggler-icon {
+        background-color: #FFFFFF !important;
+    }
+
+    .\32 0-prcent-tag p.tag-line-save {
+        font-size: 11.5px !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
+    }
+
+    .ozotrips-header .u-header__navbar-collapse.collapse,
+    .ozotrips-header .u-header__navbar-collapse.collapsing,
+    .ozotrips-header .u-header__navbar-collapse.collapse.show {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        z-index: 9998 !important;
+    }
+
+    .ozotrips-header .u-header__navbar-collapse.collapse .navbar-nav,
+    .ozotrips-header .u-header__navbar-collapse.collapsing .navbar-nav {
+        background: #0B1120 !important;
+        width: 290px !important;
+        max-width: 85vw !important;
+        padding: 76px 16px 28px !important;
+        overflow-y: auto !important;
+        border-right: 1px solid rgba(56, 189, 248, 0.22) !important;
+        box-shadow: 12px 0 40px rgba(0, 0, 0, 0.55) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 6px !important;
+    }
+
+    .ozotrips-header .u-header__navbar-collapse .navbar-nav .nav-item {
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .ozotrips-header .u-header__navbar-collapse .navbar-nav .nav-link {
+        color: #F8FAFC !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        padding: 12px 16px !important;
+        font-size: 15px !important;
+    }
+
+    .ozotrips-header .u-header__navbar-collapse .navbar-nav .lft-ham {
+        margin-left: 0 !important;
+        color: #F8FAFC !important;
+    }
+}
+
 
