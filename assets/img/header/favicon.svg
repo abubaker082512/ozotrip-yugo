@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" fill="none">
+  <defs>
+    <linearGradient id="icon-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#021B47" />
+    </linearGradient>
+    <linearGradient id="icon-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="icon-sunset" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="60%" stop-color="#F97316" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle App Icon Container -->
+  <rect width="128" height="128" rx="28" fill="url(#icon-bg)" />
+  <rect x="1" y="1" width="126" height="126" rx="27" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+
+  <!-- Mark scaled and centered -->
+  <g transform="translate(14, 14) scale(0.95)">
+    <!-- Outer Orbit Ring (The 'O') -->
+    <path d="M 50 10 A 40 40 0 1 0 90 50 C 90 46 86 44 83 45 C 80 46 78 49 78 50 A 28 28 0 1 1 50 22 C 58 22 64 25 70 30 C 73 32.5 77 32 79 29 C 81 26 80 22 77 19.5 C 69 13.5 60 10 50 10 Z" 
+          fill="url(#icon-blue)" />
+
+    <!-- Flight Swoop Trail -->
+    <path d="M 18 66 C 26 78 42 84 56 81 C 72 78 84 66 90 50 C 92 44 95 36 102 24" 
+          stroke="url(#icon-sunset)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Jet at Apex -->
+    <g transform="translate(100, 22) rotate(42) scale(1.1)">
+      <path d="M 0 -14 L 5 2 L 14 6 L 14 9 L 5 8 L 3 14 L 7 17 L 7 19 L 0 18 L -7 19 L -7 17 L -3 14 L -5 8 L -14 9 L -14 6 L -5 2 Z" 
+            fill="url(#icon-sunset)" />
+      <circle cx="0" cy="-6" r="1.5" fill="#FFFFFF" />
+    </g>
+
+    <!-- Star Accent -->
+    <polygon points="50,25 52,31 58,33 52,35 50,41 48,35 42,33 48,31" fill="url(#icon-sunset)" />
+  </g>
+</svg>

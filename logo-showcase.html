@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OzoTrips Brand Identity & Logo Design System</title>
+  <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #141c2e;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #0066ff;
+      --secondary: #ff7a00;
+      --font: 'Outfit', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      padding: 40px 24px 80px;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #fff 40%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Section Styling */
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title span {
+      color: #38bdf8;
+    }
+
+    /* Logos Grid */
+    .logos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 28px;
+      margin-bottom: 50px;
+    }
+    .logo-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .logo-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+    .preview-box {
+      padding: 35px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 170px;
+      transition: background 0.3s;
+    }
+    .preview-box.light {
+      background: #ffffff;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .preview-box.slate {
+      background: #f4f7fa;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .preview-box.dark {
+      background: #0b1120;
+      border-bottom: 1px solid #1e293b;
+    }
+    .preview-box img, .preview-box svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      max-height: 80px;
+    }
+
+    .card-content {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+    .concept-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ff9900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .card-features {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .card-features li {
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: #cbd5e1;
+    }
+
+    /* Color Palettes Section */
+    .palettes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+    .palette-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 22px;
+      position: relative;
+    }
+    .palette-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .palette-mood {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .swatches {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .swatch {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    .swatch:hover {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+    .swatch-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.85;
+    }
+
+    /* Mockup Preview */
+    .mockup-preview {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 50px;
+    }
+    .browser-header {
+      background: #0f172a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .browser-dots {
+      padding: 10px 16px;
+      background: #1e293b;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .dot.r { background: #ef4444; }
+    .dot.y { background: #f59e0b; }
+    .dot.g { background: #10b981; }
+    .browser-bar {
+      margin-left: 15px;
+      background: #0f172a;
+      border-radius: 6px;
+      padding: 3px 12px;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      font-family: monospace;
+      width: 250px;
+    }
+
+    .mockup-navbar {
+      background: #ffffff;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .mockup-navbar img {
+      height: 48px;
+    }
+    .mock-links {
+      display: flex;
+      gap: 20px;
+      color: #334155;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .mock-btn {
+      background: #0052cc;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .app-icon-row {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .app-icon-box {
+      text-align: center;
+    }
+    .app-icon-box img {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-bottom: 8px;
+    }
+    .app-icon-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Action bar */
+    .action-banner {
+      background: linear-gradient(135deg, #0052cc 0%, #1e40af 100%);
+      border-radius: 16px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .action-text h3 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+    .action-text p {
+      opacity: 0.9;
+      font-size: 0.95rem;
+    }
+    .badge-ready {
+      background: #ff9900;
+      color: #fff;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <span class="badge">Brand Identity Design</span>
+      <h1>OzoTrips New Logo & Color Systems</h1>
+      <p class="subtitle">
+        Tailored for local & international tour bookings, sacred journeys (Hajj & Umrah), adventure expeditions, and flight packages.
+      </p>
+    </header>
+
+    <!-- SECTION: FINAL WINNER -->
+    <h2 class="section-title"><span>👑</span> Finalized Winner: Cyan "OZO" + Sunset Amber "TRIPS"</h2>
+    <div style="background:#141c2e; border: 2px solid #38bdf8; border-radius: 20px; padding: 28px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-bottom: 20px;">
+        <!-- Dark Mode -->
+        <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 14px; padding: 25px; text-align: center;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #94a3b8; display: block; margin-bottom: 15px;">Dark Background Version</span>
+          <img src="./assets/new-logos/ozotrips-cyan-ozo-amber-trips-dark.svg" style="max-height: 70px; width: auto;" alt="Final Dark">
+        </div>
+        <!-- Light Mode -->
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 25px; text-align: center;">
+          <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #64748b; display: block; margin-bottom: 15px;">Light Background Version</span>
+          <img src="./assets/new-logos/ozotrips-cyan-ozo-amber-trips-light.svg" style="max-height: 70px; width: auto;" alt="Final Light">
+        </div>
+      </div>
+      <p style="color: #cbd5e1; font-size: 0.95rem; text-align: center;">
+        <strong>Perfect Brand Harmony:</strong> Electric Cyan <strong>OZO</strong> echoes the outer orbit ring of the icon, while Sunset Amber <strong>TRIPS</strong> mirrors the soaring aeroplane & contrail swoop!
+      </p>
+    </div>
+
+    <!-- SECTION: TYPOGRAPHY REFINEMENTS -->
+    <h2 class="section-title"><span>★</span> Refined Typography, Spacings & Text Colors</h2>
+    <div style="background:#141c2e; border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 24px; margin-bottom: 40px;">
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        
+        <!-- OPT 1 -->
+        <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 12px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+          <img src="./assets/new-logos/refined-opt1-cyan-dark.svg" style="max-height: 60px; width: auto;" alt="Option 1">
+          <div style="color: #94a3b8; font-size: 0.85rem; max-width: 320px;">
+            <strong style="color: #38bdf8; display: block; font-size: 0.95rem;">Option 1: Ice White + Electric Cyan</strong>
+            Clean seamless kerning, high contrast on dark backgrounds, electric cyan highlight.
+          </div>
+        </div>
+
+        <!-- OPT 2 -->
+        <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 12px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+          <img src="./assets/new-logos/refined-opt2-amber-dark.svg" style="max-height: 60px; width: auto;" alt="Option 2">
+          <div style="color: #94a3b8; font-size: 0.85rem; max-width: 320px;">
+            <strong style="color: #f59e0b; display: block; font-size: 0.95rem;">Option 2: Sunset Amber Accent</strong>
+            Direct color synergy with the golden aircraft & contrail. Vibrant travel warmth.
+          </div>
+        </div>
+
+        <!-- OPT 3 -->
+        <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 12px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+          <img src="./assets/new-logos/refined-opt3-titlecase-dark.svg" style="max-height: 60px; width: auto;" alt="Option 3">
+          <div style="color: #94a3b8; font-size: 0.85rem; max-width: 320px;">
+            <strong style="color: #fff; display: block; font-size: 0.95rem;">Option 3: Modern TitleCase (OzoTrips)</strong>
+            Friendly modern tech booking feel like Expedia/Airbnb with an amber accent dot.
+          </div>
+        </div>
+
+        <!-- OPT 4 -->
+        <div style="background: #0b1120; border: 1px solid #1e293b; border-radius: 12px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+          <img src="./assets/new-logos/refined-opt4-monolith-dark.svg" style="max-height: 60px; width: auto;" alt="Option 4">
+          <div style="color: #94a3b8; font-size: 0.85rem; max-width: 320px;">
+            <strong style="color: #fff; display: block; font-size: 0.95rem;">Option 4: White Monolith & Horizon Line</strong>
+            Pure white high-luxury typography underlined by a gradient flight trajectory.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION: LOGO CONCEPTS -->
+    <h2 class="section-title"><span>01.</span> New Logo Concepts</h2>
+    <div class="logos-grid">
+
+      <!-- CONCEPT 1 -->
+      <div class="logo-card">
+        <div class="preview-box light">
+          <img src="./assets/new-logos/concept1-infinite-flight.svg" alt="Concept 1 Light">
+        </div>
+        <div class="preview-box dark">
+          <img src="./assets/new-logos/concept1-infinite-flight-dark.svg" alt="Concept 1 Dark">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="concept-tag">Concept 1 (Recommended)</span>
+          </div>
+          <h3 class="card-title">The "Infinite Flight & Compass"</h3>
+          <p class="card-desc">
+            An aerodynamic infinity 'O' loop crossed by a soaring supersonic jet with warm sunset contrails and a subtle north compass star. Communicates worldwide connectivity, speed, confidence, and wanderlust.
+          </p>
+          <ul class="card-features">
+            <li>Dynamic Flight Jet</li>
+            <li>Horizon Sunset Arc</li>
+            <li>North Star Navigation</li>
+            <li>Perfect at Any Scale</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONCEPT 2 -->
+      <div class="logo-card">
+        <div class="preview-box light">
+          <img src="./assets/new-logos/concept2-compass-peak.svg" alt="Concept 2 Light">
+        </div>
+        <div class="preview-box slate">
+          <img src="./assets/new-logos/concept2-compass-peak.svg" alt="Concept 2 Slate">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="concept-tag">Concept 2</span>
+          </div>
+          <h3 class="card-title">The "Compass Peak & Waypoint"</h3>
+          <p class="card-desc">
+            Combines a modern map waypoint pin with snow-capped mountain peaks (celebrating Northern Pakistan, Hunza, Passu Cones) and a golden navigational star. Ideal for adventure, nature tours, and sacred pilgrimages.
+          </p>
+          <ul class="card-features">
+            <li>Geo-Location Pin</li>
+            <li>Himalayan Mountain Peaks</li>
+            <li>Golden Guide Star</li>
+            <li>Adventure & Heritage</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONCEPT 3 -->
+      <div class="logo-card">
+        <div class="preview-box light">
+          <img src="./assets/new-logos/concept3-horizon-orbit.svg" alt="Concept 3 Light">
+        </div>
+        <div class="preview-box dark">
+          <img src="./assets/new-logos/concept3-horizon-orbit.svg" alt="Concept 3 Dark">
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <span class="concept-tag">Concept 3</span>
+          </div>
+          <h3 class="card-title">The "Horizon Orbit & Modern Wings"</h3>
+          <p class="card-desc">
+            An ultra-sleek, minimalist dual-ribbon monogram combining an orbital loop with stylized flight wings in vibrant Indigo and Sunset Coral. Gives OzoTrips a high-tech Silicon-Valley booking portal vibe.
+          </p>
+          <ul class="card-features">
+            <li>Modernist Geometric Monogram</li>
+            <li>Tech & Seamless UI Friendly</li>
+            <li>Dual Ribbon Orbit</li>
+            <li>Coral & Indigo Pulse</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION: COLOR PALETTES -->
+    <h2 class="section-title"><span>02.</span> Strategic Color Palettes</h2>
+    <div class="palettes-grid">
+
+      <!-- PALETTE 1 -->
+      <div class="palette-card">
+        <h4 class="palette-name">1. Aero Royal & Sunset Amber</h4>
+        <p class="palette-mood">Vibrant, Trustworthy, Energetic (Current website evolved)</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#0052CC; color:#fff;">
+            <span>#0052CC</span><span class="swatch-label">Primary Royal</span>
+          </div>
+          <div class="swatch" style="background:#0033AA; color:#fff;">
+            <span>#0033AA</span><span class="swatch-label">Deep Navy Brand</span>
+          </div>
+          <div class="swatch" style="background:#FF9900; color:#1a1a1a;">
+            <span>#FF9900</span><span class="swatch-label">Sunset Gold / CTA</span>
+          </div>
+          <div class="swatch" style="background:#00C9FF; color:#1a1a1a;">
+            <span>#00C9FF</span><span class="swatch-label">Sky Cyan Accent</span>
+          </div>
+          <div class="swatch" style="background:#F4F7FA; color:#0f172a;">
+            <span>#F4F7FA</span><span class="swatch-label">Ice White Surface</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALETTE 2 -->
+      <div class="palette-card">
+        <h4 class="palette-name">2. Mediterranean Azure & Coral</h4>
+        <p class="palette-mood">Fresh, Tropical, Youthful & Modern Booking</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#0284C7; color:#fff;">
+            <span>#0284C7</span><span class="swatch-label">Ocean Azure</span>
+          </div>
+          <div class="swatch" style="background:#38BDF8; color:#0f172a;">
+            <span>#38BDF8</span><span class="swatch-label">Tropical Sky</span>
+          </div>
+          <div class="swatch" style="background:#FF6B35; color:#fff;">
+            <span>#FF6B35</span><span class="swatch-label">Tangerine Sunset</span>
+          </div>
+          <div class="swatch" style="background:#0F172A; color:#fff;">
+            <span>#0F172A</span><span class="swatch-label">Midnight Slate</span>
+          </div>
+          <div class="swatch" style="background:#FFFFFF; color:#0f172a;">
+            <span>#FFFFFF</span><span class="swatch-label">Pure Crisp Canvas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALETTE 3 -->
+      <div class="palette-card">
+        <h4 class="palette-name">3. Emerald Oasis & Sahara Gold</h4>
+        <p class="palette-mood">Sacred Journeys, VIP Luxury & Heritage (Umrah / Northern Tours)</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#065F46; color:#fff;">
+            <span>#065F46</span><span class="swatch-label">Imperial Emerald</span>
+          </div>
+          <div class="swatch" style="background:#0D9488; color:#fff;">
+            <span>#0D9488</span><span class="swatch-label">Mountain Pine</span>
+          </div>
+          <div class="swatch" style="background:#D97706; color:#fff;">
+            <span>#D97706</span><span class="swatch-label">Sahara Warm Gold</span>
+          </div>
+          <div class="swatch" style="background:#FDE68A; color:#78350f;">
+            <span>#FDE68A</span><span class="swatch-label">Sand Dune Glow</span>
+          </div>
+          <div class="swatch" style="background:#F8F9FA; color:#0f172a;">
+            <span>#F8F9FA</span><span class="swatch-label">Pearl Sand</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALETTE 4 -->
+      <div class="palette-card">
+        <h4 class="palette-name">4. Cyber Indigo & Neon Aurora</h4>
+        <p class="palette-mood">Next-Gen Travel App, High-Tech, High Contrast</p>
+        <div class="swatches">
+          <div class="swatch" style="background:#4F46E5; color:#fff;">
+            <span>#4F46E5</span><span class="swatch-label">Electric Indigo</span>
+          </div>
+          <div class="swatch" style="background:#06B6D4; color:#0f172a;">
+            <span>#06B6D4</span><span class="swatch-label">Cyan Velocity</span>
+          </div>
+          <div class="swatch" style="background:#F43F5E; color:#fff;">
+            <span>#F43F5E</span><span class="swatch-label">Coral Rose</span>
+          </div>
+          <div class="swatch" style="background:#1E1B4B; color:#fff;">
+            <span>#1E1B4B</span><span class="swatch-label">Cosmic Deep Blue</span>
+          </div>
+          <div class="swatch" style="background:#F1F5F9; color:#0f172a;">
+            <span>#F1F5F9</span><span class="swatch-label">Ultra Slate</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECTION: LIVE CONTEXT MOCKUPS -->
+    <h2 class="section-title"><span>03.</span> Real-World Mockups & App Icon</h2>
+    <div class="mockup-preview">
+      <h3 style="font-size: 1.15rem; margin-bottom: 14px; color: #cbd5e1;">Website Header Preview (Desktop)</h3>
+      <div class="browser-header">
+        <div class="browser-dots">
+          <span class="dot r"></span>
+          <span class="dot y"></span>
+          <span class="dot g"></span>
+          <span class="browser-bar">https://ozotrips.com</span>
+        </div>
+        <div class="mockup-navbar">
+          <img src="./assets/new-logos/concept1-infinite-flight.svg" alt="OzoTrips in Navbar">
+          <div class="mock-links">
+            <span>Explore Tours</span>
+            <span>Umrah Packages</span>
+            <span>Flights</span>
+            <span>Visa Services</span>
+            <span>Custom Planner</span>
+          </div>
+          <span class="mock-btn">Book Your Trip</span>
+        </div>
+      </div>
+
+      <div class="app-icon-row">
+        <div class="app-icon-box">
+          <img src="./assets/new-logos/ozotrips-app-icon.svg" alt="Mobile App Icon">
+          <div class="app-icon-label">iOS / Android Icon</div>
+        </div>
+        <div class="app-icon-box">
+          <img src="./assets/new-logos/ozotrips-app-icon.svg" style="width: 48px; height: 48px; border-radius: 12px;" alt="Favicon">
+          <div class="app-icon-label">Favicon / PWA (48px)</div>
+        </div>
+        <div style="flex:1; padding-left: 20px;">
+          <h4 style="font-size: 1.05rem; margin-bottom: 6px;">Vector Scalability & Formats</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            All 3 concepts are rendered in pure vector SVG code with infinite resolution — sharp on 4K retina screens, mobile app headers, printed boarding passes, baggage tags, and billboard signage.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTION / READY FOOTER -->
+    <div class="action-banner">
+      <div class="action-text">
+        <h3>Ready to adopt your favorite logo?</h3>
+        <p>You can choose your preferred concept and palette. Once you decide, we can update your website header, footer, and tokens automatically!</p>
+      </div>
+      <div>
+        <span class="badge-ready">SVG Files Generated in src/assets/new-logos/</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
