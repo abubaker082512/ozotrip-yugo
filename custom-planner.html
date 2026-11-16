@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <title>Bespoke Custom Trip Planner | OzoTrips</title>
+  <meta name="description" content="Plan your custom holiday, luxury honeymoon, northern Pakistan adventure, or VIP Umrah journey with OzoTrips."/>
+  <link rel="shortcut icon" href="assets/img/header/favicon.svg" type="image/svg+xml"/>
+  
+  <!-- CSS Files -->
+  <link href="assets/vendor/slick-carousel/slick/slick.css" rel="stylesheet"/>
+  <link href="assets/css/owl.carousel.min.css" rel="stylesheet"/>
+  <link href="assets/css/tokens.css" rel="stylesheet"/>
+  <link href="assets/css/theme.css" rel="stylesheet"/>
+  <link href="assets/css/custom-header.css" rel="stylesheet"/>
+  <link href="assets/css/custom-style.css" rel="stylesheet"/>
+  <link href="assets/css/redesign-luxe.css" rel="stylesheet"/>
+  <link href="assets/css/custom-footer.css" rel="stylesheet"/>
+
+  <style>
+    .planner-hero {
+      padding: 140px 20px 60px;
+      background: linear-gradient(180deg, #0B1120 0%, #0F172A 100%);
+      color: #FFFFFF;
+      text-align: center;
+      position: relative;
+    }
+    .planner-card-container {
+      max-width: 840px;
+      margin: -40px auto 80px;
+      background: #FFFFFF;
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(11, 17, 32, 0.12);
+      border: 1px solid #E2E8F0;
+      position: relative;
+      z-index: 10;
+    }
+    .planner-progress-track {
+      height: 8px;
+      background: #E2E8F0;
+      border-radius: 100px;
+      overflow: hidden;
+      margin-bottom: 35px;
+    }
+    .planner-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #00D2FF 0%, #FF9900 100%);
+      width: 20%;
+      transition: width 0.35s ease;
+      border-radius: 100px;
+    }
+    .planner-step {
+      display: none;
+    }
+    .planner-step.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .step-title {
+      font-family: var(--font-heading) !important;
+      font-size: 24px;
+      font-weight: 800;
+      color: #0B1120;
+      margin-bottom: 8px;
+    }
+    .step-desc {
+      font-size: 15px;
+      color: #64748B;
+      margin-bottom: 24px;
+    }
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .option-btn {
+      padding: 20px;
+      border-radius: 18px;
+      border: 2px solid #E2E8F0;
+      background: #F8FAFC;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .option-btn:hover {
+      border-color: #00D2FF;
+      background: rgba(0, 210, 255, 0.04);
+      transform: translateY(-2px);
+    }
+    .option-btn.selected {
+      border-color: #0066FF;
+      background: rgba(0, 102, 255, 0.08);
+      box-shadow: 0 4px 15px rgba(0, 102, 255, 0.15);
+    }
+    .option-btn-icon {
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+    .option-btn-title {
+      font-family: var(--font-heading) !important;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0B1120;
+    }
+    .option-btn-desc {
+      font-size: 12.5px;
+      color: #64748B;
+    }
+    .nav-buttons-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #E2E8F0;
+    }
+    .nav-prev-btn {
+      background: #F1F5F9;
+      color: #334155;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 24px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .nav-next-btn {
+      background: linear-gradient(135deg, #FF9900 0%, #F97316 100%);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 100px;
+      padding: 12px 30px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3);
+      transition: all 0.25s ease;
+    }
+    .nav-next-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 153, 0, 0.4);
+    }
+    .custom-input {
+      width: 100%;
+      height: 48px;
+      border-radius: 12px;
+      border: 1.5px solid #CBD5E1;
+      padding: 10px 16px;
+      font-size: 15px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+    .custom-input:focus {
+      border-color: #00D2FF;
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Glassmorphic Header -->
+  <header class="new-header ozotrips-header" id="header">
+    <div class="20-prcent-tag">
+      <p class="tag-line-save">
+        <img alt="percentage icon" class="promo-icon-head" loading="lazy" src="assets/img/home/prcnt-con.png"/>
+        Amazing Discount! Use Promo Code 'SAVE10' to <span class="sve-bld">SAVE 10%</span> on Visas & Tours
+      </p>
+    </div>
+    <section class="wrapper">
+      <div class="u-header__section u-header__shadow-on-show-hide">
+        <div class="container-fluid" id="logoAndNav">
+          <nav class="js-mega-menu navbar navbar-expand-xl u-header__navbar u-header__navbar--no-space">
+            <a aria-label="OzoTrips" class="navbar-brand" href="index.html">
+              <img alt="OzoTrips Logo" loading="lazy" src="assets/img/header/logo-light.svg"/>
+            </a>
+            <div class="navbar-collapse u-header__navbar-collapse collapse position-relative" id="navBar">
+              <ul class="navbar-nav text-center u-header__navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+                <li class="nav-item"><a class="nav-link" href="umrah.html">Umrah</a></li>
+                <li class="nav-item"><a class="nav-link" href="visas.html">Visas</a></li>
+                <li class="nav-item"><a class="nav-link" href="flights.html">Flights</a></li>
+                <li class="nav-item active"><a class="nav-link" href="custom-planner.html">Custom Planner</a></li>
+                <li class="nav-item appt-btn-item">
+                  <a class="nav-link appt-btn-link" href="appointments.html">Appointments</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="planner-hero">
+    <div class="ozo-hero-vibe-bar">
+      <span class="ozo-vibe-pill">✨ Bespoke Travel Design</span>
+      <span class="ozo-vibe-pill">🛎️ Dedicated Trip Concierge</span>
+      <span class="ozo-vibe-pill">⚡ Instant WhatsApp Quote</span>
+    </div>
+    <h1 style="font-family: var(--font-heading) !important; font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 800; margin-bottom: 14px;">
+      Design Your Dream <span style="color: #FF9900;">Journey</span>
+    </h1>
+    <p style="font-size: 16px; color: #94A3B8; max-width: 600px; margin: 0 auto;">
+      Answer 5 quick questions and our senior travel experts will curate a personalized itinerary with hotels, flights, and activities tailored exactly to your budget.
+    </p>
+  </section>
+
+  <!-- Multi-Step Questionnaire Card -->
+  <div class="planner-card-container">
+    <div class="planner-progress-track">
+      <div class="planner-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Step 1: Destination -->
+    <div class="planner-step active" id="step1">
+      <h2 class="step-title">Step 1: Where do you want to travel?</h2>
+      <p class="step-desc">Select the primary region or destination style for your journey.</p>
+      <div class="option-grid">
+        <div class="option-btn selected" data-value="Northern Pakistan">
+          <div class="option-btn-icon">🏔️</div>
+          <div class="option-btn-title">Northern Pakistan</div>
+          <div class="option-btn-desc">Hunza, Skardu, Swat, Naran & Fairy Meadows</div>
+        </div>
+        <div class="option-btn" data-value="Sacred Pilgrimage (Umrah)">
+          <div class="option-btn-icon">🕌</div>
+          <div class="option-btn-title">Sacred Umrah & Ziyarat</div>
+          <div class="option-btn-desc">Makkah, Madinah, Rawdah permits & VIP transport</div>
+        </div>
+        <div class="option-btn" data-value="International Leisure Escapes">
+          <div class="option-btn-icon">✈️</div>
+          <div class="option-btn-title">International Escapes</div>
+          <div class="option-btn-desc">Baku, Dubai, Thailand, Bali, Turkey, Europe</div>
+        </div>
+        <div class="option-btn" data-value="Luxury Honeymoon">
+          <div class="option-btn-icon">💍</div>
+          <div class="option-btn-title">Luxury Honeymoon</div>
+          <div class="option-btn-desc">Intimate romantic resorts, private candlelight dinners</div>
+        </div>
+      </div>
+      <div class="nav-buttons-row">
+        <div></div>
+        <button class="nav-next-btn" onclick="nextStep(2)">Continue to Step 2 ➔</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Travel Style -->
+    <div class="planner-step" id="step2">
+      <h2 class="step-title">Step 2: Who is traveling with you?</h2>
+      <p class="step-desc">We customize accommodation sizes, private transport, and pacing based on your travel party.</p>
+      <div class="option-grid">
+        <div class="option-btn selected" data-value="Family with Children">
+          <div class="option-btn-icon">👨‍👩‍👧‍👦</div>
+          <div class="option-btn-title">Family Holiday</div>
+          <div class="option-btn-desc">Connecting rooms, kid-friendly excursions</div>
+        </div>
+        <div class="option-btn" data-value="Couple / Romantic">
+          <div class="option-btn-icon">💑</div>
+          <div class="option-btn-title">Couple / Honeymoon</div>
+          <div class="option-btn-desc">Private vehicle, scenic views, boutique stays</div>
+        </div>
+        <div class="option-btn" data-value="Friends / Adventure Group">
+          <div class="option-btn-icon">🧗</div>
+          <div class="option-btn-title">Adventure Group</div>
+          <div class="option-btn-desc">Trekking, off-road 4x4, shared fun & campfires</div>
+        </div>
+        <div class="option-btn" data-value="Solo Traveler">
+          <div class="option-btn-icon">🎒</div>
+          <div class="option-btn-title">Solo Explorer</div>
+          <div class="option-btn-desc">Flexible dates, culture immersion, safe guidance</div>
+        </div>
+      </div>
+      <div class="nav-buttons-row">
+        <button class="nav-prev-btn" onclick="prevStep(1)">← Back</button>
+        <button class="nav-next-btn" onclick="nextStep(3)">Continue to Step 3 ➔</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Dates & Duration -->
+    <div class="planner-step" id="step3">
+      <h2 class="step-title">Step 3: Duration & Ideal Timing</h2>
+      <p class="step-desc">How long would you like your trip to last?</p>
+      <div class="option-grid">
+        <div class="option-btn" data-value="3 to 5 Days">
+          <div class="option-btn-icon">⚡</div>
+          <div class="option-btn-title">3 - 5 Days</div>
+          <div class="option-btn-desc">Quick weekend getaway or city break</div>
+        </div>
+        <div class="option-btn selected" data-value="6 to 9 Days">
+          <div class="option-btn-icon">🌿</div>
+          <div class="option-btn-title">6 - 9 Days</div>
+          <div class="option-btn-desc">Standard comprehensive holiday</div>
+        </div>
+        <div class="option-btn" data-value="10 to 14 Days">
+          <div class="option-btn-icon">✨</div>
+          <div class="option-btn-title">10 - 14 Days</div>
+          <div class="option-btn-desc">Deep cultural immersion or sacred journey</div>
+        </div>
+        <div class="option-btn" data-value="15+ Days Grand Tour">
+          <div class="option-btn-icon">🌍</div>
+          <div class="option-btn-title">15+ Days</div>
+          <div class="option-btn-desc">Multi-country expedition or extended retreat</div>
+        </div>
+      </div>
+      <div class="nav-buttons-row">
+        <button class="nav-prev-btn" onclick="prevStep(2)">← Back</button>
+        <button class="nav-next-btn" onclick="nextStep(4)">Continue to Step 4 ➔</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Accommodation Tier -->
+    <div class="planner-step" id="step4">
+      <h2 class="step-title">Step 4: Accommodation Preference</h2>
+      <p class="step-desc">Select your preferred comfort level for hotels and resorts.</p>
+      <div class="option-grid">
+        <div class="option-btn" data-value="3-Star Comfort">
+          <div class="option-btn-icon">🛏️</div>
+          <div class="option-btn-title">3-Star Comfort</div>
+          <div class="option-btn-desc">Clean, vetted, central locations with breakfast</div>
+        </div>
+        <div class="option-btn selected" data-value="4-Star Premium">
+          <div class="option-btn-icon">⭐</div>
+          <div class="option-btn-title">4-Star Premium</div>
+          <div class="option-btn-desc">Panoramic views, swimming pool, luxury amenities</div>
+        </div>
+        <div class="option-btn" data-value="5-Star Luxury VIP">
+          <div class="option-btn-icon">👑</div>
+          <div class="option-btn-title">5-Star Luxury VIP</div>
+          <div class="option-btn-desc">Fairmont, Swissôtel, Serena, Ritz-Carlton standards</div>
+        </div>
+        <div class="option-btn" data-value="Glamping / Boutique Chalet">
+          <div class="option-btn-icon">🏕️</div>
+          <div class="option-btn-title">Boutique Glamping</div>
+          <div class="option-btn-desc">Luxury dome tents, river chalets & heritage forts</div>
+        </div>
+      </div>
+      <div class="nav-buttons-row">
+        <button class="nav-prev-btn" onclick="prevStep(3)">← Back</button>
+        <button class="nav-next-btn" onclick="nextStep(5)">Review & Get Quote ➔</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Contact & Instant Quote -->
+    <div class="planner-step" id="step5">
+      <h2 class="step-title">Step 5: Where should we send your quote?</h2>
+      <p class="step-desc">Our senior planner will send a bespoke itinerary and transparent pricing breakdown within minutes.</p>
+      
+      <div style="max-width: 480px; margin: 0 auto; text-align: left;">
+        <label style="font-weight: 700; font-size: 13px; color: #334155;">Full Name</label>
+        <input class="custom-input" id="userName" placeholder="e.g. Ali Ahmed" type="text"/>
+
+        <label style="font-weight: 700; font-size: 13px; color: #334155;">WhatsApp Number (Mandatory for Instant Quote)</label>
+        <input class="custom-input" id="userWhatsApp" placeholder="e.g. +92 300 1234567" type="tel"/>
+
+        <label style="font-weight: 700; font-size: 13px; color: #334155;">Email Address</label>
+        <input class="custom-input" id="userEmail" placeholder="e.g. ali@example.com" type="email"/>
+
+        <label style="font-weight: 700; font-size: 13px; color: #334155;">Special Requests or Notes (Optional)</label>
+        <textarea class="custom-input" id="userNotes" placeholder="e.g. Need flight tickets from Lahore, vegetarian meals..." style="height: 80px;"></textarea>
+
+        <button onclick="submitPlan()" class="ozo-btn-primary" style="width: 100%; height: 50px; font-size: 16px; margin-top: 10px;">
+          💬 Deliver Itinerary to My WhatsApp
+        </button>
+      </div>
+
+      <div class="nav-buttons-row">
+        <button class="nav-prev-btn" onclick="prevStep(4)">← Back</button>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-ozotrips text-center" style="background: #0B1120; color: #94A3B8; padding: 40px 20px;">
+    <p style="margin: 0; font-size: 14px;">© 2026 OzoTrips. All rights reserved. Registered IATA Travel Partner.</p>
+  </footer>
+
+  <script>
+    var currentStep = 1;
+    var planData = {
+      destination: 'Northern Pakistan',
+      style: 'Family with Children',
+      duration: '6 to 9 Days',
+      accommodation: '4-Star Premium'
+    };
+
+    // Option Button Selection
+    document.querySelectorAll('.planner-step').forEach(function(step) {
+      step.querySelectorAll('.option-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          btn.closest('.option-grid').querySelectorAll('.option-btn').forEach(function(b) {
+            b.classList.remove('selected');
+          });
+          btn.classList.add('selected');
+          var stepId = btn.closest('.planner-step').id;
+          if (stepId === 'step1') planData.destination = btn.getAttribute('data-value');
+          if (stepId === 'step2') planData.style = btn.getAttribute('data-value');
+          if (stepId === 'step3') planData.duration = btn.getAttribute('data-value');
+          if (stepId === 'step4') planData.accommodation = btn.getAttribute('data-value');
+        });
+      });
+    });
+
+    function nextStep(step) {
+      document.getElementById('step' + currentStep).classList.remove('active');
+      currentStep = step;
+      document.getElementById('step' + currentStep).classList.add('active');
+      document.getElementById('progressBar').style.width = (currentStep * 20) + '%';
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    function prevStep(step) {
+      document.getElementById('step' + currentStep).classList.remove('active');
+      currentStep = step;
+      document.getElementById('step' + currentStep).classList.add('active');
+      document.getElementById('progressBar').style.width = (currentStep * 20) + '%';
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    function submitPlan() {
+      var name = document.getElementById('userName').value.trim() || 'Traveler';
+      var wa = document.getElementById('userWhatsApp').value.trim();
+      var email = document.getElementById('userEmail').value.trim();
+      var notes = document.getElementById('userNotes').value.trim();
+
+      var msg = "Hi OzoTrips! I just completed the Custom Trip Planner on OzoTrips.com:\n\n" +
+                "👤 *TRAVELER DETAILS*\n" +
+                "Name: " + name + "\n" +
+                "Phone/WA: " + (wa || "Not specified") + "\n" +
+                "Email: " + (email || "Not specified") + "\n\n" +
+                "✈️ *TRIP PREFERENCES*\n" +
+                "Destination: " + planData.destination + "\n" +
+                "Travel Style: " + planData.style + "\n" +
+                "Duration: " + planData.duration + "\n" +
+                "Accommodation: " + planData.accommodation + "\n" +
+                (notes ? "Notes: " + notes + "\n\n" : "\n") +
+                "Please send me customized itinerary options and best prices!";
+
+      window.open("https://wa.me/923211840777?text=" + encodeURIComponent(msg), '_blank');
+    }
+  </script>
+</body>
+</html>

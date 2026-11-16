@@ -1,0 +1,252 @@
+/**
+ * OzoTrips Global Design Tokens & Foundation System
+ * Brand Palette: Electric Cyan (#00D2FF / #38BDF8) & Sunset Amber (#FF9900 / #F97316)
+ * Luxury Foundations: Midnight Navy (#0B1120) & Crisp Ice Slate (#F8FAFC)
+ * Typography: Plus Jakarta Sans / Outfit (Headings) + Inter (Body)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
+
+:root {
+  /* ==========================================================================
+     COLOR TOKENS
+     ========================================================================== */
+  /* Primary Brand: Electric Cyan */
+  --color-primary: #0066FF;
+  --color-primary-cyan: #00D2FF;
+  --color-primary-cyan-light: #38BDF8;
+  --color-primary-cyan-glow: rgba(0, 210, 255, 0.35);
+
+  /* Secondary Brand: Sunset Amber & Tangerine (High-Converting CTAs) */
+  --color-secondary: #FF9900;
+  --color-secondary-amber: #FF9900;
+  --color-accent-sunset: #F97316;
+  --color-accent-amber-glow: rgba(255, 153, 0, 0.35);
+
+  /* Deep Midnight Navy (Anchors & Luxury Dark Canvas) */
+  --color-navy-midnight: #0B1120;
+  --color-navy-deep: #0F172A;
+  --color-navy-surface: #141C2E;
+  --color-navy-border: #1E293B;
+
+  /* Crisp Ice Slate (Light Mode Canvas & Subtle Dividers) */
+  --bg-primary: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #FFFFFF;
+  --color-slate-ice: #F8FAFC;
+  --color-slate-subtle: #E2E8F0;
+  --color-slate-muted: #64748B;
+  --color-slate-dark: #334155;
+
+  /* Spiritual & Reassurance Green (Umrah & Verified Accents) */
+  --color-emerald-sacred: #10B981;
+  --color-emerald-glow: rgba(16, 185, 129, 0.25);
+  --color-emerald-light: #D1FAE5;
+
+  /* Dynamic Borders */
+  --border-subtle: rgba(56, 189, 248, 0.14);
+  --border-subtle-light: rgba(0, 102, 255, 0.08);
+  --border-card: #E2E8F0;
+
+  /* ==========================================================================
+     TYPOGRAPHY TOKENS
+     ========================================================================== */
+  --font-heading: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-subheading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* ==========================================================================
+     ELEVATION & GLASSMORPHISM
+     ========================================================================== */
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-bg-dark: rgba(11, 17, 32, 0.88);
+  --glass-blur: blur(16px);
+  --glass-border: 1px solid rgba(56, 189, 248, 0.18);
+  --glass-border-light: 1px solid rgba(255, 255, 255, 0.6);
+
+  --shadow-sm: 0 2px 8px rgba(11, 17, 32, 0.04);
+  --shadow-card: 0 12px 32px -4px rgba(0, 82, 204, 0.08);
+  --shadow-card-hover: 0 20px 40px -4px rgba(0, 82, 204, 0.16);
+  --shadow-float: 0 24px 48px -12px rgba(11, 17, 32, 0.18);
+  --shadow-glow-cyan: 0 0 24px rgba(0, 210, 255, 0.35);
+  --shadow-glow-amber: 0 0 24px rgba(255, 153, 0, 0.35);
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 100px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY RULES
+   ========================================================================== */
+body {
+  font-family: var(--font-body) !important;
+  color: var(--color-navy-deep);
+  background-color: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6,
+.ozo-heading,
+.hero-main-title {
+  font-family: var(--font-heading) !important;
+  color: var(--color-navy-midnight);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   MODERN UI COMPONENT PRIMITIVES
+   ========================================================================== */
+
+/* Modern Floating Glass Header */
+.ozo-floating-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: var(--glass-border);
+  box-shadow: 0 4px 20px rgba(11, 17, 32, 0.04);
+  transition: all var(--transition-normal);
+}
+
+.ozo-floating-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 30px rgba(11, 17, 32, 0.08);
+}
+
+/* Primary Amber Action CTA Button */
+.ozo-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--color-secondary-amber) 0%, var(--color-accent-sunset) 100%);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.28);
+  transition: all var(--transition-fast);
+}
+
+.ozo-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 153, 0, 0.38);
+  color: #FFFFFF !important;
+}
+
+/* Secondary Cyan Accent Button */
+.ozo-btn-cyan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #00D2FF 0%, #0066FF 100%);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  border: none;
+  cursor: pointer;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.28);
+  transition: all var(--transition-fast);
+}
+
+.ozo-btn-cyan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 210, 255, 0.4);
+  color: #FFFFFF !important;
+}
+
+/* Editorial Vibe Tag */
+.ozo-vibe-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(11, 17, 32, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-pill);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Knowledge Badges (GetYourGuide / Klook Inspired) */
+.ozo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ozo-badge-cyan {
+  background: rgba(0, 210, 255, 0.12);
+  color: #0077B6;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.ozo-badge-amber {
+  background: rgba(255, 153, 0, 0.12);
+  color: #C2410C;
+  border: 1px solid rgba(255, 153, 0, 0.3);
+}
+
+.ozo-badge-sacred {
+  background: rgba(16, 185, 129, 0.12);
+  color: #065F46;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.ozo-badge-navy {
+  background: rgba(11, 17, 32, 0.08);
+  color: var(--color-navy-midnight);
+  border: 1px solid rgba(11, 17, 32, 0.12);
+}
+
+/* Luxury Glass Card */
+.ozo-glass-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.ozo-glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(56, 189, 248, 0.35);
+}

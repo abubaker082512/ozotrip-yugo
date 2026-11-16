@@ -1,3 +1,5 @@
+@import "./tokens.css";
+
 .main-topper-11 {
     position: relative;
     display: inline-block;
@@ -1191,6 +1193,8 @@ img.promo-icon-head {
 .nav-links ul li {
     margin: 0 14px !important;
 }
+@import "./tokens.css";
+
 .main-topper-11 {
     left: 14px !important;
 }
@@ -1283,4 +1287,133 @@ img.promo-icon-head {
         color: #fff !important;
     }
 }
+
+/* ==========================================================================
+   OZOTRIPS MODERN FLOATING GLASSMORPHIC HEADER SYSTEM
+   ========================================================================== */
+.new-header,
+.ozotrips-header {
+    background: rgba(11, 17, 32, 0.88) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.16) !important;
+    box-shadow: 0 10px 30px rgba(11, 17, 32, 0.28) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.new-header .navbar-brand img,
+.ozotrips-header .navbar-brand img {
+    height: 44px;
+    width: auto;
+    transition: transform 0.25s ease;
+}
+
+.new-header .navbar-brand:hover img,
+.ozotrips-header .navbar-brand:hover img {
+    transform: scale(1.03);
+}
+
+/* Promo Announcement Bar */
+.20-prcent-tag,
+.tag-line-save {
+    background: linear-gradient(90deg, #070d18 0%, #0b192c 50%, #070d18 100%) !important;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.14) !important;
+    color: #cbd5e1 !important;
+    font-size: 13px !important;
+    padding: 7px 0 !important;
+}
+
+.tag-line-save .sve-bld {
+    color: #00d2ff !important;
+    font-weight: 800 !important;
+    text-shadow: 0 0 12px rgba(0, 210, 255, 0.45) !important;
+}
+
+/* Pill Navigation Links */
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-item {
+    padding: 0 4px !important;
+}
+
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-link {
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #f1f5f9 !important;
+    padding: 8px 16px !important;
+    border-radius: 100px !important;
+    border: 1px solid transparent !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-item:hover .nav-link,
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-link:hover {
+    background: rgba(0, 210, 255, 0.12) !important;
+    color: #00d2ff !important;
+    border-color: rgba(0, 210, 255, 0.3) !important;
+    box-shadow: 0 0 16px rgba(0, 210, 255, 0.2) !important;
+}
+
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-item.active .nav-link {
+    background: rgba(0, 210, 255, 0.18) !important;
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3) !important;
+}
+
+/* Sunset Amber Primary Action Pill */
+.appt-btn-link,
+.new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link,
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link {
+    background: linear-gradient(135deg, #ff9900 0%, #f97316 100%) !important;
+    color: #ffffff !important;
+    border-radius: 100px !important;
+    padding: 10px 22px !important;
+    font-weight: 700 !important;
+    font-size: 14.5px !important;
+    border: none !important;
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.32) !important;
+    transition: all 0.25s ease !important;
+}
+
+.appt-btn-link:hover,
+.new-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link:hover,
+.ozotrips-header .navbar-expand-xl .navbar-nav .nav-item.appt-btn-item .appt-btn-link:hover {
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 24px rgba(255, 153, 0, 0.45) !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown Menus */
+.main-box-open,
+.dropdown-menu.u-header__sub-menu {
+    background: rgba(11, 17, 32, 0.96) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(56, 189, 248, 0.22) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45) !important;
+    padding: 10px !important;
+}
+
+.choose-11-user,
+.dropdown-menu.u-header__sub-menu .dropdown-item {
+    color: #f1f5f9 !important;
+    border-radius: 10px !important;
+    padding: 10px 16px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+}
+
+.choose-11-user:hover,
+.dropdown-menu.u-header__sub-menu .dropdown-item:hover {
+    background: rgba(0, 210, 255, 0.15) !important;
+    color: #00d2ff !important;
+    transform: translateX(4px) !important;
+}
+
 

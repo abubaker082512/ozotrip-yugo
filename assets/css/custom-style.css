@@ -1,13 +1,17 @@
 
+@import "./tokens.css";
+
 :root {
-    --ozo-navy: #1c3659;
-    --ozo-navy-dark: #0f1e36;
-    --ozo-gold: #ff9c00;
-    --ozo-gold-dark: #e08500;
+    --ozo-navy: #0b1120;
+    --ozo-navy-dark: #070d18;
+    --ozo-gold: #ff9900;
+    --ozo-gold-dark: #f97316;
+    --ozo-cyan: #00d2ff;
+    --ozo-cyan-light: #38bdf8;
     --ozo-white: #ffffff;
-    --ozo-text: #1e293b;
+    --ozo-text: #0f172a;
     --ozo-text-muted: #64748b;
-    --ozo-bg: #faf9f6;
+    --ozo-bg: #f8fafc;
 }
 /* --- GLOBAL TYPOGRAPHY REDESIGN: OPTION 1 (OUTFIT + INTER) --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');

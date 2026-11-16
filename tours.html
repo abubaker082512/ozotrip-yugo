@@ -167,9 +167,11 @@
 <!-- <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css"> -->
 <link href="assets/css/owl.carousel.min.css" rel="stylesheet"/>
 <!-- CSS OzoTrips Template -->
+<link href="assets/css/tokens.css" rel="stylesheet"/>
 <link href="assets/css/theme.css" rel="stylesheet"/>
 <link href="assets/css/custom-header.css" rel="stylesheet"/>
 <link href="assets/css/custom-style.css" rel="stylesheet"/>
+<link href="assets/css/redesign-luxe.css" rel="stylesheet"/>
 <link href="assets/css/custom-footer.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css"/>
 <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
@@ -1713,6 +1715,32 @@
 </div>
 </section>
 </div>
+<!-- Faceted Filter Sticky Bar (GetYourGuide / Klook Inspired) -->
+<div class="container" style="max-width: 1200px; margin: 30px auto 0; padding: 0 15px;">
+  <div class="ozo-tours-filter-bar">
+    <div class="ozo-filter-pills" id="toursCategoryFilter">
+      <button class="ozo-filter-pill-btn active" data-category="all">✨ All Tours</button>
+      <button class="ozo-filter-pill-btn" data-category="northern">🏔️ Northern Pakistan</button>
+      <button class="ozo-filter-pill-btn" data-category="international">✈️ International Group</button>
+      <button class="ozo-filter-pill-btn" data-category="honeymoon">💍 Honeymoon</button>
+      <button class="ozo-filter-pill-btn" data-category="sacred">🕌 Sacred Journeys</button>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+      <select id="tourDurationFilter" style="height: 38px; border-radius: 100px; border: 1px solid #cbd5e1; padding: 0 16px; font-size: 13px; font-weight: 600; color: #334155; background: #fff;">
+        <option value="all">Any Duration</option>
+        <option value="3-5">3 - 5 Days</option>
+        <option value="6-9">6 - 9 Days</option>
+        <option value="10+">10+ Days</option>
+      </select>
+      <select id="tourTransportFilter" style="height: 38px; border-radius: 100px; border: 1px solid #cbd5e1; padding: 0 16px; font-size: 13px; font-weight: 600; color: #334155; background: #fff;">
+        <option value="all">All Transport</option>
+        <option value="flight">Flight Included</option>
+        <option value="coaster">Luxury Coaster / 4x4</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 <div class="warpper">
 <div class="desktop-category">
 <div class="row change-40">

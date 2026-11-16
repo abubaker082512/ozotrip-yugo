@@ -1,0 +1,701 @@
+/**
+ * OzoTrips Luxury Editorial & Booking Architecture Design System
+ * Inspired by Airbnb Luxe, GetYourGuide, Klook, and Nusuk
+ */
+
+/* ==========================================================================
+   CINEMATIC HERO & VIBE TAGS
+   ========================================================================== */
+.ozo-luxe-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.72) 0%, rgba(11, 17, 32, 0.45) 50%, rgba(11, 17, 32, 0.88) 100%),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+  padding: 140px 20px 80px;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.ozo-hero-vibe-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.ozo-vibe-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+}
+
+.ozo-vibe-pill:hover {
+  background: rgba(0, 210, 255, 0.25);
+  border-color: #00D2FF;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.35);
+}
+
+.ozo-hero-headline {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+}
+
+.ozo-hero-headline span.gradient-text {
+  background: linear-gradient(135deg, #00D2FF 0%, #38BDF8 50%, #FF9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ozo-hero-subheadline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.88);
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   UNIVERSAL BOOKING HUB (5-TAB SEARCH CONSOLE)
+   ========================================================================== */
+.ozo-booking-hub {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 60px -12px rgba(11, 17, 32, 0.25), 0 0 0 1px rgba(0, 102, 255, 0.08);
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+}
+
+.ozo-hub-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 0;
+  border-bottom: 1px solid #E2E8F0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.ozo-hub-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.ozo-hub-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #475569;
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  outline: none !important;
+}
+
+.ozo-hub-tab-btn:hover {
+  color: #0066FF;
+}
+
+.ozo-hub-tab-btn.active {
+  color: #0066FF;
+  border-bottom-color: #0066FF;
+}
+
+.ozo-hub-panel {
+  display: none;
+  padding: 24px 28px 28px;
+}
+
+.ozo-hub-panel.active {
+  display: block;
+}
+
+.ozo-search-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 160px;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+@media (max-width: 991px) {
+  .ozo-search-grid-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ozo-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.ozo-input-group label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+  margin: 0;
+}
+
+.ozo-input-group select,
+.ozo-input-group input {
+  height: 48px;
+  padding: 10px 16px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #0F172A;
+  font-size: 14.5px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ozo-input-group select:focus,
+.ozo-input-group input:focus {
+  border-color: #00D2FF;
+  box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.15);
+  outline: none;
+}
+
+/* ==========================================================================
+   "WHY OZOTRIPS SPEAKS FOR ITSELF" TRUST SECTION
+   ========================================================================== */
+.ozo-trust-section {
+  padding: 80px 20px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.ozo-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.ozo-trust-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+  border-radius: 20px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s ease;
+}
+
+.ozo-trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 102, 255, 0.08);
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.ozo-trust-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.12) 0%, rgba(0, 102, 255, 0.12) 100%);
+  color: #0066FF;
+}
+
+.ozo-trust-info h4 {
+  font-family: var(--font-heading) !important;
+  font-size: 17px;
+  font-weight: 700;
+  color: #0B1120;
+  margin: 0 0 6px;
+}
+
+.ozo-trust-info p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #64748B;
+  margin: 0;
+}
+
+/* ==========================================================================
+   CURATED DESTINATION COLLECTIONS (AIRBNB LUXE STYLE)
+   ========================================================================== */
+.ozo-collections-section {
+  padding: 90px 20px;
+  background: #F8FAFC;
+}
+
+.ozo-section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 50px;
+}
+
+.ozo-section-tag {
+  display: inline-block;
+  color: #FF9900;
+  font-weight: 800;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+
+.ozo-section-title {
+  font-family: var(--font-heading) !important;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #0B1120;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.ozo-section-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #64748B;
+  margin: 0;
+}
+
+.ozo-collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ozo-destination-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 8px 24px rgba(11, 17, 32, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ozo-destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 102, 255, 0.12);
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.ozo-card-media {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.ozo-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ozo-destination-card:hover .ozo-card-media img {
+  transform: scale(1.08);
+}
+
+.ozo-card-season-pill {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(11, 17, 32, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ozo-card-badge-top {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #10B981;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 100px;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.ozo-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ozo-card-category {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0077B6;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.ozo-card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 19px;
+  font-weight: 700;
+  color: #0B1120;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.ozo-card-badges-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.ozo-card-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ozo-card-price-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.ozo-card-price-label {
+  font-size: 11.5px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.ozo-card-price-val {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0B1120;
+}
+
+.ozo-card-btn {
+  padding: 8px 18px;
+  background: #FF9900;
+  color: #FFFFFF !important;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 13.5px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.ozo-card-btn:hover {
+  background: #F97316;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 153, 0, 0.35);
+}
+
+/* ==========================================================================
+   FACETED FILTER BAR & TOURS CATALOG (GetYourGuide / Klook Inspired)
+   ========================================================================== */
+.ozo-tours-filter-bar {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 20px;
+  padding: 18px 24px;
+  box-shadow: 0 4px 20px rgba(11, 17, 32, 0.04);
+  margin-bottom: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ozo-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ozo-filter-pill-btn {
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  color: #334155;
+  font-family: var(--font-heading) !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none !important;
+}
+
+.ozo-filter-pill-btn:hover {
+  background: rgba(0, 210, 255, 0.12);
+  color: #0077B6;
+  border-color: #00D2FF;
+}
+
+.ozo-filter-pill-btn.active {
+  background: #0066FF;
+  color: #FFFFFF;
+  border-color: #0066FF;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.3);
+}
+
+.ozo-tours-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 28px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .ozo-tours-modern-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ozo-modern-tour-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 6px 20px rgba(11, 17, 32, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ozo-modern-tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 102, 255, 0.1);
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.ozo-tour-media-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.ozo-tour-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ozo-modern-tour-card:hover .ozo-tour-media-wrap img {
+  transform: scale(1.06);
+}
+
+.ozo-tour-badges-floating {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ozo-tour-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ozo-tour-card-title {
+  font-family: var(--font-heading) !important;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0B1120;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+
+.ozo-tour-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ozo-tour-highlights-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.ozo-tour-highlights-list li svg,
+.ozo-tour-highlights-list li span.bullet-icon {
+  color: #10B981;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.ozo-tour-card-actions {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   TOUR DETAIL EXPERIENCE (Airbnb Luxe & GetYourGuide Deep Knowledge)
+   ========================================================================== */
+.ozo-detail-hero-mosaic {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 240px 240px;
+  gap: 12px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  .ozo-detail-hero-mosaic {
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px;
+  }
+}
+
+.ozo-mosaic-main {
+  grid-row: span 2;
+  position: relative;
+}
+
+.ozo-mosaic-main img,
+.ozo-mosaic-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ozo-timeline-step {
+  position: relative;
+  padding-left: 36px;
+  padding-bottom: 30px;
+  border-left: 2px dashed #00D2FF;
+}
+
+.ozo-timeline-step:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.ozo-timeline-badge {
+  position: absolute;
+  left: -14px;
+  top: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0066FF;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(0, 102, 255, 0.4);
+}
+
+.ozo-timeline-content {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+/* ==========================================================================
+   SACRED PILGRIMAGE (Nusuk & HalalBooking Inspired Haram Proximity)
+   ========================================================================== */
+.ozo-proximity-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  border: 1px solid #86EFAC;
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.ozo-proximity-metric {
+  font-family: var(--font-heading) !important;
+  font-size: 26px;
+  font-weight: 800;
+  color: #166534;
+  line-height: 1;
+}
+
+.ozo-proximity-label {
+  font-size: 13px;
+  color: #15803D;
+  font-weight: 600;
+}
+

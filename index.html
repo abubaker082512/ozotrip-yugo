@@ -965,9 +965,11 @@
 <!-- <link rel="stylesheet" href="../../assets/css/owl.theme.default.min.css"> -->
 <link href="assets/css/owl.carousel.min.css" rel="stylesheet"/>
 <!-- CSS OzoTrips Template -->
+<link href="assets/css/tokens.css" rel="stylesheet"/>
 <link href="assets/css/theme.css" rel="stylesheet"/>
 <link href="assets/css/custom-header.css" rel="stylesheet"/>
 <link href="assets/css/custom-style.css" rel="stylesheet"/>
+<link href="assets/css/redesign-luxe.css" rel="stylesheet"/>
 <link href="assets/css/custom-footer.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css"/>
 <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
@@ -3127,37 +3129,47 @@ a.double-25 {
 <section class="wrapper">
 <div class="position-relative float-left col-xl-12 p-0">
 <div class="hero-main-title-container">
-  <h1 class="hero-main-title">One-Stop Solution For <span class="highlight-gold">Travelers</span></h1>
-  <p class="hero-sub-title">Book Flights, Visas, Tours & Umrah Packages Seamlessly</p>
+  <div class="ozo-hero-vibe-bar">
+    <a href="tours.html" class="ozo-vibe-pill">🏔️ Karakoram Adventure</a>
+    <a href="umrah.html" class="ozo-vibe-pill">🕌 Sacred Pilgrimage</a>
+    <a href="tours.html" class="ozo-vibe-pill">🌴 Tropical Serenity</a>
+    <a href="flights.html" class="ozo-vibe-pill">✈️ Global Flights</a>
+    <a href="visas.html" class="ozo-vibe-pill">🛂 98 Country Visas</a>
+  </div>
+  <h1 class="hero-main-title">One-Stop Solution For <span class="highlight-gold" style="color: #ff9900 !important;">Travelers</span></h1>
+  <p class="hero-sub-title">Book Flights, Visas, Tours & Umrah Packages Seamlessly with OzoTrips</p>
 </div>
 <div class="fxd-srch-100">
   <div class="multi-search-container">
-    <!-- Tabs Header (Icons Removed for a clean, text-only look) -->
+    <!-- Tabs Header -->
     <div class="search-tabs">
-      <button class="search-tab-btn active" data-tab="visas-tab" type="button">
-        <span class="tab-label">Visas</span>
-      </button>
-      <button class="search-tab-btn" data-tab="flights-tab" type="button">
-        <span class="tab-label">Flights</span>
+      <button class="search-tab-btn active" data-tab="tours-tab" type="button">
+        <span class="tab-label">🏔️ Tours</span>
       </button>
       <button class="search-tab-btn" data-tab="umrah-tab" type="button">
-        <span class="tab-label">Umrah</span>
+        <span class="tab-label">🕌 Umrah</span>
       </button>
-      <button class="search-tab-btn" data-tab="tours-tab" type="button">
-        <span class="tab-label">Tours</span>
+      <button class="search-tab-btn" data-tab="flights-tab" type="button">
+        <span class="tab-label">✈️ Flights</span>
+      </button>
+      <button class="search-tab-btn" data-tab="visas-tab" type="button">
+        <span class="tab-label">🛂 Visas</span>
+      </button>
+      <button class="search-tab-btn" data-tab="planner-tab" type="button">
+        <span class="tab-label">✨ Custom Planner</span>
       </button>
       <button class="search-tab-btn" data-tab="cars-tab" type="button">
-        <span class="tab-label">Car Rental</span>
+        <span class="tab-label">🚗 Cars</span>
       </button>
       <button class="search-tab-btn" data-tab="tracking-tab" type="button">
-        <span class="tab-label">Tracking</span>
+        <span class="tab-label">🔍 Tracking</span>
       </button>
     </div>
 
     <!-- Tabs Content Panels -->
     <div class="search-panels">
       <!-- Visas Tab Panel -->
-      <div class="search-panel active" id="visas-tab">
+      <div class="search-panel" id="visas-tab">
         <div class="search-fields-grid">
           <div class="search-field">
             <label>Select Destination Country</label>
@@ -3476,19 +3488,70 @@ a.double-25 {
       </div>
 
       <!-- Tours Tab Panel -->
-      <div class="search-panel" id="tours-tab">
-        <div class="search-fields-grid">
+      <div class="search-panel active" id="tours-tab">
+        <div class="search-fields-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 160px; gap: 15px; align-items: flex-end;">
           <div class="search-field">
-            <label>Choose Tour Destination</label>
-            <select id="tours_destination_select">
-              <option value="">Where would you like to tour?</option>
-              <option value="tours.html">Baku (Azerbaijan)</option>
-              <option value="tours.html">Europe Group Tours</option>
-              <option value="tours.html">Thailand Group Tours</option>
-              <option value="tours.html">Malaysia Holiday Packages</option>
+            <label>Destination</label>
+            <select id="tours_destination_select" style="height:42px; border:1px solid #cbd5e1; border-radius:6px; padding:0 12px; width:100%; box-sizing:border-box;">
+              <option value="tours.html">All Top Destinations</option>
+              <option value="tours.html?dest=hunza-skardu">Hunza & Skardu (Northern Pakistan)</option>
+              <option value="group-tour/5-days-baku-group-tour-package.html">Baku Panoramic & Shahdag</option>
+              <option value="group-tour/7-days-malaysia-thailand-tour-package.html">Thailand & Malaysia Combo</option>
+              <option value="group-tour/9-days-europe-tour-package.html">Europe Highlights (9 Days)</option>
+              <option value="group-tour/7-days-uk-tour-package.html">United Kingdom & Scotland</option>
+              <option value="group-tour/10-days-australia-tour-package.html">Australia East Coast Tour</option>
             </select>
           </div>
-          <button class="search-action-btn" id="tours_search_btn" type="button">Search Tours</button>
+          <div class="search-field">
+            <label>Travel Season</label>
+            <select id="tours_season_select" style="height:42px; border:1px solid #cbd5e1; border-radius:6px; padding:0 12px; width:100%; box-sizing:border-box;">
+              <option value="">Any Upcoming Month</option>
+              <option value="spring">Spring Blossom (Mar - May)</option>
+              <option value="summer">Summer Holiday (Jun - Aug)</option>
+              <option value="autumn">Golden Autumn (Sep - Nov)</option>
+              <option value="winter">Winter Snow & Escapes (Dec - Feb)</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Tour Style</label>
+            <select id="tours_style_select" style="height:42px; border:1px solid #cbd5e1; border-radius:6px; padding:0 12px; width:100%; box-sizing:border-box;">
+              <option value="">All Styles</option>
+              <option value="family">Family Friendly</option>
+              <option value="honeymoon">Honeymoon & Couples</option>
+              <option value="group">Group Adventure</option>
+              <option value="luxury">Luxury VIP Experience</option>
+            </select>
+          </div>
+          <button class="search-action-btn" id="tours_search_btn" type="button" style="height:42px; background:linear-gradient(135deg, #FF9900 0%, #F97316 100%); color:#fff; border:none; border-radius:100px; font-weight:700;">Explore Tours</button>
+        </div>
+      </div>
+
+      <!-- Custom Planner Tab Panel -->
+      <div class="search-panel" id="planner-tab">
+        <div class="search-fields-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 180px; gap: 15px; align-items: flex-end;">
+          <div class="search-field">
+            <label>Dream Destination</label>
+            <input id="planner_destination" placeholder="e.g. Hunza, Skardu, Baku, Bali" type="text" style="height:42px; border:1px solid #cbd5e1; border-radius:6px; padding:0 12px; width:100%; box-sizing:border-box;" />
+          </div>
+          <div class="search-field">
+            <label>Travel Style</label>
+            <select id="planner_style" style="height:42px; border:1px solid #cbd5e1; border-radius:6px; padding:0 12px; width:100%; box-sizing:border-box;">
+              <option value="Family Holiday">Family Holiday</option>
+              <option value="Honeymoon Couple">Honeymoon Luxury</option>
+              <option value="Friends & Adventure">Friends / Adventure Group</option>
+              <option value="Corporate / VIP">Corporate VIP</option>
+            </select>
+          </div>
+          <div class="search-field">
+            <label>Approx. Duration</label>
+            <select id="planner_duration" style="height:42px; border:1px solid #cbd5e1; border-radius:6px; padding:0 12px; width:100%; box-sizing:border-box;">
+              <option value="3-5 Days">3 - 5 Days</option>
+              <option value="6-9 Days">6 - 9 Days</option>
+              <option value="10-14 Days">10 - 14 Days</option>
+              <option value="15+ Days">15+ Days Custom</option>
+            </select>
+          </div>
+          <button class="search-action-btn" id="planner_submit_btn" type="button" style="height:42px; background:linear-gradient(135deg, #FF9900 0%, #F97316 100%); color:#fff; border:none; border-radius:100px; font-weight:700;">Plan My Trip ✨</button>
         </div>
       </div>
 
@@ -3548,6 +3611,205 @@ a.double-25 {
 </div>
 </section>
 </div>
+
+<!-- "Why OzoTrips Speaks for Itself" Trust Section -->
+<section class="ozo-trust-section">
+  <div class="container">
+    <div class="ozo-trust-grid">
+      <div class="ozo-trust-card">
+        <div class="ozo-trust-icon">🛡️</div>
+        <div class="ozo-trust-info">
+          <h4>IATA Accredited Agency</h4>
+          <p>Officially licensed travel partner with guaranteed airline ticket issuance and zero hidden fees.</p>
+        </div>
+      </div>
+      <div class="ozo-trust-card">
+        <div class="ozo-trust-icon">🛎️</div>
+        <div class="ozo-trust-info">
+          <h4>24/7 On-Ground Manager</h4>
+          <p>Dedicated WhatsApp trip manager supporting you from departure until safe return home.</p>
+        </div>
+      </div>
+      <div class="ozo-trust-card">
+        <div class="ozo-trust-icon">🏷️</div>
+        <div class="ozo-trust-info">
+          <h4>Transparent Fair Pricing</h4>
+          <p>Clear per-person rates with breakdown of taxes, private transport, and hotel star ratings.</p>
+        </div>
+      </div>
+      <div class="ozo-trust-card">
+        <div class="ozo-trust-icon">⭐</div>
+        <div class="ozo-trust-info">
+          <h4>4.9/5 Rating (1,800+ Reviews)</h4>
+          <p>Pakistan's most trusted travel collective with thousands of transformed, verified journeys.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Curated Destination Collections (Airbnb Luxe Inspired) -->
+<section class="ozo-collections-section">
+  <div class="container">
+    <div class="ozo-section-header">
+      <span class="ozo-section-tag">Curated Collections</span>
+      <h2 class="ozo-section-title">Iconic Journeys, Curated to Perfection</h2>
+      <p class="ozo-section-desc">Handpicked escapes merging boutique luxury with local authenticity, led by verified travel experts.</p>
+    </div>
+    
+    <div class="ozo-collections-grid">
+      <!-- Collection 1: Hunza & Skardu -->
+      <div class="ozo-destination-card">
+        <div class="ozo-card-media">
+          <img src="assets/img/recent_tours/skardu_valley.jpg" alt="Hunza & Skardu Adventure" onerror="this.src='assets/img/pkgzHotel/three-countries/Coral-Island-Tour.svg'; this.onerror=null;">
+          <span class="ozo-card-season-pill">🍂 Sep - Nov Golden Autumn</span>
+          <span class="ozo-card-badge-top">Top Adventure</span>
+        </div>
+        <div class="ozo-card-body">
+          <span class="ozo-card-category">Northern Pakistan</span>
+          <h3 class="ozo-card-title">Hunza & Skardu Karakoram Expedition</h3>
+          <div class="ozo-card-badges-row">
+            <span class="ozo-badge ozo-badge-cyan">⏱️ 8 Days</span>
+            <span class="ozo-badge ozo-badge-navy">🚙 4x4 Prado Included</span>
+            <span class="ozo-badge ozo-badge-sacred">🏨 4-Star Mountain View</span>
+          </div>
+          <div class="ozo-card-footer">
+            <div class="ozo-card-price-block">
+              <span class="ozo-card-price-label">Starting From</span>
+              <span class="ozo-card-price-val">PKR 85,000</span>
+            </div>
+            <a href="tours.html" class="ozo-card-btn">Explore Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection 2: VIP Sacred Umrah -->
+      <div class="ozo-destination-card">
+        <div class="ozo-card-media">
+          <img src="assets/img/home/pakistan-bg.jpg" alt="VIP Umrah 2026/2027" onerror="this.src='assets/img/header/OzoTrips-Umrah-top-banner-mobile23.png'; this.onerror=null;">
+          <span class="ozo-card-season-pill">🌙 Year Round & Ramadan</span>
+          <span class="ozo-card-badge-top" style="background: #10B981;">Spiritual Executive</span>
+        </div>
+        <div class="ozo-card-body">
+          <span class="ozo-card-category">Sacred Pilgrimage</span>
+          <h3 class="ozo-card-title">5-Star VIP Executive Umrah Experience</h3>
+          <div class="ozo-card-badges-row">
+            <span class="ozo-badge ozo-badge-sacred">🕋 50m to Clock Tower</span>
+            <span class="ozo-badge ozo-badge-cyan">⏱️ 14 Days</span>
+            <span class="ozo-badge ozo-badge-amber">⭐ Swissôtel Makkah</span>
+          </div>
+          <div class="ozo-card-footer">
+            <div class="ozo-card-price-block">
+              <span class="ozo-card-price-label">Per Person From</span>
+              <span class="ozo-card-price-val">PKR 295,000</span>
+            </div>
+            <a href="umrah.html" class="ozo-card-btn">View Packages</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection 3: Baku Panoramic -->
+      <div class="ozo-destination-card">
+        <div class="ozo-card-media">
+          <img src="assets/img/pkgzHotel/Baku-Group-Tour/Baku-panoramic-city-tour.jpg" alt="Baku Panoramic Tour">
+          <span class="ozo-card-season-pill">🌸 Apr - Jun Spring</span>
+          <span class="ozo-card-badge-top">Trending</span>
+        </div>
+        <div class="ozo-card-body">
+          <span class="ozo-card-category">Caucasus Charm</span>
+          <h3 class="ozo-card-title">Baku Panoramic & Shahdag Cable Car</h3>
+          <div class="ozo-card-badges-row">
+            <span class="ozo-badge ozo-badge-cyan">⏱️ 5 Days</span>
+            <span class="ozo-badge ozo-badge-amber">🚠 Shahdag Excursion</span>
+            <span class="ozo-badge ozo-badge-navy">🏨 4-Star City Center</span>
+          </div>
+          <div class="ozo-card-footer">
+            <div class="ozo-card-price-block">
+              <span class="ozo-card-price-label">Starting From</span>
+              <span class="ozo-card-price-val">PKR 145,000</span>
+            </div>
+            <a href="group-tour/5-days-baku-group-tour-package.html" class="ozo-card-btn">Explore Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection 4: Thailand & Malaysia Combo -->
+      <div class="ozo-destination-card">
+        <div class="ozo-card-media">
+          <img src="assets/img/pkgzHotel/ThaiLand-Malaysia/CORAL-ISLAND-SPEEDBOAT-TOUR.jpg" alt="Thailand & Malaysia Combo">
+          <span class="ozo-card-season-pill">☀️ Nov - Mar Sunshine</span>
+          <span class="ozo-card-badge-top">Best Value</span>
+        </div>
+        <div class="ozo-card-body">
+          <span class="ozo-card-category">Far East Escapes</span>
+          <h3 class="ozo-card-title">Thailand & Malaysia Twin-Country Journey</h3>
+          <div class="ozo-card-badges-row">
+            <span class="ozo-badge ozo-badge-cyan">⏱️ 7 Days</span>
+            <span class="ozo-badge ozo-badge-amber">🚤 Speedboat Tour</span>
+            <span class="ozo-badge ozo-badge-navy">🏨 4-Star Hotels</span>
+          </div>
+          <div class="ozo-card-footer">
+            <div class="ozo-card-price-block">
+              <span class="ozo-card-price-label">Starting From</span>
+              <span class="ozo-card-price-val">PKR 175,000</span>
+            </div>
+            <a href="group-tour/7-days-malaysia-thailand-tour-package.html" class="ozo-card-btn">Explore Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection 5: Europe Highlights -->
+      <div class="ozo-destination-card">
+        <div class="ozo-card-media">
+          <img src="assets/img/pkgzHotel/Poland/Historic-Landmarks-Tour.svg" alt="Europe Highlights">
+          <span class="ozo-card-season-pill">🏰 May - Sep Summer</span>
+          <span class="ozo-card-badge-top">Luxe Escapes</span>
+        </div>
+        <div class="ozo-card-body">
+          <span class="ozo-card-category">European Grandeur</span>
+          <h3 class="ozo-card-title">9-Day Grand Europe Highlights Experience</h3>
+          <div class="ozo-card-badges-row">
+            <span class="ozo-badge ozo-badge-cyan">⏱️ 9 Days</span>
+            <span class="ozo-badge ozo-badge-navy">🚌 Luxury AC Coach</span>
+            <span class="ozo-badge ozo-badge-sacred">🎟️ All Entry Tickets</span>
+          </div>
+          <div class="ozo-card-footer">
+            <div class="ozo-card-price-block">
+              <span class="ozo-card-price-label">Starting From</span>
+              <span class="ozo-card-price-val">PKR 490,000</span>
+            </div>
+            <a href="group-tour/9-days-europe-tour-package.html" class="ozo-card-btn">Explore Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Collection 6: United Kingdom Tour -->
+      <div class="ozo-destination-card">
+        <div class="ozo-card-media">
+          <img src="assets/img/pkgzHotel/UK-7-days/Edinburgh-Castle-Tour.svg" alt="UK Holiday Package">
+          <span class="ozo-card-season-pill">👑 Jun - Aug High Season</span>
+          <span class="ozo-card-badge-top">Heritage</span>
+        </div>
+        <div class="ozo-card-body">
+          <span class="ozo-card-category">British Heritage</span>
+          <h3 class="ozo-card-title">7-Day London & Scottish Highlands Tour</h3>
+          <div class="ozo-card-badges-row">
+            <span class="ozo-badge ozo-badge-cyan">⏱️ 7 Days</span>
+            <span class="ozo-badge ozo-badge-amber">🏰 Edinburgh Castle</span>
+            <span class="ozo-badge ozo-badge-navy">🏨 Central London Stay</span>
+          </div>
+          <div class="ozo-card-footer">
+            <div class="ozo-card-price-block">
+              <span class="ozo-card-price-label">Starting From</span>
+              <span class="ozo-card-price-val">PKR 385,000</span>
+            </div>
+            <a href="group-tour/7-days-uk-tour-package.html" class="ozo-card-btn">Explore Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- unique offers section -->
@@ -9281,6 +9543,23 @@ jQuery(document).ready(function () {
             } else {
                 window.location.href = 'visas.html';
             }
+        });
+
+        $(document).on('click', '#tours_search_btn', function() {
+            var tourUrl = $('#tours_destination_select').val();
+            window.location.href = tourUrl || 'tours.html';
+        });
+
+        $(document).on('click', '#planner_submit_btn', function() {
+            var dest = $('#planner_destination').val() || 'Dream Destination';
+            var style = $('#planner_style').val() || 'Custom';
+            var duration = $('#planner_duration').val() || 'Flexible';
+            var msg = "Hi OzoTrips! I would like to plan a custom trip:\n" +
+                      "🌍 Destination: " + dest + "\n" +
+                      "✨ Style: " + style + "\n" +
+                      "⏱️ Duration: " + duration + "\n\n" +
+                      "Please share personalized package options and quotes!";
+            window.open("https://wa.me/923211840777?text=" + encodeURIComponent(msg), '_blank');
         });
 
         function rebuildDatePicker(containerId, isOneWay) {

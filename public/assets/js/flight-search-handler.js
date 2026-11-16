@@ -406,6 +406,11 @@
                 <div>
                     <h3 style="margin:0; font-size: 18px; color: #0b192c; font-weight: 700;">✈️ Available Flights: ${oCode} ➔ ${dCode}</h3>
                     <span style="font-size: 13px; color: #64748b;">Date: ${depDate} | Type: ${searchType.toUpperCase()}</span>
+                    <div style="display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap;">
+                        <span style="font-size: 11.5px; background: #f1f5f9; padding: 3px 10px; border-radius: 100px; color: #475569; font-weight: 600;">🧳 2x 23kg Baggage Included</span>
+                        <span style="font-size: 11.5px; background: rgba(0, 210, 255, 0.12); padding: 3px 10px; border-radius: 100px; color: #0284c7; font-weight: 700;">★ Best Value Route</span>
+                        <span style="font-size: 11.5px; background: #f0fdf4; padding: 3px 10px; border-radius: 100px; color: #16a34a; font-weight: 600;">✓ Instant Confirmation</span>
+                    </div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 13px; color: #16a34a; font-weight: 700; background: #f0fdf4; padding: 6px 14px; border-radius: 100px; border: 1px solid #bbf7d0;">● Live Fares Connected</span>
@@ -429,7 +434,7 @@
                         </div>
                         <div>
                             <div class="carrier-name" style="font-weight: 700; color: #0b192c; font-size: 15px;">${deal.airline}</div>
-                            <div style="font-size: 12px; color: #64748b; font-weight: 500;">${deal.flightNo} • Economy</div>
+                            <div style="font-size: 12px; color: #64748b; font-weight: 500;">${deal.flightNo} • Economy • <span style="color:#16a34a; font-weight:600;">🧳 2x 23kg</span></div>
                         </div>
                     </div>
 
