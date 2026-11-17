@@ -346,13 +346,13 @@
 
 .ozo-card-season-pill {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  background: rgba(11, 17, 32, 0.72);
+  bottom: 12px;
+  left: 12px;
+  background: rgba(11, 17, 32, 0.78);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   padding: 5px 12px;
   border-radius: 100px;
@@ -1464,6 +1464,462 @@ html body div.new-home-banner p.hero-sub-title {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
   }
+}
+
+/* ==========================================================================
+   SIGNATURE SPLIT HERO + ASYMMETRIC COLLAGE + BENTO + UMRAH SHOWCASE
+   ========================================================================== */
+.ozo-hero-split-grid {
+  max-width: 1180px;
+  margin: 0 auto 36px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 44px;
+  align-items: center;
+  text-align: left;
+}
+
+.ozo-hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ozo-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  background: rgba(0, 210, 255, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  color: #38BDF8;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.ozo-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.28);
+}
+
+.new-home-banner .ozo-split-title {
+  text-align: left !important;
+  font-size: clamp(2.4rem, 4.4vw, 3.85rem) !important;
+  line-height: 1.08 !important;
+  margin: 0 0 16px !important;
+}
+
+.new-home-banner .ozo-split-sub {
+  text-align: left !important;
+  margin: 0 0 22px !important;
+  max-width: 540px !important;
+  font-size: 1.08rem !important;
+  line-height: 1.6 !important;
+}
+
+.ozo-split-vibes {
+  justify-content: flex-start !important;
+  margin-bottom: 20px !important;
+}
+
+.ozo-hero-flight-arc {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+
+.ozo-arc-caption {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94A3B8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Asymmetric 3-Card Photo Collage */
+.ozo-hero-collage {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  height: 360px;
+}
+
+.ozo-collage-stack {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 14px;
+  height: 100%;
+}
+
+.ozo-collage-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  display: block;
+  text-decoration: none !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.ozo-collage-card:hover {
+  transform: translateY(-5px);
+  border-color: #00D2FF;
+}
+
+.ozo-collage-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ozo-collage-card:hover img {
+  transform: scale(1.07);
+}
+
+.ozo-collage-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 11, 22, 0.05) 35%, rgba(6, 11, 22, 0.90) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  text-align: left;
+}
+
+.ozo-collage-tag {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(0, 210, 255, 0.22);
+  border: 1px solid rgba(0, 210, 255, 0.55);
+  color: #38BDF8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 3px 9px;
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
+
+.ozo-collage-tag.ozo-tag-emerald {
+  background: rgba(16, 185, 129, 0.24);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #6EE7B7;
+}
+
+.ozo-collage-tag.ozo-tag-amber {
+  background: rgba(255, 153, 0, 0.24);
+  border-color: rgba(255, 153, 0, 0.6);
+  color: #FCD34D;
+}
+
+.ozo-collage-overlay h4 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ozo-collage-mini .ozo-collage-overlay h4 {
+  font-size: 0.94rem;
+}
+
+.ozo-collage-meta {
+  font-size: 12px;
+  color: #CBD5E1;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+@media (max-width: 991px) {
+  .ozo-hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .ozo-hero-left {
+    align-items: center;
+  }
+
+  .new-home-banner .ozo-split-title,
+  .new-home-banner .ozo-split-sub {
+    text-align: center !important;
+  }
+
+  .ozo-split-vibes,
+  .ozo-hero-flight-arc {
+    justify-content: center !important;
+  }
+
+  .ozo-hero-collage {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .ozo-collage-main {
+    height: 220px;
+  }
+
+  .ozo-collage-stack {
+    grid-template-rows: none;
+    grid-template-columns: 1fr 1fr;
+    height: 165px;
+  }
+}
+
+/* Asymmetric 12-Col Bento Grid for Curated Collections on Large Desktop */
+@media (min-width: 1120px) {
+  .ozo-collections-grid {
+    grid-template-columns: repeat(12, 1fr) !important;
+    max-width: 1240px !important;
+  }
+
+  .ozo-collections-grid .ozo-destination-card:nth-child(1) {
+    grid-column: span 7;
+  }
+
+  .ozo-collections-grid .ozo-destination-card:nth-child(2) {
+    grid-column: span 5;
+  }
+
+  .ozo-collections-grid .ozo-destination-card:nth-child(n+3) {
+    grid-column: span 3;
+  }
+
+  .ozo-collections-grid .ozo-destination-card:nth-child(n+3) .ozo-card-media {
+    height: 200px;
+  }
+
+  .ozo-collections-grid .ozo-destination-card:nth-child(n+3) .ozo-card-body {
+    padding: 18px;
+  }
+
+  .ozo-collections-grid .ozo-destination-card:nth-child(n+3) .ozo-card-title {
+    font-size: 16.5px;
+  }
+}
+
+/* Luxury Split Sacred Pilgrimage (Umrah) Showcase */
+.ozo-umrah-showcase-section {
+  padding: 50px 20px;
+  background: #FFFFFF;
+}
+
+.ozo-umrah-showcase-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #061411 0%, #0B1F1A 55%, #070D18 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: 0 24px 60px rgba(6, 11, 22, 0.22);
+}
+
+.ozo-umrah-visual {
+  position: relative;
+  min-height: 400px;
+}
+
+.ozo-umrah-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ozo-umrah-floating-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(6, 11, 22, 0.84);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  color: #ECFDF5;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.ozo-umrah-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+.ozo-umrah-copy {
+  padding: 44px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.ozo-umrah-eyebrow {
+  color: #34D399;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ozo-umrah-copy h2 {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: clamp(1.8rem, 3vw, 2.5rem) !important;
+  font-weight: 800 !important;
+  color: #FFFFFF !important;
+  line-height: 1.18 !important;
+  margin: 0 0 14px !important;
+  text-align: left !important;
+}
+
+.ozo-umrah-copy p {
+  color: #CBD5E1;
+  font-size: 15.5px;
+  line-height: 1.65;
+  margin: 0 0 26px;
+}
+
+.ozo-umrah-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.ozo-umrah-metric {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 14px 12px;
+}
+
+.ozo-umrah-metric strong {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FF9900;
+  line-height: 1.1;
+}
+
+.ozo-umrah-metric span {
+  font-size: 12px;
+  color: #CBD5E1;
+  font-weight: 600;
+}
+
+.ozo-umrah-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ozo-umrah-btn-primary {
+  padding: 13px 26px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #FF9900 0%, #F97316 100%);
+  color: #FFFFFF !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(255, 153, 0, 0.35);
+  transition: transform 0.25s ease;
+}
+
+.ozo-umrah-btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.ozo-umrah-btn-ghost {
+  padding: 13px 24px;
+  border-radius: 100px;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  color: #6EE7B7 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14.5px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.ozo-umrah-btn-ghost:hover {
+  background: rgba(16, 185, 129, 0.25);
+  color: #FFFFFF !important;
+}
+
+@media (max-width: 991px) {
+  .ozo-umrah-showcase-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ozo-umrah-visual {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .ozo-umrah-copy {
+    padding: 28px 22px;
+  }
+
+  .ozo-umrah-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom Dual-Tone SVG Feature Badges (Why Book With Us) */
+.ozo-feature-svg-badge {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 20px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ozo-feature-svg-badge.ozo-svg-cyan {
+  background: linear-gradient(135deg, rgba(0, 210, 255, 0.16) 0%, rgba(0, 102, 255, 0.16) 100%);
+  color: #0066FF;
+  border: 1px solid rgba(0, 210, 255, 0.35);
+}
+
+.ozo-feature-svg-badge.ozo-svg-amber {
+  background: linear-gradient(135deg, rgba(255, 153, 0, 0.18) 0%, rgba(249, 115, 22, 0.18) 100%);
+  color: #EA580C;
+  border: 1px solid rgba(255, 153, 0, 0.35);
+}
+
+.ozo-feature-svg-badge.ozo-svg-emerald {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(5, 150, 105, 0.16) 100%);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 
